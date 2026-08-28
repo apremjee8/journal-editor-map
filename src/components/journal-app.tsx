@@ -8,7 +8,6 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { instColor } from "@/lib/colors";
 import { formatShare, yearLabel } from "@/lib/load-bundle";
-import { CONTROL_LABEL } from "@/lib/site";
 import { takeoverRows } from "@/lib/takeover";
 import type { DataBundle, JournalId } from "@/lib/types";
 
@@ -45,9 +44,8 @@ export function JournalApp({
         </h1>
         <p className="max-w-3xl text-[15px] leading-7 text-[#3f3a33]">
           Solid lines are that institution&apos;s share of OpenAlex articles in the
-          selected journal. Dashed lines are the same institution&apos;s share in the
-          other journals in this catalog that year. Shaded bands mark sourced
-          editor-in-chief tenures. This is the raw series, not a causal estimate.
+          selected journal. Shaded bands mark sourced editor-in-chief tenures.
+          This is the raw series, not a causal estimate.
         </p>
       </header>
 
@@ -112,7 +110,6 @@ export function JournalApp({
 
         <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-xs text-[#6b6458]">
           <span>Solid: share in this journal</span>
-          <span>Dashed: share in the {CONTROL_LABEL}</span>
           <span>Band: sourced EIC window</span>
         </div>
       </section>
@@ -194,23 +191,13 @@ export function JournalApp({
                       {row.institutionLabel} · {row.startYear}
                     </div>
                     <div className="text-xs text-[#6b6458]">{row.window}</div>
-                    <dl className="mt-2 grid grid-cols-2 gap-2 tabular-nums">
+                    <dl className="mt-2 tabular-nums">
                       <div>
                         <dt className="text-xs uppercase tracking-wide text-[#6b6458]">Here</dt>
                         <dd>
                           {row.beforeShare == null ? "—" : formatShare(row.beforeShare)}
                           {" → "}
                           {row.afterShare == null ? "—" : formatShare(row.afterShare)}
-                        </dd>
-                      </div>
-                      <div>
-                        <dt className="text-xs uppercase tracking-wide text-[#6b6458]">
-                          Other journals
-                        </dt>
-                        <dd className="text-[#6b6458]">
-                          {row.beforeControl == null ? "—" : formatShare(row.beforeControl)}
-                          {" → "}
-                          {row.afterControl == null ? "—" : formatShare(row.afterControl)}
                         </dd>
                       </div>
                     </dl>
@@ -223,7 +210,6 @@ export function JournalApp({
                     <tr>
                       <th className="px-3 py-2 font-medium">Editor</th>
                       <th className="px-3 py-2 font-medium">Here</th>
-                      <th className="px-3 py-2 font-medium">Other journals</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -241,11 +227,6 @@ export function JournalApp({
                           {" → "}
                           {row.afterShare == null ? "—" : formatShare(row.afterShare)}
                         </td>
-                        <td className="px-3 py-2 align-top tabular-nums text-[#6b6458]">
-                          {row.beforeControl == null ? "—" : formatShare(row.beforeControl)}
-                          {" → "}
-                          {row.afterControl == null ? "—" : formatShare(row.afterControl)}
-                        </td>
                       </tr>
                     ))}
                   </tbody>
@@ -258,10 +239,8 @@ export function JournalApp({
             </p>
           )}
           <p className="mt-3 text-sm leading-6 text-[#3f3a33]">
-            A rise in this journal that does not also appear in the {CONTROL_LABEL} is
-            the pattern people notice. Niche titles in this set show it more often
-            than JAMA or NEJM. Topic mix, trial networks, and OpenAlex coverage can
-            produce the same bump.
+            A rise after a handover is the pattern people notice. Topic mix, trial
+            networks, and OpenAlex coverage can produce the same bump.
           </p>
         </div>
       </section>

@@ -7,8 +7,6 @@ export type TakeoverRow = {
   startYear: number;
   beforeShare: number | null;
   afterShare: number | null;
-  beforeControl: number | null;
-  afterControl: number | null;
   window: string;
 };
 
@@ -33,10 +31,10 @@ export function takeoverRows(
     const afterYears = [start, start + 1, start + 2].filter((y) => byYear.has(y));
     if (!afterYears.length) continue;
 
-    const pick = (years: number[], field: "share" | "controlShare") =>
+    const pick = (years: number[]) =>
       mean(
         years
-          .map((y) => byYear.get(y)?.byInstitution[editor.institutionGroupId!]?.[field])
+          .map((y) => byYear.get(y)?.byInstitution[editor.institutionGroupId!]?.share)
           .filter((n): n is number => typeof n === "number")
       );
 
@@ -45,10 +43,8 @@ export function takeoverRows(
       institutionId: editor.institutionGroupId,
       institutionLabel: labels[editor.institutionGroupId] ?? editor.institutionGroupId,
       startYear: start,
-      beforeShare: pick(beforeYears, "share"),
-      afterShare: pick(afterYears, "share"),
-      beforeControl: pick(beforeYears, "controlShare"),
-      afterControl: pick(afterYears, "controlShare"),
+      beforeShare: pick(beforeYears),
+      afterShare: pick(afterYears),
       window: `${beforeYears[0] ?? "n/a"}–${beforeYears.at(-1) ?? "n/a"} vs ${afterYears[0]}–${afterYears.at(-1)}`,
     });
   }

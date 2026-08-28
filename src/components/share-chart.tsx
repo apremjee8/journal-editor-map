@@ -14,7 +14,6 @@ import {
 
 import { instColor } from "@/lib/colors";
 import { formatShare } from "@/lib/load-bundle";
-import { CONTROL_LABEL } from "@/lib/site";
 import type { EditorTenure, InstitutionGroup, YearPoint } from "@/lib/types";
 
 type Props = {
@@ -29,7 +28,6 @@ export function ShareChart({ series, institutions, editors }: Props) {
     for (const inst of institutions) {
       const cell = p.byInstitution[inst.id];
       row[`${inst.id}_share`] = (cell?.share ?? 0) * 100;
-      row[`${inst.id}_control`] = (cell?.controlShare ?? 0) * 100;
       row[`${inst.id}_articles`] = cell?.articles ?? 0;
     }
     return row;
@@ -42,7 +40,7 @@ export function ShareChart({ series, institutions, editors }: Props) {
   const maxShare = Math.max(
     4,
     ...rows.flatMap((r) =>
-      institutions.flatMap((inst) => [r[`${inst.id}_share`] ?? 0, r[`${inst.id}_control`] ?? 0])
+      institutions.map((inst) => r[`${inst.id}_share`] ?? 0)
     )
   );
   const yMax = Math.min(100, Math.ceil(maxShare / 2) * 2 + 2);
@@ -103,9 +101,6 @@ export function ShareChart({ series, institutions, editors }: Props) {
                           in this journal {cell ? formatShare(cell.share) : "—"} (
                           {cell?.articles ?? 0})
                         </div>
-                        <div className="text-[#6b6458]">
-                          in the {CONTROL_LABEL} {cell ? formatShare(cell.controlShare) : "—"}
-                        </div>
                       </div>
                     );
                   })}
@@ -127,19 +122,6 @@ export function ShareChart({ series, institutions, editors }: Props) {
               strokeWidth={2.2}
               dot={false}
               activeDot={{ r: 3 }}
-            />
-          ))}
-          {institutions.map((inst) => (
-            <Line
-              key={`${inst.id}-control`}
-              type="monotone"
-              dataKey={`${inst.id}_control`}
-              name={`${inst.label} in the ${CONTROL_LABEL}`}
-              stroke={instColor(inst.id)}
-              strokeWidth={1.4}
-              strokeDasharray="5 4"
-              dot={false}
-              legendType="plainline"
             />
           ))}
         </LineChart>

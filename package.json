@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start --port 4521",
     "lint": "eslint",
+    "assert-no-control-copy": "node scripts/assert-no-control-copy.mjs",
     "fetch-data": "node scripts/fetch-openalex.mjs",
     "verify-data": "node scripts/verify-data.mjs"
   },

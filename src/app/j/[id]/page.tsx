@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const row = getJournal(id);
   if (!row) return { title: "Unknown journal" };
   const title = `${row.journal.shortName} editor home and journal share`;
-  const description = `Editor-in-chief timeline for ${row.journal.name}, plotted against each editor’s home institution share of OpenAlex articles. Control is the same institution in the other journals in this catalog.`;
+  const description = `Editor-in-chief timeline for ${row.journal.name}, plotted against each editor’s home institution share of OpenAlex articles.`;
   const url = `${siteUrl()}/j/${id}`;
   return {
     title,
