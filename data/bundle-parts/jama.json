@@ -57,7 +57,7 @@
       ]
     },
     {
-      "role": "interim-eic",
+      "role": "eic",
       "name": "Phil B. Fontanarosa",
       "institutionGroupId": null,
       "startYear": 2021,
@@ -282,7 +282,7 @@
       "byInstitution": {
         "johns-hopkins": {
           "articles": 27,
-          "share": 0.014136125654450262,
+          "share": 0.014136125654450266,
           "controlArticles": 127,
           "controlTotal": 7192,
           "controlShare": 0.017658509454949945
@@ -606,7 +606,7 @@
       "byInstitution": {
         "johns-hopkins": {
           "articles": 43,
-          "share": 0.024089635854341738,
+          "share": 0.024089635854341736,
           "controlArticles": 262,
           "controlTotal": 16756,
           "controlShare": 0.015636190021484843
