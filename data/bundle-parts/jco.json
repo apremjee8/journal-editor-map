@@ -1,1 +1,18 @@
-PLACEHOLDER_JCO
+{
+  "journal": {
+    "id": "jco",
+    "name": "Journal of Clinical Oncology",
+    "shortName": "JCO",
+    "openAlexId": "S15137598",
+    "issnL": "0732-183X",
+    "issns": [
+      "0732-183X",
+      "1527-7755"
+    ],
+    "predecessorOpenAlexIds": [],
+    "firstYear": 2000,
+    "notes": [
+      "ASCO flagship. Sister titles (JCO Oncology Practice, JCO Precision Oncology) are separate OpenAlex sources and are not included."
+    ]
+  }
+}
