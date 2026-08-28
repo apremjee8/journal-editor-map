@@ -1,0 +1,165 @@
+{
+  "resolvedVia": "OpenAlex GET /sources?search=… on 2026-08-28. ISSNs are the ones OpenAlex returned, not guessed.",
+  "yearStart": 2000,
+  "yearEnd": 2024,
+  "workType": "article",
+  "journals": [
+    {
+      "id": "jama",
+      "name": "JAMA",
+      "shortName": "JAMA",
+      "openAlexId": "S172573765",
+      "issnL": "0002-9955",
+      "issns": ["0002-9955", "0098-7484", "1538-3598", "2376-8118"],
+      "predecessorOpenAlexIds": [],
+      "firstYear": 2000,
+      "notes": [
+        "OpenAlex display name is JAMA. issn_l is the historical 0002-9955; the current print ISSN 0098-7484 is in the same source record."
+      ]
+    },
+    {
+      "id": "jama-im",
+      "name": "JAMA Internal Medicine",
+      "shortName": "JAMA Intern Med",
+      "openAlexId": "S65364685",
+      "issnL": "2168-6106",
+      "issns": ["2168-6106", "2168-6114"],
+      "predecessorOpenAlexIds": ["S4210206803"],
+      "predecessorNote": "OpenAlex splits the 2013 rename. Archives of Internal Medicine (S4210206803, issn_l 0003-9926) holds almost all pre-2013 articles; JAMA Internal Medicine (S65364685) holds 2013 onward. Counts for this journal sum both sources.",
+      "firstYear": 2000,
+      "notes": [
+        "Renamed from Archives of Internal Medicine in 2013. Year counts without the predecessor source collapse before 2013."
+      ]
+    },
+    {
+      "id": "nejm",
+      "name": "New England Journal of Medicine",
+      "shortName": "NEJM",
+      "openAlexId": "S62468778",
+      "issnL": "0028-4793",
+      "issns": ["0028-4793", "0096-6762", "1533-4406", "2331-4710"],
+      "predecessorOpenAlexIds": [],
+      "firstYear": 2000,
+      "notes": []
+    },
+    {
+      "id": "jacc",
+      "name": "Journal of the American College of Cardiology",
+      "shortName": "JACC",
+      "openAlexId": "S60865174",
+      "issnL": "0735-1097",
+      "issns": ["0735-1097", "1558-3597"],
+      "predecessorOpenAlexIds": [],
+      "firstYear": 2000,
+      "notes": [
+        "Sister titles (JACC Interventions, JACC Imaging, and the rest) are separate OpenAlex sources and are not included.",
+        "OpenAlex article counts jump in some years (for example 2001 and 2010). Those years likely include more supplement or meeting items classified as articles. Share is still a ratio inside that year."
+      ]
+    },
+    {
+      "id": "circulation",
+      "name": "Circulation",
+      "shortName": "Circulation",
+      "openAlexId": "S116251202",
+      "issnL": "0009-7322",
+      "issns": ["0009-7322", "1524-4539"],
+      "predecessorOpenAlexIds": [],
+      "firstYear": 2000,
+      "notes": [
+        "Not Circulation Research or the Circulation subspecialty journals."
+      ]
+    },
+    {
+      "id": "jama-cardio",
+      "name": "JAMA Cardiology",
+      "shortName": "JAMA Cardiol",
+      "openAlexId": "S2765015654",
+      "issnL": "2380-6583",
+      "issns": ["2380-6583", "2380-6591"],
+      "predecessorOpenAlexIds": [],
+      "firstYear": 2016,
+      "notes": [
+        "Launched in 2016. Years before 2016 have no articles."
+      ]
+    },
+    {
+      "id": "ehj",
+      "name": "European Heart Journal",
+      "shortName": "Eur Heart J",
+      "openAlexId": "S181568219",
+      "issnL": "0195-668X",
+      "issns": ["0195-668X", "1522-9645"],
+      "predecessorOpenAlexIds": [],
+      "firstYear": 2000,
+      "notes": [
+        "Not EHJ Cardiovascular Imaging or the other EHJ sister titles.",
+        "OpenAlex article counts jump from hundreds to several thousand after 2016. Later years likely include more supplement items. Zurich’s share looks smaller after that jump even when the raw Zurich count stays high."
+      ]
+    },
+    {
+      "id": "ajrccm",
+      "name": "American Journal of Respiratory and Critical Care Medicine",
+      "shortName": "AJRCCM",
+      "openAlexId": "S93356601",
+      "issnL": "1073-449X",
+      "issns": ["1073-449X", "1535-4970"],
+      "predecessorOpenAlexIds": [],
+      "firstYear": 2000,
+      "notes": [
+        "ATS flagship. Not AJRCMB or Annals of the American Thoracic Society."
+      ]
+    },
+    {
+      "id": "chest",
+      "name": "CHEST",
+      "shortName": "CHEST",
+      "openAlexId": "S76900504",
+      "issnL": "0012-3692",
+      "issns": ["0012-3692", "1931-3543"],
+      "predecessorOpenAlexIds": [],
+      "firstYear": 2000,
+      "notes": [
+        "OpenAlex display name is CHEST Journal."
+      ]
+    },
+    {
+      "id": "jco",
+      "name": "Journal of Clinical Oncology",
+      "shortName": "JCO",
+      "openAlexId": "S15137598",
+      "issnL": "0732-183X",
+      "issns": ["0732-183X", "1527-7755"],
+      "predecessorOpenAlexIds": [],
+      "firstYear": 2000,
+      "notes": [
+        "ASCO flagship. Sister titles (JCO Oncology Practice, JCO Precision Oncology) are separate OpenAlex sources and are not included."
+      ]
+    },
+    {
+      "id": "lancet-onc",
+      "name": "The Lancet Oncology",
+      "shortName": "Lancet Oncol",
+      "openAlexId": "S116900674",
+      "issnL": "1470-2045",
+      "issns": ["1470-2045", "1474-5488"],
+      "predecessorOpenAlexIds": [],
+      "firstYear": 2000,
+      "notes": [
+        "Launched in 2000. In-house Lancet Group editors, not a rotating academic EIC."
+      ]
+    },
+    {
+      "id": "jama-onc",
+      "name": "JAMA Oncology",
+      "shortName": "JAMA Oncol",
+      "openAlexId": "S2756165422",
+      "issnL": "2374-2437",
+      "issns": ["2374-2437", "2374-2445"],
+      "predecessorOpenAlexIds": [],
+      "firstYear": 2015,
+      "notes": [
+        "Launched in 2015. OpenAlex first_publication_year of 1902 is noise and is ignored. Years before 2015 have no articles."
+      ]
+    }
+  ]
+}
