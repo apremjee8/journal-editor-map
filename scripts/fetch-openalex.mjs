@@ -5,7 +5,6 @@
  *   data/openalex-cache.json
  *   data/bundle-parts
  *   data/bundle.json
- * Set JOURNAL=<id> to refresh one title and keep the other parts.
  */
 
 import { mkdir, readFile, writeFile } from "node:fs/promises";
