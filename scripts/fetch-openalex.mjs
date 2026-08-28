@@ -280,7 +280,6 @@ async function main() {
       "Counts are OpenAlex works with type=article and the journal as primary location. Editorials, letters, and news items are excluded so an editor's own commentary does not inflate the home-institution line.",
       "A paper counts for every distinct OpenAlex institution among its authors. Multi-center trials raise several institutions at once.",
       "Institution groups sum campus and hospital records that OpenAlex keeps separate (Harvard + Brigham, Zurich + University Hospital Zurich, and the rest).",
-      "HMS / Harvard uses the Harvard University OpenAlex record (I136199984). OpenAlex has no separate Harvard Medical School institution.",
       "Editor years come from mastheads, publisher announcements, and journal editorials. Missing windows are labeled on the chart. Dates were not invented.",
       "This chart is not a causal estimate of editorial homophily.",
     ],

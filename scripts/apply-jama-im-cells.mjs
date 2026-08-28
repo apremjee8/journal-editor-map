@@ -59,13 +59,6 @@ await writeFile(join(DATA, "bundle-parts/jama-im.json"), JSON.stringify(out, nul
 
 meta.institutions = institutionsFile.groups;
 meta.fetchedAt = new Date().toISOString();
-if (!meta.caveats.some((c) => c.includes("I136199984"))) {
-  meta.caveats.splice(
-    3,
-    0,
-    "HMS / Harvard uses the Harvard University OpenAlex record (I136199984). OpenAlex has no separate Harvard Medical School institution."
-  );
-}
 await writeFile(join(DATA, "bundle-parts/meta.json"), JSON.stringify(meta, null, 2) + "\n");
 
 const y23 = series.find((p) => p.year === 2023).byInstitution["harvard-hms"];

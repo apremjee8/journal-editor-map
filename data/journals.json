@@ -28,7 +28,8 @@
       "predecessorNote": "OpenAlex splits the 2013 rename. Archives of Internal Medicine (S4210206803, issn_l 0003-9926) holds almost all pre-2013 articles; JAMA Internal Medicine (S65364685) holds 2013 onward. Counts for this journal sum both sources.",
       "firstYear": 2000,
       "notes": [
-        "Renamed from Archives of Internal Medicine in 2013. Year counts without the predecessor source collapse before 2013."
+        "Renamed from Archives of Internal Medicine in 2013. Year counts without the predecessor source collapse before 2013.",
+        "HMS / Harvard uses the Harvard University OpenAlex record (I136199984). OpenAlex has no separate Harvard Medical School institution."
       ]
     },
     {
