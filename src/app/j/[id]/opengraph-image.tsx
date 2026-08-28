@@ -8,7 +8,8 @@ import { handoverClaim, handoverFallback, latestScoredHandover, takeoverRows } f
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
-const PLOT = { left: 56, top: 8, width: 1040, height: 268 };
+const FRAME = { width: 1104, height: 292 };
+const PLOT = { left: 80, top: 10, width: 996, height: 246 };
 
 export default async function Image({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
@@ -75,14 +76,14 @@ export default async function Image({ params }: { params: Promise<{ id: string }
             display: "flex",
             position: "relative",
             marginTop: 16,
-            width: 1104,
-            height: 292,
+            width: FRAME.width,
+            height: FRAME.height,
             background: "#fffdf8",
             border: "1px solid #d6cfc2",
             borderRadius: 12,
           }}
         >
-          <svg width="1104" height="292" viewBox="0 0 1104 292">
+          <svg width={FRAME.width} height={FRAME.height} viewBox={`0 0 ${FRAME.width} ${FRAME.height}`}>
             {bands.map((band) => {
               const x1 = yearToX(band.visibleStart, yearStart, yearEnd, PLOT.left, PLOT.width);
               const x2 = yearToX(band.endYear, yearStart, yearEnd, PLOT.left, PLOT.width);
@@ -133,10 +134,13 @@ export default async function Image({ params }: { params: Promise<{ id: string }
           <div
             style={{
               position: "absolute",
-              left: PLOT.left,
+              left: 8,
               top: PLOT.top,
+              width: PLOT.left - 16,
               display: "flex",
+              justifyContent: "flex-end",
               fontSize: 16,
+              lineHeight: 1,
               color: "#6b6458",
             }}
           >
@@ -145,10 +149,13 @@ export default async function Image({ params }: { params: Promise<{ id: string }
           <div
             style={{
               position: "absolute",
-              left: PLOT.left,
-              top: PLOT.top + PLOT.height - 18,
+              left: 8,
+              top: PLOT.top + PLOT.height - 16,
+              width: PLOT.left - 16,
               display: "flex",
+              justifyContent: "flex-end",
               fontSize: 16,
+              lineHeight: 1,
               color: "#6b6458",
             }}
           >
@@ -158,9 +165,10 @@ export default async function Image({ params }: { params: Promise<{ id: string }
             style={{
               position: "absolute",
               left: PLOT.left,
-              top: PLOT.top + PLOT.height + 2,
+              top: PLOT.top + PLOT.height + 8,
               display: "flex",
               fontSize: 16,
+              lineHeight: 1,
               color: "#6b6458",
             }}
           >
@@ -170,9 +178,10 @@ export default async function Image({ params }: { params: Promise<{ id: string }
             style={{
               position: "absolute",
               left: PLOT.left + PLOT.width - 40,
-              top: PLOT.top + PLOT.height + 2,
+              top: PLOT.top + PLOT.height + 8,
               display: "flex",
               fontSize: 16,
+              lineHeight: 1,
               color: "#6b6458",
             }}
           >
@@ -185,8 +194,8 @@ export default async function Image({ params }: { params: Promise<{ id: string }
                 key={`${band.name}-label`}
                 style={{
                   position: "absolute",
-                  left: Math.min(x + 6, 980),
-                  top: 10,
+                  left: Math.min(x + 10, FRAME.width - 150),
+                  top: PLOT.top + 4,
                   display: "flex",
                   fontSize: 16,
                   fontWeight: 700,

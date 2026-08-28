@@ -60,7 +60,7 @@ export function ShareChart({ series, institutions, editors }: Props) {
       </ul>
       <div className="h-[260px] w-full sm:h-[400px]">
         <ResponsiveContainer width="100%" height="100%">
-          <LineChart data={rows} margin={{ top: 28, right: 10, left: 0, bottom: 4 }}>
+          <LineChart data={rows} margin={{ top: 28, right: 12, left: 8, bottom: 10 }}>
             <CartesianGrid stroke="#e7e2d8" vertical={false} />
             {bands.map((band) => (
               <ReferenceArea
@@ -82,6 +82,7 @@ export function ShareChart({ series, institutions, editors }: Props) {
                 label={{
                   value: band.shortLabel,
                   position: "insideTopRight",
+                  dx: 6,
                   fill: instColor(band.institutionId, cohort),
                   fontSize: 11,
                   fontWeight: 600,
@@ -95,6 +96,8 @@ export function ShareChart({ series, institutions, editors }: Props) {
               axisLine={{ stroke: "#d6cfc2" }}
               interval="preserveStartEnd"
               minTickGap={28}
+              tickMargin={8}
+              padding={{ left: 6, right: 6 }}
             />
             <YAxis
               tickFormatter={(v) => `${v}%`}
@@ -102,7 +105,8 @@ export function ShareChart({ series, institutions, editors }: Props) {
               tick={{ fill: "#4b453c", fontSize: 10 }}
               tickLine={false}
               axisLine={false}
-              width={36}
+              width={48}
+              tickMargin={6}
             />
             <Tooltip
               content={({ active, payload, label }) => {
