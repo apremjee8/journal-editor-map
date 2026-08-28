@@ -1,0 +1,329 @@
+{
+  "fetchedAt": "2026-08-28T18:04:36.704Z",
+  "yearStart": 2000,
+  "yearEnd": 2024,
+  "workType": "article",
+  "institutions": [
+    {
+      "id": "johns-hopkins",
+      "label": "Johns Hopkins",
+      "members": [
+        {
+          "openAlexId": "I145311948",
+          "displayName": "Johns Hopkins University"
+        }
+      ]
+    },
+    {
+      "id": "boston-university",
+      "label": "Boston University / BMC",
+      "members": [
+        {
+          "openAlexId": "I111088046",
+          "displayName": "Boston University"
+        },
+        {
+          "openAlexId": "I1286490081",
+          "displayName": "Boston Medical Center"
+        }
+      ]
+    },
+    {
+      "id": "ucsf",
+      "label": "UCSF",
+      "members": [
+        {
+          "openAlexId": "I180670191",
+          "displayName": "University of California, San Francisco"
+        }
+      ]
+    },
+    {
+      "id": "harvard-brigham",
+      "label": "Harvard / Brigham",
+      "members": [
+        {
+          "openAlexId": "I136199984",
+          "displayName": "Harvard University"
+        },
+        {
+          "openAlexId": "I1283280774",
+          "displayName": "Brigham and Women's Hospital"
+        }
+      ]
+    },
+    {
+      "id": "hebrew-seniorlife",
+      "label": "Hebrew SeniorLife",
+      "members": [
+        {
+          "openAlexId": "I4210123879",
+          "displayName": "Hebrew SeniorLife"
+        }
+      ]
+    },
+    {
+      "id": "mount-sinai",
+      "label": "Mount Sinai",
+      "members": [
+        {
+          "openAlexId": "I98704320",
+          "displayName": "Icahn School of Medicine at Mount Sinai"
+        }
+      ]
+    },
+    {
+      "id": "ucsd",
+      "label": "UC San Diego",
+      "members": [
+        {
+          "openAlexId": "I36258959",
+          "displayName": "University of California San Diego"
+        }
+      ]
+    },
+    {
+      "id": "utsw",
+      "label": "UT Southwestern",
+      "members": [
+        {
+          "openAlexId": "I867280407",
+          "displayName": "The University of Texas Southwestern Medical Center"
+        }
+      ]
+    },
+    {
+      "id": "northwestern",
+      "label": "Northwestern",
+      "members": [
+        {
+          "openAlexId": "I111979921",
+          "displayName": "Northwestern University"
+        }
+      ]
+    },
+    {
+      "id": "yale",
+      "label": "Yale",
+      "members": [
+        {
+          "openAlexId": "I32971472",
+          "displayName": "Yale University"
+        }
+      ]
+    },
+    {
+      "id": "zurich",
+      "label": "University of Zurich",
+      "members": [
+        {
+          "openAlexId": "I202697423",
+          "displayName": "University of Zurich"
+        },
+        {
+          "openAlexId": "I4210100468",
+          "displayName": "University Hospital Zurich"
+        }
+      ]
+    },
+    {
+      "id": "cattolica-gemelli",
+      "label": "Cattolica / Gemelli",
+      "members": [
+        {
+          "openAlexId": "I103320735",
+          "displayName": "Universit\u00e0 Cattolica del Sacro Cuore"
+        },
+        {
+          "openAlexId": "I2802557943",
+          "displayName": "Agostino Gemelli University Polyclinic"
+        }
+      ]
+    },
+    {
+      "id": "arizona",
+      "label": "University of Arizona",
+      "members": [
+        {
+          "openAlexId": "I138006243",
+          "displayName": "University of Arizona"
+        }
+      ]
+    },
+    {
+      "id": "leuven",
+      "label": "KU Leuven",
+      "members": [
+        {
+          "openAlexId": "I99464096",
+          "displayName": "KU Leuven"
+        }
+      ]
+    },
+    {
+      "id": "ut-houston",
+      "label": "UTHealth Houston",
+      "members": [
+        {
+          "openAlexId": "I919571938",
+          "displayName": "The University of Texas Health Science Center at Houston"
+        }
+      ]
+    },
+    {
+      "id": "imperial",
+      "label": "Imperial College London",
+      "members": [
+        {
+          "openAlexId": "I47508984",
+          "displayName": "Imperial College London"
+        }
+      ]
+    },
+    {
+      "id": "royal-brompton",
+      "label": "Royal Brompton",
+      "members": [
+        {
+          "openAlexId": "I4210096640",
+          "displayName": "Royal Brompton Hospital"
+        }
+      ]
+    },
+    {
+      "id": "umd-baltimore",
+      "label": "University of Maryland, Baltimore",
+      "members": [
+        {
+          "openAlexId": "I126744593",
+          "displayName": "University of Maryland, Baltimore"
+        }
+      ]
+    },
+    {
+      "id": "loyola",
+      "label": "Loyola University Chicago",
+      "members": [
+        {
+          "openAlexId": "I1925986",
+          "displayName": "Loyola University Chicago"
+        }
+      ]
+    },
+    {
+      "id": "colorado-denver",
+      "label": "University of Colorado Denver",
+      "members": [
+        {
+          "openAlexId": "I921990950",
+          "displayName": "University of Colorado Denver"
+        }
+      ]
+    },
+    {
+      "id": "weill-cornell",
+      "label": "Weill Cornell / NYP",
+      "members": [
+        {
+          "openAlexId": "I4387153466",
+          "displayName": "Weill Cornell Medicine"
+        },
+        {
+          "openAlexId": "I1340179700",
+          "displayName": "NewYork\u2013Presbyterian Hospital"
+        }
+      ]
+    },
+    {
+      "id": "umass",
+      "label": "UMass Chan / UMass Memorial",
+      "members": [
+        {
+          "openAlexId": "I166722992",
+          "displayName": "University of Massachusetts Chan Medical School"
+        },
+        {
+          "openAlexId": "I4210162397",
+          "displayName": "UMass Memorial Medical Center"
+        }
+      ]
+    },
+    {
+      "id": "cleveland-clinic",
+      "label": "Cleveland Clinic",
+      "members": [
+        {
+          "openAlexId": "I1316902750",
+          "displayName": "Cleveland Clinic"
+        }
+      ]
+    },
+    {
+      "id": "dana-farber",
+      "label": "Dana-Farber",
+      "members": [
+        {
+          "openAlexId": "I4210117453",
+          "displayName": "Dana-Farber Cancer Institute"
+        }
+      ]
+    },
+    {
+      "id": "penn",
+      "label": "University of Pennsylvania",
+      "members": [
+        {
+          "openAlexId": "I79576946",
+          "displayName": "University of Pennsylvania"
+        },
+        {
+          "openAlexId": "I2799810409",
+          "displayName": "Hospital of the University of Pennsylvania"
+        }
+      ]
+    },
+    {
+      "id": "bidmc",
+      "label": "Beth Israel Deaconess",
+      "members": [
+        {
+          "openAlexId": "I1316535847",
+          "displayName": "Beth Israel Deaconess Medical Center"
+        }
+      ]
+    },
+    {
+      "id": "rochester",
+      "label": "University of Rochester",
+      "members": [
+        {
+          "openAlexId": "I5388228",
+          "displayName": "University of Rochester"
+        },
+        {
+          "openAlexId": "I28792581",
+          "displayName": "University of Rochester Medicine"
+        }
+      ]
+    },
+    {
+      "id": "washington",
+      "label": "University of Washington",
+      "members": [
+        {
+          "openAlexId": "I201448701",
+          "displayName": "University of Washington"
+        }
+      ]
+    }
+  ],
+  "caveats": [
+    "Counts are OpenAlex works with type=article and the journal as primary location. Editorials, letters, and news items are excluded so an editor's own commentary does not inflate the home-institution line.",
+    "A paper counts for every distinct OpenAlex institution among its authors. Multi-center trials raise several institutions at once.",
+    "Institution groups sum campus and hospital records that OpenAlex keeps separate (Harvard + Brigham, Zurich + University Hospital Zurich, and the rest).",
+    "The dashed control is that same institution group's share of articles in the other journals in this catalog, same year. It is not a topic-matched or author-fixed control. A raw bump that also appears in the control is more likely a field-wide shift.",
+    "Editor years come from mastheads, publisher announcements, and journal editorials. Missing windows are labeled on the chart. Dates were not invented.",
+    "This chart is not a causal estimate of editorial homophily.",
+    "586 institution-year cells were still outside OpenAlex's group_by top 200 when this bundle was built. Those exact fills are treated as zero until a later fetch completes. Journal totals and in-journal shares for editor homes that appear in the top 200 are unaffected."
+  ]
+}

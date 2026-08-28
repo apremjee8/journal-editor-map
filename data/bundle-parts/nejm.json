@@ -1,0 +1,396 @@
+{
+  "journal": {
+    "id": "nejm",
+    "name": "New England Journal of Medicine",
+    "shortName": "NEJM",
+    "openAlexId": "S62468778",
+    "issnL": "0028-4793",
+    "issns": [
+      "0028-4793",
+      "0096-6762",
+      "1533-4406",
+      "2331-4710"
+    ],
+    "predecessorOpenAlexIds": [],
+    "firstYear": 2000,
+    "notes": []
+  },
+  "editors": [
+    {
+      "role": "eic",
+      "name": "Jeffrey M. Drazen",
+      "institutionGroupId": "harvard-brigham",
+      "startYear": 2000,
+      "endYear": 2019,
+      "sources": [
+        {
+          "label": "NEJM Wikipedia editors list",
+          "url": "https://en.wikipedia.org/wiki/The_New_England_Journal_of_Medicine",
+          "quote": "Jeffrey M. Drazen, 2000\u20132019."
+        },
+        {
+          "label": "Medscape, Rubin appointment",
+          "url": "https://www.medscape.com/viewarticle/914780",
+          "quote": "named Rubin to succeed Jeffrey Drazen, MD, who announced his retirement in October."
+        }
+      ]
+    },
+    {
+      "role": "eic",
+      "name": "Eric J. Rubin",
+      "institutionGroupId": "harvard-brigham",
+      "startYear": 2019,
+      "endYear": null,
+      "sources": [
+        {
+          "label": "NEJM Media Center",
+          "url": "https://www.nejm.org/media-center/editor-in-chief",
+          "quote": "Joining NEJM as an Associate Editor in 2012, Dr. Rubin was appointed Editor-in-Chief in September 2019\u2026 Professor of Medicine at Harvard Medical School\u2026 patients at Brigham and Women\u2019s Hospital."
+        }
+      ]
+    }
+  ],
+  "series": [
+    {
+      "year": 2000,
+      "journalArticles": 980,
+      "byInstitution": {
+        "harvard-brigham": {
+          "articles": 47,
+          "share": 0.04795918367346939,
+          "controlArticles": 236,
+          "controlTotal": 8921,
+          "controlShare": 0.026454433359488848
+        }
+      }
+    },
+    {
+      "year": 2001,
+      "journalArticles": 954,
+      "byInstitution": {
+        "harvard-brigham": {
+          "articles": 49,
+          "share": 0.051362683438155136,
+          "controlArticles": 229,
+          "controlTotal": 11391,
+          "controlShare": 0.0201035905539461
+        }
+      }
+    },
+    {
+      "year": 2002,
+      "journalArticles": 1113,
+      "byInstitution": {
+        "harvard-brigham": {
+          "articles": 52,
+          "share": 0.04672057502246182,
+          "controlArticles": 231,
+          "controlTotal": 11157,
+          "controlShare": 0.02070449045442323
+        }
+      }
+    },
+    {
+      "year": 2003,
+      "journalArticles": 1213,
+      "byInstitution": {
+        "harvard-brigham": {
+          "articles": 130,
+          "share": 0.10717230008244023,
+          "controlArticles": 254,
+          "controlTotal": 11947,
+          "controlShare": 0.021260567506486985
+        }
+      }
+    },
+    {
+      "year": 2004,
+      "journalArticles": 1268,
+      "byInstitution": {
+        "harvard-brigham": {
+          "articles": 161,
+          "share": 0.12697160883280756,
+          "controlArticles": 349,
+          "controlTotal": 10551,
+          "controlShare": 0.033077433418633305
+        }
+      }
+    },
+    {
+      "year": 2005,
+      "journalArticles": 1260,
+      "byInstitution": {
+        "harvard-brigham": {
+          "articles": 133,
+          "share": 0.10555555555555556,
+          "controlArticles": 351,
+          "controlTotal": 9190,
+          "controlShare": 0.0381936887921654
+        }
+      }
+    },
+    {
+      "year": 2006,
+      "journalArticles": 1239,
+      "byInstitution": {
+        "harvard-brigham": {
+          "articles": 114,
+          "share": 0.09200968523002422,
+          "controlArticles": 361,
+          "controlTotal": 7937,
+          "controlShare": 0.04548318004283734
+        }
+      }
+    },
+    {
+      "year": 2007,
+      "journalArticles": 1195,
+      "byInstitution": {
+        "harvard-brigham": {
+          "articles": 113,
+          "share": 0.09456066945606695,
+          "controlArticles": 391,
+          "controlTotal": 7907,
+          "controlShare": 0.0494498545592513
+        }
+      }
+    },
+    {
+      "year": 2008,
+      "journalArticles": 1185,
+      "byInstitution": {
+        "harvard-brigham": {
+          "articles": 144,
+          "share": 0.12151898734177215,
+          "controlArticles": 385,
+          "controlTotal": 7948,
+          "controlShare": 0.0484398590840463
+        }
+      }
+    },
+    {
+      "year": 2009,
+      "journalArticles": 1250,
+      "byInstitution": {
+        "harvard-brigham": {
+          "articles": 164,
+          "share": 0.1312,
+          "controlArticles": 356,
+          "controlTotal": 7654,
+          "controlShare": 0.046511627906976744
+        }
+      }
+    },
+    {
+      "year": 2010,
+      "journalArticles": 1244,
+      "byInstitution": {
+        "harvard-brigham": {
+          "articles": 160,
+          "share": 0.12861736334405144,
+          "controlArticles": 398,
+          "controlTotal": 10598,
+          "controlShare": 0.037554255519909416
+        }
+      }
+    },
+    {
+      "year": 2011,
+      "journalArticles": 1217,
+      "byInstitution": {
+        "harvard-brigham": {
+          "articles": 187,
+          "share": 0.15365653245686114,
+          "controlArticles": 451,
+          "controlTotal": 10934,
+          "controlShare": 0.04124748490945674
+        }
+      }
+    },
+    {
+      "year": 2012,
+      "journalArticles": 1206,
+      "byInstitution": {
+        "harvard-brigham": {
+          "articles": 174,
+          "share": 0.14427860696517414,
+          "controlArticles": 552,
+          "controlTotal": 11183,
+          "controlShare": 0.04936063668067603
+        }
+      }
+    },
+    {
+      "year": 2013,
+      "journalArticles": 1187,
+      "byInstitution": {
+        "harvard-brigham": {
+          "articles": 169,
+          "share": 0.14237573715248525,
+          "controlArticles": 676,
+          "controlTotal": 11987,
+          "controlShare": 0.056394427296237594
+        }
+      }
+    },
+    {
+      "year": 2014,
+      "journalArticles": 1199,
+      "byInstitution": {
+        "harvard-brigham": {
+          "articles": 151,
+          "share": 0.12593828190158465,
+          "controlArticles": 668,
+          "controlTotal": 12693,
+          "controlShare": 0.05262743244307886
+        }
+      }
+    },
+    {
+      "year": 2015,
+      "journalArticles": 1132,
+      "byInstitution": {
+        "harvard-brigham": {
+          "articles": 125,
+          "share": 0.11042402826855123,
+          "controlArticles": 748,
+          "controlTotal": 12521,
+          "controlShare": 0.05973963740915263
+        }
+      }
+    },
+    {
+      "year": 2016,
+      "journalArticles": 1143,
+      "byInstitution": {
+        "harvard-brigham": {
+          "articles": 143,
+          "share": 0.12510936132983377,
+          "controlArticles": 931,
+          "controlTotal": 13530,
+          "controlShare": 0.06881005173688101
+        }
+      }
+    },
+    {
+      "year": 2017,
+      "journalArticles": 1074,
+      "byInstitution": {
+        "harvard-brigham": {
+          "articles": 198,
+          "share": 0.18435754189944134,
+          "controlArticles": 920,
+          "controlTotal": 16999,
+          "controlShare": 0.0541208306370963
+        }
+      }
+    },
+    {
+      "year": 2018,
+      "journalArticles": 1092,
+      "byInstitution": {
+        "harvard-brigham": {
+          "articles": 177,
+          "share": 0.1620879120879121,
+          "controlArticles": 1005,
+          "controlTotal": 16890,
+          "controlShare": 0.05950266429840142
+        }
+      }
+    },
+    {
+      "year": 2019,
+      "journalArticles": 1085,
+      "byInstitution": {
+        "harvard-brigham": {
+          "articles": 169,
+          "share": 0.15576036866359447,
+          "controlArticles": 1102,
+          "controlTotal": 17456,
+          "controlShare": 0.06313015582034831
+        }
+      }
+    },
+    {
+      "year": 2020,
+      "journalArticles": 1276,
+      "byInstitution": {
+        "harvard-brigham": {
+          "articles": 185,
+          "share": 0.14498432601880878,
+          "controlArticles": 1303,
+          "controlTotal": 18938,
+          "controlShare": 0.06880346393494562
+        }
+      }
+    },
+    {
+      "year": 2021,
+      "journalArticles": 1124,
+      "byInstitution": {
+        "harvard-brigham": {
+          "articles": 128,
+          "share": 0.11387900355871886,
+          "controlArticles": 1062,
+          "controlTotal": 16247,
+          "controlShare": 0.06536591370714594
+        }
+      }
+    },
+    {
+      "year": 2022,
+      "journalArticles": 1101,
+      "byInstitution": {
+        "harvard-brigham": {
+          "articles": 129,
+          "share": 0.11716621253405994,
+          "controlArticles": 1068,
+          "controlTotal": 16300,
+          "controlShare": 0.06552147239263803
+        }
+      }
+    },
+    {
+      "year": 2023,
+      "journalArticles": 1039,
+      "byInstitution": {
+        "harvard-brigham": {
+          "articles": 153,
+          "share": 0.1472569778633301,
+          "controlArticles": 1175,
+          "controlTotal": 18571,
+          "controlShare": 0.06327069086209682
+        }
+      }
+    },
+    {
+      "year": 2024,
+      "journalArticles": 1046,
+      "byInstitution": {
+        "harvard-brigham": {
+          "articles": 56,
+          "share": 0.05353728489483748,
+          "controlArticles": 1225,
+          "controlTotal": 19322,
+          "controlShare": 0.06339923403374392
+        }
+      }
+    }
+  ],
+  "trackedInstitutions": [
+    {
+      "id": "harvard-brigham",
+      "label": "Harvard / Brigham",
+      "members": [
+        {
+          "openAlexId": "I136199984",
+          "displayName": "Harvard University"
+        },
+        {
+          "openAlexId": "I1283280774",
+          "displayName": "Brigham and Women's Hospital"
+        }
+      ]
+    }
+  ]
+}

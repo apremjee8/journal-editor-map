@@ -1,0 +1,183 @@
+{
+  "journal": {
+    "id": "jama-onc",
+    "name": "JAMA Oncology",
+    "shortName": "JAMA Oncol",
+    "openAlexId": "S2756165422",
+    "issnL": "2374-2437",
+    "issns": [
+      "2374-2437",
+      "2374-2445"
+    ],
+    "predecessorOpenAlexIds": [],
+    "firstYear": 2015,
+    "notes": [
+      "Launched in 2015. OpenAlex first_publication_year of 1902 is noise and is ignored. Years before 2015 have no articles."
+    ]
+  },
+  "editors": [
+    {
+      "role": "eic",
+      "name": "Mary L. (Nora) Disis",
+      "institutionGroupId": "washington",
+      "startYear": 2015,
+      "endYear": null,
+      "sources": [
+        {
+          "label": "AMA, JAMA Oncology to debut in 2015",
+          "url": "https://www.ama-assn.org/about/publications-newsletters/new-journal-jama-oncology-debut-2015",
+          "quote": "Nora Disis, MD, as our inaugural editor-in-chief\u2026 director of the Center for Translational Medicine in Women\u2019s Health and director of the Institute of Translational Health Sciences at the University of Washington."
+        },
+        {
+          "label": "Disis, Announcing JAMA Oncology, 2015",
+          "url": "https://jamanetwork.com/journals/jamaoncology/fullarticle/2108846",
+          "quote": "Tumor Vaccine Group, Center for Translational Medicine in Women\u2019s Health, University of Washington."
+        }
+      ]
+    }
+  ],
+  "series": [
+    {
+      "year": 2015,
+      "journalArticles": 384,
+      "byInstitution": {
+        "washington": {
+          "articles": 19,
+          "share": 0.049479166666666664,
+          "controlArticles": 138,
+          "controlTotal": 13269,
+          "controlShare": 0.01040018087271083
+        }
+      }
+    },
+    {
+      "year": 2016,
+      "journalArticles": 518,
+      "byInstitution": {
+        "washington": {
+          "articles": 21,
+          "share": 0.04054054054054054,
+          "controlArticles": 181,
+          "controlTotal": 14155,
+          "controlShare": 0.012787001059696221
+        }
+      }
+    },
+    {
+      "year": 2017,
+      "journalArticles": 383,
+      "byInstitution": {
+        "washington": {
+          "articles": 14,
+          "share": 0.03655352480417755,
+          "controlArticles": 197,
+          "controlTotal": 17690,
+          "controlShare": 0.01113623516110797
+        }
+      }
+    },
+    {
+      "year": 2018,
+      "journalArticles": 491,
+      "byInstitution": {
+        "washington": {
+          "articles": 12,
+          "share": 0.024439918533604887,
+          "controlArticles": 147,
+          "controlTotal": 17491,
+          "controlShare": 0.008404322222857469
+        }
+      }
+    },
+    {
+      "year": 2019,
+      "journalArticles": 476,
+      "byInstitution": {
+        "washington": {
+          "articles": 19,
+          "share": 0.03991596638655462,
+          "controlArticles": 193,
+          "controlTotal": 18065,
+          "controlShare": 0.01068364240243565
+        }
+      }
+    },
+    {
+      "year": 2020,
+      "journalArticles": 458,
+      "byInstitution": {
+        "washington": {
+          "articles": 19,
+          "share": 0.04148471615720524,
+          "controlArticles": 247,
+          "controlTotal": 19756,
+          "controlShare": 0.012502530876695688
+        }
+      }
+    },
+    {
+      "year": 2021,
+      "journalArticles": 416,
+      "byInstitution": {
+        "washington": {
+          "articles": 16,
+          "share": 0.038461538461538464,
+          "controlArticles": 173,
+          "controlTotal": 16955,
+          "controlShare": 0.010203479799469183
+        }
+      }
+    },
+    {
+      "year": 2022,
+      "journalArticles": 418,
+      "byInstitution": {
+        "washington": {
+          "articles": 7,
+          "share": 0.01674641148325359,
+          "controlArticles": 190,
+          "controlTotal": 16983,
+          "controlShare": 0.011187658246481776
+        }
+      }
+    },
+    {
+      "year": 2023,
+      "journalArticles": 360,
+      "byInstitution": {
+        "washington": {
+          "articles": 9,
+          "share": 0.025,
+          "controlArticles": 182,
+          "controlTotal": 19250,
+          "controlShare": 0.009454545454545455
+        }
+      }
+    },
+    {
+      "year": 2024,
+      "journalArticles": 375,
+      "byInstitution": {
+        "washington": {
+          "articles": 13,
+          "share": 0.034666666666666665,
+          "controlArticles": 189,
+          "controlTotal": 19993,
+          "controlShare": 0.009453308658030311
+        }
+      }
+    }
+  ],
+  "trackedInstitutions": [
+    {
+      "id": "washington",
+      "label": "University of Washington",
+      "members": [
+        {
+          "openAlexId": "I201448701",
+          "displayName": "University of Washington"
+        }
+      ]
+    }
+  ]
+}
