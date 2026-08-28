@@ -1,11 +1,10 @@
 "use client";
 
-import Link from "next/link";
 import { useMemo } from "react";
 
 import { ShareChart } from "@/components/share-chart";
+import { SiteNav } from "@/components/site-nav";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { instColor } from "@/lib/colors";
 import { formatShare, yearLabel } from "@/lib/load-bundle";
 import { takeoverRows } from "@/lib/takeover";
@@ -49,31 +48,7 @@ export function JournalApp({
         </p>
       </header>
 
-      <nav
-        className="-mx-3 flex gap-2 overflow-x-auto px-3 pb-1 sm:mx-0 sm:flex-wrap sm:overflow-visible sm:px-0"
-        aria-label="Journals"
-      >
-        {bundle.journals.map((j) => {
-          const selected = j.journal.id === current.journal.id;
-          return (
-            <Button
-              key={j.journal.id}
-              asChild
-              variant={selected ? "default" : "outline"}
-              size="sm"
-              className={
-                selected
-                  ? "shrink-0 bg-[#1c1915] text-[#fffdf8] hover:bg-[#1c1915]/90"
-                  : "shrink-0 border-[#d6cfc2] bg-[#fffdf8] text-[#1c1915] hover:bg-[#f3eee4]"
-              }
-            >
-              <Link href={`/j/${j.journal.id}`} aria-current={selected ? "page" : undefined}>
-                {j.journal.shortName}
-              </Link>
-            </Button>
-          );
-        })}
-      </nav>
+      <SiteNav bundle={bundle} current={current.journal.id} />
 
       <section className="rounded-xl border border-[#d6cfc2] bg-[#fffdf8] p-3 sm:p-6">
         <div className="mb-4 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">

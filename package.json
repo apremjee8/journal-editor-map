@@ -8,6 +8,8 @@
     "start": "next start --port 4521",
     "lint": "eslint",
     "assert-no-control-copy": "node scripts/assert-no-control-copy.mjs",
+    "assert-inouye-hms": "node scripts/assert-inouye-hms.mjs",
+    "assemble-bundle": "node scripts/assemble-bundle.mjs",
     "fetch-data": "node scripts/fetch-openalex.mjs",
     "verify-data": "node scripts/verify-data.mjs"
   },

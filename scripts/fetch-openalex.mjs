@@ -3,7 +3,9 @@
  * Fetch article counts from OpenAlex for each journal × year, then
  * assemble institution-share series. Safe to rerun. Writes:
  *   data/openalex-cache.json
+ *   data/bundle-parts
  *   data/bundle.json
+ * Set JOURNAL=<id> to refresh one title and keep the other parts.
  */
 
 import { mkdir, readFile, writeFile } from "node:fs/promises";
@@ -99,6 +101,11 @@ async function main() {
   const yearEnd = journalsFile.yearEnd;
   const journals = journalsFile.journals;
   const groups = institutionsFile.groups;
+  const onlyId = process.env.JOURNAL || "";
+  const fetchJournals = onlyId ? journals.filter((j) => j.id === onlyId) : journals;
+  if (onlyId && !fetchJournals.length) {
+    throw new Error(`unknown JOURNAL=${onlyId}`);
+  }
 
   const allTrackedIds = new Set();
   for (const journal of journals) {
@@ -132,7 +139,7 @@ async function main() {
     return cacheOut;
   }
 
-  for (const journal of journals) {
+  for (const journal of fetchJournals) {
     const start = Math.max(yearStart, journal.firstYear);
     for (let year = start; year <= yearEnd; year++) {
       const key = cellKey(journal.id, year);
@@ -167,7 +174,7 @@ async function main() {
   }
 
   const missing = [];
-  for (const journal of journals) {
+  for (const journal of fetchJournals) {
     const start = Math.max(yearStart, journal.firstYear);
     for (let year = start; year <= yearEnd; year++) {
       const cell = cache[cellKey(journal.id, year)];
@@ -210,7 +217,8 @@ async function main() {
 
   const groupById = Object.fromEntries(groups.map((g) => [g.id, g]));
 
-  const journalBundles = journals.map((journal) => {
+  const assembleJournals = onlyId ? fetchJournals : journals;
+  const journalBundles = assembleJournals.map((journal) => {
     const editors = editorsFile.byJournal[journal.id] || [];
     const usedGroupIds = [
       ...new Set(
@@ -272,14 +280,34 @@ async function main() {
       "Counts are OpenAlex works with type=article and the journal as primary location. Editorials, letters, and news items are excluded so an editor's own commentary does not inflate the home-institution line.",
       "A paper counts for every distinct OpenAlex institution among its authors. Multi-center trials raise several institutions at once.",
       "Institution groups sum campus and hospital records that OpenAlex keeps separate (Harvard + Brigham, Zurich + University Hospital Zurich, and the rest).",
+      "HMS / Harvard uses the Harvard University OpenAlex record (I136199984). OpenAlex has no separate Harvard Medical School institution.",
       "Editor years come from mastheads, publisher announcements, and journal editorials. Missing windows are labeled on the chart. Dates were not invented.",
       "This chart is not a causal estimate of editorial homophily.",
     ],
   };
 
-  await writeFile(join(DATA, "bundle.json"), JSON.stringify(bundle, null, 2) + "\n");
   const partsDir = join(DATA, "bundle-parts");
   await mkdir(partsDir, { recursive: true });
+
+  if (onlyId) {
+    for (const row of journalBundles) {
+      await writeFile(join(partsDir, `${row.journal.id}.json`), JSON.stringify(row, null, 2) + "\n");
+    }
+    const meta = JSON.parse(await readFile(join(partsDir, "meta.json"), "utf8"));
+    meta.fetchedAt = cacheOut.fetchedAt;
+    meta.institutions = groups;
+    await writeFile(join(partsDir, "meta.json"), JSON.stringify(meta, null, 2) + "\n");
+    const allParts = [];
+    for (const journal of journals) {
+      allParts.push(JSON.parse(await readFile(join(partsDir, `${journal.id}.json`), "utf8")));
+    }
+    const full = { ...meta, journals: allParts };
+    await writeFile(join(DATA, "bundle.json"), JSON.stringify(full, null, 2) + "\n");
+    console.log(`Wrote ${onlyId} part and reassembled bundle.json from ${allParts.length} parts`);
+    return;
+  }
+
+  await writeFile(join(DATA, "bundle.json"), JSON.stringify(bundle, null, 2) + "\n");
   const { journals: partJournals, ...meta } = bundle;
   await writeFile(join(partsDir, "meta.json"), JSON.stringify(meta, null, 2) + "\n");
   for (const row of partJournals) {

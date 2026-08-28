@@ -25,7 +25,7 @@ npm install
 npm run dev
 ```
 
-The app listens on [http://127.0.0.1:4521](http://127.0.0.1:4521) and opens on JACC. Each journal has its own URL at `/j/<id>`. Data is read from `data/bundle.json`. The live page does not call OpenAlex.
+The app listens on [http://127.0.0.1:4521](http://127.0.0.1:4521) and opens on JACC. Each journal has its own URL at `/j/<id>`. `/trends` pools sourced handovers across all twelve. Data is read from `data/bundle-parts`. The live page does not call OpenAlex.
 
 ## Share cards
 
@@ -42,7 +42,7 @@ npm run fetch-data
 npm run verify-data
 ```
 
-`scripts/fetch-openalex.mjs` walks each journal-year on the OpenAlex works API (`type=article`), caches raw cells in `data/openalex-cache.json`, and rebuilds `data/bundle.json`. It is safe to rerun. Cached cells are reused. Institution IDs used by any editor in the catalog are filled on every journal.
+`scripts/fetch-openalex.mjs` walks each journal-year on the OpenAlex works API (`type=article`), caches raw cells in `data/openalex-cache.json`, and rebuilds `data/bundle-parts`. It is safe to rerun. Cached cells are reused. Institution IDs used by any editor in the catalog are filled on every journal. Set `JOURNAL=jama-im` to refresh one title and keep the other parts.
 
 Editor years live in `data/editors.json`. They come from journal announcements, mastheads, and editorials. If a window is missing, the file says so. Do not invent dates to fill a gap.
 
@@ -51,7 +51,7 @@ Editor years live in `data/editors.json`. They come from journal announcements, 
 - Numerator: articles in that journal-year with at least one author at a member of the editor's institution group.
 - Denominator: all OpenAlex `type=article` works whose primary location is that journal (and, for JAMA Internal Medicine, Archives of Internal Medicine before the 2013 rename).
 
-OpenAlex keeps campus and hospital records separate. Some homes are grouped on purpose (Harvard + Brigham, Weill Cornell + NewYork-Presbyterian). Inouye is plotted as Hebrew SeniorLife only. Cannistra is plotted as Beth Israel Deaconess only. OpenAlex has no separate Harvard Medical School record.
+OpenAlex keeps campus and hospital records separate. Some homes are grouped on purpose (Harvard + Brigham, Weill Cornell + NewYork-Presbyterian). OpenAlex has no Harvard Medical School institution. Inouye is plotted as HMS / Harvard on the Harvard University record (`I136199984`). Cannistra is plotted as Beth Israel Deaconess only.
 
 ## Layout
 
@@ -59,4 +59,5 @@ OpenAlex keeps campus and hospital records separate. Some homes are grouped on p
 - `scripts/fetch-openalex.mjs` the fetch lever
 - `scripts/verify-data.mjs` checks that all twelve journals have a series and sourced or gapped editors
 - `src/app/j/[id]/page.tsx` one URL per journal
+- `src/app/trends/page.tsx` pooled handover score
 - `src/app/j/[id]/opengraph-image.tsx` the share card

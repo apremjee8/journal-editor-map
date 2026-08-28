@@ -19,7 +19,20 @@ const REQUIRED = [
   "jama-onc",
 ];
 
-const bundle = JSON.parse(await readFile(join(ROOT, "data/bundle.json"), "utf8"));
+const PARTS = join(ROOT, "data/bundle-parts");
+let bundle;
+try {
+  bundle = JSON.parse(await readFile(join(ROOT, "data/bundle.json"), "utf8"));
+} catch {
+  const meta = JSON.parse(await readFile(join(PARTS, "meta.json"), "utf8"));
+  const ids = REQUIRED;
+  bundle = {
+    ...meta,
+    journals: await Promise.all(
+      ids.map(async (id) => JSON.parse(await readFile(join(PARTS, `${id}.json`), "utf8")))
+    ),
+  };
+}
 const errors = [];
 
 if (bundle.workType !== "article") errors.push("workType must be article");
