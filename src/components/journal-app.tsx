@@ -27,6 +27,7 @@ export function JournalApp({
   const labels = Object.fromEntries(
     current.trackedInstitutions.map((i) => [i.id, i.label])
   );
+  const cohort = current.trackedInstitutions.map((i) => i.id);
   const takeovers = useMemo(
     () => takeoverRows(current.editors, current.series, labels),
     [current, labels]
@@ -86,6 +87,7 @@ export function JournalApp({
         <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-xs text-[#6b6458]">
           <span>Solid: share in this journal</span>
           <span>Band: sourced EIC window</span>
+          <span>Rule: sourced start year</span>
         </div>
       </section>
 
@@ -111,7 +113,7 @@ export function JournalApp({
                 </div>
                 <div className="mt-1 text-sm text-[#3f3a33]">
                   {editor.institutionGroupId ? (
-                    <span style={{ color: instColor(editor.institutionGroupId) }}>
+                    <span style={{ color: instColor(editor.institutionGroupId, cohort) }}>
                       {labels[editor.institutionGroupId]}
                     </span>
                   ) : (
@@ -162,7 +164,7 @@ export function JournalApp({
                     className="rounded-lg border border-[#d6cfc2] bg-[#fffdf8] p-3 text-sm"
                   >
                     <div className="font-medium text-[#1c1915]">{row.name}</div>
-                    <div className="text-xs" style={{ color: instColor(row.institutionId) }}>
+                    <div className="text-xs" style={{ color: instColor(row.institutionId, cohort) }}>
                       {row.institutionLabel} · {row.startYear}
                     </div>
                     <div className="text-xs text-[#6b6458]">{row.window}</div>
@@ -192,7 +194,7 @@ export function JournalApp({
                       <tr key={`${row.name}-${row.startYear}`} className="border-t border-[#ece6da]">
                         <td className="px-3 py-2 align-top">
                           <div className="font-medium text-[#1c1915]">{row.name}</div>
-                          <div className="text-xs" style={{ color: instColor(row.institutionId) }}>
+                          <div className="text-xs" style={{ color: instColor(row.institutionId, cohort) }}>
                             {row.institutionLabel} · {row.startYear}
                           </div>
                           <div className="text-xs text-[#6b6458]">{row.window}</div>

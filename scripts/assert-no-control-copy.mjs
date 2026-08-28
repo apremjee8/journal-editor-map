@@ -17,6 +17,8 @@ const FILES = [
   "src/lib/site.ts",
   "src/lib/takeover.ts",
   "src/lib/trends.ts",
+  "src/lib/chart-marks.ts",
+  "src/lib/colors.ts",
   "README.md",
   "data/bundle-parts/meta.json",
   "scripts/fetch-openalex.mjs",
