@@ -1,11 +1,4 @@
 #!/usr/bin/env node
-/**
- * Fetch exact OpenAlex article counts for named institution IDs on one
- * journal, then rebuild that journal's bundle-parts file from editors.json
- * and institutions.json. Cached cells for other journals stay put.
- *
- *   node scripts/fill-journal-institutions.mjs jama-im I136199984 I4210123879
- */
 
 import { readFile, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
@@ -111,32 +104,40 @@ const usedGroupIds = [
   ...new Set(editors.map((e) => e.institutionGroupId).filter((id) => id && groupById[id])),
 ];
 const trackedInstitutions = usedGroupIds.map((id) => groupById[id]);
+const requested = new Set(fillIds);
+
+function articlesForGroup(group, yearFills, existing, year) {
+  const needed = group.members.filter((m) => requested.has(m.openAlexId));
+  if (needed.length) {
+    let articles = 0;
+    for (const m of group.members) {
+      const n = yearFills[m.openAlexId];
+      if (n == null) {
+        throw new Error(`missing fill for ${group.id} ${m.openAlexId} ${year}`);
+      }
+      articles += n;
+    }
+    return articles;
+  }
+  if (!existing) {
+    throw new Error(`no existing series for ${group.id} ${year}`);
+  }
+  return existing.articles;
+}
 
 for (const pt of part.series) {
   const yearFills = fills.cells[String(pt.year)] || {};
   const next = {};
   for (const group of trackedInstitutions) {
-    let articles = 0;
-    for (const m of group.members) {
-      if (yearFills[m.openAlexId] != null) {
-        articles += yearFills[m.openAlexId];
-        continue;
-      }
-      const prev = pt.byInstitution[group.id];
-      if (prev && group.members.length === 1) {
-        articles += prev.articles || 0;
-        continue;
-      }
-      throw new Error(`missing fill for ${group.id} ${m.openAlexId} ${pt.year}`);
-    }
+    const existing = pt.byInstitution[group.id];
+    const articles = articlesForGroup(group, yearFills, existing, pt.year);
     const share = pt.journalArticles > 0 ? articles / pt.journalArticles : 0;
-    const prev = pt.byInstitution[group.id];
     next[group.id] = {
       articles,
       share,
-      controlArticles: prev?.controlArticles ?? 0,
-      controlTotal: prev?.controlTotal ?? 0,
-      controlShare: prev?.controlShare ?? 0,
+      controlArticles: existing?.controlArticles ?? 0,
+      controlTotal: existing?.controlTotal ?? 0,
+      controlShare: existing?.controlShare ?? 0,
     };
   }
   pt.byInstitution = next;
