@@ -1,0 +1,802 @@
+{
+  "journal": {
+    "id": "jama",
+    "name": "JAMA",
+    "shortName": "JAMA",
+    "openAlexId": "S172573765",
+    "issnL": "0002-9955",
+    "issns": [
+      "0002-9955",
+      "0098-7484",
+      "1538-3598",
+      "2376-8118"
+    ],
+    "predecessorOpenAlexIds": [],
+    "firstYear": 2000,
+    "notes": [
+      "OpenAlex display name is JAMA. issn_l is the historical 0002-9955; the current print ISSN 0098-7484 is in the same source record."
+    ]
+  },
+  "editors": [
+    {
+      "role": "eic",
+      "name": "Catherine D. DeAngelis",
+      "institutionGroupId": "johns-hopkins",
+      "startYear": 2000,
+      "endYear": 2011,
+      "sources": [
+        {
+          "label": "PR Newswire, 10 Mar 2011",
+          "url": "https://www.prnewswire.com/news-releases/american-medical-association-names-new-jama-editor-in-chief-117740453.html",
+          "quote": "Dr. Bauchner is following Catherine D. DeAngelis, who is leaving the post after 11 years to return to Johns Hopkins School of Medicine in Baltimore."
+        },
+        {
+          "label": "Johns Hopkins Medicine, DeAngelis profile",
+          "url": "https://www.hopkinsmedicine.org/about/leadership/catherine-deangelis",
+          "quote": "editor in chief emerita of JAMA \u2026 (2000 to 2011)."
+        },
+        {
+          "label": "New York Times, 9 Oct 1999",
+          "url": "https://www.nytimes.com/1999/10/09/us/woman-is-named-editor-of-ama-journal.html",
+          "quote": "will leave her job as a vice dean at Johns Hopkins University School of Medicine."
+        }
+      ]
+    },
+    {
+      "role": "eic",
+      "name": "Howard C. Bauchner",
+      "institutionGroupId": "boston-university",
+      "startYear": 2011,
+      "endYear": 2021,
+      "sources": [
+        {
+          "label": "JAMA farewell editorial, 2021",
+          "url": "https://jamanetwork.com/journals/jama/fullarticle/2780788",
+          "quote": "On July 1, 2011, Howard Bauchner, MD, became the 16th Editor in Chief of JAMA\u2026 from Boston Medical Center and Boston University School of Medicine. \u2026 effective June 30, 2021."
+        }
+      ]
+    },
+    {
+      "role": "interim-eic",
+      "name": "Phil B. Fontanarosa",
+      "institutionGroupId": null,
+      "startYear": 2021,
+      "endYear": 2022,
+      "gapReason": "Interim editor from JAMA Network staff. No university home is used for the share series.",
+      "sources": [
+        {
+          "label": "JAMA farewell editorial, 1 Jun 2021",
+          "url": "https://jamanetwork.com/journals/jama/fullarticle/2780788",
+          "quote": "Dr Fontanarosa is Executive Editor and Interim Editor in Chief\u2026 JAMA and the JAMA Network."
+        }
+      ]
+    },
+    {
+      "role": "eic",
+      "name": "Kirsten Bibbins-Domingo",
+      "institutionGroupId": "ucsf",
+      "startYear": 2022,
+      "endYear": null,
+      "sources": [
+        {
+          "label": "AMA press release",
+          "url": "https://www.ama-assn.org/press-center/ama-press-releases/ama-names-new-editor-chief-jama-and-jama-network",
+          "quote": "Lee Goldman, M.D,. Endowed Professor of Medicine and chair of the Department of Epidemiology and Biostatistics at the UCSF School of Medicine\u2026 will begin her tenure on July 1, 2022."
+        }
+      ]
+    }
+  ],
+  "series": [
+    {
+      "year": 2000,
+      "journalArticles": 2973,
+      "byInstitution": {
+        "johns-hopkins": {
+          "articles": 18,
+          "share": 0.006054490413723511,
+          "controlArticles": 102,
+          "controlTotal": 6928,
+          "controlShare": 0.014722863741339492
+        },
+        "boston-university": {
+          "articles": 10,
+          "share": 0.003363605785401951,
+          "controlArticles": 53,
+          "controlTotal": 6928,
+          "controlShare": 0.007650115473441108
+        },
+        "ucsf": {
+          "articles": 16,
+          "share": 0.0053817692566431215,
+          "controlArticles": 66,
+          "controlTotal": 6928,
+          "controlShare": 0.009526558891454965
+        }
+      }
+    },
+    {
+      "year": 2001,
+      "journalArticles": 2833,
+      "byInstitution": {
+        "johns-hopkins": {
+          "articles": 20,
+          "share": 0.0070596540769502295,
+          "controlArticles": 102,
+          "controlTotal": 9512,
+          "controlShare": 0.010723296888141295
+        },
+        "boston-university": {
+          "articles": 9,
+          "share": 0.0031768443346276033,
+          "controlArticles": 60,
+          "controlTotal": 9512,
+          "controlShare": 0.006307821698906644
+        },
+        "ucsf": {
+          "articles": 13,
+          "share": 0.004588775150017649,
+          "controlArticles": 64,
+          "controlTotal": 9512,
+          "controlShare": 0.00672834314550042
+        }
+      }
+    },
+    {
+      "year": 2002,
+      "journalArticles": 2830,
+      "byInstitution": {
+        "johns-hopkins": {
+          "articles": 28,
+          "share": 0.009893992932862191,
+          "controlArticles": 99,
+          "controlTotal": 9440,
+          "controlShare": 0.01048728813559322
+        },
+        "boston-university": {
+          "articles": 6,
+          "share": 0.0021201413427561835,
+          "controlArticles": 59,
+          "controlTotal": 9440,
+          "controlShare": 0.00625
+        },
+        "ucsf": {
+          "articles": 33,
+          "share": 0.011660777385159011,
+          "controlArticles": 66,
+          "controlTotal": 9440,
+          "controlShare": 0.0069915254237288135
+        }
+      }
+    },
+    {
+      "year": 2003,
+      "journalArticles": 2519,
+      "byInstitution": {
+        "johns-hopkins": {
+          "articles": 30,
+          "share": 0.011909487892020643,
+          "controlArticles": 93,
+          "controlTotal": 10641,
+          "controlShare": 0.008739780095855652
+        },
+        "boston-university": {
+          "articles": 13,
+          "share": 0.005160778086542279,
+          "controlArticles": 64,
+          "controlTotal": 10641,
+          "controlShare": 0.006014472324029696
+        },
+        "ucsf": {
+          "articles": 32,
+          "share": 0.012703453751488685,
+          "controlArticles": 66,
+          "controlTotal": 10641,
+          "controlShare": 0.006202424584155625
+        }
+      }
+    },
+    {
+      "year": 2004,
+      "journalArticles": 2133,
+      "byInstitution": {
+        "johns-hopkins": {
+          "articles": 25,
+          "share": 0.011720581340834505,
+          "controlArticles": 132,
+          "controlTotal": 9686,
+          "controlShare": 0.01362791658063184
+        },
+        "boston-university": {
+          "articles": 5,
+          "share": 0.0023441162681669013,
+          "controlArticles": 81,
+          "controlTotal": 9686,
+          "controlShare": 0.008362585174478628
+        },
+        "ucsf": {
+          "articles": 18,
+          "share": 0.008438818565400843,
+          "controlArticles": 96,
+          "controlTotal": 9686,
+          "controlShare": 0.009911212058641337
+        }
+      }
+    },
+    {
+      "year": 2005,
+      "journalArticles": 2018,
+      "byInstitution": {
+        "johns-hopkins": {
+          "articles": 23,
+          "share": 0.011397423191278493,
+          "controlArticles": 141,
+          "controlTotal": 8432,
+          "controlShare": 0.016722011385199242
+        },
+        "boston-university": {
+          "articles": 3,
+          "share": 0.0014866204162537165,
+          "controlArticles": 69,
+          "controlTotal": 8432,
+          "controlShare": 0.008183111954459203
+        },
+        "ucsf": {
+          "articles": 19,
+          "share": 0.009415262636273538,
+          "controlArticles": 116,
+          "controlTotal": 8432,
+          "controlShare": 0.013757115749525617
+        }
+      }
+    },
+    {
+      "year": 2006,
+      "journalArticles": 1963,
+      "byInstitution": {
+        "johns-hopkins": {
+          "articles": 28,
+          "share": 0.014263881813550688,
+          "controlArticles": 125,
+          "controlTotal": 7213,
+          "controlShare": 0.017329821156245668
+        },
+        "boston-university": {
+          "articles": 3,
+          "share": 0.0015282730514518594,
+          "controlArticles": 63,
+          "controlTotal": 7213,
+          "controlShare": 0.008734229862747817
+        },
+        "ucsf": {
+          "articles": 16,
+          "share": 0.00815078960774325,
+          "controlArticles": 92,
+          "controlTotal": 7213,
+          "controlShare": 0.012754748370996811
+        }
+      }
+    },
+    {
+      "year": 2007,
+      "journalArticles": 1910,
+      "byInstitution": {
+        "johns-hopkins": {
+          "articles": 27,
+          "share": 0.014136125654450262,
+          "controlArticles": 127,
+          "controlTotal": 7192,
+          "controlShare": 0.017658509454949945
+        },
+        "boston-university": {
+          "articles": 3,
+          "share": 0.0015706806282722514,
+          "controlArticles": 59,
+          "controlTotal": 7192,
+          "controlShare": 0.008203559510567298
+        },
+        "ucsf": {
+          "articles": 15,
+          "share": 0.007853403141361256,
+          "controlArticles": 92,
+          "controlTotal": 7192,
+          "controlShare": 0.012791991101223582
+        }
+      }
+    },
+    {
+      "year": 2008,
+      "journalArticles": 1977,
+      "byInstitution": {
+        "johns-hopkins": {
+          "articles": 31,
+          "share": 0.01568032372281234,
+          "controlArticles": 127,
+          "controlTotal": 7156,
+          "controlShare": 0.017747344885410844
+        },
+        "boston-university": {
+          "articles": 7,
+          "share": 0.0035407182599898838,
+          "controlArticles": 83,
+          "controlTotal": 7156,
+          "controlShare": 0.011598658468418111
+        },
+        "ucsf": {
+          "articles": 8,
+          "share": 0.004046535154274153,
+          "controlArticles": 88,
+          "controlTotal": 7156,
+          "controlShare": 0.012297372833985467
+        }
+      }
+    },
+    {
+      "year": 2009,
+      "journalArticles": 1925,
+      "byInstitution": {
+        "johns-hopkins": {
+          "articles": 26,
+          "share": 0.013506493506493506,
+          "controlArticles": 158,
+          "controlTotal": 6979,
+          "controlShare": 0.022639346611262358
+        },
+        "boston-university": {
+          "articles": 4,
+          "share": 0.002077922077922078,
+          "controlArticles": 63,
+          "controlTotal": 6979,
+          "controlShare": 0.009027081243731194
+        },
+        "ucsf": {
+          "articles": 13,
+          "share": 0.006753246753246753,
+          "controlArticles": 103,
+          "controlTotal": 6979,
+          "controlShare": 0.014758561398481158
+        }
+      }
+    },
+    {
+      "year": 2010,
+      "journalArticles": 1850,
+      "byInstitution": {
+        "johns-hopkins": {
+          "articles": 32,
+          "share": 0.017297297297297298,
+          "controlArticles": 140,
+          "controlTotal": 9992,
+          "controlShare": 0.01401120896717374
+        },
+        "boston-university": {
+          "articles": 6,
+          "share": 0.003243243243243243,
+          "controlArticles": 79,
+          "controlTotal": 9992,
+          "controlShare": 0.007906325060048038
+        },
+        "ucsf": {
+          "articles": 14,
+          "share": 0.0075675675675675675,
+          "controlArticles": 121,
+          "controlTotal": 9992,
+          "controlShare": 0.01210968775020016
+        }
+      }
+    },
+    {
+      "year": 2011,
+      "journalArticles": 1933,
+      "byInstitution": {
+        "johns-hopkins": {
+          "articles": 29,
+          "share": 0.015002586652871184,
+          "controlArticles": 148,
+          "controlTotal": 10218,
+          "controlShare": 0.01448424349187708
+        },
+        "boston-university": {
+          "articles": 4,
+          "share": 0.0020693222969477496,
+          "controlArticles": 97,
+          "controlTotal": 10218,
+          "controlShare": 0.009493051477784302
+        },
+        "ucsf": {
+          "articles": 16,
+          "share": 0.008277289187790998,
+          "controlArticles": 133,
+          "controlTotal": 10218,
+          "controlShare": 0.013016245840673322
+        }
+      }
+    },
+    {
+      "year": 2012,
+      "journalArticles": 1945,
+      "byInstitution": {
+        "johns-hopkins": {
+          "articles": 38,
+          "share": 0.01953727506426735,
+          "controlArticles": 159,
+          "controlTotal": 10444,
+          "controlShare": 0.015224052087322864
+        },
+        "boston-university": {
+          "articles": 5,
+          "share": 0.002570694087403599,
+          "controlArticles": 89,
+          "controlTotal": 10444,
+          "controlShare": 0.008521639218690157
+        },
+        "ucsf": {
+          "articles": 18,
+          "share": 0.009254498714652956,
+          "controlArticles": 146,
+          "controlTotal": 10444,
+          "controlShare": 0.013979318268862504
+        }
+      }
+    },
+    {
+      "year": 2013,
+      "journalArticles": 1947,
+      "byInstitution": {
+        "johns-hopkins": {
+          "articles": 39,
+          "share": 0.020030816640986132,
+          "controlArticles": 183,
+          "controlTotal": 11227,
+          "controlShare": 0.01629999109290104
+        },
+        "boston-university": {
+          "articles": 23,
+          "share": 0.011813045711350795,
+          "controlArticles": 75,
+          "controlTotal": 11227,
+          "controlShare": 0.006680324218402066
+        },
+        "ucsf": {
+          "articles": 30,
+          "share": 0.015408320493066256,
+          "controlArticles": 190,
+          "controlTotal": 11227,
+          "controlShare": 0.0169234880199519
+        }
+      }
+    },
+    {
+      "year": 2014,
+      "journalArticles": 1864,
+      "byInstitution": {
+        "johns-hopkins": {
+          "articles": 55,
+          "share": 0.029506437768240343,
+          "controlArticles": 199,
+          "controlTotal": 12028,
+          "controlShare": 0.016544728965746592
+        },
+        "boston-university": {
+          "articles": 20,
+          "share": 0.01072961373390558,
+          "controlArticles": 93,
+          "controlTotal": 12028,
+          "controlShare": 0.007731958762886598
+        },
+        "ucsf": {
+          "articles": 29,
+          "share": 0.01555793991416309,
+          "controlArticles": 141,
+          "controlTotal": 12028,
+          "controlShare": 0.011722647156634519
+        }
+      }
+    },
+    {
+      "year": 2015,
+      "journalArticles": 1795,
+      "byInstitution": {
+        "johns-hopkins": {
+          "articles": 43,
+          "share": 0.02395543175487465,
+          "controlArticles": 189,
+          "controlTotal": 11858,
+          "controlShare": 0.015938606847697757
+        },
+        "boston-university": {
+          "articles": 28,
+          "share": 0.015598885793871866,
+          "controlArticles": 77,
+          "controlTotal": 11858,
+          "controlShare": 0.006493506493506494
+        },
+        "ucsf": {
+          "articles": 44,
+          "share": 0.024512534818941504,
+          "controlArticles": 215,
+          "controlTotal": 11858,
+          "controlShare": 0.018131219429920728
+        }
+      }
+    },
+    {
+      "year": 2016,
+      "journalArticles": 1860,
+      "byInstitution": {
+        "johns-hopkins": {
+          "articles": 47,
+          "share": 0.025268817204301075,
+          "controlArticles": 201,
+          "controlTotal": 12813,
+          "controlShare": 0.015687192694919222
+        },
+        "boston-university": {
+          "articles": 33,
+          "share": 0.017741935483870968,
+          "controlArticles": 107,
+          "controlTotal": 12813,
+          "controlShare": 0.008350893623663466
+        },
+        "ucsf": {
+          "articles": 60,
+          "share": 0.03225806451612903,
+          "controlArticles": 209,
+          "controlTotal": 12813,
+          "controlShare": 0.01631155857332397
+        }
+      }
+    },
+    {
+      "year": 2017,
+      "journalArticles": 1772,
+      "byInstitution": {
+        "johns-hopkins": {
+          "articles": 43,
+          "share": 0.024266365688487584,
+          "controlArticles": 255,
+          "controlTotal": 16301,
+          "controlShare": 0.015643212072878963
+        },
+        "boston-university": {
+          "articles": 27,
+          "share": 0.015237020316027089,
+          "controlArticles": 110,
+          "controlTotal": 16301,
+          "controlShare": 0.006748052266732103
+        },
+        "ucsf": {
+          "articles": 38,
+          "share": 0.02144469525959368,
+          "controlArticles": 236,
+          "controlTotal": 16301,
+          "controlShare": 0.014477639408625238
+        }
+      }
+    },
+    {
+      "year": 2018,
+      "journalArticles": 1781,
+      "byInstitution": {
+        "johns-hopkins": {
+          "articles": 36,
+          "share": 0.02021336327905671,
+          "controlArticles": 236,
+          "controlTotal": 16201,
+          "controlShare": 0.014567002036911301
+        },
+        "boston-university": {
+          "articles": 27,
+          "share": 0.015160022459292532,
+          "controlArticles": 123,
+          "controlTotal": 16201,
+          "controlShare": 0.007592123942966484
+        },
+        "ucsf": {
+          "articles": 41,
+          "share": 0.023020774845592364,
+          "controlArticles": 208,
+          "controlTotal": 16201,
+          "controlShare": 0.01283871365965064
+        }
+      }
+    },
+    {
+      "year": 2019,
+      "journalArticles": 1785,
+      "byInstitution": {
+        "johns-hopkins": {
+          "articles": 43,
+          "share": 0.024089635854341738,
+          "controlArticles": 262,
+          "controlTotal": 16756,
+          "controlShare": 0.015636190021484843
+        },
+        "boston-university": {
+          "articles": 30,
+          "share": 0.01680672268907563,
+          "controlArticles": 110,
+          "controlTotal": 16756,
+          "controlShare": 0.006564812604440201
+        },
+        "ucsf": {
+          "articles": 55,
+          "share": 0.03081232492997199,
+          "controlArticles": 264,
+          "controlTotal": 16756,
+          "controlShare": 0.015755550250656482
+        }
+      }
+    },
+    {
+      "year": 2020,
+      "journalArticles": 1859,
+      "byInstitution": {
+        "johns-hopkins": {
+          "articles": 60,
+          "share": 0.0322754168908015,
+          "controlArticles": 290,
+          "controlTotal": 18355,
+          "controlShare": 0.01579950967038954
+        },
+        "boston-university": {
+          "articles": 40,
+          "share": 0.02151694459386767,
+          "controlArticles": 147,
+          "controlTotal": 18355,
+          "controlShare": 0.008008716970852628
+        },
+        "ucsf": {
+          "articles": 65,
+          "share": 0.03496503496503497,
+          "controlArticles": 280,
+          "controlTotal": 18355,
+          "controlShare": 0.015254698992100245
+        }
+      }
+    },
+    {
+      "year": 2021,
+      "journalArticles": 1699,
+      "byInstitution": {
+        "johns-hopkins": {
+          "articles": 47,
+          "share": 0.02766333137139494,
+          "controlArticles": 278,
+          "controlTotal": 15672,
+          "controlShare": 0.017738642164369576
+        },
+        "boston-university": {
+          "articles": 16,
+          "share": 0.009417304296645085,
+          "controlArticles": 115,
+          "controlTotal": 15672,
+          "controlShare": 0.007337927514037774
+        },
+        "ucsf": {
+          "articles": 46,
+          "share": 0.02707474985285462,
+          "controlArticles": 248,
+          "controlTotal": 15672,
+          "controlShare": 0.01582440020418581
+        }
+      }
+    },
+    {
+      "year": 2022,
+      "journalArticles": 1689,
+      "byInstitution": {
+        "johns-hopkins": {
+          "articles": 45,
+          "share": 0.02664298401420959,
+          "controlArticles": 218,
+          "controlTotal": 15712,
+          "controlShare": 0.013874745417515275
+        },
+        "boston-university": {
+          "articles": 23,
+          "share": 0.013617525162818236,
+          "controlArticles": 138,
+          "controlTotal": 15712,
+          "controlShare": 0.008783095723014257
+        },
+        "ucsf": {
+          "articles": 49,
+          "share": 0.02901124925991711,
+          "controlArticles": 229,
+          "controlTotal": 15712,
+          "controlShare": 0.014574847250509166
+        }
+      }
+    },
+    {
+      "year": 2023,
+      "journalArticles": 1848,
+      "byInstitution": {
+        "johns-hopkins": {
+          "articles": 56,
+          "share": 0.030303030303030304,
+          "controlArticles": 248,
+          "controlTotal": 17762,
+          "controlShare": 0.013962391622565027
+        },
+        "boston-university": {
+          "articles": 29,
+          "share": 0.015692640692640692,
+          "controlArticles": 136,
+          "controlTotal": 17762,
+          "controlShare": 0.0076567954059227564
+        },
+        "ucsf": {
+          "articles": 49,
+          "share": 0.026515151515151516,
+          "controlArticles": 260,
+          "controlTotal": 17762,
+          "controlShare": 0.014637991217205269
+        }
+      }
+    },
+    {
+      "year": 2024,
+      "journalArticles": 1858,
+      "byInstitution": {
+        "johns-hopkins": {
+          "articles": 50,
+          "share": 0.02691065662002153,
+          "controlArticles": 249,
+          "controlTotal": 18510,
+          "controlShare": 0.013452188006482983
+        },
+        "boston-university": {
+          "articles": 37,
+          "share": 0.01991388589881593,
+          "controlArticles": 93,
+          "controlTotal": 18510,
+          "controlShare": 0.005024311183144246
+        },
+        "ucsf": {
+          "articles": 68,
+          "share": 0.03659849300322928,
+          "controlArticles": 286,
+          "controlTotal": 18510,
+          "controlShare": 0.015451107509454349
+        }
+      }
+    }
+  ],
+  "trackedInstitutions": [
+    {
+      "id": "johns-hopkins",
+      "label": "Johns Hopkins",
+      "members": [
+        {
+          "openAlexId": "I145311948",
+          "displayName": "Johns Hopkins University"
+        }
+      ]
+    },
+    {
+      "id": "boston-university",
+      "label": "Boston University / BMC",
+      "members": [
+        {
+          "openAlexId": "I111088046",
+          "displayName": "Boston University"
+        },
+        {
+          "openAlexId": "I1286490081",
+          "displayName": "Boston Medical Center"
+        }
+      ]
+    },
+    {
+      "id": "ucsf",
+      "label": "UCSF",
+      "members": [
+        {
+          "openAlexId": "I180670191",
+          "displayName": "University of California, San Francisco"
+        }
+      ]
+    }
+  ]
+}

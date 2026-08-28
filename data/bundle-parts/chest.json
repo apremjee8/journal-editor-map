@@ -1,0 +1,601 @@
+{
+  "journal": {
+    "id": "chest",
+    "name": "CHEST",
+    "shortName": "CHEST",
+    "openAlexId": "S76900504",
+    "issnL": "0012-3692",
+    "issns": [
+      "0012-3692",
+      "1931-3543"
+    ],
+    "predecessorOpenAlexIds": [],
+    "firstYear": 2000,
+    "notes": [
+      "OpenAlex display name is CHEST Journal."
+    ]
+  },
+  "editors": [
+    {
+      "role": "eic",
+      "name": "Unknown (pre-Irwin)",
+      "institutionGroupId": null,
+      "startYear": null,
+      "endYear": 2005,
+      "gapReason": "Irwin\u2019s 2019 commentary says he is the seventh EIC and that his tenure began 1 July 2005. The sixth EIC window is not sourced here. Dates were not invented.",
+      "sources": [
+        {
+          "label": "Irwin, On Being the Editor in Chief of the Journal CHEST, June 2019",
+          "url": "https://journal.chestnet.org/article/S0012-3692(19)30823-2/fulltext",
+          "quote": "On July 1, 2005, my tenure as Editor in Chief of CHEST began."
+        }
+      ]
+    },
+    {
+      "role": "eic",
+      "name": "Richard S. Irwin",
+      "institutionGroupId": "umass",
+      "startYear": 2005,
+      "endYear": 2019,
+      "sources": [
+        {
+          "label": "Irwin, On Being the Editor in Chief of the Journal CHEST, June 2019",
+          "url": "https://journal.chestnet.org/article/S0012-3692(19)30823-2/fulltext",
+          "quote": "On July 1, 2005, my tenure as Editor in Chief of CHEST began; on June 30, 2019, it will end."
+        },
+        {
+          "label": "Newswise, UMass affiliation while EIC",
+          "url": "https://www.newswise.com/articles/umass-richard-irwin-to-receive-ge-healthcare-aacn-pioneering-spirit-award",
+          "quote": "professor of medicine and professor of nursing at the University of Massachusetts, Worcester, Mass. He also serves as chair of critical care operations at UMass Memorial Medical Center and as editor-in-chief of the journal CHEST, a position he has held since 2005."
+        }
+      ]
+    },
+    {
+      "role": "eic",
+      "name": "Peter J. Mazzone",
+      "institutionGroupId": "cleveland-clinic",
+      "startYear": 2019,
+      "endYear": null,
+      "sources": [
+        {
+          "label": "CHEST Physician / MDedge, 9 Aug 2019",
+          "url": "https://www.mdedge.com/content/new-editor-chief-takes-reins",
+          "quote": "CHEST welcomed Peter J. Mazzone, MD, MPH, FCCP, in July, as the new Editor in Chief of the journal CHEST. Dr. Mazzone is the Director of the Lung Cancer Program \u2026 at the Cleveland Clinic in Ohio."
+        },
+        {
+          "label": "Mazzone, The CHEST Editorial Team, 2019",
+          "url": "https://doi.org/10.1016/j.chest.2019.05.010",
+          "quote": "It is a privilege to be given the opportunity to build the team who will shepherd the evolution of CHEST."
+        }
+      ]
+    }
+  ],
+  "series": [
+    {
+      "year": 2000,
+      "journalArticles": 886,
+      "byInstitution": {
+        "umass": {
+          "articles": 4,
+          "share": 0.004514672686230248,
+          "controlArticles": 10,
+          "controlTotal": 9015,
+          "controlShare": 0.0011092623405435386
+        },
+        "cleveland-clinic": {
+          "articles": 9,
+          "share": 0.010158013544018058,
+          "controlArticles": 91,
+          "controlTotal": 9015,
+          "controlShare": 0.010094287298946202
+        }
+      }
+    },
+    {
+      "year": 2001,
+      "journalArticles": 1004,
+      "byInstitution": {
+        "umass": {
+          "articles": 5,
+          "share": 0.0049800796812749,
+          "controlArticles": 17,
+          "controlTotal": 11341,
+          "controlShare": 0.0014989859800723041
+        },
+        "cleveland-clinic": {
+          "articles": 7,
+          "share": 0.0069721115537848604,
+          "controlArticles": 88,
+          "controlTotal": 11341,
+          "controlShare": 0.007759456838021339
+        }
+      }
+    },
+    {
+      "year": 2002,
+      "journalArticles": 1014,
+      "byInstitution": {
+        "umass": {
+          "articles": 5,
+          "share": 0.004930966469428008,
+          "controlArticles": 18,
+          "controlTotal": 11256,
+          "controlShare": 0.0015991471215351812
+        },
+        "cleveland-clinic": {
+          "articles": 5,
+          "share": 0.004930966469428008,
+          "controlArticles": 104,
+          "controlTotal": 11256,
+          "controlShare": 0.00923951670220327
+        }
+      }
+    },
+    {
+      "year": 2003,
+      "journalArticles": 1053,
+      "byInstitution": {
+        "umass": {
+          "articles": 5,
+          "share": 0.004748338081671415,
+          "controlArticles": 15,
+          "controlTotal": 12107,
+          "controlShare": 0.0012389526720079293
+        },
+        "cleveland-clinic": {
+          "articles": 8,
+          "share": 0.007597340930674264,
+          "controlArticles": 102,
+          "controlTotal": 12107,
+          "controlShare": 0.00842487816965392
+        }
+      }
+    },
+    {
+      "year": 2004,
+      "journalArticles": 1017,
+      "byInstitution": {
+        "umass": {
+          "articles": 7,
+          "share": 0.00688298918387414,
+          "controlArticles": 25,
+          "controlTotal": 10802,
+          "controlShare": 0.00231438622477319
+        },
+        "cleveland-clinic": {
+          "articles": 12,
+          "share": 0.011799410029498525,
+          "controlArticles": 107,
+          "controlTotal": 10802,
+          "controlShare": 0.009905573042029254
+        }
+      }
+    },
+    {
+      "year": 2005,
+      "journalArticles": 1331,
+      "byInstitution": {
+        "umass": {
+          "articles": 4,
+          "share": 0.003005259203606311,
+          "controlArticles": 15,
+          "controlTotal": 9119,
+          "controlShare": 0.001644917205833973
+        },
+        "cleveland-clinic": {
+          "articles": 15,
+          "share": 0.011269722013523666,
+          "controlArticles": 85,
+          "controlTotal": 9119,
+          "controlShare": 0.009321197499725847
+        }
+      }
+    },
+    {
+      "year": 2006,
+      "journalArticles": 743,
+      "byInstitution": {
+        "umass": {
+          "articles": 8,
+          "share": 0.010767160161507403,
+          "controlArticles": 19,
+          "controlTotal": 8433,
+          "controlShare": 0.0022530534803747184
+        },
+        "cleveland-clinic": {
+          "articles": 7,
+          "share": 0.009421265141318977,
+          "controlArticles": 103,
+          "controlTotal": 8433,
+          "controlShare": 0.012213921498873473
+        }
+      }
+    },
+    {
+      "year": 2007,
+      "journalArticles": 854,
+      "byInstitution": {
+        "umass": {
+          "articles": 7,
+          "share": 0.00819672131147541,
+          "controlArticles": 16,
+          "controlTotal": 8248,
+          "controlShare": 0.0019398642095053346
+        },
+        "cleveland-clinic": {
+          "articles": 6,
+          "share": 0.00702576112412178,
+          "controlArticles": 97,
+          "controlTotal": 8248,
+          "controlShare": 0.01176042677012609
+        }
+      }
+    },
+    {
+      "year": 2008,
+      "journalArticles": 697,
+      "byInstitution": {
+        "umass": {
+          "articles": 1,
+          "share": 0.0014347202295552368,
+          "controlArticles": 13,
+          "controlTotal": 8436,
+          "controlShare": 0.0015410146989094358
+        },
+        "cleveland-clinic": {
+          "articles": 3,
+          "share": 0.00430416068866571,
+          "controlArticles": 85,
+          "controlTotal": 8436,
+          "controlShare": 0.010075865339023233
+        }
+      }
+    },
+    {
+      "year": 2009,
+      "journalArticles": 764,
+      "byInstitution": {
+        "umass": {
+          "articles": 4,
+          "share": 0.005235602094240838,
+          "controlArticles": 16,
+          "controlTotal": 8140,
+          "controlShare": 0.0019656019656019656
+        },
+        "cleveland-clinic": {
+          "articles": 11,
+          "share": 0.014397905759162303,
+          "controlArticles": 72,
+          "controlTotal": 8140,
+          "controlShare": 0.008845208845208846
+        }
+      }
+    },
+    {
+      "year": 2010,
+      "journalArticles": 1643,
+      "byInstitution": {
+        "umass": {
+          "articles": 5,
+          "share": 0.0030432136335970784,
+          "controlArticles": 17,
+          "controlTotal": 10199,
+          "controlShare": 0.0016668300813805275
+        },
+        "cleveland-clinic": {
+          "articles": 16,
+          "share": 0.009738283627510651,
+          "controlArticles": 76,
+          "controlTotal": 10199,
+          "controlShare": 0.007451710952054123
+        }
+      }
+    },
+    {
+      "year": 2011,
+      "journalArticles": 1750,
+      "byInstitution": {
+        "umass": {
+          "articles": 11,
+          "share": 0.006285714285714286,
+          "controlArticles": 18,
+          "controlTotal": 10401,
+          "controlShare": 0.0017306028266512836
+        },
+        "cleveland-clinic": {
+          "articles": 21,
+          "share": 0.012,
+          "controlArticles": 84,
+          "controlTotal": 10401,
+          "controlShare": 0.008076146524372656
+        }
+      }
+    },
+    {
+      "year": 2012,
+      "journalArticles": 1713,
+      "byInstitution": {
+        "umass": {
+          "articles": 8,
+          "share": 0.004670169293636894,
+          "controlArticles": 17,
+          "controlTotal": 10676,
+          "controlShare": 0.0015923566878980893
+        },
+        "cleveland-clinic": {
+          "articles": 30,
+          "share": 0.017513134851138354,
+          "controlArticles": 170,
+          "controlTotal": 10676,
+          "controlShare": 0.01592356687898089
+        }
+      }
+    },
+    {
+      "year": 2013,
+      "journalArticles": 1879,
+      "byInstitution": {
+        "umass": {
+          "articles": 14,
+          "share": 0.007450771687067589,
+          "controlArticles": 26,
+          "controlTotal": 11295,
+          "controlShare": 0.0023019034971226205
+        },
+        "cleveland-clinic": {
+          "articles": 48,
+          "share": 0.025545502927088876,
+          "controlArticles": 163,
+          "controlTotal": 11295,
+          "controlShare": 0.014431164231961044
+        }
+      }
+    },
+    {
+      "year": 2014,
+      "journalArticles": 2272,
+      "byInstitution": {
+        "umass": {
+          "articles": 17,
+          "share": 0.007482394366197183,
+          "controlArticles": 18,
+          "controlTotal": 11620,
+          "controlShare": 0.001549053356282272
+        },
+        "cleveland-clinic": {
+          "articles": 50,
+          "share": 0.022007042253521125,
+          "controlArticles": 125,
+          "controlTotal": 11620,
+          "controlShare": 0.010757314974182444
+        }
+      }
+    },
+    {
+      "year": 2015,
+      "journalArticles": 1696,
+      "byInstitution": {
+        "umass": {
+          "articles": 15,
+          "share": 0.00884433962264151,
+          "controlArticles": 25,
+          "controlTotal": 11957,
+          "controlShare": 0.0020908254578907754
+        },
+        "cleveland-clinic": {
+          "articles": 38,
+          "share": 0.02240566037735849,
+          "controlArticles": 132,
+          "controlTotal": 11957,
+          "controlShare": 0.011039558417663294
+        }
+      }
+    },
+    {
+      "year": 2016,
+      "journalArticles": 2539,
+      "byInstitution": {
+        "umass": {
+          "articles": 23,
+          "share": 0.009058684521465145,
+          "controlArticles": 26,
+          "controlTotal": 12134,
+          "controlShare": 0.0021427394099225315
+        },
+        "cleveland-clinic": {
+          "articles": 32,
+          "share": 0.01260338716029933,
+          "controlArticles": 166,
+          "controlTotal": 12134,
+          "controlShare": 0.013680567001813087
+        }
+      }
+    },
+    {
+      "year": 2017,
+      "journalArticles": 1681,
+      "byInstitution": {
+        "umass": {
+          "articles": 28,
+          "share": 0.01665675193337299,
+          "controlArticles": 32,
+          "controlTotal": 16392,
+          "controlShare": 0.0019521717911176184
+        },
+        "cleveland-clinic": {
+          "articles": 36,
+          "share": 0.021415823914336704,
+          "controlArticles": 169,
+          "controlTotal": 16392,
+          "controlShare": 0.010309907271839922
+        }
+      }
+    },
+    {
+      "year": 2018,
+      "journalArticles": 1540,
+      "byInstitution": {
+        "umass": {
+          "articles": 9,
+          "share": 0.005844155844155844,
+          "controlArticles": 31,
+          "controlTotal": 16442,
+          "controlShare": 0.001885415399586425
+        },
+        "cleveland-clinic": {
+          "articles": 36,
+          "share": 0.023376623376623377,
+          "controlArticles": 218,
+          "controlTotal": 16442,
+          "controlShare": 0.013258727648704538
+        }
+      }
+    },
+    {
+      "year": 2019,
+      "journalArticles": 2732,
+      "byInstitution": {
+        "umass": {
+          "articles": 12,
+          "share": 0.004392386530014641,
+          "controlArticles": 49,
+          "controlTotal": 15809,
+          "controlShare": 0.003099500284647985
+        },
+        "cleveland-clinic": {
+          "articles": 43,
+          "share": 0.0157393850658858,
+          "controlArticles": 223,
+          "controlTotal": 15809,
+          "controlShare": 0.014105889050540832
+        }
+      }
+    },
+    {
+      "year": 2020,
+      "journalArticles": 3578,
+      "byInstitution": {
+        "umass": {
+          "articles": 22,
+          "share": 0.006148686416992733,
+          "controlArticles": 56,
+          "controlTotal": 16636,
+          "controlShare": 0.003366193796585718
+        },
+        "cleveland-clinic": {
+          "articles": 45,
+          "share": 0.01257685858021241,
+          "controlArticles": 261,
+          "controlTotal": 16636,
+          "controlShare": 0.015688867516229863
+        }
+      }
+    },
+    {
+      "year": 2021,
+      "journalArticles": 2998,
+      "byInstitution": {
+        "umass": {
+          "articles": 7,
+          "share": 0.0023348899266177454,
+          "controlArticles": 47,
+          "controlTotal": 14373,
+          "controlShare": 0.0032700201767202394
+        },
+        "cleveland-clinic": {
+          "articles": 30,
+          "share": 0.01000667111407605,
+          "controlArticles": 199,
+          "controlTotal": 14373,
+          "controlShare": 0.013845404578028247
+        }
+      }
+    },
+    {
+      "year": 2022,
+      "journalArticles": 3318,
+      "byInstitution": {
+        "umass": {
+          "articles": 4,
+          "share": 0.0012055455093429777,
+          "controlArticles": 53,
+          "controlTotal": 14083,
+          "controlShare": 0.0037634026840871974
+        },
+        "cleveland-clinic": {
+          "articles": 18,
+          "share": 0.0054249547920434,
+          "controlArticles": 198,
+          "controlTotal": 14083,
+          "controlShare": 0.014059504366967266
+        }
+      }
+    },
+    {
+      "year": 2023,
+      "journalArticles": 4689,
+      "byInstitution": {
+        "umass": {
+          "articles": 3,
+          "share": 0.0006397952655150352,
+          "controlArticles": 43,
+          "controlTotal": 14921,
+          "controlShare": 0.002881844380403458
+        },
+        "cleveland-clinic": {
+          "articles": 20,
+          "share": 0.0042653017701002344,
+          "controlArticles": 239,
+          "controlTotal": 14921,
+          "controlShare": 0.01601769318410294
+        }
+      }
+    },
+    {
+      "year": 2024,
+      "journalArticles": 4265,
+      "byInstitution": {
+        "umass": {
+          "articles": 5,
+          "share": 0.0011723329425556857,
+          "controlArticles": 31,
+          "controlTotal": 16103,
+          "controlShare": 0.0019251071228963547
+        },
+        "cleveland-clinic": {
+          "articles": 21,
+          "share": 0.00492379835873388,
+          "controlArticles": 256,
+          "controlTotal": 16103,
+          "controlShare": 0.01589765882133764
+        }
+      }
+    }
+  ],
+  "trackedInstitutions": [
+    {
+      "id": "umass",
+      "label": "UMass Chan / UMass Memorial",
+      "members": [
+        {
+          "openAlexId": "I166722992",
+          "displayName": "University of Massachusetts Chan Medical School"
+        },
+        {
+          "openAlexId": "I4210162397",
+          "displayName": "UMass Memorial Medical Center"
+        }
+      ]
+    },
+    {
+      "id": "cleveland-clinic",
+      "label": "Cleveland Clinic",
+      "members": [
+        {
+          "openAlexId": "I1316902750",
+          "displayName": "Cleveland Clinic"
+        }
+      ]
+    }
+  ]
+}
