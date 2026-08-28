@@ -1,0 +1,57 @@
+#!/usr/bin/env node
+import { readFile } from "node:fs/promises";
+import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
+
+const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
+
+const FILES = [
+  "src/components/share-chart.tsx",
+  "src/components/journal-app.tsx",
+  "src/app/j/[id]/page.tsx",
+  "src/app/j/[id]/opengraph-image.tsx",
+  "src/app/layout.tsx",
+  "src/lib/site.ts",
+  "src/lib/takeover.ts",
+  "README.md",
+  "data/bundle-parts/meta.json",
+  "scripts/fetch-openalex.mjs",
+];
+
+const FORBIDDEN = [
+  /\bcontrol\b/i,
+  /other journals/i,
+  /\bdashed\b/i,
+  /CONTROL_LABEL/,
+];
+
+const ALLOWED = [
+  /controlArticles/,
+  /controlTotal/,
+  /controlShare/,
+];
+
+const errors = [];
+
+for (const rel of FILES) {
+  const text = await readFile(join(ROOT, rel), "utf8");
+  const lines = text.split("\n");
+  lines.forEach((line, i) => {
+    if (ALLOWED.some((re) => re.test(line)) && !/CONTROL_LABEL|other journals|dashed/i.test(line)) {
+      return;
+    }
+    for (const re of FORBIDDEN) {
+      if (re.test(line)) {
+        errors.push(`${rel}:${i + 1}: ${line.trim()}`);
+      }
+    }
+  });
+}
+
+if (errors.length) {
+  console.error("visitor-facing control copy still present:");
+  for (const e of errors) console.error(`  ${e}`);
+  process.exit(1);
+}
+
+console.log("no visitor-facing control copy in page, chart, card, or README");

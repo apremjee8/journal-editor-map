@@ -59,7 +59,7 @@ export default async function Image({ params }: { params: Promise<{ id: string }
           )}
         </div>
         <div style={{ display: "flex", fontSize: 22, color: "#6b6458" }}>
-          Control is the same institution in the other journals in this catalog.
+          Raw share of OpenAlex articles. Not a causal estimate.
         </div>
       </div>
     ),

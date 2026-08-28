@@ -2,7 +2,7 @@
 
 A web app that plots editor-in-chief tenures for twelve journals against each editor's home institution share of papers in that journal.
 
-The question is descriptive. When an editor takes over, does their institution's share of articles in that journal rise? Look at the handover table on each journal. Do not treat a rise as a result of this repo. The dashed control is the same institution's share in the other journals in this catalog that year. A bump that also appears there is more likely a field-wide shift.
+The question is descriptive. When an editor takes over, does their institution's share of articles in that journal rise? Look at the handover table on each journal. Do not treat a rise as a result of this repo.
 
 This is not a causal estimate.
 
@@ -42,7 +42,7 @@ npm run fetch-data
 npm run verify-data
 ```
 
-`scripts/fetch-openalex.mjs` walks each journal-year on the OpenAlex works API (`type=article`), caches raw cells in `data/openalex-cache.json`, and rebuilds `data/bundle.json`. It is safe to rerun. Cached cells are reused. Institution IDs used by any editor in the catalog are filled on every journal so the control series is comparable.
+`scripts/fetch-openalex.mjs` walks each journal-year on the OpenAlex works API (`type=article`), caches raw cells in `data/openalex-cache.json`, and rebuilds `data/bundle.json`. It is safe to rerun. Cached cells are reused. Institution IDs used by any editor in the catalog are filled on every journal.
 
 Editor years live in `data/editors.json`. They come from journal announcements, mastheads, and editorials. If a window is missing, the file says so. Do not invent dates to fill a gap.
 
@@ -50,7 +50,6 @@ Editor years live in `data/editors.json`. They come from journal announcements, 
 
 - Numerator: articles in that journal-year with at least one author at a member of the editor's institution group.
 - Denominator: all OpenAlex `type=article` works whose primary location is that journal (and, for JAMA Internal Medicine, Archives of Internal Medicine before the 2013 rename).
-- Control: the same numerator and denominator, summed across the other journals in this catalog.
 
 OpenAlex keeps campus and hospital records separate. Some homes are grouped on purpose (Harvard + Brigham, Weill Cornell + NewYork-Presbyterian). Inouye is plotted as Hebrew SeniorLife only. Cannistra is plotted as Beth Israel Deaconess only. OpenAlex has no separate Harvard Medical School record.
 

@@ -6,5 +6,3 @@ export function siteUrl(): string {
   if (process.env.VERCEL_URL) return `https://${process.env.VERCEL_URL}`;
   return "http://127.0.0.1:4521";
 }
-
-export const CONTROL_LABEL = "other journals in this catalog";
