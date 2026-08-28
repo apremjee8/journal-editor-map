@@ -132,10 +132,10 @@
       {
         "role": "eic",
         "name": "Sharon K. Inouye",
-        "institutionGroupId": "hebrew-seniorlife",
+        "institutionGroupId": "harvard-hms",
         "startYear": 2023,
         "endYear": null,
-        "gapReason": "She holds a Harvard Medical School appointment. OpenAlex has no separate HMS record, so the plotted home is Hebrew SeniorLife only. A Harvard-wide line would be HMS volume, not this appointment.",
+        "gapReason": "OpenAlex has no distinct Harvard Medical School record. The plotted line is Harvard University, where HMS-authored papers land. Hebrew SeniorLife is a related nonprofit and is not the plotted home.",
         "sources": [
           {
             "label": "EurekAlert, 1 Mar 2023",

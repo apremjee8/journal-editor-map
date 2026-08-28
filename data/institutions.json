@@ -1,5 +1,5 @@
 {
-  "resolvedVia": "OpenAlex GET /institutions?search=… on 2026-08-28. Groups sum related campus/hospital records that OpenAlex keeps separate.",
+  "resolvedVia": "OpenAlex GET /institutions?search=… on 2026-08-28. Groups sum related campus/hospital records that OpenAlex keeps separate. HMS search the same day: search=Harvard Medical School, display_name.search:Harvard Medical School, and ror:03wadbt59 each returned 0 hits. Accepted I136199984 (Harvard University, ror:03vek6s52) for harvard-hms. Rejected joining harvard-brigham (adds Brigham I1283280774). Rejected Hebrew SeniorLife I4210123879 as the plotted home.",
   "groups": [
     {
       "id": "johns-hopkins",
@@ -50,12 +50,12 @@
       ]
     },
     {
-      "id": "hebrew-seniorlife",
-      "label": "Hebrew SeniorLife",
+      "id": "harvard-hms",
+      "label": "Harvard / HMS",
       "members": [
         {
-          "openAlexId": "I4210123879",
-          "displayName": "Hebrew SeniorLife"
+          "openAlexId": "I136199984",
+          "displayName": "Harvard University"
         }
       ]
     },

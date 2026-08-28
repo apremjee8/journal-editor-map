@@ -3,7 +3,7 @@ export const INSTITUTION_COLORS: Record<string, string> = {
   "boston-university": "#b00020",
   "ucsf": "#0b6e4f",
   "harvard-brigham": "#a51c30",
-  "hebrew-seniorlife": "#6b4c9a",
+  "harvard-hms": "#a51c30",
   "mount-sinai": "#221f73",
   "ucsd": "#182b49",
   "utsw": "#c45c12",

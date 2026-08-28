@@ -44,6 +44,12 @@ npm run verify-data
 
 `scripts/fetch-openalex.mjs` walks each journal-year on the OpenAlex works API (`type=article`), caches raw cells in `data/openalex-cache.json`, and rebuilds `data/bundle.json`. It is safe to rerun. Cached cells are reused. Institution IDs used by any editor in the catalog are filled on every journal.
 
+To fill new institution IDs on one journal without a 12-journal refetch:
+
+```bash
+node scripts/fill-journal-institutions.mjs jama-im I136199984
+```
+
 Editor years live in `data/editors.json`. They come from journal announcements, mastheads, and editorials. If a window is missing, the file says so. Do not invent dates to fill a gap.
 
 ## What the chart counts
@@ -51,7 +57,7 @@ Editor years live in `data/editors.json`. They come from journal announcements, 
 - Numerator: articles in that journal-year with at least one author at a member of the editor's institution group.
 - Denominator: all OpenAlex `type=article` works whose primary location is that journal (and, for JAMA Internal Medicine, Archives of Internal Medicine before the 2013 rename).
 
-OpenAlex keeps campus and hospital records separate. Some homes are grouped on purpose (Harvard + Brigham, Weill Cornell + NewYork-Presbyterian). Inouye is plotted as Hebrew SeniorLife only. Cannistra is plotted as Beth Israel Deaconess only. OpenAlex has no separate Harvard Medical School record.
+OpenAlex keeps campus and hospital records separate. Some homes are grouped on purpose (Harvard + Brigham, Weill Cornell + NewYork-Presbyterian). Inouye is plotted as Harvard / HMS. OpenAlex has no distinct Harvard Medical School record, so that line is Harvard University (I136199984). Cannistra is plotted as Beth Israel Deaconess only.
 
 ## Layout
 
