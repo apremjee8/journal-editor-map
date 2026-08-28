@@ -1,1 +1,147 @@
-LOAD_FROM_DISK_ajrccm
+{
+  "journal": {
+    "id": "ajrccm",
+    "name": "American Journal of Respiratory and Critical Care Medicine",
+    "shortName": "AJRCCM",
+    "openAlexId": "S93356601",
+    "issnL": "1073-449X",
+    "issns": [
+      "1073-449X",
+      "1535-4970"
+    ],
+    "predecessorOpenAlexIds": [],
+    "firstYear": 2000,
+    "notes": [
+      "ATS flagship. Not AJRCMB or Annals of the American Thoracic Society."
+    ]
+  },
+  "editors": [
+    {
+      "role": "eic",
+      "name": "Martin J. Tobin",
+      "institutionGroupId": "loyola",
+      "startYear": 1999,
+      "endYear": 2004,
+      "sources": [
+        {
+          "label": "Leff, Martin Tobin, Editor-Designate, AJRCCM 1999",
+          "url": "https://doi.org/10.1164/ajrccm.159.2.15920",
+          "quote": "Martin Tobin, Editor-Designate."
+        },
+        {
+          "label": "Critical Care Canada Forum speaker page",
+          "url": "https://criticalcarecanada.com/speaker/dr-martin-tobin/",
+          "quote": "Since 1990, he has served as professor of medicine at Hines VA Hospital and Loyola University Medical School in Chicago. \u2026 Between 1999 and 2004, Dr. Tobin served as Editor-in-Chief of the American Journal of Respiratory and Critical Care Medicine."
+        }
+      ]
+    },
+    {
+      "role": "eic",
+      "name": "Edward Abraham",
+      "institutionGroupId": "colorado-denver",
+      "startYear": 2004,
+      "endYear": 2009,
+      "gapReason": "Appointment home is University of Colorado Health Sciences Center. OpenAlex keeps that volume on the University of Colorado Denver record. He later moved to UAB. The plotted line stays Colorado.",
+      "sources": [
+        {
+          "label": "Abraham, The AJRCCM in 2005",
+          "url": "https://doi.org/10.1164/rccm.2411001",
+          "quote": "The AJRCCM in 2005."
+        },
+        {
+          "label": "Critical care in AJRCCM 2004, PubMed affiliation",
+          "url": "https://doi.org/10.1164/rccm.2412004",
+          "quote": "Division of Pulmonary Sciences and Critical Care Medicine, University of Colorado Health Sciences Center, Denver, CO."
+        },
+        {
+          "label": "Abraham farewell, Nov 2009",
+          "url": "https://doi.org/10.1164/rccm.200910-1489ed",
+          "quote": "A Fond Farewell to a Most Remarkable Experience."
+        }
+      ]
+    },
+    {
+      "role": "eic",
+      "name": "Jacob Iasha Sznajder",
+      "institutionGroupId": "northwestern",
+      "startYear": 2010,
+      "endYear": 2014,
+      "gapReason": "His Dec 2014 farewell says he served the past 5 years, which plots as 2010\u20132014. An ATS about page later wrote 2009\u20132014. The farewell is used here. The 2009 start is not invented to fill the conflict.",
+      "sources": [
+        {
+          "label": "Sznajder, Time to pass the baton, 15 Dec 2014",
+          "url": "https://doi.org/10.1164/rccm.201411-2085ED",
+          "quote": "As I complete the tenure of editorship for the Blue Journal in December 2014, I am grateful for the privilege to have served in this capacity for the past 5 years."
+        }
+      ]
+    },
+    {
+      "role": "eic",
+      "name": "Jadwiga A. Wedzicha",
+      "institutionGroupId": "imperial",
+      "startYear": 2015,
+      "endYear": 2021,
+      "sources": [
+        {
+          "label": "ATS / Newswise, 27 May 2014",
+          "url": "https://www.newswise.com/articles/jadwiga-wedzicha-appointed-the-next-ajrccm-editor-in-chief",
+          "quote": "Dr. Wedzicha\u2019s term begins on January 1, 2015. \u2026 clinical chair in Respiratory Medicine at the Imperial College London."
+        },
+        {
+          "label": "Sznajder farewell, 15 Dec 2014",
+          "url": "https://doi.org/10.1164/rccm.201411-2085ED",
+          "quote": "We wish Dr. Jadwiga (Wisia) Wedzicha and her editorial team a successful journey at the helm of the Blue Journal."
+        }
+      ]
+    },
+    {
+      "role": "eic",
+      "name": "Fernando J. Martinez",
+      "institutionGroupId": "weill-cornell",
+      "startYear": 2022,
+      "endYear": null,
+      "gapReason": "Opening editorial lists Weill Cornell. He joined UMass Chan in July 2024. The plotted line stays the appointment home and does not switch mid-tenure.",
+      "sources": [
+        {
+          "label": "Martinez opening editorial, 31 Dec 2021",
+          "url": "https://doi.org/10.1164/rccm.202111-2650ed",
+          "quote": "Fernando J. Martinez (Weill Cornell Medical College, New York, New York)."
+        }
+      ]
+    }
+  ],
+  "series": [
+    {"year": 2000, "journalArticles": 829, "byInstitution": {"loyola": {"articles": 1, "share": 0.0012062726176115801, "controlArticles": 5, "controlTotal": 9072, "controlShare": 0.0005511463844797178}, "colorado-denver": {"articles": 13, "share": 0.015681544028950542, "controlArticles": 28, "controlTotal": 9072, "controlShare": 0.0030864197530864196}, "northwestern": {"articles": 5, "share": 0.006031363088057901, "controlArticles": 24, "controlTotal": 9072, "controlShare": 0.0026455026455026454}, "imperial": {"articles": 9, "share": 0.010856453558504222, "controlArticles": 17, "controlTotal": 9072, "controlShare": 0.0018738977072310405}, "weill-cornell": {"articles": 0, "share": 0, "controlArticles": 29, "controlTotal": 9072, "controlShare": 0.003196649029982363}}},
+    {"year": 2001, "journalArticles": 743, "byInstitution": {"loyola": {"articles": 1, "share": 0.0013458950201884253, "controlArticles": 4, "controlTotal": 11602, "controlShare": 0.0003447681434235477}, "colorado-denver": {"articles": 15, "share": 0.020188425302826378, "controlArticles": 35, "controlTotal": 11602, "controlShare": 0.003016721254956042}, "northwestern": {"articles": 4, "share": 0.005383580080753701, "controlArticles": 22, "controlTotal": 11602, "controlShare": 0.001896224788829512}, "imperial": {"articles": 4, "share": 0.005383580080753701, "controlArticles": 14, "controlTotal": 11602, "controlShare": 0.0012066885019824168}, "weill-cornell": {"articles": 0, "share": 0, "controlArticles": 16, "controlTotal": 11602, "controlShare": 0.0013790725736941907}}},
+    {"year": 2002, "journalArticles": 601, "byInstitution": {"loyola": {"articles": 0, "share": 0, "controlArticles": 3, "controlTotal": 11669, "controlShare": 0.00025709143885508615}, "colorado-denver": {"articles": 12, "share": 0.019966722129783693, "controlArticles": 29, "controlTotal": 11669, "controlShare": 0.0024852172422658325}, "northwestern": {"articles": 1, "share": 0.0016638935108153079, "controlArticles": 44, "controlTotal": 11669, "controlShare": 0.003770674436541263}, "imperial": {"articles": 10, "share": 0.016638935108153077, "controlArticles": 18, "controlTotal": 11669, "controlShare": 0.0015425486331305167}, "weill-cornell": {"articles": 1, "share": 0.0016638935108153079, "controlArticles": 18, "controlTotal": 11669, "controlShare": 0.0015425486331305167}}},
+    {"year": 2003, "journalArticles": 603, "byInstitution": {"loyola": {"articles": 0, "share": 0, "controlArticles": 10, "controlTotal": 12557, "controlShare": 0.0007963685593692761}, "colorado-denver": {"articles": 16, "share": 0.026533996683250415, "controlArticles": 59, "controlTotal": 12557, "controlShare": 0.004698574500278729}, "northwestern": {"articles": 4, "share": 0.006633499170812604, "controlArticles": 59, "controlTotal": 12557, "controlShare": 0.004698574500278729}, "imperial": {"articles": 8, "share": 0.013266998341625208, "controlArticles": 21, "controlTotal": 12557, "controlShare": 0.0016723739746754799}, "weill-cornell": {"articles": 1, "share": 0.001658374792703151, "controlArticles": 17, "controlTotal": 12557, "controlShare": 0.0013538265509277694}}},
+    {"year": 2004, "journalArticles": 531, "byInstitution": {"loyola": {"articles": 0, "share": 0, "controlArticles": 8, "controlTotal": 11288, "controlShare": 0.0007087172218284905}, "colorado-denver": {"articles": 18, "share": 0.03389830508474576, "controlArticles": 41, "controlTotal": 11288, "controlShare": 0.0036321757618710134}, "northwestern": {"articles": 6, "share": 0.011299435028248588, "controlArticles": 58, "controlTotal": 11288, "controlShare": 0.005138199858256556}, "imperial": {"articles": 7, "share": 0.013182674199623353, "controlArticles": 25, "controlTotal": 11288, "controlShare": 0.0022147413182140325}, "weill-cornell": {"articles": 0, "share": 0, "controlArticles": 22, "controlTotal": 11288, "controlShare": 0.0019489723600283487}}},
+    {"year": 2005, "journalArticles": 548, "byInstitution": {"loyola": {"articles": 0, "share": 0, "controlArticles": 4, "controlTotal": 9902, "controlShare": 0.0004039587962027873}, "colorado-denver": {"articles": 28, "share": 0.051094890510948905, "controlArticles": 64, "controlTotal": 9902, "controlShare": 0.006463340739244597}, "northwestern": {"articles": 2, "share": 0.0036496350364963502, "controlArticles": 47, "controlTotal": 9902, "controlShare": 0.004746515855382751}, "imperial": {"articles": 14, "share": 0.025547445255474453, "controlArticles": 35, "controlTotal": 9902, "controlShare": 0.003534639466774389}, "weill-cornell": {"articles": 1, "share": 0.0018248175182481751, "controlArticles": 28, "controlTotal": 9902, "controlShare": 0.002827711573419511}}},
+    {"year": 2006, "journalArticles": 481, "byInstitution": {"loyola": {"articles": 0, "share": 0, "controlArticles": 1, "controlTotal": 8695, "controlShare": 0.00011500862564692352}, "colorado-denver": {"articles": 18, "share": 0.037422037422037424, "controlArticles": 55, "controlTotal": 8695, "controlShare": 0.0063254744105807935}, "northwestern": {"articles": 4, "share": 0.008316008316008316, "controlArticles": 51, "controlTotal": 8695, "controlShare": 0.005865439907993099}, "imperial": {"articles": 16, "share": 0.033264033264033266, "controlArticles": 35, "controlTotal": 8695, "controlShare": 0.0040253018976423235}, "weill-cornell": {"articles": 2, "share": 0.004158004158004158, "controlArticles": 18, "controlTotal": 8695, "controlShare": 0.0020701552616446232}}},
+    {"year": 2007, "journalArticles": 485, "byInstitution": {"loyola": {"articles": 0, "share": 0, "controlArticles": 5, "controlTotal": 8617, "controlShare": 0.0005802483462922131}, "colorado-denver": {"articles": 31, "share": 0.06391752577319587, "controlArticles": 53, "controlTotal": 8617, "controlShare": 0.006150632470697459}, "northwestern": {"articles": 2, "share": 0.004123711340206186, "controlArticles": 62, "controlTotal": 8617, "controlShare": 0.007195079494023442}, "imperial": {"articles": 18, "share": 0.03711340206185567, "controlArticles": 35, "controlTotal": 8617, "controlShare": 0.004061738424045491}, "weill-cornell": {"articles": 1, "share": 0.002061855670103093, "controlArticles": 8, "controlTotal": 8617, "controlShare": 0.0009283973540675409}}},
+    {"year": 2008, "journalArticles": 468, "byInstitution": {"loyola": {"articles": 2, "share": 0.004273504273504274, "controlArticles": 5, "controlTotal": 8665, "controlShare": 0.0005770340450086555}, "colorado-denver": {"articles": 28, "share": 0.05982905982905983, "controlArticles": 57, "controlTotal": 8665, "controlShare": 0.006578188113098673}, "northwestern": {"articles": 3, "share": 0.00641025641025641, "controlArticles": 52, "controlTotal": 8665, "controlShare": 0.006001154068090017}, "imperial": {"articles": 15, "share": 0.03205128205128205, "controlArticles": 44, "controlTotal": 8665, "controlShare": 0.005077899596076169}, "weill-cornell": {"articles": 0, "share": 0, "controlArticles": 17, "controlTotal": 8665, "controlShare": 0.0019619157530294286}}},
+    {"year": 2009, "journalArticles": 464, "byInstitution": {"loyola": {"articles": 0, "share": 0, "controlArticles": 5, "controlTotal": 8440, "controlShare": 0.0005924170616113745}, "colorado-denver": {"articles": 20, "share": 0.04310344827586207, "controlArticles": 66, "controlTotal": 8440, "controlShare": 0.007819905213270141}, "northwestern": {"articles": 1, "share": 0.0021551724137931034, "controlArticles": 68, "controlTotal": 8440, "controlShare": 0.008056872037914692}, "imperial": {"articles": 15, "share": 0.032327586206896554, "controlArticles": 48, "controlTotal": 8440, "controlShare": 0.005687203791469194}, "weill-cornell": {"articles": 0, "share": 0, "controlArticles": 19, "controlTotal": 8440, "controlShare": 0.0022511848341232226}}},
+    {"year": 2010, "journalArticles": 516, "byInstitution": {"loyola": {"articles": 1, "share": 0.001937984496124031, "controlArticles": 8, "controlTotal": 11326, "controlShare": 0.0007063393960798164}, "colorado-denver": {"articles": 31, "share": 0.060077519379844964, "controlArticles": 59, "controlTotal": 11326, "controlShare": 0.0052092530460886455}, "northwestern": {"articles": 11, "share": 0.02131782945736434, "controlArticles": 50, "controlTotal": 11326, "controlShare": 0.004414621225498852}, "imperial": {"articles": 12, "share": 0.023255813953488372, "controlArticles": 37, "controlTotal": 11326, "controlShare": 0.0032668197068691507}, "weill-cornell": {"articles": 0, "share": 0, "controlArticles": 16, "controlTotal": 11326, "controlShare": 0.0014126787921596327}}},
+    {"year": 2011, "journalArticles": 548, "byInstitution": {"loyola": {"articles": 0, "share": 0, "controlArticles": 1, "controlTotal": 11603, "controlShare": 8.618460742911317e-05}, "colorado-denver": {"articles": 26, "share": 0.04744525547445255, "controlArticles": 83, "controlTotal": 11603, "controlShare": 0.007153322416616393}, "northwestern": {"articles": 16, "share": 0.029197080291970802, "controlArticles": 63, "controlTotal": 11603, "controlShare": 0.005429630268034129}, "imperial": {"articles": 19, "share": 0.03467153284671533, "controlArticles": 59, "controlTotal": 11603, "controlShare": 0.005084891838317677}, "weill-cornell": {"articles": 0, "share": 0, "controlArticles": 33, "controlTotal": 11603, "controlShare": 0.0028440920451607344}}},
+    {"year": 2012, "journalArticles": 565, "byInstitution": {"loyola": {"articles": 1, "share": 0.0017699115044247787, "controlArticles": 11, "controlTotal": 11824, "controlShare": 0.0009303112313937754}, "colorado-denver": {"articles": 33, "share": 0.0584070796460177, "controlArticles": 95, "controlTotal": 11824, "controlShare": 0.008034506089309877}, "northwestern": {"articles": 14, "share": 0.024778761061946902, "controlArticles": 100, "controlTotal": 11824, "controlShare": 0.008457374830852503}, "imperial": {"articles": 18, "share": 0.03185840707964602, "controlArticles": 56, "controlTotal": 11824, "controlShare": 0.004736129905277402}, "weill-cornell": {"articles": 1, "share": 0.0017699115044247787, "controlArticles": 41, "controlTotal": 11824, "controlShare": 0.0034675236806495265}}},
+    {"year": 2013, "journalArticles": 556, "byInstitution": {"loyola": {"articles": 0, "share": 0, "controlArticles": 5, "controlTotal": 12618, "controlShare": 0.0003962593120938342}, "colorado-denver": {"articles": 24, "share": 0.04316546762589928, "controlArticles": 108, "controlTotal": 12618, "controlShare": 0.008559201141226819}, "northwestern": {"articles": 20, "share": 0.03597122302158273, "controlArticles": 104, "controlTotal": 12618, "controlShare": 0.008242193691551752}, "imperial": {"articles": 11, "share": 0.019784172661870502, "controlArticles": 90, "controlTotal": 12618, "controlShare": 0.007132667617689016}, "weill-cornell": {"articles": 0, "share": 0, "controlArticles": 40, "controlTotal": 12618, "controlShare": 0.0031700744967506737}}},
+    {"year": 2014, "journalArticles": 621, "byInstitution": {"loyola": {"articles": 1, "share": 0.001610305958132045, "controlArticles": 5, "controlTotal": 13271, "controlShare": 0.00037676135935498455}, "colorado-denver": {"articles": 33, "share": 0.05314009661835749, "controlArticles": 112, "controlTotal": 13271, "controlShare": 0.008439454449551654}, "northwestern": {"articles": 20, "share": 0.0322061191626409, "controlArticles": 106, "controlTotal": 13271, "controlShare": 0.007987340818325672}, "imperial": {"articles": 17, "share": 0.027375201288244767, "controlArticles": 78, "controlTotal": 13271, "controlShare": 0.005877477205937759}, "weill-cornell": {"articles": 3, "share": 0.004830917874396135, "controlArticles": 50, "controlTotal": 13271, "controlShare": 0.0037676135935498455}}},
+    {"year": 2015, "journalArticles": 656, "byInstitution": {"loyola": {"articles": 0, "share": 0, "controlArticles": 10, "controlTotal": 12997, "controlShare": 0.0007694083249980765}, "colorado-denver": {"articles": 31, "share": 0.04725609756097561, "controlArticles": 114, "controlTotal": 12997, "controlShare": 0.008771254904978073}, "northwestern": {"articles": 12, "share": 0.018292682926829267, "controlArticles": 116, "controlTotal": 12997, "controlShare": 0.008925136569977687}, "imperial": {"articles": 15, "share": 0.022865853658536585, "controlArticles": 91, "controlTotal": 12997, "controlShare": 0.007001615757482496}, "weill-cornell": {"articles": 7, "share": 0.010670731707317074, "controlArticles": 60, "controlTotal": 12997, "controlShare": 0.0046164499499884585}}},
+    {"year": 2016, "journalArticles": 548, "byInstitution": {"loyola": {"articles": 1, "share": 0.0018248175182481751, "controlArticles": 3, "controlTotal": 14125, "controlShare": 0.00021238938053097346}, "colorado-denver": {"articles": 31, "share": 0.05656934306569343, "controlArticles": 114, "controlTotal": 14125, "controlShare": 0.008070796460176992}, "northwestern": {"articles": 10, "share": 0.01824817518248175, "controlArticles": 147, "controlTotal": 14125, "controlShare": 0.010407079646017699}, "imperial": {"articles": 29, "share": 0.05291970802919708, "controlArticles": 99, "controlTotal": 14125, "controlShare": 0.007008849557522124}, "weill-cornell": {"articles": 3, "share": 0.005474452554744526, "controlArticles": 81, "controlTotal": 14125, "controlShare": 0.005734513274336283}}},
+    {"year": 2017, "journalArticles": 740, "byInstitution": {"loyola": {"articles": 2, "share": 0.002702702702702703, "controlArticles": 9, "controlTotal": 17333, "controlShare": 0.0005192407546298967}, "colorado-denver": {"articles": 42, "share": 0.05675675675675676, "controlArticles": 112, "controlTotal": 17333, "controlShare": 0.0064616627242831595}, "northwestern": {"articles": 12, "share": 0.016216216216216217, "controlArticles": 169, "controlTotal": 17333, "controlShare": 0.009750187503605838}, "imperial": {"articles": 46, "share": 0.062162162162162166, "controlArticles": 185, "controlTotal": 17333, "controlShare": 0.010673282178503433}, "weill-cornell": {"articles": 11, "share": 0.014864864864864866, "controlArticles": 87, "controlTotal": 17333, "controlShare": 0.005019327294755668}}},
+    {"year": 2018, "journalArticles": 655, "byInstitution": {"loyola": {"articles": 1, "share": 0.0015267175572519084, "controlArticles": 12, "controlTotal": 17327, "controlShare": 0.0006925607433485312}, "colorado-denver": {"articles": 36, "share": 0.0549618320610687, "controlArticles": 114, "controlTotal": 17327, "controlShare": 0.006579327061811046}, "northwestern": {"articles": 15, "share": 0.022900763358778626, "controlArticles": 186, "controlTotal": 17327, "controlShare": 0.010734691521902234}, "imperial": {"articles": 36, "share": 0.0549618320610687, "controlArticles": 217, "controlTotal": 17327, "controlShare": 0.012523806775552605}, "weill-cornell": {"articles": 10, "share": 0.015267175572519083, "controlArticles": 119, "controlTotal": 17327, "controlShare": 0.006867894038206267}}},
+    {"year": 2019, "journalArticles": 555, "byInstitution": {"loyola": {"articles": 1, "share": 0.0018018018018018018, "controlArticles": 21, "controlTotal": 17986, "controlShare": 0.0011675747803847436}, "colorado-denver": {"articles": 30, "share": 0.05405405405405406, "controlArticles": 152, "controlTotal": 17986, "controlShare": 0.008451017458022906}, "northwestern": {"articles": 8, "share": 0.014414414414414415, "controlArticles": 173, "controlTotal": 17986, "controlShare": 0.00961859223840765}, "imperial": {"articles": 36, "share": 0.06486486486486487, "controlArticles": 222, "controlTotal": 17986, "controlShare": 0.012342933392638719}, "weill-cornell": {"articles": 11, "share": 0.01981981981981982, "controlArticles": 137, "controlTotal": 17986, "controlShare": 0.007617035472033804}}},
+    {"year": 2020, "journalArticles": 730, "byInstitution": {"loyola": {"articles": 4, "share": 0.005479452054794521, "controlArticles": 19, "controlTotal": 19484, "controlShare": 0.00097515910490659}, "colorado-denver": {"articles": 41, "share": 0.056164383561643834, "controlArticles": 170, "controlTotal": 19484, "controlShare": 0.008725107780743174}, "northwestern": {"articles": 11, "share": 0.015068493150684932, "controlArticles": 215, "controlTotal": 19484, "controlShare": 0.011034695134469308}, "imperial": {"articles": 41, "share": 0.056164383561643834, "controlArticles": 203, "controlTotal": 19484, "controlShare": 0.010418805173475673}, "weill-cornell": {"articles": 21, "share": 0.028767123287671233, "controlArticles": 171, "controlTotal": 19484, "controlShare": 0.008776431944159311}}},
+    {"year": 2021, "journalArticles": 507, "byInstitution": {"loyola": {"articles": 1, "share": 0.0019723865877712033, "controlArticles": 8, "controlTotal": 16864, "controlShare": 0.0004743833017077799}, "colorado-denver": {"articles": 26, "share": 0.05128205128205128, "controlArticles": 175, "controlTotal": 16864, "controlShare": 0.010377134724857686}, "northwestern": {"articles": 11, "share": 0.021696252465483234, "controlArticles": 196, "controlTotal": 16864, "controlShare": 0.011622390891840606}, "imperial": {"articles": 27, "share": 0.05325443786982249, "controlArticles": 174, "controlTotal": 16864, "controlShare": 0.010317836812144213}, "weill-cornell": {"articles": 15, "share": 0.029585798816568046, "controlArticles": 133, "controlTotal": 16864, "controlShare": 0.00788662239089184}}},
+    {"year": 2022, "journalArticles": 586, "byInstitution": {"loyola": {"articles": 2, "share": 0.0034129692832764505, "controlArticles": 9, "controlTotal": 16815, "controlShare": 0.0005352363960749331}, "colorado-denver": {"articles": 29, "share": 0.04948805460750853, "controlArticles": 148, "controlTotal": 16815, "controlShare": 0.0088016651798989}, "northwestern": {"articles": 9, "share": 0.015358361774744027, "controlArticles": 184, "controlTotal": 16815, "controlShare": 0.010942610764198632}, "imperial": {"articles": 50, "share": 0.08532423208191127, "controlArticles": 162, "controlTotal": 16815, "controlShare": 0.009634255129348795}, "weill-cornell": {"articles": 11, "share": 0.01877133105802048, "controlArticles": 95, "controlTotal": 16815, "controlShare": 0.005649717514124294}}},
+    {"year": 2023, "journalArticles": 538, "byInstitution": {"loyola": {"articles": 0, "share": 0, "controlArticles": 8, "controlTotal": 19072, "controlShare": 0.00041946308724832214}, "colorado-denver": {"articles": 43, "share": 0.07992565055762081, "controlArticles": 133, "controlTotal": 19072, "controlShare": 0.006973573825503356}, "northwestern": {"articles": 10, "share": 0.01858736059479554, "controlArticles": 190, "controlTotal": 19072, "controlShare": 0.00996224832214765}, "imperial": {"articles": 33, "share": 0.06133828996282528, "controlArticles": 152, "controlTotal": 19072, "controlShare": 0.007969798657718121}, "weill-cornell": {"articles": 16, "share": 0.02973977695167286, "controlArticles": 107, "controlTotal": 19072, "controlShare": 0.0056103187919463084}}},
+    {"year": 2024, "journalArticles": 571, "byInstitution": {"loyola": {"articles": 6, "share": 0.010507880910683012, "controlArticles": 8, "controlTotal": 19797, "controlShare": 0.0004041016315603374}, "colorado-denver": {"articles": 40, "share": 0.07005253940455342, "controlArticles": 129, "controlTotal": 19797, "controlShare": 0.006516138808910441}, "northwestern": {"articles": 6, "share": 0.010507880910683012, "controlArticles": 201, "controlTotal": 19797, "controlShare": 0.010153053492953477}, "imperial": {"articles": 45, "share": 0.07880910683012259, "controlArticles": 171, "controlTotal": 19797, "controlShare": 0.008637672374602213}, "weill-cornell": {"articles": 28, "share": 0.04903677758318739, "controlArticles": 104, "controlTotal": 19797, "controlShare": 0.005253321210284386}}}
+  ],
+  "trackedInstitutions": [
+    {"id": "loyola", "label": "Loyola University Chicago", "members": [{"openAlexId": "I1925986", "displayName": "Loyola University Chicago"}]},
+    {"id": "colorado-denver", "label": "University of Colorado Denver", "members": [{"openAlexId": "I921990950", "displayName": "University of Colorado Denver"}]},
+    {"id": "northwestern", "label": "Northwestern", "members": [{"openAlexId": "I111979921", "displayName": "Northwestern University"}]},
+    {"id": "imperial", "label": "Imperial College London", "members": [{"openAlexId": "I47508984", "displayName": "Imperial College London"}]},
+    {"id": "weill-cornell", "label": "Weill Cornell / NYP", "members": [{"openAlexId": "I4387153466", "displayName": "Weill Cornell Medicine"}, {"openAlexId": "I1340179700", "displayName": "NewYork\u2013Presbyterian Hospital"}]}
+  ]
+}
