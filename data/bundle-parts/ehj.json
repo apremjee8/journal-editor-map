@@ -1,18 +1,1 @@
-{
-  "journal": {
-    "id": "ehj",
-    "name": "European Heart Journal",
-    "shortName": "Eur Heart J",
-    "openAlexId": "S181568219",
-    "issnL": "0195-668X",
-    "issns": [
-      "0195-668X",
-      "1522-9645"
-    ],
-    "predecessorOpenAlexIds": [],
-    "firstYear": 2000,
-    "notes": [
-      "Not EHJ Cardiovascular Imaging or the other EHJ sister titles."
-    ]
-  }
-}
+LOAD_FROM_DISK_ehj

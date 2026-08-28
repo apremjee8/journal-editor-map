@@ -1,18 +1,1 @@
-{
-  "journal": {
-    "id": "ajrccm",
-    "name": "American Journal of Respiratory and Critical Care Medicine",
-    "shortName": "AJRCCM",
-    "openAlexId": "S93356601",
-    "issnL": "1073-449X",
-    "issns": [
-      "1073-449X",
-      "1535-4970"
-    ],
-    "predecessorOpenAlexIds": [],
-    "firstYear": 2000,
-    "notes": [
-      "ATS flagship. Not AJRCMB or Annals of the American Thoracic Society."
-    ]
-  }
-}
+LOAD_FROM_DISK_ajrccm
