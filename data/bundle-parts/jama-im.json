@@ -1,0 +1,990 @@
+{
+  "journal": {
+    "id": "jama-im",
+    "name": "JAMA Internal Medicine",
+    "shortName": "JAMA Intern Med",
+    "openAlexId": "S65364685",
+    "issnL": "2168-6106",
+    "issns": [
+      "2168-6106",
+      "2168-6114"
+    ],
+    "predecessorOpenAlexIds": [
+      "S4210206803"
+    ],
+    "predecessorNote": "OpenAlex splits the 2013 rename. Archives of Internal Medicine (S4210206803, issn_l 0003-9926) holds almost all pre-2013 articles; JAMA Internal Medicine (S65364685) holds 2013 onward. Counts for this journal sum both sources.",
+    "firstYear": 2000,
+    "notes": [
+      "Renamed from Archives of Internal Medicine in 2013. Year counts without the predecessor source collapse before 2013."
+    ]
+  },
+  "editors": [
+    {
+      "role": "eic",
+      "name": "James E. Dalen",
+      "institutionGroupId": "arizona",
+      "startYear": 1988,
+      "endYear": 2003,
+      "gapReason": "Sources conflict on whether he started in 1987 or 1988. He was EIC through 31 December 2003. The chart window starts in 2000.",
+      "sources": [
+        {
+          "label": "Northwestern news, 1 Nov 2003",
+          "url": "https://news.feinberg.northwestern.edu/2003/11/01/greenland/",
+          "quote": "Greenland named chief editor effective January 1, 2004; immediate predecessor, Dr. Jim Dalen."
+        },
+        {
+          "label": "University of Arizona Health Sciences, 2024",
+          "url": "https://medicine.arizona.edu/news/2024/loss-family-uarizona-health-sciences-colleges-medicine-public-health",
+          "quote": "served as editor of the prestigious Archives of Internal Medicine (1988-2004), now JAMA Internal Medicine."
+        }
+      ]
+    },
+    {
+      "role": "eic",
+      "name": "Philip Greenland",
+      "institutionGroupId": "northwestern",
+      "startYear": 2004,
+      "endYear": 2008,
+      "sources": [
+        {
+          "label": "Northwestern news, 1 Nov 2003",
+          "url": "https://news.feinberg.northwestern.edu/2003/11/01/greenland/",
+          "quote": "has been named chief editor of the Archives of Internal Medicine effective January 1, 2004; Dingman Professor of Cardiology and chair of the Department of Preventive Medicine at the Feinberg School."
+        },
+        {
+          "label": "Northwestern news, 14 Nov 2016",
+          "url": "https://news.feinberg.northwestern.edu/2016/11/14/greenland-honored-by-acp-and-aamc-for-contributions-to-preventive-cardiology/",
+          "quote": "From 2004 to 2008, he served as editor-in-chief of the Archives of Internal Medicine."
+        }
+      ]
+    },
+    {
+      "role": "eic",
+      "name": "Rita F. Redberg",
+      "institutionGroupId": "ucsf",
+      "startYear": 2009,
+      "endYear": 2023,
+      "sources": [
+        {
+          "label": "AMA, new editor announcement",
+          "url": "https://www.ama-assn.org/about/publications-newsletters/new-editor-these-4-priorities-will-drive-jama-internal-medicine",
+          "quote": "She succeeds Rita F. Redberg, MD, who has served as editor-in-chief of JAMA Internal Medicine since 2009."
+        },
+        {
+          "label": "UCSF Profiles",
+          "url": "https://profiles.ucsf.edu/rita.redberg",
+          "quote": "She was the Editor-in-Chief of JAMA Internal Medicine from 2009 - 2023."
+        }
+      ]
+    },
+    {
+      "role": "eic",
+      "name": "Sharon K. Inouye",
+      "institutionGroupId": "hebrew-seniorlife",
+      "startYear": 2023,
+      "endYear": null,
+      "gapReason": "She holds a Harvard Medical School appointment. OpenAlex has no separate HMS record, so the plotted home is Hebrew SeniorLife only. A Harvard-wide line would be HMS volume, not this appointment.",
+      "sources": [
+        {
+          "label": "EurekAlert, 1 Mar 2023",
+          "url": "https://www.eurekalert.org/news-releases/981147",
+          "quote": "Sharon K. Inouye, Professor of Medicine at Harvard Medical School and Director of the Aging Brain Center, Marcus Institute for Aging Research at Hebrew SeniorLife\u2026 will assume this position on July 1, 2023."
+        }
+      ]
+    }
+  ],
+  "series": [
+    {
+      "year": 2000,
+      "journalArticles": 636,
+      "byInstitution": {
+        "arizona": {
+          "articles": 5,
+          "share": 0.007861635220125786,
+          "controlArticles": 27,
+          "controlTotal": 9265,
+          "controlShare": 0.0029141932002158663
+        },
+        "northwestern": {
+          "articles": 0,
+          "share": 0,
+          "controlArticles": 29,
+          "controlTotal": 9265,
+          "controlShare": 0.0031300593631948194
+        },
+        "ucsf": {
+          "articles": 8,
+          "share": 0.012578616352201259,
+          "controlArticles": 74,
+          "controlTotal": 9265,
+          "controlShare": 0.007987048030221263
+        },
+        "hebrew-seniorlife": {
+          "articles": 0,
+          "share": 0,
+          "controlArticles": 1,
+          "controlTotal": 9265,
+          "controlShare": 0.00010793308148947653
+        }
+      }
+    },
+    {
+      "year": 2001,
+      "journalArticles": 612,
+      "byInstitution": {
+        "arizona": {
+          "articles": 2,
+          "share": 0.0032679738562091504,
+          "controlArticles": 20,
+          "controlTotal": 11733,
+          "controlShare": 0.001704593880507969
+        },
+        "northwestern": {
+          "articles": 1,
+          "share": 0.0016339869281045752,
+          "controlArticles": 25,
+          "controlTotal": 11733,
+          "controlShare": 0.0021307423506349613
+        },
+        "ucsf": {
+          "articles": 2,
+          "share": 0.0032679738562091504,
+          "controlArticles": 75,
+          "controlTotal": 11733,
+          "controlShare": 0.0063922270519048835
+        },
+        "hebrew-seniorlife": {
+          "articles": 0,
+          "share": 0,
+          "controlArticles": 3,
+          "controlTotal": 11733,
+          "controlShare": 0.00025568908207619537
+        }
+      }
+    },
+    {
+      "year": 2002,
+      "journalArticles": 582,
+      "byInstitution": {
+        "arizona": {
+          "articles": 5,
+          "share": 0.00859106529209622,
+          "controlArticles": 17,
+          "controlTotal": 11688,
+          "controlShare": 0.0014544832306639288
+        },
+        "northwestern": {
+          "articles": 1,
+          "share": 0.001718213058419244,
+          "controlArticles": 44,
+          "controlTotal": 11688,
+          "controlShare": 0.0037645448323066393
+        },
+        "ucsf": {
+          "articles": 7,
+          "share": 0.012027491408934709,
+          "controlArticles": 92,
+          "controlTotal": 11688,
+          "controlShare": 0.00787132101300479
+        },
+        "hebrew-seniorlife": {
+          "articles": 0,
+          "share": 0,
+          "controlArticles": 2,
+          "controlTotal": 11688,
+          "controlShare": 0.00017111567419575633
+        }
+      }
+    },
+    {
+      "year": 2003,
+      "journalArticles": 650,
+      "byInstitution": {
+        "arizona": {
+          "articles": 2,
+          "share": 0.003076923076923077,
+          "controlArticles": 17,
+          "controlTotal": 12510,
+          "controlShare": 0.0013589128697042367
+        },
+        "northwestern": {
+          "articles": 4,
+          "share": 0.006153846153846154,
+          "controlArticles": 59,
+          "controlTotal": 12510,
+          "controlShare": 0.0047162270183852915
+        },
+        "ucsf": {
+          "articles": 8,
+          "share": 0.012307692307692308,
+          "controlArticles": 90,
+          "controlTotal": 12510,
+          "controlShare": 0.007194244604316547
+        },
+        "hebrew-seniorlife": {
+          "articles": 0,
+          "share": 0,
+          "controlArticles": 3,
+          "controlTotal": 12510,
+          "controlShare": 0.00023980815347721823
+        }
+      }
+    },
+    {
+      "year": 2004,
+      "journalArticles": 521,
+      "byInstitution": {
+        "arizona": {
+          "articles": 3,
+          "share": 0.005758157389635317,
+          "controlArticles": 26,
+          "controlTotal": 11298,
+          "controlShare": 0.002301292264117543
+        },
+        "northwestern": {
+          "articles": 5,
+          "share": 0.009596928982725527,
+          "controlArticles": 59,
+          "controlTotal": 11298,
+          "controlShare": 0.005222163214728271
+        },
+        "ucsf": {
+          "articles": 11,
+          "share": 0.02111324376199616,
+          "controlArticles": 103,
+          "controlTotal": 11298,
+          "controlShare": 0.009116657815542575
+        },
+        "hebrew-seniorlife": {
+          "articles": 1,
+          "share": 0.0019193857965451055,
+          "controlArticles": 2,
+          "controlTotal": 11298,
+          "controlShare": 0.0001770224818551956
+        }
+      }
+    },
+    {
+      "year": 2005,
+      "journalArticles": 581,
+      "byInstitution": {
+        "arizona": {
+          "articles": 1,
+          "share": 0.0017211703958691911,
+          "controlArticles": 20,
+          "controlTotal": 9869,
+          "controlShare": 0.002026547775863816
+        },
+        "northwestern": {
+          "articles": 4,
+          "share": 0.0068846815834767644,
+          "controlArticles": 45,
+          "controlTotal": 9869,
+          "controlShare": 0.004559732495693586
+        },
+        "ucsf": {
+          "articles": 11,
+          "share": 0.0189328743545611,
+          "controlArticles": 124,
+          "controlTotal": 9869,
+          "controlShare": 0.012564596210355659
+        },
+        "hebrew-seniorlife": {
+          "articles": 0,
+          "share": 0,
+          "controlArticles": 0,
+          "controlTotal": 9869,
+          "controlShare": 0
+        }
+      }
+    },
+    {
+      "year": 2006,
+      "journalArticles": 572,
+      "byInstitution": {
+        "arizona": {
+          "articles": 0,
+          "share": 0,
+          "controlArticles": 19,
+          "controlTotal": 8604,
+          "controlShare": 0.002208275220827522
+        },
+        "northwestern": {
+          "articles": 5,
+          "share": 0.008741258741258742,
+          "controlArticles": 50,
+          "controlTotal": 8604,
+          "controlShare": 0.005811250581125058
+        },
+        "ucsf": {
+          "articles": 8,
+          "share": 0.013986013986013986,
+          "controlArticles": 100,
+          "controlTotal": 8604,
+          "controlShare": 0.011622501162250116
+        },
+        "hebrew-seniorlife": {
+          "articles": 0,
+          "share": 0,
+          "controlArticles": 1,
+          "controlTotal": 8604,
+          "controlShare": 0.00011622501162250116
+        }
+      }
+    },
+    {
+      "year": 2007,
+      "journalArticles": 517,
+      "byInstitution": {
+        "arizona": {
+          "articles": 0,
+          "share": 0,
+          "controlArticles": 16,
+          "controlTotal": 8585,
+          "controlShare": 0.0018637157833430401
+        },
+        "northwestern": {
+          "articles": 8,
+          "share": 0.015473887814313346,
+          "controlArticles": 56,
+          "controlTotal": 8585,
+          "controlShare": 0.0065230052417006405
+        },
+        "ucsf": {
+          "articles": 10,
+          "share": 0.019342359767891684,
+          "controlArticles": 97,
+          "controlTotal": 8585,
+          "controlShare": 0.011298776936517181
+        },
+        "hebrew-seniorlife": {
+          "articles": 1,
+          "share": 0.0019342359767891683,
+          "controlArticles": 1,
+          "controlTotal": 8585,
+          "controlShare": 0.00011648223645894001
+        }
+      }
+    },
+    {
+      "year": 2008,
+      "journalArticles": 556,
+      "byInstitution": {
+        "arizona": {
+          "articles": 0,
+          "share": 0,
+          "controlArticles": 27,
+          "controlTotal": 8577,
+          "controlShare": 0.0031479538300104933
+        },
+        "northwestern": {
+          "articles": 3,
+          "share": 0.00539568345323741,
+          "controlArticles": 52,
+          "controlTotal": 8577,
+          "controlShare": 0.0060627258948350235
+        },
+        "ucsf": {
+          "articles": 12,
+          "share": 0.02158273381294964,
+          "controlArticles": 84,
+          "controlTotal": 8577,
+          "controlShare": 0.009793634137810424
+        },
+        "hebrew-seniorlife": {
+          "articles": 0,
+          "share": 0,
+          "controlArticles": 1,
+          "controlTotal": 8577,
+          "controlShare": 0.00011659088259298122
+        }
+      }
+    },
+    {
+      "year": 2009,
+      "journalArticles": 532,
+      "byInstitution": {
+        "arizona": {
+          "articles": 1,
+          "share": 0.0018796992481203006,
+          "controlArticles": 36,
+          "controlTotal": 8372,
+          "controlShare": 0.004300047778308648
+        },
+        "northwestern": {
+          "articles": 7,
+          "share": 0.013157894736842105,
+          "controlArticles": 62,
+          "controlTotal": 8372,
+          "controlShare": 0.007405637840420449
+        },
+        "ucsf": {
+          "articles": 9,
+          "share": 0.016917293233082706,
+          "controlArticles": 107,
+          "controlTotal": 8372,
+          "controlShare": 0.012780697563306258
+        },
+        "hebrew-seniorlife": {
+          "articles": 0,
+          "share": 0,
+          "controlArticles": 2,
+          "controlTotal": 8372,
+          "controlShare": 0.00023889154323936931
+        }
+      }
+    },
+    {
+      "year": 2010,
+      "journalArticles": 616,
+      "byInstitution": {
+        "arizona": {
+          "articles": 1,
+          "share": 0.0016233766233766235,
+          "controlArticles": 28,
+          "controlTotal": 11226,
+          "controlShare": 0.002494209869944771
+        },
+        "northwestern": {
+          "articles": 6,
+          "share": 0.00974025974025974,
+          "controlArticles": 55,
+          "controlTotal": 11226,
+          "controlShare": 0.004899340815962943
+        },
+        "ucsf": {
+          "articles": 25,
+          "share": 0.040584415584415584,
+          "controlArticles": 110,
+          "controlTotal": 11226,
+          "controlShare": 0.009798681631925887
+        },
+        "hebrew-seniorlife": {
+          "articles": 2,
+          "share": 0.003246753246753247,
+          "controlArticles": 1,
+          "controlTotal": 11226,
+          "controlShare": 8.907892392659897e-05
+        }
+      }
+    },
+    {
+      "year": 2011,
+      "journalArticles": 677,
+      "byInstitution": {
+        "arizona": {
+          "articles": 0,
+          "share": 0,
+          "controlArticles": 25,
+          "controlTotal": 11474,
+          "controlShare": 0.002178839114519784
+        },
+        "northwestern": {
+          "articles": 3,
+          "share": 0.004431314623338257,
+          "controlArticles": 76,
+          "controlTotal": 11474,
+          "controlShare": 0.006623670908140143
+        },
+        "ucsf": {
+          "articles": 35,
+          "share": 0.051698670605613,
+          "controlArticles": 114,
+          "controlTotal": 11474,
+          "controlShare": 0.009935506362210215
+        },
+        "hebrew-seniorlife": {
+          "articles": 0,
+          "share": 0,
+          "controlArticles": 2,
+          "controlTotal": 11474,
+          "controlShare": 0.0001743071291615827
+        }
+      }
+    },
+    {
+      "year": 2012,
+      "journalArticles": 718,
+      "byInstitution": {
+        "arizona": {
+          "articles": 2,
+          "share": 0.002785515320334262,
+          "controlArticles": 22,
+          "controlTotal": 11671,
+          "controlShare": 0.001885014137606032
+        },
+        "northwestern": {
+          "articles": 8,
+          "share": 0.011142061281337047,
+          "controlArticles": 106,
+          "controlTotal": 11671,
+          "controlShare": 0.009082340844829064
+        },
+        "ucsf": {
+          "articles": 37,
+          "share": 0.05153203342618384,
+          "controlArticles": 127,
+          "controlTotal": 11671,
+          "controlShare": 0.01088167252163482
+        },
+        "hebrew-seniorlife": {
+          "articles": 2,
+          "share": 0.002785515320334262,
+          "controlArticles": 2,
+          "controlTotal": 11671,
+          "controlShare": 0.00017136492160054837
+        }
+      }
+    },
+    {
+      "year": 2013,
+      "journalArticles": 812,
+      "byInstitution": {
+        "arizona": {
+          "articles": 1,
+          "share": 0.0012315270935960591,
+          "controlArticles": 24,
+          "controlTotal": 12362,
+          "controlShare": 0.001941433425012134
+        },
+        "northwestern": {
+          "articles": 8,
+          "share": 0.009852216748768473,
+          "controlArticles": 116,
+          "controlTotal": 12362,
+          "controlShare": 0.009383594887558647
+        },
+        "ucsf": {
+          "articles": 68,
+          "share": 0.08374384236453201,
+          "controlArticles": 152,
+          "controlTotal": 12362,
+          "controlShare": 0.012295745025076849
+        },
+        "hebrew-seniorlife": {
+          "articles": 6,
+          "share": 0.007389162561576354,
+          "controlArticles": 7,
+          "controlTotal": 12362,
+          "controlShare": 0.0005662514156285391
+        }
+      }
+    },
+    {
+      "year": 2014,
+      "journalArticles": 655,
+      "byInstitution": {
+        "arizona": {
+          "articles": 0,
+          "share": 0,
+          "controlArticles": 32,
+          "controlTotal": 13237,
+          "controlShare": 0.002417466193246204
+        },
+        "northwestern": {
+          "articles": 6,
+          "share": 0.00916030534351145,
+          "controlArticles": 120,
+          "controlTotal": 13237,
+          "controlShare": 0.009065498224673264
+        },
+        "ucsf": {
+          "articles": 54,
+          "share": 0.08244274809160305,
+          "controlArticles": 116,
+          "controlTotal": 13237,
+          "controlShare": 0.008763314950517489
+        },
+        "hebrew-seniorlife": {
+          "articles": 3,
+          "share": 0.004580152671755725,
+          "controlArticles": 1,
+          "controlTotal": 13237,
+          "controlShare": 7.554581853894387e-05
+        }
+      }
+    },
+    {
+      "year": 2015,
+      "journalArticles": 669,
+      "byInstitution": {
+        "arizona": {
+          "articles": 0,
+          "share": 0,
+          "controlArticles": 44,
+          "controlTotal": 12984,
+          "controlShare": 0.0033887861983980284
+        },
+        "northwestern": {
+          "articles": 8,
+          "share": 0.01195814648729447,
+          "controlArticles": 120,
+          "controlTotal": 12984,
+          "controlShare": 0.009242144177449169
+        },
+        "ucsf": {
+          "articles": 68,
+          "share": 0.10164424514200299,
+          "controlArticles": 191,
+          "controlTotal": 12984,
+          "controlShare": 0.014710412815773259
+        },
+        "hebrew-seniorlife": {
+          "articles": 3,
+          "share": 0.004484304932735426,
+          "controlArticles": 4,
+          "controlTotal": 12984,
+          "controlShare": 0.00030807147258163895
+        }
+      }
+    },
+    {
+      "year": 2016,
+      "journalArticles": 662,
+      "byInstitution": {
+        "arizona": {
+          "articles": 2,
+          "share": 0.0030211480362537764,
+          "controlArticles": 48,
+          "controlTotal": 14011,
+          "controlShare": 0.0034258796659767327
+        },
+        "northwestern": {
+          "articles": 4,
+          "share": 0.006042296072507553,
+          "controlArticles": 153,
+          "controlTotal": 14011,
+          "controlShare": 0.010919991435300836
+        },
+        "ucsf": {
+          "articles": 74,
+          "share": 0.11178247734138973,
+          "controlArticles": 195,
+          "controlTotal": 14011,
+          "controlShare": 0.013917636143030475
+        },
+        "hebrew-seniorlife": {
+          "articles": 3,
+          "share": 0.004531722054380665,
+          "controlArticles": 2,
+          "controlTotal": 14011,
+          "controlShare": 0.00014274498608236386
+        }
+      }
+    },
+    {
+      "year": 2017,
+      "journalArticles": 664,
+      "byInstitution": {
+        "arizona": {
+          "articles": 0,
+          "share": 0,
+          "controlArticles": 54,
+          "controlTotal": 17409,
+          "controlShare": 0.003101843873858349
+        },
+        "northwestern": {
+          "articles": 8,
+          "share": 0.012048192771084338,
+          "controlArticles": 173,
+          "controlTotal": 17409,
+          "controlShare": 0.009937388706990636
+        },
+        "ucsf": {
+          "articles": 94,
+          "share": 0.14156626506024098,
+          "controlArticles": 180,
+          "controlTotal": 17409,
+          "controlShare": 0.01033947957952783
+        },
+        "hebrew-seniorlife": {
+          "articles": 2,
+          "share": 0.0030120481927710845,
+          "controlArticles": 1,
+          "controlTotal": 17409,
+          "controlShare": 5.744155321959906e-05
+        }
+      }
+    },
+    {
+      "year": 2018,
+      "journalArticles": 607,
+      "byInstitution": {
+        "arizona": {
+          "articles": 3,
+          "share": 0.004942339373970346,
+          "controlArticles": 38,
+          "controlTotal": 17375,
+          "controlShare": 0.0021870503597122303
+        },
+        "northwestern": {
+          "articles": 8,
+          "share": 0.013179571663920923,
+          "controlArticles": 193,
+          "controlTotal": 17375,
+          "controlShare": 0.011107913669064749
+        },
+        "ucsf": {
+          "articles": 66,
+          "share": 0.10873146622734761,
+          "controlArticles": 183,
+          "controlTotal": 17375,
+          "controlShare": 0.010532374100719425
+        },
+        "hebrew-seniorlife": {
+          "articles": 6,
+          "share": 0.009884678747940691,
+          "controlArticles": 1,
+          "controlTotal": 17375,
+          "controlShare": 5.755395683453237e-05
+        }
+      }
+    },
+    {
+      "year": 2019,
+      "journalArticles": 601,
+      "byInstitution": {
+        "arizona": {
+          "articles": 1,
+          "share": 0.0016638935108153079,
+          "controlArticles": 59,
+          "controlTotal": 17940,
+          "controlShare": 0.0032887402452619844
+        },
+        "northwestern": {
+          "articles": 9,
+          "share": 0.014975041597337771,
+          "controlArticles": 172,
+          "controlTotal": 17940,
+          "controlShare": 0.009587513935340023
+        },
+        "ucsf": {
+          "articles": 77,
+          "share": 0.1281198003327787,
+          "controlArticles": 242,
+          "controlTotal": 17940,
+          "controlShare": 0.013489409141583055
+        },
+        "hebrew-seniorlife": {
+          "articles": 5,
+          "share": 0.008319467554076539,
+          "controlArticles": 6,
+          "controlTotal": 17940,
+          "controlShare": 0.00033444816053511704
+        }
+      }
+    },
+    {
+      "year": 2020,
+      "journalArticles": 564,
+      "byInstitution": {
+        "arizona": {
+          "articles": 2,
+          "share": 0.0035460992907801418,
+          "controlArticles": 70,
+          "controlTotal": 19650,
+          "controlShare": 0.0035623409669211198
+        },
+        "northwestern": {
+          "articles": 7,
+          "share": 0.012411347517730497,
+          "controlArticles": 219,
+          "controlTotal": 19650,
+          "controlShare": 0.011145038167938931
+        },
+        "ucsf": {
+          "articles": 81,
+          "share": 0.14361702127659576,
+          "controlArticles": 264,
+          "controlTotal": 19650,
+          "controlShare": 0.013435114503816794
+        },
+        "hebrew-seniorlife": {
+          "articles": 4,
+          "share": 0.0070921985815602835,
+          "controlArticles": 4,
+          "controlTotal": 19650,
+          "controlShare": 0.0002035623409669211
+        }
+      }
+    },
+    {
+      "year": 2021,
+      "journalArticles": 488,
+      "byInstitution": {
+        "arizona": {
+          "articles": 2,
+          "share": 0.004098360655737705,
+          "controlArticles": 51,
+          "controlTotal": 16883,
+          "controlShare": 0.0030207901439317656
+        },
+        "northwestern": {
+          "articles": 6,
+          "share": 0.012295081967213115,
+          "controlArticles": 201,
+          "controlTotal": 16883,
+          "controlShare": 0.011905467037848724
+        },
+        "ucsf": {
+          "articles": 69,
+          "share": 0.1413934426229508,
+          "controlArticles": 225,
+          "controlTotal": 16883,
+          "controlShare": 0.013327015340875437
+        },
+        "hebrew-seniorlife": {
+          "articles": 1,
+          "share": 0.0020491803278688526,
+          "controlArticles": 4,
+          "controlTotal": 16883,
+          "controlShare": 0.0002369247171711189
+        }
+      }
+    },
+    {
+      "year": 2022,
+      "journalArticles": 372,
+      "byInstitution": {
+        "arizona": {
+          "articles": 2,
+          "share": 0.005376344086021506,
+          "controlArticles": 65,
+          "controlTotal": 17029,
+          "controlShare": 0.0038170180280697632
+        },
+        "northwestern": {
+          "articles": 6,
+          "share": 0.016129032258064516,
+          "controlArticles": 187,
+          "controlTotal": 17029,
+          "controlShare": 0.010981267249985318
+        },
+        "ucsf": {
+          "articles": 38,
+          "share": 0.10215053763440861,
+          "controlArticles": 240,
+          "controlTotal": 17029,
+          "controlShare": 0.014093605026719126
+        },
+        "hebrew-seniorlife": {
+          "articles": 7,
+          "share": 0.01881720430107527,
+          "controlArticles": 1,
+          "controlTotal": 17029,
+          "controlShare": 5.872335427799636e-05
+        }
+      }
+    },
+    {
+      "year": 2023,
+      "journalArticles": 434,
+      "byInstitution": {
+        "arizona": {
+          "articles": 0,
+          "share": 0,
+          "controlArticles": 81,
+          "controlTotal": 19176,
+          "controlShare": 0.004224030037546934
+        },
+        "northwestern": {
+          "articles": 5,
+          "share": 0.01152073732718894,
+          "controlArticles": 195,
+          "controlTotal": 19176,
+          "controlShare": 0.010168961201501877
+        },
+        "ucsf": {
+          "articles": 59,
+          "share": 0.1359447004608295,
+          "controlArticles": 250,
+          "controlTotal": 19176,
+          "controlShare": 0.013037129745515227
+        },
+        "hebrew-seniorlife": {
+          "articles": 5,
+          "share": 0.01152073732718894,
+          "controlArticles": 8,
+          "controlTotal": 19176,
+          "controlShare": 0.00041718815185648727
+        }
+      }
+    },
+    {
+      "year": 2024,
+      "journalArticles": 489,
+      "byInstitution": {
+        "arizona": {
+          "articles": 0,
+          "share": 0,
+          "controlArticles": 66,
+          "controlTotal": 19879,
+          "controlShare": 0.0033200865234669754
+        },
+        "northwestern": {
+          "articles": 7,
+          "share": 0.014314928425357873,
+          "controlArticles": 200,
+          "controlTotal": 19879,
+          "controlShare": 0.010060868252930228
+        },
+        "ucsf": {
+          "articles": 69,
+          "share": 0.1411042944785276,
+          "controlArticles": 285,
+          "controlTotal": 19879,
+          "controlShare": 0.014336737260425574
+        },
+        "hebrew-seniorlife": {
+          "articles": 8,
+          "share": 0.016359918200409,
+          "controlArticles": 7,
+          "controlTotal": 19879,
+          "controlShare": 0.000352130388852558
+        }
+      }
+    }
+  ],
+  "trackedInstitutions": [
+    {
+      "id": "arizona",
+      "label": "University of Arizona",
+      "members": [
+        {
+          "openAlexId": "I138006243",
+          "displayName": "University of Arizona"
+        }
+      ]
+    },
+    {
+      "id": "northwestern",
+      "label": "Northwestern",
+      "members": [
+        {
+          "openAlexId": "I111979921",
+          "displayName": "Northwestern University"
+        }
+      ]
+    },
+    {
+      "id": "ucsf",
+      "label": "UCSF",
+      "members": [
+        {
+          "openAlexId": "I180670191",
+          "displayName": "University of California, San Francisco"
+        }
+      ]
+    },
+    {
+      "id": "hebrew-seniorlife",
+      "label": "Hebrew SeniorLife",
+      "members": [
+        {
+          "openAlexId": "I4210123879",
+          "displayName": "Hebrew SeniorLife"
+        }
+      ]
+    }
+  ]
+}
