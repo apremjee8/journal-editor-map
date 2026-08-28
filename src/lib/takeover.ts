@@ -1,0 +1,56 @@
+import type { EditorTenure, YearPoint } from "./types";
+
+export type TakeoverRow = {
+  name: string;
+  institutionId: string;
+  institutionLabel: string;
+  startYear: number;
+  beforeShare: number | null;
+  afterShare: number | null;
+  beforeControl: number | null;
+  afterControl: number | null;
+  window: string;
+};
+
+function mean(values: number[]): number | null {
+  if (!values.length) return null;
+  return values.reduce((a, b) => a + b, 0) / values.length;
+}
+
+export function takeoverRows(
+  editors: EditorTenure[],
+  series: YearPoint[],
+  labels: Record<string, string>
+): TakeoverRow[] {
+  const byYear = new Map(series.map((p) => [p.year, p]));
+  const rows: TakeoverRow[] = [];
+
+  for (const editor of editors) {
+    if (editor.role === "deputy") continue;
+    if (editor.startYear == null || !editor.institutionGroupId) continue;
+    const start = editor.startYear;
+    const beforeYears = [start - 2, start - 1].filter((y) => byYear.has(y));
+    const afterYears = [start, start + 1, start + 2].filter((y) => byYear.has(y));
+    if (!afterYears.length) continue;
+
+    const pick = (years: number[], field: "share" | "controlShare") =>
+      mean(
+        years
+          .map((y) => byYear.get(y)?.byInstitution[editor.institutionGroupId!]?.[field])
+          .filter((n): n is number => typeof n === "number")
+      );
+
+    rows.push({
+      name: editor.name,
+      institutionId: editor.institutionGroupId,
+      institutionLabel: labels[editor.institutionGroupId] ?? editor.institutionGroupId,
+      startYear: start,
+      beforeShare: pick(beforeYears, "share"),
+      afterShare: pick(afterYears, "share"),
+      beforeControl: pick(beforeYears, "controlShare"),
+      afterControl: pick(afterYears, "controlShare"),
+      window: `${beforeYears[0] ?? "n/a"}–${beforeYears.at(-1) ?? "n/a"} vs ${afterYears[0]}–${afterYears.at(-1)}`,
+    });
+  }
+  return rows;
+}
