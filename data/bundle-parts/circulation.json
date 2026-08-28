@@ -1,0 +1,992 @@
+{
+  "journal": {
+    "id": "circulation",
+    "name": "Circulation",
+    "shortName": "Circulation",
+    "openAlexId": "S116251202",
+    "issnL": "0009-7322",
+    "issns": [
+      "0009-7322",
+      "1524-4539"
+    ],
+    "predecessorOpenAlexIds": [],
+    "firstYear": 2000,
+    "notes": [
+      "Not Circulation Research or the Circulation subspecialty journals."
+    ]
+  },
+  "editors": [
+    {
+      "role": "eic",
+      "name": "James T. Willerson",
+      "institutionGroupId": "ut-houston",
+      "startYear": 1993,
+      "endYear": 2004,
+      "gapReason": "Sources place the editorial office at St. Luke\u2019s / Texas Heart Institute in Houston. OpenAlex has no Texas Heart Institute record, so the plotted home is UTHealth Houston.",
+      "sources": [
+        {
+          "label": "Circulation, Willerson 1993\u20132004",
+          "url": "https://doi.org/10.1161/01.cir.0000132471.97182.df",
+          "quote": "James T. Willerson, MD, Editor of Circulation, 1993\u20132004."
+        },
+        {
+          "label": "Circulation, May 2004 transition notice",
+          "url": "https://doi.org/10.1161/circ.109.19.2255",
+          "quote": "incoming Editor, Joseph Loscalzo, MD, PhD, as of April 1, 2004\u2026 incumbent office St Luke\u2019s Episcopal Hospital/Texas Heart Institute, Houston, TX."
+        }
+      ]
+    },
+    {
+      "role": "eic",
+      "name": "Joseph Loscalzo",
+      "institutionGroupId": "boston-university",
+      "startYear": 2004,
+      "endYear": 2016,
+      "gapReason": "Appointment home is Boston University (2004 incoming office circ@bu.edu). He moved to Harvard / Brigham in 2005. The plotted line stays BU, the institution at takeover, and does not switch mid-tenure.",
+      "sources": [
+        {
+          "label": "Circulation, May 2004 transition notice",
+          "url": "https://doi.org/10.1161/circ.109.19.2255",
+          "quote": "incoming Editor, Joseph Loscalzo, MD, PhD\u2026 560 Harrison Avenue, Suite 502, Boston, MA 02118 \u2026 circ@bu.edu."
+        },
+        {
+          "label": "Brigham and Women\u2019s, Loscalzo bio",
+          "url": "https://www.brighamandwomens.org/research/labs-and-projects/loscalzo/joseph-loscalzo-md-phd-bio",
+          "quote": "He joined the faculty of Boston University in 1994 \u2026 He returned to Harvard and Brigham and Women\u2019s Hospital in 2005."
+        }
+      ]
+    },
+    {
+      "role": "eic",
+      "name": "Joseph A. Hill",
+      "institutionGroupId": "utsw",
+      "startYear": 2016,
+      "endYear": 2026,
+      "sources": [
+        {
+          "label": "American Heart Association, Hill legacy",
+          "url": "https://www.heart.org/en/around-the-aha/top-journal-editors-impact-builds-lasting-legacy",
+          "quote": "For 10 years\u2026 Dr. Joseph Hill\u2026 after June 30, when his tenure as Circulation\u2019s editor-in-chief ends\u2026 professor\u2026 at UT Southwestern Medical Center in Dallas."
+        },
+        {
+          "label": "AHA newsroom, Maron appointment, 6 Jul 2026",
+          "url": "https://newsroom.heart.org/news/leader-in-pulmonary-vascular-research-named-new-editor-in-chief-of-circulation-journal",
+          "quote": "Maron succeeds Joseph A. Hill, who has led Circulation since 2016, and Joseph Loscalzo\u2026 2004-2016."
+        }
+      ]
+    },
+    {
+      "role": "eic",
+      "name": "Bradley A. Maron",
+      "institutionGroupId": "umd-baltimore",
+      "startYear": 2026,
+      "endYear": null,
+      "gapReason": "Tenure starts July 2026. The OpenAlex series in this build ends in 2024, so Maryland has no plotted share points yet.",
+      "sources": [
+        {
+          "label": "AHA newsroom, 6 Jul 2026",
+          "url": "https://newsroom.heart.org/news/leader-in-pulmonary-vascular-research-named-new-editor-in-chief-of-circulation-journal",
+          "quote": "effective with today\u2019s issue, Bradley A. Maron, M.D., FAHA, is the new editor-in-chief of Circulation."
+        }
+      ]
+    }
+  ],
+  "series": [
+    {
+      "year": 2000,
+      "journalArticles": 1702,
+      "byInstitution": {
+        "ut-houston": {
+          "articles": 7,
+          "share": 0.004112808460634548,
+          "controlArticles": 7,
+          "controlTotal": 8199,
+          "controlShare": 0.0008537626539821929
+        },
+        "boston-university": {
+          "articles": 22,
+          "share": 0.012925969447708578,
+          "controlArticles": 41,
+          "controlTotal": 8199,
+          "controlShare": 0.0050006098304671304
+        },
+        "utsw": {
+          "articles": 7,
+          "share": 0.004112808460634548,
+          "controlArticles": 28,
+          "controlTotal": 8199,
+          "controlShare": 0.0034150506159287717
+        },
+        "umd-baltimore": {
+          "articles": 10,
+          "share": 0.005875440658049354,
+          "controlArticles": 28,
+          "controlTotal": 8199,
+          "controlShare": 0.0034150506159287717
+        }
+      }
+    },
+    {
+      "year": 2001,
+      "journalArticles": 1689,
+      "byInstitution": {
+        "ut-houston": {
+          "articles": 9,
+          "share": 0.0053285968028419185,
+          "controlArticles": 5,
+          "controlTotal": 10656,
+          "controlShare": 0.0004692192192192192
+        },
+        "boston-university": {
+          "articles": 21,
+          "share": 0.012433392539964476,
+          "controlArticles": 48,
+          "controlTotal": 10656,
+          "controlShare": 0.0045045045045045045
+        },
+        "utsw": {
+          "articles": 11,
+          "share": 0.006512729425695678,
+          "controlArticles": 26,
+          "controlTotal": 10656,
+          "controlShare": 0.00243993993993994
+        },
+        "umd-baltimore": {
+          "articles": 7,
+          "share": 0.0041444641799881585,
+          "controlArticles": 17,
+          "controlTotal": 10656,
+          "controlShare": 0.0015953453453453454
+        }
+      }
+    },
+    {
+      "year": 2002,
+      "journalArticles": 1592,
+      "byInstitution": {
+        "ut-houston": {
+          "articles": 9,
+          "share": 0.005653266331658292,
+          "controlArticles": 5,
+          "controlTotal": 10678,
+          "controlShare": 0.0004682524817381532
+        },
+        "boston-university": {
+          "articles": 20,
+          "share": 0.01256281407035176,
+          "controlArticles": 45,
+          "controlTotal": 10678,
+          "controlShare": 0.004214272335643379
+        },
+        "utsw": {
+          "articles": 10,
+          "share": 0.00628140703517588,
+          "controlArticles": 21,
+          "controlTotal": 10678,
+          "controlShare": 0.0019666604233002437
+        },
+        "umd-baltimore": {
+          "articles": 13,
+          "share": 0.008165829145728644,
+          "controlArticles": 21,
+          "controlTotal": 10678,
+          "controlShare": 0.0019666604233002437
+        }
+      }
+    },
+    {
+      "year": 2003,
+      "journalArticles": 1615,
+      "byInstitution": {
+        "ut-houston": {
+          "articles": 7,
+          "share": 0.0043343653250774,
+          "controlArticles": 7,
+          "controlTotal": 11545,
+          "controlShare": 0.000606323083585968
+        },
+        "boston-university": {
+          "articles": 16,
+          "share": 0.009907120743034056,
+          "controlArticles": 61,
+          "controlTotal": 11545,
+          "controlShare": 0.005283672585534863
+        },
+        "utsw": {
+          "articles": 15,
+          "share": 0.009287925696594427,
+          "controlArticles": 24,
+          "controlTotal": 11545,
+          "controlShare": 0.0020788220008661758
+        },
+        "umd-baltimore": {
+          "articles": 5,
+          "share": 0.0030959752321981426,
+          "controlArticles": 29,
+          "controlTotal": 11545,
+          "controlShare": 0.0025119099177132957
+        }
+      }
+    },
+    {
+      "year": 2004,
+      "journalArticles": 1721,
+      "byInstitution": {
+        "ut-houston": {
+          "articles": 4,
+          "share": 0.002324230098779779,
+          "controlArticles": 14,
+          "controlTotal": 10098,
+          "controlShare": 0.0013864131511190335
+        },
+        "boston-university": {
+          "articles": 29,
+          "share": 0.0168506682161534,
+          "controlArticles": 57,
+          "controlTotal": 10098,
+          "controlShare": 0.00564468211527035
+        },
+        "utsw": {
+          "articles": 5,
+          "share": 0.002905287623474724,
+          "controlArticles": 46,
+          "controlTotal": 10098,
+          "controlShare": 0.004555357496533967
+        },
+        "umd-baltimore": {
+          "articles": 3,
+          "share": 0.0017431725740848344,
+          "controlArticles": 18,
+          "controlTotal": 10098,
+          "controlShare": 0.0017825311942959
+        }
+      }
+    },
+    {
+      "year": 2005,
+      "journalArticles": 1504,
+      "byInstitution": {
+        "ut-houston": {
+          "articles": 1,
+          "share": 0.0006648936170212766,
+          "controlArticles": 12,
+          "controlTotal": 8946,
+          "controlShare": 0.0013413816230717639
+        },
+        "boston-university": {
+          "articles": 28,
+          "share": 0.018617021276595744,
+          "controlArticles": 44,
+          "controlTotal": 8946,
+          "controlShare": 0.0049183992845964674
+        },
+        "utsw": {
+          "articles": 6,
+          "share": 0.003989361702127659,
+          "controlArticles": 25,
+          "controlTotal": 8946,
+          "controlShare": 0.002794545048066175
+        },
+        "umd-baltimore": {
+          "articles": 5,
+          "share": 0.003324468085106383,
+          "controlArticles": 30,
+          "controlTotal": 8946,
+          "controlShare": 0.00335345405767941
+        }
+      }
+    },
+    {
+      "year": 2006,
+      "journalArticles": 1246,
+      "byInstitution": {
+        "ut-houston": {
+          "articles": 0,
+          "share": 0,
+          "controlArticles": 17,
+          "controlTotal": 7930,
+          "controlShare": 0.0021437578814627995
+        },
+        "boston-university": {
+          "articles": 19,
+          "share": 0.015248796147672551,
+          "controlArticles": 47,
+          "controlTotal": 7930,
+          "controlShare": 0.005926860025220681
+        },
+        "utsw": {
+          "articles": 9,
+          "share": 0.0072231139646869984,
+          "controlArticles": 30,
+          "controlTotal": 7930,
+          "controlShare": 0.0037831021437578815
+        },
+        "umd-baltimore": {
+          "articles": 6,
+          "share": 0.004815409309791332,
+          "controlArticles": 25,
+          "controlTotal": 7930,
+          "controlShare": 0.0031525851197982345
+        }
+      }
+    },
+    {
+      "year": 2007,
+      "journalArticles": 1249,
+      "byInstitution": {
+        "ut-houston": {
+          "articles": 2,
+          "share": 0.0016012810248198558,
+          "controlArticles": 9,
+          "controlTotal": 7853,
+          "controlShare": 0.0011460588310199923
+        },
+        "boston-university": {
+          "articles": 24,
+          "share": 0.01921537229783827,
+          "controlArticles": 38,
+          "controlTotal": 7853,
+          "controlShare": 0.004838915064306635
+        },
+        "utsw": {
+          "articles": 2,
+          "share": 0.0016012810248198558,
+          "controlArticles": 36,
+          "controlTotal": 7853,
+          "controlShare": 0.004584235324079969
+        },
+        "umd-baltimore": {
+          "articles": 8,
+          "share": 0.006405124099279423,
+          "controlArticles": 25,
+          "controlTotal": 7853,
+          "controlShare": 0.0031834967528333123
+        }
+      }
+    },
+    {
+      "year": 2008,
+      "journalArticles": 1194,
+      "byInstitution": {
+        "ut-houston": {
+          "articles": 0,
+          "share": 0,
+          "controlArticles": 8,
+          "controlTotal": 7939,
+          "controlShare": 0.001007683587353571
+        },
+        "boston-university": {
+          "articles": 32,
+          "share": 0.02680067001675042,
+          "controlArticles": 58,
+          "controlTotal": 7939,
+          "controlShare": 0.007305706008313389
+        },
+        "utsw": {
+          "articles": 7,
+          "share": 0.005862646566164154,
+          "controlArticles": 35,
+          "controlTotal": 7939,
+          "controlShare": 0.004408615694671873
+        },
+        "umd-baltimore": {
+          "articles": 5,
+          "share": 0.0041876046901172526,
+          "controlArticles": 27,
+          "controlTotal": 7939,
+          "controlShare": 0.003400932107318302
+        }
+      }
+    },
+    {
+      "year": 2009,
+      "journalArticles": 1106,
+      "byInstitution": {
+        "ut-houston": {
+          "articles": 4,
+          "share": 0.003616636528028933,
+          "controlArticles": 13,
+          "controlTotal": 7798,
+          "controlShare": 0.0016670941266991536
+        },
+        "boston-university": {
+          "articles": 17,
+          "share": 0.015370705244122965,
+          "controlArticles": 50,
+          "controlTotal": 7798,
+          "controlShare": 0.006411900487304437
+        },
+        "utsw": {
+          "articles": 7,
+          "share": 0.006329113924050633,
+          "controlArticles": 26,
+          "controlTotal": 7798,
+          "controlShare": 0.003334188253398307
+        },
+        "umd-baltimore": {
+          "articles": 6,
+          "share": 0.0054249547920434,
+          "controlArticles": 26,
+          "controlTotal": 7798,
+          "controlShare": 0.003334188253398307
+        }
+      }
+    },
+    {
+      "year": 2010,
+      "journalArticles": 1084,
+      "byInstitution": {
+        "ut-houston": {
+          "articles": 1,
+          "share": 0.0009225092250922509,
+          "controlArticles": 24,
+          "controlTotal": 10758,
+          "controlShare": 0.002230897936419409
+        },
+        "boston-university": {
+          "articles": 15,
+          "share": 0.013837638376383764,
+          "controlArticles": 70,
+          "controlTotal": 10758,
+          "controlShare": 0.006506785647889942
+        },
+        "utsw": {
+          "articles": 5,
+          "share": 0.004612546125461255,
+          "controlArticles": 42,
+          "controlTotal": 10758,
+          "controlShare": 0.0039040713887339654
+        },
+        "umd-baltimore": {
+          "articles": 3,
+          "share": 0.0027675276752767526,
+          "controlArticles": 36,
+          "controlTotal": 10758,
+          "controlShare": 0.0033463469046291134
+        }
+      }
+    },
+    {
+      "year": 2011,
+      "journalArticles": 1212,
+      "byInstitution": {
+        "ut-houston": {
+          "articles": 4,
+          "share": 0.0033003300330033004,
+          "controlArticles": 19,
+          "controlTotal": 10939,
+          "controlShare": 0.0017369046530761496
+        },
+        "boston-university": {
+          "articles": 18,
+          "share": 0.01485148514851485,
+          "controlArticles": 83,
+          "controlTotal": 10939,
+          "controlShare": 0.007587530852911601
+        },
+        "utsw": {
+          "articles": 6,
+          "share": 0.0049504950495049506,
+          "controlArticles": 37,
+          "controlTotal": 10939,
+          "controlShare": 0.0033823932717798703
+        },
+        "umd-baltimore": {
+          "articles": 4,
+          "share": 0.0033003300330033004,
+          "controlArticles": 24,
+          "controlTotal": 10939,
+          "controlShare": 0.0021939848249382943
+        }
+      }
+    },
+    {
+      "year": 2012,
+      "journalArticles": 1250,
+      "byInstitution": {
+        "ut-houston": {
+          "articles": 0,
+          "share": 0,
+          "controlArticles": 21,
+          "controlTotal": 11139,
+          "controlShare": 0.0018852679773767843
+        },
+        "boston-university": {
+          "articles": 26,
+          "share": 0.0208,
+          "controlArticles": 68,
+          "controlTotal": 11139,
+          "controlShare": 0.0061046772600772065
+        },
+        "utsw": {
+          "articles": 5,
+          "share": 0.004,
+          "controlArticles": 48,
+          "controlTotal": 11139,
+          "controlShare": 0.0043091839482897925
+        },
+        "umd-baltimore": {
+          "articles": 4,
+          "share": 0.0032,
+          "controlArticles": 45,
+          "controlTotal": 11139,
+          "controlShare": 0.004039859951521681
+        }
+      }
+    },
+    {
+      "year": 2013,
+      "journalArticles": 1181,
+      "byInstitution": {
+        "ut-houston": {
+          "articles": 4,
+          "share": 0.003386960203217612,
+          "controlArticles": 30,
+          "controlTotal": 11993,
+          "controlShare": 0.0025014591845243057
+        },
+        "boston-university": {
+          "articles": 7,
+          "share": 0.0059271803556308214,
+          "controlArticles": 91,
+          "controlTotal": 11993,
+          "controlShare": 0.007587759526390394
+        },
+        "utsw": {
+          "articles": 8,
+          "share": 0.006773920406435224,
+          "controlArticles": 73,
+          "controlTotal": 11993,
+          "controlShare": 0.006086884015675811
+        },
+        "umd-baltimore": {
+          "articles": 1,
+          "share": 0.000846740050804403,
+          "controlArticles": 37,
+          "controlTotal": 11993,
+          "controlShare": 0.0030851329942466438
+        }
+      }
+    },
+    {
+      "year": 2014,
+      "journalArticles": 1024,
+      "byInstitution": {
+        "ut-houston": {
+          "articles": 3,
+          "share": 0.0029296875,
+          "controlArticles": 27,
+          "controlTotal": 12868,
+          "controlShare": 0.002098228162884675
+        },
+        "boston-university": {
+          "articles": 17,
+          "share": 0.0166015625,
+          "controlArticles": 96,
+          "controlTotal": 12868,
+          "controlShare": 0.007460366801367734
+        },
+        "utsw": {
+          "articles": 7,
+          "share": 0.0068359375,
+          "controlArticles": 70,
+          "controlTotal": 12868,
+          "controlShare": 0.005439850792663973
+        },
+        "umd-baltimore": {
+          "articles": 5,
+          "share": 0.0048828125,
+          "controlArticles": 53,
+          "controlTotal": 12868,
+          "controlShare": 0.004118744171588437
+        }
+      }
+    },
+    {
+      "year": 2015,
+      "journalArticles": 934,
+      "byInstitution": {
+        "ut-houston": {
+          "articles": 2,
+          "share": 0.0021413276231263384,
+          "controlArticles": 21,
+          "controlTotal": 12719,
+          "controlShare": 0.001651073197578426
+        },
+        "boston-university": {
+          "articles": 11,
+          "share": 0.011777301927194861,
+          "controlArticles": 94,
+          "controlTotal": 12719,
+          "controlShare": 0.007390518122493907
+        },
+        "utsw": {
+          "articles": 8,
+          "share": 0.008565310492505354,
+          "controlArticles": 83,
+          "controlTotal": 12719,
+          "controlShare": 0.006525670257095683
+        },
+        "umd-baltimore": {
+          "articles": 4,
+          "share": 0.004282655246252677,
+          "controlArticles": 44,
+          "controlTotal": 12719,
+          "controlShare": 0.0034593914615928924
+        }
+      }
+    },
+    {
+      "year": 2016,
+      "journalArticles": 959,
+      "byInstitution": {
+        "ut-houston": {
+          "articles": 2,
+          "share": 0.0020855057351407717,
+          "controlArticles": 41,
+          "controlTotal": 13714,
+          "controlShare": 0.002989645617617034
+        },
+        "boston-university": {
+          "articles": 30,
+          "share": 0.03128258602711158,
+          "controlArticles": 110,
+          "controlTotal": 13714,
+          "controlShare": 0.008021000437509114
+        },
+        "utsw": {
+          "articles": 17,
+          "share": 0.017726798748696558,
+          "controlArticles": 89,
+          "controlTotal": 13714,
+          "controlShare": 0.006489718535802829
+        },
+        "umd-baltimore": {
+          "articles": 3,
+          "share": 0.0031282586027111575,
+          "controlArticles": 45,
+          "controlTotal": 13714,
+          "controlShare": 0.003281318360799183
+        }
+      }
+    },
+    {
+      "year": 2017,
+      "journalArticles": 698,
+      "byInstitution": {
+        "ut-houston": {
+          "articles": 1,
+          "share": 0.0014326647564469914,
+          "controlArticles": 53,
+          "controlTotal": 17375,
+          "controlShare": 0.0030503597122302157
+        },
+        "boston-university": {
+          "articles": 7,
+          "share": 0.01002865329512894,
+          "controlArticles": 130,
+          "controlTotal": 17375,
+          "controlShare": 0.007482014388489209
+        },
+        "utsw": {
+          "articles": 13,
+          "share": 0.01862464183381089,
+          "controlArticles": 127,
+          "controlTotal": 17375,
+          "controlShare": 0.007309352517985612
+        },
+        "umd-baltimore": {
+          "articles": 6,
+          "share": 0.008595988538681949,
+          "controlArticles": 53,
+          "controlTotal": 17375,
+          "controlShare": 0.0030503597122302157
+        }
+      }
+    },
+    {
+      "year": 2018,
+      "journalArticles": 738,
+      "byInstitution": {
+        "ut-houston": {
+          "articles": 4,
+          "share": 0.005420054200542005,
+          "controlArticles": 51,
+          "controlTotal": 17244,
+          "controlShare": 0.0029575504523312456
+        },
+        "boston-university": {
+          "articles": 10,
+          "share": 0.013550135501355014,
+          "controlArticles": 140,
+          "controlTotal": 17244,
+          "controlShare": 0.008118765947575969
+        },
+        "utsw": {
+          "articles": 23,
+          "share": 0.03116531165311653,
+          "controlArticles": 128,
+          "controlTotal": 17244,
+          "controlShare": 0.007422871723498028
+        },
+        "umd-baltimore": {
+          "articles": 5,
+          "share": 0.006775067750677507,
+          "controlArticles": 50,
+          "controlTotal": 17244,
+          "controlShare": 0.002899559266991417
+        }
+      }
+    },
+    {
+      "year": 2019,
+      "journalArticles": 730,
+      "byInstitution": {
+        "ut-houston": {
+          "articles": 7,
+          "share": 0.009589041095890411,
+          "controlArticles": 48,
+          "controlTotal": 17811,
+          "controlShare": 0.00269496378642412
+        },
+        "boston-university": {
+          "articles": 8,
+          "share": 0.010958904109589041,
+          "controlArticles": 132,
+          "controlTotal": 17811,
+          "controlShare": 0.00741115041266633
+        },
+        "utsw": {
+          "articles": 44,
+          "share": 0.06027397260273973,
+          "controlArticles": 123,
+          "controlTotal": 17811,
+          "controlShare": 0.0069058447027118075
+        },
+        "umd-baltimore": {
+          "articles": 2,
+          "share": 0.0027397260273972603,
+          "controlArticles": 66,
+          "controlTotal": 17811,
+          "controlShare": 0.003705575206333165
+        }
+      }
+    },
+    {
+      "year": 2020,
+      "journalArticles": 728,
+      "byInstitution": {
+        "ut-houston": {
+          "articles": 2,
+          "share": 0.0027472527472527475,
+          "controlArticles": 46,
+          "controlTotal": 19486,
+          "controlShare": 0.0023606691983988504
+        },
+        "boston-university": {
+          "articles": 11,
+          "share": 0.01510989010989011,
+          "controlArticles": 176,
+          "controlTotal": 19486,
+          "controlShare": 0.00903212562865647
+        },
+        "utsw": {
+          "articles": 43,
+          "share": 0.059065934065934064,
+          "controlArticles": 127,
+          "controlTotal": 19486,
+          "controlShare": 0.0065174997434055216
+        },
+        "umd-baltimore": {
+          "articles": 6,
+          "share": 0.008241758241758242,
+          "controlArticles": 81,
+          "controlTotal": 19486,
+          "controlShare": 0.004156830545006671
+        }
+      }
+    },
+    {
+      "year": 2021,
+      "journalArticles": 532,
+      "byInstitution": {
+        "ut-houston": {
+          "articles": 1,
+          "share": 0.0018796992481203006,
+          "controlArticles": 32,
+          "controlTotal": 16839,
+          "controlShare": 0.001900350377100778
+        },
+        "boston-university": {
+          "articles": 8,
+          "share": 0.015037593984962405,
+          "controlArticles": 123,
+          "controlTotal": 16839,
+          "controlShare": 0.007304471761981115
+        },
+        "utsw": {
+          "articles": 22,
+          "share": 0.041353383458646614,
+          "controlArticles": 123,
+          "controlTotal": 16839,
+          "controlShare": 0.007304471761981115
+        },
+        "umd-baltimore": {
+          "articles": 11,
+          "share": 0.020676691729323307,
+          "controlArticles": 60,
+          "controlTotal": 16839,
+          "controlShare": 0.0035631569570639585
+        }
+      }
+    },
+    {
+      "year": 2022,
+      "journalArticles": 435,
+      "byInstitution": {
+        "ut-houston": {
+          "articles": 6,
+          "share": 0.013793103448275862,
+          "controlArticles": 28,
+          "controlTotal": 16966,
+          "controlShare": 0.001650359542614641
+        },
+        "boston-university": {
+          "articles": 12,
+          "share": 0.027586206896551724,
+          "controlArticles": 149,
+          "controlTotal": 16966,
+          "controlShare": 0.00878227042319934
+        },
+        "utsw": {
+          "articles": 21,
+          "share": 0.04827586206896552,
+          "controlArticles": 120,
+          "controlTotal": 16966,
+          "controlShare": 0.007072969468348462
+        },
+        "umd-baltimore": {
+          "articles": 5,
+          "share": 0.011494252873563218,
+          "controlArticles": 47,
+          "controlTotal": 16966,
+          "controlShare": 0.0027702463751031474
+        }
+      }
+    },
+    {
+      "year": 2023,
+      "journalArticles": 439,
+      "byInstitution": {
+        "ut-houston": {
+          "articles": 4,
+          "share": 0.009111617312072893,
+          "controlArticles": 45,
+          "controlTotal": 19171,
+          "controlShare": 0.0023472953940848157
+        },
+        "boston-university": {
+          "articles": 9,
+          "share": 0.02050113895216401,
+          "controlArticles": 156,
+          "controlTotal": 19171,
+          "controlShare": 0.008137290699494027
+        },
+        "utsw": {
+          "articles": 27,
+          "share": 0.06150341685649203,
+          "controlArticles": 125,
+          "controlTotal": 19171,
+          "controlShare": 0.0065202649835689325
+        },
+        "umd-baltimore": {
+          "articles": 6,
+          "share": 0.01366742596810934,
+          "controlArticles": 67,
+          "controlTotal": 19171,
+          "controlShare": 0.0034948620311929476
+        }
+      }
+    },
+    {
+      "year": 2024,
+      "journalArticles": 425,
+      "byInstitution": {
+        "ut-houston": {
+          "articles": 5,
+          "share": 0.011764705882352941,
+          "controlArticles": 45,
+          "controlTotal": 19943,
+          "controlShare": 0.0022564308278593993
+        },
+        "boston-university": {
+          "articles": 5,
+          "share": 0.011764705882352941,
+          "controlArticles": 125,
+          "controlTotal": 19943,
+          "controlShare": 0.006267863410720553
+        },
+        "utsw": {
+          "articles": 30,
+          "share": 0.07058823529411765,
+          "controlArticles": 150,
+          "controlTotal": 19943,
+          "controlShare": 0.007521436092864664
+        },
+        "umd-baltimore": {
+          "articles": 7,
+          "share": 0.01647058823529412,
+          "controlArticles": 77,
+          "controlTotal": 19943,
+          "controlShare": 0.003861003861003861
+        }
+      }
+    }
+  ],
+  "trackedInstitutions": [
+    {
+      "id": "ut-houston",
+      "label": "UTHealth Houston",
+      "members": [
+        {
+          "openAlexId": "I919571938",
+          "displayName": "The University of Texas Health Science Center at Houston"
+        }
+      ]
+    },
+    {
+      "id": "boston-university",
+      "label": "Boston University / BMC",
+      "members": [
+        {
+          "openAlexId": "I111088046",
+          "displayName": "Boston University"
+        },
+        {
+          "openAlexId": "I1286490081",
+          "displayName": "Boston Medical Center"
+        }
+      ]
+    },
+    {
+      "id": "utsw",
+      "label": "UT Southwestern",
+      "members": [
+        {
+          "openAlexId": "I867280407",
+          "displayName": "The University of Texas Southwestern Medical Center"
+        }
+      ]
+    },
+    {
+      "id": "umd-baltimore",
+      "label": "University of Maryland, Baltimore",
+      "members": [
+        {
+          "openAlexId": "I126744593",
+          "displayName": "University of Maryland, Baltimore"
+        }
+      ]
+    }
+  ]
+}
