@@ -1,0 +1,986 @@
+{
+  "journal": {
+    "id": "jacc",
+    "name": "Journal of the American College of Cardiology",
+    "shortName": "JACC",
+    "openAlexId": "S60865174",
+    "issnL": "0735-1097",
+    "issns": [
+      "0735-1097",
+      "1558-3597"
+    ],
+    "predecessorOpenAlexIds": [],
+    "firstYear": 2000,
+    "notes": [
+      "Sister titles (JACC Interventions, JACC Imaging, and the rest) are separate OpenAlex sources and are not included.",
+      "OpenAlex article counts jump in some years (for example 2001 and 2010). Those years likely include more supplement or meeting items classified as articles. Share is still a ratio inside that year."
+    ]
+  },
+  "editors": [
+    {
+      "role": "eic",
+      "name": "William W. Parmley",
+      "institutionGroupId": "ucsf",
+      "startYear": 1992,
+      "endYear": 2002,
+      "sources": [
+        {
+          "label": "JACC, Passing the Torch, 2024",
+          "url": "https://www.jacc.org/doi/10.1016/j.jacc.2024.04.045",
+          "quote": "Dack passed the torch to William W. Parmley \u2026 the second JACC EiC (1992-2002)."
+        },
+        {
+          "label": "DeMaria first editor\u2019s page",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0735109702019411",
+          "quote": "the Editorial Office transitions from Bill Parmley and associates at UCSF to myself and colleagues at UCSD."
+        }
+      ]
+    },
+    {
+      "role": "eic",
+      "name": "Anthony N. DeMaria",
+      "institutionGroupId": "ucsd",
+      "startYear": 2002,
+      "endYear": 2014,
+      "sources": [
+        {
+          "label": "JACC, Passing the Torch, 2024",
+          "url": "https://www.jacc.org/doi/10.1016/j.jacc.2024.04.045",
+          "quote": "Anthony N. DeMaria was the third JACC EiC (2002-2014)."
+        },
+        {
+          "label": "ACC / PR Newswire, 15 Aug 2013",
+          "url": "https://www.prnewswire.com/news-releases/valentin-fuster-named-editor-in-chief-of-accs-flagship-journal-219832891.html",
+          "quote": "Dr. Fuster replaces Anthony DeMaria, who has served as the editor-in-chief of JACC since 2002."
+        }
+      ]
+    },
+    {
+      "role": "eic",
+      "name": "Valentin Fuster",
+      "institutionGroupId": "mount-sinai",
+      "startYear": 2014,
+      "endYear": 2024,
+      "sources": [
+        {
+          "label": "JACC, Passing the Torch, 2024",
+          "url": "https://www.jacc.org/doi/10.1016/j.jacc.2024.04.045",
+          "quote": "Valentin Fuster recently completed his term as the fourth EiC (2014-2024)."
+        },
+        {
+          "label": "Mount Sinai / Newswise, 15 Aug 2013",
+          "url": "https://www.newswise.com/articles/journal-of-the-american-college-of-cardiology-taps-next-editor-in-chief",
+          "quote": "Director of Mount Sinai Heart\u2026 Dr. Fuster will begin his five-year term in 2014."
+        }
+      ]
+    },
+    {
+      "role": "eic",
+      "name": "Harlan M. Krumholz",
+      "institutionGroupId": "yale",
+      "startYear": 2024,
+      "endYear": null,
+      "sources": [
+        {
+          "label": "Yale School of Medicine, 11 Dec 2023",
+          "url": "https://medicine.yale.edu/news-article/krumholz-next-editor-in-chief-of-jacc/",
+          "quote": "Harold H. Hines, Jr. Professor of Medicine (Cardiology), Yale School of Medicine\u2026 term as editor-in-chief of JACC will begin on July 1, 2024."
+        }
+      ]
+    }
+  ],
+  "series": [
+    {
+      "year": 2000,
+      "journalArticles": 737,
+      "byInstitution": {
+        "ucsf": {
+          "articles": 15,
+          "share": 0.0203527815468114,
+          "controlArticles": 67,
+          "controlTotal": 9164,
+          "controlShare": 0.007311217808817111
+        },
+        "ucsd": {
+          "articles": 2,
+          "share": 0.0027137042062415195,
+          "controlArticles": 20,
+          "controlTotal": 9164,
+          "controlShare": 0.002182453077258839
+        },
+        "mount-sinai": {
+          "articles": 2,
+          "share": 0.0027137042062415195,
+          "controlArticles": 13,
+          "controlTotal": 9164,
+          "controlShare": 0.0014185945002182453
+        },
+        "yale": {
+          "articles": 5,
+          "share": 0.0067842605156037995,
+          "controlArticles": 39,
+          "controlTotal": 9164,
+          "controlShare": 0.0042557835006547355
+        }
+      }
+    },
+    {
+      "year": 2001,
+      "journalArticles": 3102,
+      "byInstitution": {
+        "ucsf": {
+          "articles": 14,
+          "share": 0.004513217279174726,
+          "controlArticles": 63,
+          "controlTotal": 9243,
+          "controlShare": 0.006815968841285297
+        },
+        "ucsd": {
+          "articles": 8,
+          "share": 0.0025789813023855577,
+          "controlArticles": 25,
+          "controlTotal": 9243,
+          "controlShare": 0.002704749540192578
+        },
+        "mount-sinai": {
+          "articles": 6,
+          "share": 0.0019342359767891683,
+          "controlArticles": 16,
+          "controlTotal": 9243,
+          "controlShare": 0.00173103970572325
+        },
+        "yale": {
+          "articles": 8,
+          "share": 0.0025789813023855577,
+          "controlArticles": 36,
+          "controlTotal": 9243,
+          "controlShare": 0.0038948393378773127
+        }
+      }
+    },
+    {
+      "year": 2002,
+      "journalArticles": 2806,
+      "byInstitution": {
+        "ucsf": {
+          "articles": 15,
+          "share": 0.005345687811831789,
+          "controlArticles": 84,
+          "controlTotal": 9464,
+          "controlShare": 0.008875739644970414
+        },
+        "ucsd": {
+          "articles": 10,
+          "share": 0.003563791874554526,
+          "controlArticles": 36,
+          "controlTotal": 9464,
+          "controlShare": 0.0038038884192730348
+        },
+        "mount-sinai": {
+          "articles": 2,
+          "share": 0.0007127583749109052,
+          "controlArticles": 10,
+          "controlTotal": 9464,
+          "controlShare": 0.0010566356720202875
+        },
+        "yale": {
+          "articles": 6,
+          "share": 0.0021382751247327157,
+          "controlArticles": 31,
+          "controlTotal": 9464,
+          "controlShare": 0.003275570583262891
+        }
+      }
+    },
+    {
+      "year": 2003,
+      "journalArticles": 3168,
+      "byInstitution": {
+        "ucsf": {
+          "articles": 9,
+          "share": 0.002840909090909091,
+          "controlArticles": 89,
+          "controlTotal": 9992,
+          "controlShare": 0.008907125700560448
+        },
+        "ucsd": {
+          "articles": 9,
+          "share": 0.002840909090909091,
+          "controlArticles": 31,
+          "controlTotal": 9992,
+          "controlShare": 0.003102481985588471
+        },
+        "mount-sinai": {
+          "articles": 8,
+          "share": 0.0025252525252525255,
+          "controlArticles": 18,
+          "controlTotal": 9992,
+          "controlShare": 0.001801441152922338
+        },
+        "yale": {
+          "articles": 9,
+          "share": 0.002840909090909091,
+          "controlArticles": 50,
+          "controlTotal": 9992,
+          "controlShare": 0.0050040032025620495
+        }
+      }
+    },
+    {
+      "year": 2004,
+      "journalArticles": 3155,
+      "byInstitution": {
+        "ucsf": {
+          "articles": 19,
+          "share": 0.006022187004754358,
+          "controlArticles": 95,
+          "controlTotal": 8664,
+          "controlShare": 0.010964912280701754
+        },
+        "ucsd": {
+          "articles": 23,
+          "share": 0.007290015847860539,
+          "controlArticles": 31,
+          "controlTotal": 8664,
+          "controlShare": 0.0035780240073868884
+        },
+        "mount-sinai": {
+          "articles": 8,
+          "share": 0.0025356576862123614,
+          "controlArticles": 25,
+          "controlTotal": 8664,
+          "controlShare": 0.0028855032317636198
+        },
+        "yale": {
+          "articles": 15,
+          "share": 0.004754358161648178,
+          "controlArticles": 46,
+          "controlTotal": 8664,
+          "controlShare": 0.00530932594644506
+        }
+      }
+    },
+    {
+      "year": 2005,
+      "journalArticles": 851,
+      "byInstitution": {
+        "ucsf": {
+          "articles": 15,
+          "share": 0.01762632197414806,
+          "controlArticles": 120,
+          "controlTotal": 9599,
+          "controlShare": 0.012501302218981145
+        },
+        "ucsd": {
+          "articles": 11,
+          "share": 0.012925969447708578,
+          "controlArticles": 20,
+          "controlTotal": 9599,
+          "controlShare": 0.0020835503698301908
+        },
+        "mount-sinai": {
+          "articles": 9,
+          "share": 0.010575793184488837,
+          "controlArticles": 20,
+          "controlTotal": 9599,
+          "controlShare": 0.0020835503698301908
+        },
+        "yale": {
+          "articles": 9,
+          "share": 0.010575793184488837,
+          "controlArticles": 57,
+          "controlTotal": 9599,
+          "controlShare": 0.005938118554016043
+        }
+      }
+    },
+    {
+      "year": 2006,
+      "journalArticles": 930,
+      "byInstitution": {
+        "ucsf": {
+          "articles": 12,
+          "share": 0.012903225806451613,
+          "controlArticles": 96,
+          "controlTotal": 8246,
+          "controlShare": 0.011642008246422508
+        },
+        "ucsd": {
+          "articles": 17,
+          "share": 0.01827956989247312,
+          "controlArticles": 32,
+          "controlTotal": 8246,
+          "controlShare": 0.003880669415474169
+        },
+        "mount-sinai": {
+          "articles": 2,
+          "share": 0.002150537634408602,
+          "controlArticles": 25,
+          "controlTotal": 8246,
+          "controlShare": 0.003031772980839195
+        },
+        "yale": {
+          "articles": 12,
+          "share": 0.012903225806451613,
+          "controlArticles": 61,
+          "controlTotal": 8246,
+          "controlShare": 0.007397526073247635
+        }
+      }
+    },
+    {
+      "year": 2007,
+      "journalArticles": 773,
+      "byInstitution": {
+        "ucsf": {
+          "articles": 7,
+          "share": 0.009055627425614488,
+          "controlArticles": 100,
+          "controlTotal": 8329,
+          "controlShare": 0.012006243246488173
+        },
+        "ucsd": {
+          "articles": 21,
+          "share": 0.027166882276843468,
+          "controlArticles": 33,
+          "controlTotal": 8329,
+          "controlShare": 0.003962060271341097
+        },
+        "mount-sinai": {
+          "articles": 4,
+          "share": 0.00517464424320828,
+          "controlArticles": 18,
+          "controlTotal": 8329,
+          "controlShare": 0.0021611237843678715
+        },
+        "yale": {
+          "articles": 9,
+          "share": 0.01164294954721863,
+          "controlArticles": 54,
+          "controlTotal": 8329,
+          "controlShare": 0.006483371353103614
+        }
+      }
+    },
+    {
+      "year": 2008,
+      "journalArticles": 839,
+      "byInstitution": {
+        "ucsf": {
+          "articles": 10,
+          "share": 0.011918951132300357,
+          "controlArticles": 86,
+          "controlTotal": 8294,
+          "controlShare": 0.010368941403424162
+        },
+        "ucsd": {
+          "articles": 28,
+          "share": 0.033373063170441,
+          "controlArticles": 36,
+          "controlTotal": 8294,
+          "controlShare": 0.0043404870991077885
+        },
+        "mount-sinai": {
+          "articles": 5,
+          "share": 0.0059594755661501785,
+          "controlArticles": 23,
+          "controlTotal": 8294,
+          "controlShare": 0.002773088979985532
+        },
+        "yale": {
+          "articles": 2,
+          "share": 0.0023837902264600714,
+          "controlArticles": 45,
+          "controlTotal": 8294,
+          "controlShare": 0.005425608873884736
+        }
+      }
+    },
+    {
+      "year": 2009,
+      "journalArticles": 896,
+      "byInstitution": {
+        "ucsf": {
+          "articles": 12,
+          "share": 0.013392857142857142,
+          "controlArticles": 104,
+          "controlTotal": 8008,
+          "controlShare": 0.012987012987012988
+        },
+        "ucsd": {
+          "articles": 27,
+          "share": 0.030133928571428572,
+          "controlArticles": 27,
+          "controlTotal": 8008,
+          "controlShare": 0.0033716283716283715
+        },
+        "mount-sinai": {
+          "articles": 5,
+          "share": 0.005580357142857143,
+          "controlArticles": 34,
+          "controlTotal": 8008,
+          "controlShare": 0.004245754245754246
+        },
+        "yale": {
+          "articles": 7,
+          "share": 0.0078125,
+          "controlArticles": 46,
+          "controlTotal": 8008,
+          "controlShare": 0.005744255744255744
+        }
+      }
+    },
+    {
+      "year": 2010,
+      "journalArticles": 2983,
+      "byInstitution": {
+        "ucsf": {
+          "articles": 16,
+          "share": 0.0053637277908146165,
+          "controlArticles": 119,
+          "controlTotal": 8859,
+          "controlShare": 0.013432667343944011
+        },
+        "ucsd": {
+          "articles": 21,
+          "share": 0.007039892725444184,
+          "controlArticles": 37,
+          "controlTotal": 8859,
+          "controlShare": 0.004176543627948979
+        },
+        "mount-sinai": {
+          "articles": 12,
+          "share": 0.004022795843110962,
+          "controlArticles": 39,
+          "controlTotal": 8859,
+          "controlShare": 0.0044023027429732475
+        },
+        "yale": {
+          "articles": 14,
+          "share": 0.004693261816962789,
+          "controlArticles": 63,
+          "controlTotal": 8859,
+          "controlShare": 0.007111412123264477
+        }
+      }
+    },
+    {
+      "year": 2011,
+      "journalArticles": 3010,
+      "byInstitution": {
+        "ucsf": {
+          "articles": 20,
+          "share": 0.006644518272425249,
+          "controlArticles": 129,
+          "controlTotal": 9141,
+          "controlShare": 0.014112241549064654
+        },
+        "ucsd": {
+          "articles": 22,
+          "share": 0.007308970099667774,
+          "controlArticles": 31,
+          "controlTotal": 9141,
+          "controlShare": 0.00339131386062794
+        },
+        "mount-sinai": {
+          "articles": 8,
+          "share": 0.0026578073089701,
+          "controlArticles": 28,
+          "controlTotal": 9141,
+          "controlShare": 0.0030631221966962037
+        },
+        "yale": {
+          "articles": 11,
+          "share": 0.003654485049833887,
+          "controlArticles": 68,
+          "controlTotal": 9141,
+          "controlShare": 0.007439011049119352
+        }
+      }
+    },
+    {
+      "year": 2012,
+      "journalArticles": 3089,
+      "byInstitution": {
+        "ucsf": {
+          "articles": 33,
+          "share": 0.01068306895435416,
+          "controlArticles": 131,
+          "controlTotal": 9300,
+          "controlShare": 0.014086021505376344
+        },
+        "ucsd": {
+          "articles": 31,
+          "share": 0.010035610229847848,
+          "controlArticles": 38,
+          "controlTotal": 9300,
+          "controlShare": 0.0040860215053763445
+        },
+        "mount-sinai": {
+          "articles": 22,
+          "share": 0.00712204596956944,
+          "controlArticles": 40,
+          "controlTotal": 9300,
+          "controlShare": 0.004301075268817204
+        },
+        "yale": {
+          "articles": 20,
+          "share": 0.006474587245063127,
+          "controlArticles": 64,
+          "controlTotal": 9300,
+          "controlShare": 0.006881720430107527
+        }
+      }
+    },
+    {
+      "year": 2013,
+      "journalArticles": 3793,
+      "byInstitution": {
+        "ucsf": {
+          "articles": 41,
+          "share": 0.010809385710519377,
+          "controlArticles": 179,
+          "controlTotal": 9381,
+          "controlShare": 0.01908112141562733
+        },
+        "ucsd": {
+          "articles": 27,
+          "share": 0.007118375955707883,
+          "controlArticles": 42,
+          "controlTotal": 9381,
+          "controlShare": 0.004477134633834346
+        },
+        "mount-sinai": {
+          "articles": 52,
+          "share": 0.013709464803585552,
+          "controlArticles": 58,
+          "controlTotal": 9381,
+          "controlShare": 0.006182709732437906
+        },
+        "yale": {
+          "articles": 37,
+          "share": 0.009754811494858951,
+          "controlArticles": 101,
+          "controlTotal": 9381,
+          "controlShare": 0.010766442809934974
+        }
+      }
+    },
+    {
+      "year": 2014,
+      "journalArticles": 4346,
+      "byInstitution": {
+        "ucsf": {
+          "articles": 19,
+          "share": 0.0043718361711919005,
+          "controlArticles": 151,
+          "controlTotal": 9546,
+          "controlShare": 0.01581814372512047
+        },
+        "ucsd": {
+          "articles": 33,
+          "share": 0.007593189139438564,
+          "controlArticles": 43,
+          "controlTotal": 9546,
+          "controlShare": 0.0045045045045045045
+        },
+        "mount-sinai": {
+          "articles": 53,
+          "share": 0.012195121951219513,
+          "controlArticles": 55,
+          "controlTotal": 9546,
+          "controlShare": 0.0057615755290173895
+        },
+        "yale": {
+          "articles": 21,
+          "share": 0.0048320294523699955,
+          "controlArticles": 111,
+          "controlTotal": 9546,
+          "controlShare": 0.011627906976744186
+        }
+      }
+    },
+    {
+      "year": 2015,
+      "journalArticles": 4335,
+      "byInstitution": {
+        "ucsf": {
+          "articles": 27,
+          "share": 0.006228373702422145,
+          "controlArticles": 232,
+          "controlTotal": 9318,
+          "controlShare": 0.0248980467911569
+        },
+        "ucsd": {
+          "articles": 21,
+          "share": 0.004844290657439446,
+          "controlArticles": 54,
+          "controlTotal": 9318,
+          "controlShare": 0.005795235028976175
+        },
+        "mount-sinai": {
+          "articles": 57,
+          "share": 0.01314878892733564,
+          "controlArticles": 60,
+          "controlTotal": 9318,
+          "controlShare": 0.00643915003219575
+        },
+        "yale": {
+          "articles": 33,
+          "share": 0.007612456747404845,
+          "controlArticles": 107,
+          "controlTotal": 9318,
+          "controlShare": 0.011483150890749088
+        }
+      }
+    },
+    {
+      "year": 2016,
+      "journalArticles": 4274,
+      "byInstitution": {
+        "ucsf": {
+          "articles": 26,
+          "share": 0.006083294337856809,
+          "controlArticles": 243,
+          "controlTotal": 10399,
+          "controlShare": 0.02336763150302914
+        },
+        "ucsd": {
+          "articles": 19,
+          "share": 0.004445484323818437,
+          "controlArticles": 67,
+          "controlTotal": 10399,
+          "controlShare": 0.006442927204538898
+        },
+        "mount-sinai": {
+          "articles": 88,
+          "share": 0.020589611605053813,
+          "controlArticles": 70,
+          "controlTotal": 10399,
+          "controlShare": 0.006731416482354072
+        },
+        "yale": {
+          "articles": 28,
+          "share": 0.006551240056153486,
+          "controlArticles": 137,
+          "controlTotal": 10399,
+          "controlShare": 0.013174343686892971
+        }
+      }
+    },
+    {
+      "year": 2017,
+      "journalArticles": 4465,
+      "byInstitution": {
+        "ucsf": {
+          "articles": 26,
+          "share": 0.0058230683090705485,
+          "controlArticles": 248,
+          "controlTotal": 13608,
+          "controlShare": 0.018224573780129337
+        },
+        "ucsd": {
+          "articles": 18,
+          "share": 0.004031354983202688,
+          "controlArticles": 85,
+          "controlTotal": 13608,
+          "controlShare": 0.006246325690770135
+        },
+        "mount-sinai": {
+          "articles": 98,
+          "share": 0.0219484882418813,
+          "controlArticles": 106,
+          "controlTotal": 13608,
+          "controlShare": 0.007789535567313345
+        },
+        "yale": {
+          "articles": 29,
+          "share": 0.006494960806270996,
+          "controlArticles": 167,
+          "controlTotal": 13608,
+          "controlShare": 0.012272192827748383
+        }
+      }
+    },
+    {
+      "year": 2018,
+      "journalArticles": 4714,
+      "byInstitution": {
+        "ucsf": {
+          "articles": 26,
+          "share": 0.005515485787017395,
+          "controlArticles": 223,
+          "controlTotal": 13268,
+          "controlShare": 0.01680735604461863
+        },
+        "ucsd": {
+          "articles": 17,
+          "share": 0.0036062791684344504,
+          "controlArticles": 66,
+          "controlTotal": 13268,
+          "controlShare": 0.004974374434730178
+        },
+        "mount-sinai": {
+          "articles": 82,
+          "share": 0.017394993635977938,
+          "controlArticles": 107,
+          "controlTotal": 13268,
+          "controlShare": 0.008064516129032258
+        },
+        "yale": {
+          "articles": 19,
+          "share": 0.004030547305897327,
+          "controlArticles": 121,
+          "controlTotal": 13268,
+          "controlShare": 0.009119686463671993
+        }
+      }
+    },
+    {
+      "year": 2019,
+      "journalArticles": 4227,
+      "byInstitution": {
+        "ucsf": {
+          "articles": 33,
+          "share": 0.007806955287437899,
+          "controlArticles": 286,
+          "controlTotal": 14314,
+          "controlShare": 0.019980438731312004
+        },
+        "ucsd": {
+          "articles": 28,
+          "share": 0.006624083274189733,
+          "controlArticles": 103,
+          "controlTotal": 14314,
+          "controlShare": 0.007195752410227749
+        },
+        "mount-sinai": {
+          "articles": 100,
+          "share": 0.02365744026496333,
+          "controlArticles": 103,
+          "controlTotal": 14314,
+          "controlShare": 0.007195752410227749
+        },
+        "yale": {
+          "articles": 49,
+          "share": 0.011592145729832031,
+          "controlArticles": 177,
+          "controlTotal": 14314,
+          "controlShare": 0.012365516277770015
+        }
+      }
+    },
+    {
+      "year": 2020,
+      "journalArticles": 4898,
+      "byInstitution": {
+        "ucsf": {
+          "articles": 18,
+          "share": 0.0036749693752552064,
+          "controlArticles": 327,
+          "controlTotal": 15316,
+          "controlShare": 0.02135022199007574
+        },
+        "ucsd": {
+          "articles": 26,
+          "share": 0.005308289097590854,
+          "controlArticles": 129,
+          "controlTotal": 15316,
+          "controlShare": 0.008422564638286759
+        },
+        "mount-sinai": {
+          "articles": 132,
+          "share": 0.02694977541853818,
+          "controlArticles": 156,
+          "controlTotal": 15316,
+          "controlShare": 0.010185427004439801
+        },
+        "yale": {
+          "articles": 64,
+          "share": 0.013066557778685178,
+          "controlArticles": 206,
+          "controlTotal": 15316,
+          "controlShare": 0.01344998694176025
+        }
+      }
+    },
+    {
+      "year": 2021,
+      "journalArticles": 4277,
+      "byInstitution": {
+        "ucsf": {
+          "articles": 25,
+          "share": 0.005845218611176058,
+          "controlArticles": 269,
+          "controlTotal": 13094,
+          "controlShare": 0.02054376050099282
+        },
+        "ucsd": {
+          "articles": 23,
+          "share": 0.005377601122281974,
+          "controlArticles": 76,
+          "controlTotal": 13094,
+          "controlShare": 0.005804185122957079
+        },
+        "mount-sinai": {
+          "articles": 81,
+          "share": 0.01893850830021043,
+          "controlArticles": 117,
+          "controlTotal": 13094,
+          "controlShare": 0.008935390255078663
+        },
+        "yale": {
+          "articles": 55,
+          "share": 0.012859480944587328,
+          "controlArticles": 176,
+          "controlTotal": 13094,
+          "controlShare": 0.0134412708110585
+        }
+      }
+    },
+    {
+      "year": 2022,
+      "journalArticles": 4289,
+      "byInstitution": {
+        "ucsf": {
+          "articles": 28,
+          "share": 0.006528328281650735,
+          "controlArticles": 250,
+          "controlTotal": 13112,
+          "controlShare": 0.019066503965832825
+        },
+        "ucsd": {
+          "articles": 24,
+          "share": 0.00559570995570063,
+          "controlArticles": 87,
+          "controlTotal": 13112,
+          "controlShare": 0.006635143380109823
+        },
+        "mount-sinai": {
+          "articles": 87,
+          "share": 0.02028444858941478,
+          "controlArticles": 102,
+          "controlTotal": 13112,
+          "controlShare": 0.007779133618059792
+        },
+        "yale": {
+          "articles": 51,
+          "share": 0.011890883655863837,
+          "controlArticles": 171,
+          "controlTotal": 13112,
+          "controlShare": 0.013041488712629652
+        }
+      }
+    },
+    {
+      "year": 2023,
+      "journalArticles": 4881,
+      "byInstitution": {
+        "ucsf": {
+          "articles": 30,
+          "share": 0.006146281499692686,
+          "controlArticles": 279,
+          "controlTotal": 14729,
+          "controlShare": 0.01894222282571797
+        },
+        "ucsd": {
+          "articles": 23,
+          "share": 0.004712149149764392,
+          "controlArticles": 107,
+          "controlTotal": 14729,
+          "controlShare": 0.007264580080114061
+        },
+        "mount-sinai": {
+          "articles": 92,
+          "share": 0.01884859659905757,
+          "controlArticles": 130,
+          "controlTotal": 14729,
+          "controlShare": 0.0088261253309797
+        },
+        "yale": {
+          "articles": 59,
+          "share": 0.012087686949395616,
+          "controlArticles": 190,
+          "controlTotal": 14729,
+          "controlShare": 0.012899721637585715
+        }
+      }
+    },
+    {
+      "year": 2024,
+      "journalArticles": 5495,
+      "byInstitution": {
+        "ucsf": {
+          "articles": 49,
+          "share": 0.008917197452229299,
+          "controlArticles": 305,
+          "controlTotal": 14873,
+          "controlShare": 0.02050695891884623
+        },
+        "ucsd": {
+          "articles": 28,
+          "share": 0.005095541401273885,
+          "controlArticles": 99,
+          "controlTotal": 14873,
+          "controlShare": 0.0066563571572648425
+        },
+        "mount-sinai": {
+          "articles": 103,
+          "share": 0.018744313011828936,
+          "controlArticles": 139,
+          "controlTotal": 14873,
+          "controlShare": 0.009345794392523364
+        },
+        "yale": {
+          "articles": 73,
+          "share": 0.013284804367606916,
+          "controlArticles": 178,
+          "controlTotal": 14873,
+          "controlShare": 0.011967995696900423
+        }
+      }
+    }
+  ],
+  "trackedInstitutions": [
+    {
+      "id": "ucsf",
+      "label": "UCSF",
+      "members": [
+        {
+          "openAlexId": "I180670191",
+          "displayName": "University of California, San Francisco"
+        }
+      ]
+    },
+    {
+      "id": "ucsd",
+      "label": "UC San Diego",
+      "members": [
+        {
+          "openAlexId": "I36258959",
+          "displayName": "University of California San Diego"
+        }
+      ]
+    },
+    {
+      "id": "mount-sinai",
+      "label": "Mount Sinai",
+      "members": [
+        {
+          "openAlexId": "I98704320",
+          "displayName": "Icahn School of Medicine at Mount Sinai"
+        }
+      ]
+    },
+    {
+      "id": "yale",
+      "label": "Yale",
+      "members": [
+        {
+          "openAlexId": "I32971472",
+          "displayName": "Yale University"
+        }
+      ]
+    }
+  ]
+}
