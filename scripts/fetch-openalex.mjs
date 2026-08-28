@@ -6,7 +6,7 @@
  *   data/bundle.json
  */
 
-import { readFile, writeFile } from "node:fs/promises";
+import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -279,7 +279,14 @@ async function main() {
   };
 
   await writeFile(join(DATA, "bundle.json"), JSON.stringify(bundle, null, 2) + "\n");
-  console.log(`Wrote data/bundle.json with ${journalBundles.length} journals`);
+  const partsDir = join(DATA, "bundle-parts");
+  await mkdir(partsDir, { recursive: true });
+  const { journals: partJournals, ...meta } = bundle;
+  await writeFile(join(partsDir, "meta.json"), JSON.stringify(meta, null, 2) + "\n");
+  for (const row of partJournals) {
+    await writeFile(join(partsDir, `${row.journal.id}.json`), JSON.stringify(row, null, 2) + "\n");
+  }
+  console.log(`Wrote data/bundle.json and data/bundle-parts with ${journalBundles.length} journals`);
 }
 
 main().catch((err) => {
