@@ -1,0 +1,742 @@
+{
+  "coverage": "EIC tenures are the spine. Deputies only when a source names the person and a window. Years are calendar years of the documented start/end. Mid-year handovers are assigned to the start year of the incoming editor and the end year of the outgoing editor, so  one year can carry two bands.",
+  "byJournal": {
+    "jama": [
+      {
+        "role": "eic",
+        "name": "Catherine D. DeAngelis",
+        "institutionGroupId": "johns-hopkins",
+        "startYear": 2000,
+        "endYear": 2011,
+        "sources": [
+          {
+            "label": "PR Newswire, 10 Mar 2011",
+            "url": "https://www.prnewswire.com/news-releases/american-medical-association-names-new-jama-editor-in-chief-117740453.html",
+            "quote": "Dr. Bauchner is following Catherine D. DeAngelis, who is leaving the post after 11 years to return to Johns Hopkins School of Medicine in Baltimore."
+          },
+          {
+            "label": "Johns Hopkins Medicine, DeAngelis profile",
+            "url": "https://www.hopkinsmedicine.org/about/leadership/catherine-deangelis",
+            "quote": "editor in chief emerita of JAMA … (2000 to 2011)."
+          },
+          {
+            "label": "New York Times, 9 Oct 1999",
+            "url": "https://www.nytimes.com/1999/10/09/us/woman-is-named-editor-of-ama-journal.html",
+            "quote": "will leave her job as a vice dean at Johns Hopkins University School of Medicine."
+          }
+        ]
+      },
+      {
+        "role": "eic",
+        "name": "Howard C. Bauchner",
+        "institutionGroupId": "boston-university",
+        "startYear": 2011,
+        "endYear": 2021,
+        "sources": [
+          {
+            "label": "JAMA farewell editorial, 2021",
+            "url": "https://jamanetwork.com/journals/jama/fullarticle/2780788",
+            "quote": "On July 1, 2011, Howard Bauchner, MD, became the 16th Editor in Chief of JAMA… from Boston Medical Center and Boston University School of Medicine. … effective June 30, 2021."
+          }
+        ]
+      },
+      {
+        "role": "interim-eic",
+        "name": "Phil B. Fontanarosa",
+        "institutionGroupId": null,
+        "startYear": 2021,
+        "endYear": 2022,
+        "gapReason": "Interim editor from JAMA Network staff. No university home is used for the share series.",
+        "sources": [
+          {
+            "label": "JAMA farewell editorial, 1 Jun 2021",
+            "url": "https://jamanetwork.com/journals/jama/fullarticle/2780788",
+            "quote": "Dr Fontanarosa is Executive Editor and Interim Editor in Chief… JAMA and the JAMA Network."
+          }
+        ]
+      },
+      {
+        "role": "eic",
+        "name": "Kirsten Bibbins-Domingo",
+        "institutionGroupId": "ucsf",
+        "startYear": 2022,
+        "endYear": null,
+        "sources": [
+          {
+            "label": "AMA press release",
+            "url": "https://www.ama-assn.org/press-center/ama-press-releases/ama-names-new-editor-chief-jama-and-jama-network",
+            "quote": "Lee Goldman, M.D,. Endowed Professor of Medicine and chair of the Department of Epidemiology and Biostatistics at the UCSF School of Medicine… will begin her tenure on July 1, 2022."
+          }
+        ]
+      }
+    ],
+    "jama-im": [
+      {
+        "role": "eic",
+        "name": "James E. Dalen",
+        "institutionGroupId": "arizona",
+        "startYear": 1988,
+        "endYear": 2003,
+        "gapReason": "Sources conflict on whether he started in 1987 or 1988. He was EIC through 31 December 2003. The chart window starts in 2000.",
+        "sources": [
+          {
+            "label": "Northwestern news, 1 Nov 2003",
+            "url": "https://news.feinberg.northwestern.edu/2003/11/01/greenland/",
+            "quote": "Greenland named chief editor effective January 1, 2004; immediate predecessor, Dr. Jim Dalen."
+          },
+          {
+            "label": "University of Arizona Health Sciences, 2024",
+            "url": "https://medicine.arizona.edu/news/2024/loss-family-uarizona-health-sciences-colleges-medicine-public-health",
+            "quote": "served as editor of the prestigious Archives of Internal Medicine (1988-2004), now JAMA Internal Medicine."
+          }
+        ]
+      },
+      {
+        "role": "eic",
+        "name": "Philip Greenland",
+        "institutionGroupId": "northwestern",
+        "startYear": 2004,
+        "endYear": 2008,
+        "sources": [
+          {
+            "label": "Northwestern news, 1 Nov 2003",
+            "url": "https://news.feinberg.northwestern.edu/2003/11/01/greenland/",
+            "quote": "has been named chief editor of the Archives of Internal Medicine effective January 1, 2004; Dingman Professor of Cardiology and chair of the Department of Preventive Medicine at the Feinberg School."
+          },
+          {
+            "label": "Northwestern news, 14 Nov 2016",
+            "url": "https://news.feinberg.northwestern.edu/2016/11/14/greenland-honored-by-acp-and-aamc-for-contributions-to-preventive-cardiology/",
+            "quote": "From 2004 to 2008, he served as editor-in-chief of the Archives of Internal Medicine."
+          }
+        ]
+      },
+      {
+        "role": "eic",
+        "name": "Rita F. Redberg",
+        "institutionGroupId": "ucsf",
+        "startYear": 2009,
+        "endYear": 2023,
+        "sources": [
+          {
+            "label": "AMA, new editor announcement",
+            "url": "https://www.ama-assn.org/about/publications-newsletters/new-editor-these-4-priorities-will-drive-jama-internal-medicine",
+            "quote": "She succeeds Rita F. Redberg, MD, who has served as editor-in-chief of JAMA Internal Medicine since 2009."
+          },
+          {
+            "label": "UCSF Profiles",
+            "url": "https://profiles.ucsf.edu/rita.redberg",
+            "quote": "She was the Editor-in-Chief of JAMA Internal Medicine from 2009 - 2023."
+          }
+        ]
+      },
+      {
+        "role": "eic",
+        "name": "Sharon K. Inouye",
+        "institutionGroupId": "hebrew-seniorlife",
+        "startYear": 2023,
+        "endYear": null,
+        "gapReason": "She holds a Harvard Medical School appointment. OpenAlex has no separate HMS record, so the plotted home is Hebrew SeniorLife only. A Harvard-wide line would be HMS volume, not this appointment.",
+        "sources": [
+          {
+            "label": "EurekAlert, 1 Mar 2023",
+            "url": "https://www.eurekalert.org/news-releases/981147",
+            "quote": "Sharon K. Inouye, Professor of Medicine at Harvard Medical School and Director of the Aging Brain Center, Marcus Institute for Aging Research at Hebrew SeniorLife… will assume this position on July 1, 2023."
+          }
+        ]
+      }
+    ],
+    "nejm": [
+      {
+        "role": "eic",
+        "name": "Jeffrey M. Drazen",
+        "institutionGroupId": "harvard-brigham",
+        "startYear": 2000,
+        "endYear": 2019,
+        "sources": [
+          {
+            "label": "NEJM Wikipedia editors list",
+            "url": "https://en.wikipedia.org/wiki/The_New_England_Journal_of_Medicine",
+            "quote": "Jeffrey M. Drazen, 2000–2019."
+          },
+          {
+            "label": "Medscape, Rubin appointment",
+            "url": "https://www.medscape.com/viewarticle/914780",
+            "quote": "named Rubin to succeed Jeffrey Drazen, MD, who announced his retirement in October."
+          }
+        ]
+      },
+      {
+        "role": "eic",
+        "name": "Eric J. Rubin",
+        "institutionGroupId": "harvard-brigham",
+        "startYear": 2019,
+        "endYear": null,
+        "sources": [
+          {
+            "label": "NEJM Media Center",
+            "url": "https://www.nejm.org/media-center/editor-in-chief",
+            "quote": "Joining NEJM as an Associate Editor in 2012, Dr. Rubin was appointed Editor-in-Chief in September 2019… Professor of Medicine at Harvard Medical School… patients at Brigham and Women’s Hospital."
+          }
+        ]
+      }
+    ],
+    "jacc": [
+      {
+        "role": "eic",
+        "name": "William W. Parmley",
+        "institutionGroupId": "ucsf",
+        "startYear": 1992,
+        "endYear": 2002,
+        "sources": [
+          {
+            "label": "JACC, Passing the Torch, 2024",
+            "url": "https://www.jacc.org/doi/10.1016/j.jacc.2024.04.045",
+            "quote": "Dack passed the torch to William W. Parmley … the second JACC EiC (1992-2002)."
+          },
+          {
+            "label": "DeMaria first editor’s page",
+            "url": "https://www.sciencedirect.com/science/article/pii/S0735109702019411",
+            "quote": "the Editorial Office transitions from Bill Parmley and associates at UCSF to myself and colleagues at UCSD."
+          }
+        ]
+      },
+      {
+        "role": "eic",
+        "name": "Anthony N. DeMaria",
+        "institutionGroupId": "ucsd",
+        "startYear": 2002,
+        "endYear": 2014,
+        "sources": [
+          {
+            "label": "JACC, Passing the Torch, 2024",
+            "url": "https://www.jacc.org/doi/10.1016/j.jacc.2024.04.045",
+            "quote": "Anthony N. DeMaria was the third JACC EiC (2002-2014)."
+          },
+          {
+            "label": "ACC / PR Newswire, 15 Aug 2013",
+            "url": "https://www.prnewswire.com/news-releases/valentin-fuster-named-editor-in-chief-of-accs-flagship-journal-219832891.html",
+            "quote": "Dr. Fuster replaces Anthony DeMaria, who has served as the editor-in-chief of JACC since 2002."
+          }
+        ]
+      },
+      {
+        "role": "eic",
+        "name": "Valentin Fuster",
+        "institutionGroupId": "mount-sinai",
+        "startYear": 2014,
+        "endYear": 2024,
+        "sources": [
+          {
+            "label": "JACC, Passing the Torch, 2024",
+            "url": "https://www.jacc.org/doi/10.1016/j.jacc.2024.04.045",
+            "quote": "Valentin Fuster recently completed his term as the fourth EiC (2014-2024)."
+          },
+          {
+            "label": "Mount Sinai / Newswise, 15 Aug 2013",
+            "url": "https://www.newswise.com/articles/journal-of-the-american-college-of-cardiology-taps-next-editor-in-chief",
+            "quote": "Director of Mount Sinai Heart… Dr. Fuster will begin his five-year term in 2014."
+          }
+        ]
+      },
+      {
+        "role": "eic",
+        "name": "Harlan M. Krumholz",
+        "institutionGroupId": "yale",
+        "startYear": 2024,
+        "endYear": null,
+        "sources": [
+          {
+            "label": "Yale School of Medicine, 11 Dec 2023",
+            "url": "https://medicine.yale.edu/news-article/krumholz-next-editor-in-chief-of-jacc/",
+            "quote": "Harold H. Hines, Jr. Professor of Medicine (Cardiology), Yale School of Medicine… term as editor-in-chief of JACC will begin on July 1, 2024."
+          }
+        ]
+      }
+    ],
+    "circulation": [
+      {
+        "role": "eic",
+        "name": "James T. Willerson",
+        "institutionGroupId": "ut-houston",
+        "startYear": 1993,
+        "endYear": 2004,
+        "gapReason": "Sources place the editorial office at St. Luke’s / Texas Heart Institute in Houston. OpenAlex has no Texas Heart Institute record, so the plotted home is UTHealth Houston.",
+        "sources": [
+          {
+            "label": "Circulation, Willerson 1993–2004",
+            "url": "https://doi.org/10.1161/01.cir.0000132471.97182.df",
+            "quote": "James T. Willerson, MD, Editor of Circulation, 1993–2004."
+          },
+          {
+            "label": "Circulation, May 2004 transition notice",
+            "url": "https://doi.org/10.1161/circ.109.19.2255",
+            "quote": "incoming Editor, Joseph Loscalzo, MD, PhD, as of April 1, 2004… incumbent office St Luke’s Episcopal Hospital/Texas Heart Institute, Houston, TX."
+          }
+        ]
+      },
+      {
+        "role": "eic",
+        "name": "Joseph Loscalzo",
+        "institutionGroupId": "boston-university",
+        "startYear": 2004,
+        "endYear": 2016,
+        "gapReason": "Appointment home is Boston University (2004 incoming office circ@bu.edu). He moved to Harvard / Brigham in 2005. The plotted line stays BU, the institution at takeover, and does not switch mid-tenure.",
+        "sources": [
+          {
+            "label": "Circulation, May 2004 transition notice",
+            "url": "https://doi.org/10.1161/circ.109.19.2255",
+            "quote": "incoming Editor, Joseph Loscalzo, MD, PhD… 560 Harrison Avenue, Suite 502, Boston, MA 02118 … circ@bu.edu."
+          },
+          {
+            "label": "Brigham and Women’s, Loscalzo bio",
+            "url": "https://www.brighamandwomens.org/research/labs-and-projects/loscalzo/joseph-loscalzo-md-phd-bio",
+            "quote": "He joined the faculty of Boston University in 1994 … He returned to Harvard and Brigham and Women’s Hospital in 2005."
+          }
+        ]
+      },
+      {
+        "role": "eic",
+        "name": "Joseph A. Hill",
+        "institutionGroupId": "utsw",
+        "startYear": 2016,
+        "endYear": 2026,
+        "sources": [
+          {
+            "label": "American Heart Association, Hill legacy",
+            "url": "https://www.heart.org/en/around-the-aha/top-journal-editors-impact-builds-lasting-legacy",
+            "quote": "For 10 years… Dr. Joseph Hill… after June 30, when his tenure as Circulation’s editor-in-chief ends… professor… at UT Southwestern Medical Center in Dallas."
+          },
+          {
+            "label": "AHA newsroom, Maron appointment, 6 Jul 2026",
+            "url": "https://newsroom.heart.org/news/leader-in-pulmonary-vascular-research-named-new-editor-in-chief-of-circulation-journal",
+            "quote": "Maron succeeds Joseph A. Hill, who has led Circulation since 2016, and Joseph Loscalzo… 2004-2016."
+          }
+        ]
+      },
+      {
+        "role": "eic",
+        "name": "Bradley A. Maron",
+        "institutionGroupId": "umd-baltimore",
+        "startYear": 2026,
+        "endYear": null,
+        "gapReason": "Tenure starts July 2026. The OpenAlex series in this build ends in 2024, so Maryland has no plotted share points yet.",
+        "sources": [
+          {
+            "label": "AHA newsroom, 6 Jul 2026",
+            "url": "https://newsroom.heart.org/news/leader-in-pulmonary-vascular-research-named-new-editor-in-chief-of-circulation-journal",
+            "quote": "effective with today’s issue, Bradley A. Maron, M.D., FAHA, is the new editor-in-chief of Circulation."
+          }
+        ]
+      }
+    ],
+    "jama-cardio": [
+      {
+        "role": "eic",
+        "name": "Robert O. Bonow",
+        "institutionGroupId": "northwestern",
+        "startYear": 2016,
+        "endYear": 2026,
+        "gapReason": "Casadei’s opening editorial is 2 February 2026. No JAMA notice names Bonow’s last day, so the end year is inferred from that start.",
+        "sources": [
+          {
+            "label": "Northwestern Feinberg News Center, 12 Oct 2015",
+            "url": "https://news.feinberg.northwestern.edu/2015/10/12/bonow-named-founding-editor-of-jama-cardiology/",
+            "quote": "Robert Bonow… named editor-in-chief of JAMA Cardiology, a new journal in the JAMA Network that will debut in 2016."
+          },
+          {
+            "label": "JAMA Cardiology, The First Decade, 30 Jan 2026",
+            "url": "https://jamanetwork.com/journals/jamacardiology/fullarticle/2844652",
+            "quote": "inaugural Editor-in-Chief of a brand-new major medical journal."
+          }
+        ]
+      },
+      {
+        "role": "eic",
+        "name": "Barbara Casadei",
+        "institutionGroupId": "imperial",
+        "startYear": 2026,
+        "endYear": null,
+        "gapReason": "Tenure starts in early 2026. The OpenAlex series in this build ends in 2024, so Imperial has no plotted share points yet.",
+        "sources": [
+          {
+            "label": "JAMA Network appointment",
+            "url": "https://media.jamanetwork.com/post/jama-network-names-new-editor-in-chief-of-jama-cardiology",
+            "quote": "Head of the National Heart and Lung Institute (NHLI) and British Heart Foundation Professor of Cardiovascular Medicine at Imperial College London."
+          },
+          {
+            "label": "JAMA Cardiology opening editorial, 2 Feb 2026",
+            "url": "https://doi.org/10.1001/jamacardio.2026.0161",
+            "quote": "I am grateful to the JAMA Network for appointing me as the next Editor in Chief."
+          }
+        ]
+      }
+    ],
+    "ehj": [
+      {
+        "role": "eic",
+        "name": "Kim Fox",
+        "institutionGroupId": "royal-brompton",
+        "startYear": 1995,
+        "endYear": 2002,
+        "gapReason": "EHJ/ESC editorials say 1995–2002. His Imperial profile says 1994–2002. Plotted as 1995. The masthead address is Royal Brompton, not the later Imperial appointment.",
+        "sources": [
+          {
+            "label": "Lüscher 2009 EHJ history editorial",
+            "url": "https://doi.org/10.1093/eurheartj/ehn549",
+            "quote": "In 1995 Kim Fox took over the editorship."
+          },
+          {
+            "label": "EHJ 2002 handover",
+            "url": "https://doi.org/10.1053/euhj.2002.3370",
+            "quote": "The term of Professor Kim Fox as Editor-in-Chief of the European Heart Journal comes to an end on 31 December 2002."
+          },
+          {
+            "label": "EHJ masthead notice",
+            "url": "https://doi.org/10.1093/eurheartj/19.6.xxi-a",
+            "quote": "Kim Fox, MD, FESC, Editor in Chief, European Heart Journal, Royal Brompton Hospital, London SW3 6NP."
+          }
+        ]
+      },
+      {
+        "role": "eic",
+        "name": "Frans Van de Werf",
+        "institutionGroupId": "leuven",
+        "startYear": 2003,
+        "endYear": 2008,
+        "sources": [
+          {
+            "label": "Lüscher 2009 EHJ history editorial",
+            "url": "https://doi.org/10.1093/eurheartj/ehn549",
+            "quote": "Frans Van de Werf (2003 – 2008)."
+          },
+          {
+            "label": "Van de Werf farewell",
+            "url": "https://doi.org/10.1093/eurheartj/ehn526",
+            "quote": "When I took over the editorial office of the European Heart Journal in the autumn of 2002… Tom Lüscher and his team will take over the journal. They have already received all the new submissions since 1 October 2008."
+          }
+        ]
+      },
+      {
+        "role": "eic",
+        "name": "Thomas F. Lüscher",
+        "institutionGroupId": "zurich",
+        "startYear": 2009,
+        "endYear": 2020,
+        "sources": [
+          {
+            "label": "UZH Center for Molecular Cardiology, 2020",
+            "url": "https://www.cmc.uzh.ch/en/news/news100.html",
+            "quote": "handed over as of 1 September 2020 to the new editor-in-chief Filippo Crea from Rome."
+          },
+          {
+            "label": "Lüscher editing activities",
+            "url": "https://thomasluescher.ch/editing-activities/",
+            "quote": "2009 – 2020 European Heart Journal, Editor-in-Chief."
+          }
+        ]
+      },
+      {
+        "role": "eic",
+        "name": "Filippo Crea",
+        "institutionGroupId": "cattolica-gemelli",
+        "startYear": 2020,
+        "endYear": null,
+        "sources": [
+          {
+            "label": "EHJ editorial board, Oxford Academic",
+            "url": "https://academic.oup.com/eurheartj/pages/editorial_board",
+            "quote": "Fondazione Policlinico Universitario A. Gemelli IRCCS, Italy… Professor of Cardiology… at the Catholic University in Rome. Since September 2020 he is Editor-in-Chief."
+          }
+        ]
+      }
+    ],
+    "ajrccm": [
+      {
+        "role": "eic",
+        "name": "Martin J. Tobin",
+        "institutionGroupId": "loyola",
+        "startYear": 1999,
+        "endYear": 2004,
+        "sources": [
+          {
+            "label": "Leff, Martin Tobin, Editor-Designate, AJRCCM 1999",
+            "url": "https://doi.org/10.1164/ajrccm.159.2.15920",
+            "quote": "Martin Tobin, Editor-Designate."
+          },
+          {
+            "label": "Critical Care Canada Forum speaker page",
+            "url": "https://criticalcarecanada.com/speaker/dr-martin-tobin/",
+            "quote": "Since 1990, he has served as professor of medicine at Hines VA Hospital and Loyola University Medical School in Chicago. … Between 1999 and 2004, Dr. Tobin served as Editor-in-Chief of the American Journal of Respiratory and Critical Care Medicine."
+          }
+        ]
+      },
+      {
+        "role": "eic",
+        "name": "Edward Abraham",
+        "institutionGroupId": "colorado-denver",
+        "startYear": 2004,
+        "endYear": 2009,
+        "gapReason": "Appointment home is University of Colorado Health Sciences Center. OpenAlex keeps that volume on the University of Colorado Denver record. He later moved to UAB. The plotted line stays Colorado.",
+        "sources": [
+          {
+            "label": "Abraham, The AJRCCM in 2005",
+            "url": "https://doi.org/10.1164/rccm.2411001",
+            "quote": "The AJRCCM in 2005."
+          },
+          {
+            "label": "Critical care in AJRCCM 2004, PubMed affiliation",
+            "url": "https://doi.org/10.1164/rccm.2412004",
+            "quote": "Division of Pulmonary Sciences and Critical Care Medicine, University of Colorado Health Sciences Center, Denver, CO."
+          },
+          {
+            "label": "Abraham farewell, Nov 2009",
+            "url": "https://doi.org/10.1164/rccm.200910-1489ed",
+            "quote": "A Fond Farewell to a Most Remarkable Experience."
+          }
+        ]
+      },
+      {
+        "role": "eic",
+        "name": "Jacob Iasha Sznajder",
+        "institutionGroupId": "northwestern",
+        "startYear": 2010,
+        "endYear": 2014,
+        "gapReason": "His Dec 2014 farewell says he served the past 5 years, which plots as 2010–2014. An ATS about page later wrote 2009–2014. The farewell is used here. The 2009 start is not invented to fill the conflict.",
+        "sources": [
+          {
+            "label": "Sznajder, Time to pass the baton, 15 Dec 2014",
+            "url": "https://doi.org/10.1164/rccm.201411-2085ED",
+            "quote": "As I complete the tenure of editorship for the Blue Journal in December 2014, I am grateful for the privilege to have served in this capacity for the past 5 years."
+          }
+        ]
+      },
+      {
+        "role": "eic",
+        "name": "Jadwiga A. Wedzicha",
+        "institutionGroupId": "imperial",
+        "startYear": 2015,
+        "endYear": 2021,
+        "sources": [
+          {
+            "label": "ATS / Newswise, 27 May 2014",
+            "url": "https://www.newswise.com/articles/jadwiga-wedzicha-appointed-the-next-ajrccm-editor-in-chief",
+            "quote": "Dr. Wedzicha’s term begins on January 1, 2015. … clinical chair in Respiratory Medicine at the Imperial College London."
+          },
+          {
+            "label": "Sznajder farewell, 15 Dec 2014",
+            "url": "https://doi.org/10.1164/rccm.201411-2085ED",
+            "quote": "We wish Dr. Jadwiga (Wisia) Wedzicha and her editorial team a successful journey at the helm of the Blue Journal."
+          }
+        ]
+      },
+      {
+        "role": "eic",
+        "name": "Fernando J. Martinez",
+        "institutionGroupId": "weill-cornell",
+        "startYear": 2022,
+        "endYear": null,
+        "gapReason": "Opening editorial lists Weill Cornell. He joined UMass Chan in July 2024. The plotted line stays the appointment home and does not switch mid-tenure.",
+        "sources": [
+          {
+            "label": "Martinez opening editorial, 31 Dec 2021",
+            "url": "https://doi.org/10.1164/rccm.202111-2650ed",
+            "quote": "Fernando J. Martinez (Weill Cornell Medical College, New York, New York)."
+          }
+        ]
+      }
+    ],
+    "chest": [
+      {
+        "role": "eic",
+        "name": "Unknown (pre-Irwin)",
+        "institutionGroupId": null,
+        "startYear": null,
+        "endYear": 2005,
+        "gapReason": "Irwin’s 2019 commentary says he is the seventh EIC and that his tenure began 1 July 2005. The sixth EIC window is not sourced here. Dates were not invented.",
+        "sources": [
+          {
+            "label": "Irwin, On Being the Editor in Chief of the Journal CHEST, June 2019",
+            "url": "https://journal.chestnet.org/article/S0012-3692(19)30823-2/fulltext",
+            "quote": "On July 1, 2005, my tenure as Editor in Chief of CHEST began."
+          }
+        ]
+      },
+      {
+        "role": "eic",
+        "name": "Richard S. Irwin",
+        "institutionGroupId": "umass",
+        "startYear": 2005,
+        "endYear": 2019,
+        "sources": [
+          {
+            "label": "Irwin, On Being the Editor in Chief of the Journal CHEST, June 2019",
+            "url": "https://journal.chestnet.org/article/S0012-3692(19)30823-2/fulltext",
+            "quote": "On July 1, 2005, my tenure as Editor in Chief of CHEST began; on June 30, 2019, it will end."
+          },
+          {
+            "label": "Newswise, UMass affiliation while EIC",
+            "url": "https://www.newswise.com/articles/umass-richard-irwin-to-receive-ge-healthcare-aacn-pioneering-spirit-award",
+            "quote": "professor of medicine and professor of nursing at the University of Massachusetts, Worcester, Mass. He also serves as chair of critical care operations at UMass Memorial Medical Center and as editor-in-chief of the journal CHEST, a position he has held since 2005."
+          }
+        ]
+      },
+      {
+        "role": "eic",
+        "name": "Peter J. Mazzone",
+        "institutionGroupId": "cleveland-clinic",
+        "startYear": 2019,
+        "endYear": null,
+        "sources": [
+          {
+            "label": "CHEST Physician / MDedge, 9 Aug 2019",
+            "url": "https://www.mdedge.com/content/new-editor-chief-takes-reins",
+            "quote": "CHEST welcomed Peter J. Mazzone, MD, MPH, FCCP, in July, as the new Editor in Chief of the journal CHEST. Dr. Mazzone is the Director of the Lung Cancer Program … at the Cleveland Clinic in Ohio."
+          },
+          {
+            "label": "Mazzone, The CHEST Editorial Team, 2019",
+            "url": "https://doi.org/10.1016/j.chest.2019.05.010",
+            "quote": "It is a privilege to be given the opportunity to build the team who will shepherd the evolution of CHEST."
+          }
+        ]
+      }
+    ],
+    "jco": [
+      {
+        "role": "eic",
+        "name": "George P. Canellos",
+        "institutionGroupId": "dana-farber",
+        "startYear": 1988,
+        "endYear": 2001,
+        "gapReason": "JCO’s own emeriti roster says 1988–2001. A Wikipedia history line says 1987. The roster is used. He holds a Harvard appointment. The plotted home is Dana-Farber only.",
+        "sources": [
+          {
+            "label": "JCO editorial roster, Editors-in-Chief Emeriti",
+            "url": "https://ascopubs.org/jco/about/editorial-roster",
+            "quote": "George P. Canellos, MD, Boston, MA, USA (1988-2001)."
+          },
+          {
+            "label": "Dana-Farber physician profile",
+            "url": "https://www.dana-farber.org/find-a-doctor/george-p-canellos",
+            "quote": "From 1975 to 1995, he served as chief of DFCI's Division of Medical Oncology… He is the former Editor-in-Chief of the Journal of Clinical Oncology."
+          }
+        ]
+      },
+      {
+        "role": "eic",
+        "name": "Daniel G. Haller",
+        "institutionGroupId": "penn",
+        "startYear": 2001,
+        "endYear": 2011,
+        "sources": [
+          {
+            "label": "Penn Almanac, 21 Mar 2000",
+            "url": "https://almanac.upenn.edu/archive/v46/n25/honors.html",
+            "quote": "Dr. Daniel G. Haller has been appointed the Editor-in-Chief of the Journal of Clinical Oncology (JCO). Dr. Haller is a professor of medicine at the Penn Cancer Center… five year term beginning May, 2001."
+          },
+          {
+            "label": "JCO editorial roster, Editors-in-Chief Emeriti",
+            "url": "https://ascopubs.org/jco/about/editorial-roster",
+            "quote": "Daniel G. Haller, MD, FASCO, Philadelphia, PA, USA (2001-2011)."
+          }
+        ]
+      },
+      {
+        "role": "eic",
+        "name": "Stephen A. Cannistra",
+        "institutionGroupId": "bidmc",
+        "startYear": 2011,
+        "endYear": 2021,
+        "gapReason": "Appointment notices name Harvard Medical School and Beth Israel Deaconess. OpenAlex has no separate HMS record, so the plotted home is BIDMC only.",
+        "sources": [
+          {
+            "label": "JNCI, 2010 appointment notice",
+            "url": "https://doi.org/10.1093/jnci/djq014",
+            "quote": "Effective May 2011, the new editor-in-chief of the Journal of Clinical Oncology will be Stephen Cannistra, M.D., a professor of medicine at Harvard Medical School and director of gynecologic medical oncology at Beth Israel-Deaconess Medical Center."
+          },
+          {
+            "label": "JCO editorial roster, Editors-in-Chief Emeriti",
+            "url": "https://ascopubs.org/jco/about/editorial-roster",
+            "quote": "Stephen A. Cannistra, MD, FASCO, Boston, MA, USA (2011-2021)."
+          }
+        ]
+      },
+      {
+        "role": "eic",
+        "name": "Jonathan W. Friedberg",
+        "institutionGroupId": "rochester",
+        "startYear": 2021,
+        "endYear": null,
+        "sources": [
+          {
+            "label": "ASCO Post, 10 Aug 2020",
+            "url": "https://ascopost.com/issues/august-10-2020/jonathan-w-friedberg-md-mmsc-named-next-editor-in-chief-of-the-journal-of-clinical-oncology/",
+            "quote": "Director of the Wilmot Cancer Institute and Samuel Durand Professor of Medicine at the University of Rochester Medical Center… Dr. Friedberg’s 5-year term as JCO Editor-in-Chief will begin in June 2021."
+          },
+          {
+            "label": "JCO editorial roster",
+            "url": "https://ascopubs.org/jco/about/editorial-roster",
+            "quote": "Editor-in-Chief… Jonathan W. Friedberg, MD, University of Rochester, Rochester, NY, USA."
+          }
+        ]
+      }
+    ],
+    "lancet-onc": [
+      {
+        "role": "eic",
+        "name": "Unknown (launch to Feb 2002)",
+        "institutionGroupId": null,
+        "startYear": null,
+        "endYear": 2002,
+        "gapReason": "The journal launched in 2000. Collingridge’s own About page says he became EIC in March 2002. No sourced EIC is on file for the first 18 months. Wikipedia and Grokipedia names for that window were not used.",
+        "sources": [
+          {
+            "label": "The Lancet Oncology About page",
+            "url": "https://www.thelancet.com/lanonc/about",
+            "quote": "I have been Editor-in-Chief of The Lancet Oncology since March 2002."
+          }
+        ]
+      },
+      {
+        "role": "eic",
+        "name": "David Collingridge",
+        "institutionGroupId": null,
+        "startYear": 2002,
+        "endYear": null,
+        "gapReason": "In-house Lancet Group editor in London. Prior Yale and Imperial research posts are pre-Lancet and are not used for the share series.",
+        "sources": [
+          {
+            "label": "The Lancet Oncology About page",
+            "url": "https://www.thelancet.com/lanonc/about",
+            "quote": "I have been Editor-in-Chief of The Lancet Oncology since March 2002… Affiliation: The Lancet Group, London, UK."
+          },
+          {
+            "label": "Elsevier Researcher Academy editor bio",
+            "url": "https://researcheracademy.elsevier.com/node/5149",
+            "quote": "Dr David Collingridge has been Editor-in-Chief of The Lancet Oncology since March 2002."
+          }
+        ]
+      }
+    ],
+    "jama-onc": [
+      {
+        "role": "eic",
+        "name": "Mary L. (Nora) Disis",
+        "institutionGroupId": "washington",
+        "startYear": 2015,
+        "endYear": null,
+        "sources": [
+          {
+            "label": "AMA, JAMA Oncology to debut in 2015",
+            "url": "https://www.ama-assn.org/about/publications-newsletters/new-journal-jama-oncology-debut-2015",
+            "quote": "Nora Disis, MD, as our inaugural editor-in-chief… director of the Center for Translational Medicine in Women’s Health and director of the Institute of Translational Health Sciences at the University of Washington."
+          },
+          {
+            "label": "Disis, Announcing JAMA Oncology, 2015",
+            "url": "https://jamanetwork.com/journals/jamaoncology/fullarticle/2108846",
+            "quote": "Tumor Vaccine Group, Center for Translational Medicine in Women’s Health, University of Washington."
+          }
+        ]
+      }
+    ]
+  }
+}
