@@ -14,8 +14,8 @@ const REQUIRED = [
   "ajrccm",
   "chest",
   "jco",
-  "cid",
-  "jasn",
+  "lancet-id",
+  "kidney-int",
 ];
 
 const PARTS = join(ROOT, "data/bundle-parts");

@@ -637,176 +637,140 @@
         ]
       }
     ],
-    "cid": [
+    "lancet-id": [
       {
         "role": "eic",
-        "name": "Sherwood L. Gorbach",
-        "institutionGroupId": "tufts",
-        "startYear": 2000,
-        "endYear": 2016,
-        "sources": [
-          {
-            "label": "CID announcement, December 1999",
-            "url": "https://doi.org/10.1086/524971",
-            "quote": "Dr. Sherwood L. Gorbach has been appointed the new editor of Clinical Infectious Diseases. He will assume responsibility beginning with the January 2000 issue… Tufts University School of Medicine, Arnold 205, 136 Harrison Avenue, Boston, Massachusetts 02111."
-          },
-          {
-            "label": "OUP blog, Schooley start, 17 Feb 2017",
-            "url": "https://blog.oup.com/2017/02/chip-schooley-infectious-diseases-journal-publishing/",
-            "quote": "Robert T. “Chip” Schooley, editor-in-chief of the journal Clinical Infectious Diseases (CID), who began his term in January"
-          }
-        ]
-      },
-      {
-        "role": "eic",
-        "name": "Robert T. Schooley",
-        "institutionGroupId": "ucsd",
-        "startYear": 2017,
+        "name": "John McConnell",
+        "institutionGroupId": null,
+        "startYear": 2001,
         "endYear": 2022,
+        "gapReason": "Founding editor from the first issue in August 2001 until his death in February 2022. He was Lancet staff in London. No university home is used for the share series.",
         "sources": [
           {
-            "label": "IDSA, retiring CID editors, 2022",
-            "url": "https://www.idsociety.org/news--publications-new/articles/2022/idsa-thanks-retiring-clinical-infectious-diseases-editors/",
-            "quote": "Dr. Schooley officially took office as editor-in-chief of CID in 2017"
+            "label": "ISAC in memoriam",
+            "url": "https://www.isac.world/news-and-publications/in-memoriam-2",
+            "quote": "John was the founding Editor-in-Chief of The Lancet Infectious Diseases… becoming… the Editor-in-Chief of The Lancet Infectious Diseases, which published its first issue in August 2001."
           },
           {
-            "label": "OUP blog, 17 Feb 2017",
-            "url": "https://blog.oup.com/2017/02/chip-schooley-infectious-diseases-journal-publishing/",
-            "quote": "He is the Division Head and Professor of Medicine in the Department of Medicine, Division of Infectious Diseases, at the University of California, San Diego."
+            "label": "EASE obituary, March 2022",
+            "url": "https://ease.org.uk/2022/03/in-memory-of-john-mcconnell/",
+            "quote": "In February 2022, the editing community sadly lost… John McConnell. John was the founding Editor-in-Chief of The Lancet Infectious Diseases."
           }
         ]
       },
       {
         "role": "eic",
-        "name": "Paul E. Sax",
-        "institutionGroupId": "harvard-brigham",
+        "name": "Ursula Hofer",
+        "institutionGroupId": "toronto",
         "startYear": 2022,
         "endYear": null,
+        "gapReason": "The October 2022 issue is the first under Hofer. The EIC desk is at The Lancet in London. The plotted academic home is the University of Toronto adjunct appointment named on the Elsevier Researcher Academy page.",
         "sources": [
           {
-            "label": "IDSA, next CID editor-in-chief, 2022",
-            "url": "https://www.idsociety.org/news--publications-new/articles/2022/infectious-diseases-society-of-america-announces-next-editor-in-chief-of-clinical-infectious-diseases/",
-            "quote": "will succeed Robert T. Schooley, MD, FIDSA, on July 1, 2022… clinical director of the Division of Infectious Diseases at Brigham and Women's Hospital and professor of medicine at Harvard Medical School."
+            "label": "Looking back and looking ahead, October 2022",
+            "url": "https://doi.org/10.1016/S1473-3099(22)00598-9",
+            "quote": "The October issue marks the first issue of The Lancet Infectious Diseases with our new Editor-in-Chief, Ursula Hofer, on the team."
+          },
+          {
+            "label": "Elsevier Researcher Academy, Ursula Hofer",
+            "url": "https://researcheracademy.elsevier.com/node/18611",
+            "quote": "Ursula Hofer joined The Lancet Infectious Diseases as Editor-in-Chief in 2022… She is Adjunct Professor of Medicine at the University of Toronto (Canada)."
           }
         ]
       }
     ],
-    "jasn": [
+    "kidney-int": [
       {
         "role": "eic",
-        "name": "C. Craig Tisher",
-        "institutionGroupId": "florida",
+        "name": "Saulo Klahr",
+        "institutionGroupId": "wustl",
         "startYear": 1996,
-        "endYear": 2001,
-        "gapReason": "Couser’s 2001 handover essay places Tisher’s office in Gainesville after Grantham’s 1996 term. The chart window starts in 2000.",
+        "endYear": 2005,
+        "gapReason": "ISN timeline dates the start to 1996. The chart window opens in 2000. ISN said the term ended December 2005; Al-Awqati’s first issue is January 2006.",
         "sources": [
           {
-            "label": "Couser, JASN: The next era, 2001",
-            "url": "https://doi.org/10.1681/asn.v1271547",
-            "quote": "When Dr. Grantham's term expired in 1996, the editorial office… relocated from Kansas City to Gainesville, Florida, under the direction of the second JASN editor-in-chief, Dr. C. Craig Tisher."
+            "label": "ISN 60th anniversary timeline",
+            "url": "https://www.theisn.org/about-isn/history/timeline/",
+            "quote": "1996… Saulo Klahr becomes Editor of Kidney International."
           },
           {
-            "label": "Couser, Round 3 at JASN (2001 to 2007), 2010",
-            "url": "https://journals.lww.com/jasn/fulltext/2010/09000/round_3_at_jasn__2001_to_2007___recollections_of.1.aspx",
-            "quote": "When we began our tenure in July 2001"
+            "label": "KI masthead, 2002",
+            "url": "https://doi.org/10.1016/s0085-2538(15)48485-6",
+            "quote": "Saulo Klahr, M.D.… Editor, Kidney International… Washington University School of Medicine at Barnes-Jewish Hospital (North Campus)… St. Louis, Missouri 63110-1092, USA"
+          },
+          {
+            "label": "ISN / NPG publisher announcement, 2005",
+            "url": "https://liblicense.crl.edu/ListArchives/0502/msg00283.html",
+            "quote": "Dr. Qais Al-Awqati of Columbia University, NY, taking over from Dr. Saulo Klahr. Dr. Al-Awqati and his new editorial team will be responsible for the journal content beginning with the January 2006 issue."
           }
         ]
       },
       {
         "role": "eic",
-        "name": "William G. Couser",
-        "institutionGroupId": "washington",
-        "startYear": 2001,
-        "endYear": 2007,
+        "name": "Qais Al-Awqati",
+        "institutionGroupId": "columbia",
+        "startYear": 2006,
+        "endYear": 2011,
+        "gapReason": "ISN’s anniversary timeline lists Schlöndorff as editor in 2011. The 2018 KI tribute gives Schlöndorff’s EIC term as 2012 to 2017, so Al-Awqati’s plotted end is 2011.",
         "sources": [
           {
-            "label": "Couser, Round 3 at JASN (2001 to 2007), 2010",
-            "url": "https://journals.lww.com/jasn/fulltext/2010/09000/round_3_at_jasn__2001_to_2007___recollections_of.1.aspx",
-            "quote": "our term as the third editor-in-chief, deputy editor, and editorial assistant of JASN from 2001 to 2007… When we began our tenure in July 2001"
+            "label": "ISN / NPG publisher announcement, 2005",
+            "url": "https://liblicense.crl.edu/ListArchives/0502/msg00283.html",
+            "quote": "Dr. Qais Al-Awqati of Columbia University, NY, taking over from Dr. Saulo Klahr. Dr. Al-Awqati and his new editorial team will be responsible for the journal content beginning with the January 2006 issue."
           },
           {
-            "label": "ASN Presidential Address 2006",
-            "url": "https://journals.lww.com/jasn/fulltext/2007/04000/american_society_of_nephrology_presidential.6.aspx",
-            "quote": "Eric Nielsen and his deputy and associate editors will take over the reins at JASN beginning July 2007… We thank Bill Couser"
+            "label": "ISN 60th anniversary timeline",
+            "url": "https://www.theisn.org/about-isn/history/timeline/",
+            "quote": "2005… Qais Al-Awqti becomes Editor of Kidney International."
           }
         ]
       },
       {
         "role": "eic",
-        "name": "Eric G. Neilson",
-        "institutionGroupId": "vanderbilt",
-        "startYear": 2007,
-        "endYear": 2013,
-        "gapReason": "Became EIC while chair of medicine at Vanderbilt. Vanderbilt news says he continued as JASN editor when he left for Northwestern on 1 September 2011. The plotted home is Vanderbilt, where the term began.",
-        "sources": [
-          {
-            "label": "Northwestern Feinberg dean biography",
-            "url": "https://www.feinberg.northwestern.edu/about/dean/biography.html",
-            "quote": "From 2007-2013 he served as Editor-in-Chief of the Journal of the American Society of Nephrology (JASN)"
-          },
-          {
-            "label": "Vanderbilt Health News, Neilson takes post at Northwestern",
-            "url": "https://news.vumc.org/reporter-archive/neilson-takes-post-at-northwestern/",
-            "quote": "former chair of the Vanderbilt University Department of Medicine, is leaving after 13 years… He will begin his work there on Sept. 1… He also continued his role as editor of the Journal of the American Society of Nephrology."
-          },
-          {
-            "label": "ASN, Nath appointment",
-            "url": "https://www.asn-online.org/g/blast/files/jasn_eic.html",
-            "quote": "In July of 2013, Dr. Nath will succeed Editor-in-Chief Eric G. Neilson, MD, FASN who has led JASN’s tremendous success since 2007."
-          }
-        ]
-      },
-      {
-        "role": "eic",
-        "name": "Karl A. Nath",
-        "institutionGroupId": "mayo",
-        "startYear": 2013,
+        "name": "Detlef Schlöndorff",
+        "institutionGroupId": "mount-sinai",
+        "startYear": 2012,
         "endYear": 2017,
-        "gapReason": "ASN said a six-year term from 1 July 2013. Briggs’s first issue is January 2018 volume 29, so the outgoing year is 2017. The later years of the announced six-year window were not used.",
+        "gapReason": "The 2018 KI tribute gives the EIC term as 2012 to 2017. ISN’s anniversary timeline lists 2011. The plotted start is 2012 from the tribute. ISN said he would step down at the end of 2017.",
         "sources": [
           {
-            "label": "ASN, Nath appointment",
-            "url": "https://www.asn-online.org/g/blast/files/jasn_eic.html",
-            "quote": "Dr. Nath is a nephrologist at the Mayo Clinic in Rochester, MN… Dr. Nath will assume the post July 1, 2013"
+            "label": "Harris, The Bowman’s shield, 2018",
+            "url": "https://doi.org/10.1016/j.kint.2018.07.001",
+            "quote": "His most valuable and recognized contribution to the ISN has been as editor in-chief of KI and KI Supplements from 2012 to 2017"
           },
           {
-            "label": "Briggs, Thoughts on Turning 29, January 2018",
-            "url": "https://journals.lww.com/jasn/fulltext/2018/01000/thoughts_on_turning_29.2.aspx",
-            "quote": "This issue, the first in volume 29, introduces the next team. I am delighted to have been selected to be the next Editor in Chief of the journal… so ably led by the previous Editor in Chief Karl Nath"
+            "label": "Schlöndorff, The changing of the guard, 2017",
+            "url": "https://doi.org/10.1016/j.kint.2017.10.003",
+            "quote": "Detlef Schlöndorff (Mount Sinai Medical Center)"
+          },
+          {
+            "label": "ISN, New KI editor in 2017",
+            "url": "https://www.theisn.org/blog/2016/05/24/new-ki-editor-in-2017/",
+            "quote": "Detlef Schlondorff announced recently that he will be stepping down as Editor of Kidney International from the end of 2017."
           }
         ]
       },
       {
         "role": "eic",
-        "name": "Josephine P. Briggs",
-        "institutionGroupId": null,
+        "name": "Pierre Ronco",
+        "institutionGroupId": "sorbonne",
         "startYear": 2018,
-        "endYear": 2023,
-        "gapReason": "EIC from the January 2018 issue through the December 2023 handover. The 2018 editorial and ASN bio place her in Washington, DC after NIH leadership. No university home is used for the share series.",
-        "sources": [
-          {
-            "label": "Briggs, Thoughts on Turning 29, January 2018",
-            "url": "https://journals.lww.com/jasn/fulltext/2018/01000/thoughts_on_turning_29.2.aspx",
-            "quote": "This issue, the first in volume 29, introduces the next team. I am delighted to have been selected to be the next Editor in Chief of the journal."
-          },
-          {
-            "label": "ASN JASN podcast, 12 Jan 2024",
-            "url": "https://www.asn-online.org/media/podcast.aspx?p=JASN",
-            "quote": "outgoing Editor-in-Chief Josie Briggs talks with incoming Editor-in-Chief Raj Mehrotra"
-          }
-        ]
-      },
-      {
-        "role": "eic",
-        "name": "Rajnish Mehrotra",
-        "institutionGroupId": "washington",
-        "startYear": 2024,
         "endYear": null,
         "sources": [
           {
-            "label": "ASN / Newswise, 25 May 2023",
-            "url": "https://www.newswise.com/articles/american-society-of-nephrology-names-rajnish-mehrotra-editor-in-chief-of-jasn-and-senior-editor-in-chief-for-the-asn-journal-portfolio",
-            "quote": "Mehrotra’s term will begin January 1, 2024… Professor of Medicine and the Head of the Division of Nephrology in the Department of Medicine at the University of Washington School of Medicine in Seattle, Washington."
+            "label": "ISN 60th anniversary timeline",
+            "url": "https://www.theisn.org/about-isn/history/timeline/",
+            "quote": "2018… Pierre Ronco becomes Editor of KI."
+          },
+          {
+            "label": "Pamplona Nephrology Update biography",
+            "url": "https://pamplonanephrology.com/pierre-ronco/",
+            "quote": "He is currently serving as the Editor in Chief of Kidney International since January 1st, 2018."
+          },
+          {
+            "label": "ISN Events, Pierre Ronco",
+            "url": "https://events.theisn.org/event/session/person/771819?eid=912",
+            "quote": "Pierre Ronco, MD, PhD, is Professor of Nephrology at Sorbonne Université… He is currently Editor in Chief since 2018."
           }
         ]
       }

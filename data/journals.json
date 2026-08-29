@@ -124,30 +124,30 @@
       ]
     },
     {
-      "id": "cid",
-      "name": "Clinical Infectious Diseases",
-      "shortName": "CID",
-      "openAlexId": "S72350973",
-      "issnL": "1058-4838",
-      "issns": ["1058-4838", "1537-6591"],
+      "id": "lancet-id",
+      "name": "The Lancet Infectious Diseases",
+      "shortName": "Lancet Infect Dis",
+      "openAlexId": "S23772524",
+      "issnL": "1473-3099",
+      "issns": ["1473-3099", "1474-4457"],
       "predecessorOpenAlexIds": [],
-      "firstYear": 2000,
+      "firstYear": 2001,
       "notes": [
-        "IDSA flagship. OpenAlex GET /sources?filter=issn:1058-4838 on 2026-08-29 returned this single source. Not The Journal of Infectious Diseases or Open Forum Infectious Diseases."
+        "First issue August 2001. OpenAlex GET /sources?filter=issn:1473-3099 on 2026-08-29 returned this single source. Not The Lancet or The Lancet Microbe.",
+        "John McConnell was a Lancet staff editor. He has no university home on the share series."
       ]
     },
     {
-      "id": "jasn",
-      "name": "Journal of the American Society of Nephrology",
-      "shortName": "JASN",
-      "openAlexId": "S115693375",
-      "issnL": "1046-6673",
-      "issns": ["1046-6673", "1533-3450"],
+      "id": "kidney-int",
+      "name": "Kidney International",
+      "shortName": "Kidney Int",
+      "openAlexId": "S97303050",
+      "issnL": "0085-2538",
+      "issns": ["0085-2538", "1523-1755"],
       "predecessorOpenAlexIds": [],
       "firstYear": 2000,
       "notes": [
-        "ASN flagship. OpenAlex GET /sources?filter=issn:1046-6673 on 2026-08-29 returned this single source. Not CJASN, Kidney360, or Kidney International.",
-        "OpenAlex article counts jump in 2024. That year likely includes more supplement or meeting items classified as articles. Share is still a ratio inside that year."
+        "ISN flagship. OpenAlex GET /sources?filter=issn:0085-2538 on 2026-08-29 returned this single source. Not Kidney International Reports, Kidney International Supplements, or Nature Reviews Nephrology."
       ]
     }
   ]

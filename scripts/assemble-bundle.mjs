@@ -23,8 +23,8 @@ const order = [
   "ajrccm",
   "chest",
   "jco",
-  "cid",
-  "jasn",
+  "lancet-id",
+  "kidney-int",
 ];
 const journals = order.map((id) => {
   if (!byId[id]) throw new Error(`missing bundle part ${id}`);

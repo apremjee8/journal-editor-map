@@ -1,0 +1,387 @@
+{
+  "journal": {
+    "id": "lancet-id",
+    "name": "The Lancet Infectious Diseases",
+    "shortName": "Lancet Infect Dis",
+    "openAlexId": "S23772524",
+    "issnL": "1473-3099",
+    "issns": [
+      "1473-3099",
+      "1474-4457"
+    ],
+    "predecessorOpenAlexIds": [],
+    "firstYear": 2001,
+    "notes": [
+      "First issue August 2001. OpenAlex GET /sources?filter=issn:1473-3099 on 2026-08-29 returned this single source. Not The Lancet or The Lancet Microbe.",
+      "John McConnell was a Lancet staff editor. He has no university home on the share series."
+    ]
+  },
+  "editors": [
+    {
+      "role": "eic",
+      "name": "John McConnell",
+      "institutionGroupId": null,
+      "startYear": 2001,
+      "endYear": 2022,
+      "gapReason": "Founding editor from the first issue in August 2001 until his death in February 2022. He was Lancet staff in London. No university home is used for the share series.",
+      "sources": [
+        {
+          "label": "ISAC in memoriam",
+          "url": "https://www.isac.world/news-and-publications/in-memoriam-2",
+          "quote": "John was the founding Editor-in-Chief of The Lancet Infectious Diseases… becoming… the Editor-in-Chief of The Lancet Infectious Diseases, which published its first issue in August 2001."
+        },
+        {
+          "label": "EASE obituary, March 2022",
+          "url": "https://ease.org.uk/2022/03/in-memory-of-john-mcconnell/",
+          "quote": "In February 2022, the editing community sadly lost… John McConnell. John was the founding Editor-in-Chief of The Lancet Infectious Diseases."
+        }
+      ]
+    },
+    {
+      "role": "eic",
+      "name": "Ursula Hofer",
+      "institutionGroupId": "toronto",
+      "startYear": 2022,
+      "endYear": null,
+      "gapReason": "The October 2022 issue is the first under Hofer. The EIC desk is at The Lancet in London. The plotted academic home is the University of Toronto adjunct appointment named on the Elsevier Researcher Academy page.",
+      "sources": [
+        {
+          "label": "Looking back and looking ahead, October 2022",
+          "url": "https://doi.org/10.1016/S1473-3099(22)00598-9",
+          "quote": "The October issue marks the first issue of The Lancet Infectious Diseases with our new Editor-in-Chief, Ursula Hofer, on the team."
+        },
+        {
+          "label": "Elsevier Researcher Academy, Ursula Hofer",
+          "url": "https://researcheracademy.elsevier.com/node/18611",
+          "quote": "Ursula Hofer joined The Lancet Infectious Diseases as Editor-in-Chief in 2022… She is Adjunct Professor of Medicine at the University of Toronto (Canada)."
+        }
+      ]
+    }
+  ],
+  "series": [
+    {
+      "year": 2001,
+      "journalArticles": 150,
+      "byInstitution": {
+        "toronto": {
+          "articles": 0,
+          "share": 0,
+          "controlArticles": 4,
+          "controlTotal": 857,
+          "controlShare": 0.004667444574095682
+        }
+      }
+    },
+    {
+      "year": 2002,
+      "journalArticles": 319,
+      "byInstitution": {
+        "toronto": {
+          "articles": 1,
+          "share": 0.003134796238244514,
+          "controlArticles": 3,
+          "controlTotal": 728,
+          "controlShare": 0.004120879120879121
+        }
+      }
+    },
+    {
+      "year": 2003,
+      "journalArticles": 353,
+      "byInstitution": {
+        "toronto": {
+          "articles": 0,
+          "share": 0,
+          "controlArticles": 3,
+          "controlTotal": 862,
+          "controlShare": 0.0034802784222737818
+        }
+      }
+    },
+    {
+      "year": 2004,
+      "journalArticles": 371,
+      "byInstitution": {
+        "toronto": {
+          "articles": 0,
+          "share": 0,
+          "controlArticles": 3,
+          "controlTotal": 730,
+          "controlShare": 0.00410958904109589
+        }
+      }
+    },
+    {
+      "year": 2005,
+      "journalArticles": 359,
+      "byInstitution": {
+        "toronto": {
+          "articles": 3,
+          "share": 0.008356545961002786,
+          "controlArticles": 6,
+          "controlTotal": 874,
+          "controlShare": 0.006864988558352402
+        }
+      }
+    },
+    {
+      "year": 2006,
+      "journalArticles": 318,
+      "byInstitution": {
+        "toronto": {
+          "articles": 1,
+          "share": 0.0031446540880503146,
+          "controlArticles": 8,
+          "controlTotal": 928,
+          "controlShare": 0.008620689655172414
+        }
+      }
+    },
+    {
+      "year": 2007,
+      "journalArticles": 290,
+      "byInstitution": {
+        "toronto": {
+          "articles": 0,
+          "share": 0,
+          "controlArticles": 7,
+          "controlTotal": 641,
+          "controlShare": 0.0109204368174727
+        }
+      }
+    },
+    {
+      "year": 2008,
+      "journalArticles": 285,
+      "byInstitution": {
+        "toronto": {
+          "articles": 1,
+          "share": 0.0035087719298245615,
+          "controlArticles": 6,
+          "controlTotal": 684,
+          "controlShare": 0.008771929824561403
+        }
+      }
+    },
+    {
+      "year": 2009,
+      "journalArticles": 243,
+      "byInstitution": {
+        "toronto": {
+          "articles": 0,
+          "share": 0,
+          "controlArticles": 8,
+          "controlTotal": 576,
+          "controlShare": 0.013888888888888888
+        }
+      }
+    },
+    {
+      "year": 2010,
+      "journalArticles": 249,
+      "byInstitution": {
+        "toronto": {
+          "articles": 1,
+          "share": 0.004016064257028112,
+          "controlArticles": 5,
+          "controlTotal": 537,
+          "controlShare": 0.00931098696461825
+        }
+      }
+    },
+    {
+      "year": 2011,
+      "journalArticles": 291,
+      "byInstitution": {
+        "toronto": {
+          "articles": 1,
+          "share": 0.003436426116838488,
+          "controlArticles": 9,
+          "controlTotal": 453,
+          "controlShare": 0.019867549668874173
+        }
+      }
+    },
+    {
+      "year": 2012,
+      "journalArticles": 293,
+      "byInstitution": {
+        "toronto": {
+          "articles": 1,
+          "share": 0.0034129692832764505,
+          "controlArticles": 11,
+          "controlTotal": 452,
+          "controlShare": 0.024336283185840708
+        }
+      }
+    },
+    {
+      "year": 2013,
+      "journalArticles": 317,
+      "byInstitution": {
+        "toronto": {
+          "articles": 5,
+          "share": 0.015772870662460567,
+          "controlArticles": 12,
+          "controlTotal": 487,
+          "controlShare": 0.024640657084188913
+        }
+      }
+    },
+    {
+      "year": 2014,
+      "journalArticles": 361,
+      "byInstitution": {
+        "toronto": {
+          "articles": 2,
+          "share": 0.00554016620498615,
+          "controlArticles": 7,
+          "controlTotal": 415,
+          "controlShare": 0.016867469879518072
+        }
+      }
+    },
+    {
+      "year": 2015,
+      "journalArticles": 437,
+      "byInstitution": {
+        "toronto": {
+          "articles": 6,
+          "share": 0.013729977116704805,
+          "controlArticles": 9,
+          "controlTotal": 392,
+          "controlShare": 0.02295918367346939
+        }
+      }
+    },
+    {
+      "year": 2016,
+      "journalArticles": 480,
+      "byInstitution": {
+        "toronto": {
+          "articles": 6,
+          "share": 0.0125,
+          "controlArticles": 12,
+          "controlTotal": 485,
+          "controlShare": 0.024742268041237112
+        }
+      }
+    },
+    {
+      "year": 2017,
+      "journalArticles": 464,
+      "byInstitution": {
+        "toronto": {
+          "articles": 3,
+          "share": 0.00646551724137931,
+          "controlArticles": 5,
+          "controlTotal": 442,
+          "controlShare": 0.011312217194570135
+        }
+      }
+    },
+    {
+      "year": 2018,
+      "journalArticles": 428,
+      "byInstitution": {
+        "toronto": {
+          "articles": 3,
+          "share": 0.007009345794392523,
+          "controlArticles": 4,
+          "controlTotal": 389,
+          "controlShare": 0.010282776349614395
+        }
+      }
+    },
+    {
+      "year": 2019,
+      "journalArticles": 490,
+      "byInstitution": {
+        "toronto": {
+          "articles": 6,
+          "share": 0.012244897959183673,
+          "controlArticles": 13,
+          "controlTotal": 480,
+          "controlShare": 0.027083333333333334
+        }
+      }
+    },
+    {
+      "year": 2020,
+      "journalArticles": 604,
+      "byInstitution": {
+        "toronto": {
+          "articles": 9,
+          "share": 0.014900662251655629,
+          "controlArticles": 11,
+          "controlTotal": 500,
+          "controlShare": 0.022
+        }
+      }
+    },
+    {
+      "year": 2021,
+      "journalArticles": 506,
+      "byInstitution": {
+        "toronto": {
+          "articles": 10,
+          "share": 0.019762845849802372,
+          "controlArticles": 10,
+          "controlTotal": 443,
+          "controlShare": 0.022573363431151242
+        }
+      }
+    },
+    {
+      "year": 2022,
+      "journalArticles": 531,
+      "byInstitution": {
+        "toronto": {
+          "articles": 6,
+          "share": 0.011299435028248588,
+          "controlArticles": 8,
+          "controlTotal": 406,
+          "controlShare": 0.019704433497536946
+        }
+      }
+    },
+    {
+      "year": 2023,
+      "journalArticles": 478,
+      "byInstitution": {
+        "toronto": {
+          "articles": 6,
+          "share": 0.012552301255230125,
+          "controlArticles": 11,
+          "controlTotal": 359,
+          "controlShare": 0.03064066852367688
+        }
+      }
+    },
+    {
+      "year": 2024,
+      "journalArticles": 537,
+      "byInstitution": {
+        "toronto": {
+          "articles": 4,
+          "share": 0.0074487895716946,
+          "controlArticles": 6,
+          "controlTotal": 375,
+          "controlShare": 0.016
+        }
+      }
+    }
+  ],
+  "trackedInstitutions": [
+    {
+      "id": "toronto",
+      "label": "University of Toronto",
+      "members": [
+        {
+          "openAlexId": "I185261750",
+          "displayName": "University of Toronto"
+        }
+      ]
+    }
+  ]
+}

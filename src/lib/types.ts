@@ -8,8 +8,8 @@ export type JournalId =
   | "ajrccm"
   | "chest"
   | "jco"
-  | "cid"
-  | "jasn";
+  | "lancet-id"
+  | "kidney-int";
 
 export type EditorRole = "eic" | "deputy" | "interim-eic";
 
