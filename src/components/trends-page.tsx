@@ -21,7 +21,7 @@ export function TrendsPage({ bundle }: { bundle: DataBundle }) {
   const scoredN = score.rose + score.fell + score.flat;
 
   return (
-    <div className="mx-auto flex w-full max-w-5xl flex-col gap-6 px-3 py-6 sm:gap-8 sm:px-6 sm:py-10">
+    <div className="mx-auto flex w-full max-w-5xl flex-col gap-6 overflow-x-clip px-3 py-6 sm:gap-8 sm:px-6 sm:py-10">
       <header className="flex flex-col gap-3">
         <p className="text-xs uppercase tracking-[0.14em] text-[#6b6458]">
           Editor home × journal share
@@ -75,7 +75,7 @@ export function TrendsPage({ bundle }: { bundle: DataBundle }) {
           {score.byJournal.map((row) => (
             <li
               key={row.journalId}
-              className="flex items-baseline justify-between gap-3 rounded-lg border border-[#d6cfc2] bg-[#fffdf8] px-3 py-2 text-sm"
+              className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1 rounded-lg border border-[#d6cfc2] bg-[#fffdf8] px-3 py-2 text-sm"
             >
               <Link href={`/j/${row.journalId}`} className="font-medium text-[#1c1915] underline-offset-2 hover:underline">
                 {row.journalShortName}
