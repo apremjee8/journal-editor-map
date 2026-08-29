@@ -7,9 +7,11 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 
 const FILES = [
   "src/components/share-chart.tsx",
+  "src/components/editor-timeline.tsx",
   "src/components/journal-app.tsx",
   "src/components/site-nav.tsx",
   "src/components/trends-page.tsx",
+  "scripts/assert-band-labels.mjs",
   "src/app/j/[id]/page.tsx",
   "src/app/j/[id]/opengraph-image.tsx",
   "src/app/trends/page.tsx",

@@ -23,8 +23,8 @@ export function SiteNav({
         size="sm"
         className={
           current === "trends"
-            ? "shrink-0 bg-[#1c1915] text-[#fffdf8] hover:bg-[#1c1915]/90"
-            : "shrink-0 border-[#d6cfc2] bg-[#fffdf8] text-[#1c1915] hover:bg-[#f3eee4]"
+            ? "min-h-11 shrink-0 bg-[#1c1915] px-3 text-[#fffdf8] hover:bg-[#1c1915]/90 sm:min-h-7"
+            : "min-h-11 shrink-0 border-[#d6cfc2] bg-[#fffdf8] px-3 text-[#1c1915] hover:bg-[#f3eee4] sm:min-h-7"
         }
       >
         <Link href="/trends" aria-current={current === "trends" ? "page" : undefined}>
@@ -41,8 +41,8 @@ export function SiteNav({
             size="sm"
             className={
               selected
-                ? "shrink-0 bg-[#1c1915] text-[#fffdf8] hover:bg-[#1c1915]/90"
-                : "shrink-0 border-[#d6cfc2] bg-[#fffdf8] text-[#1c1915] hover:bg-[#f3eee4]"
+                ? "min-h-11 shrink-0 bg-[#1c1915] px-3 text-[#fffdf8] hover:bg-[#1c1915]/90 sm:min-h-7"
+                : "min-h-11 shrink-0 border-[#d6cfc2] bg-[#fffdf8] px-3 text-[#1c1915] hover:bg-[#f3eee4] sm:min-h-7"
             }
           >
             <Link href={`/j/${j.journal.id}`} aria-current={selected ? "page" : undefined}>

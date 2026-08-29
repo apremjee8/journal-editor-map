@@ -2,19 +2,13 @@
 
 import { useMemo } from "react";
 
+import { EditorTimeline } from "@/components/editor-timeline";
 import { ShareChart } from "@/components/share-chart";
 import { SiteNav } from "@/components/site-nav";
-import { Badge } from "@/components/ui/badge";
 import { instColor } from "@/lib/colors";
-import { formatShare, yearLabel } from "@/lib/load-bundle";
+import { formatShare } from "@/lib/load-bundle";
 import { takeoverRows } from "@/lib/takeover";
 import type { DataBundle, JournalId } from "@/lib/types";
-
-const ROLE_LABEL = {
-  eic: "Editor-in-chief",
-  deputy: "Deputy",
-  "interim-eic": "Interim editor-in-chief",
-} as const;
 
 export function JournalApp({
   bundle,
@@ -34,7 +28,7 @@ export function JournalApp({
   );
 
   return (
-    <div className="mx-auto flex w-full max-w-5xl flex-col gap-6 px-3 py-6 sm:gap-8 sm:px-6 sm:py-10">
+    <div className="mx-auto flex w-full max-w-5xl flex-col gap-6 overflow-x-clip px-3 py-6 sm:gap-8 sm:px-6 sm:py-10">
       <header className="flex flex-col gap-3">
         <p className="text-xs uppercase tracking-[0.14em] text-[#6b6458]">
           Editor home × journal share
@@ -92,64 +86,7 @@ export function JournalApp({
       </section>
 
       <section className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
-        <div>
-          <h3 className="mb-3 text-sm font-semibold uppercase tracking-wide text-[#6b6458]">
-            Editor timeline
-          </h3>
-          <ol className="flex flex-col gap-3">
-            {current.editors.map((editor, i) => (
-              <li
-                key={`${editor.name}-${i}`}
-                className="rounded-lg border border-[#d6cfc2] bg-[#fffdf8] p-3 sm:p-4"
-              >
-                <div className="flex flex-wrap items-center gap-2">
-                  <Badge variant="outline" className="border-[#d6cfc2] text-[#3f3a33]">
-                    {ROLE_LABEL[editor.role]}
-                  </Badge>
-                  <span className="font-medium text-[#1c1915]">{editor.name}</span>
-                  <span className="text-sm text-[#6b6458]">
-                    {yearLabel(editor.startYear, editor.endYear)}
-                  </span>
-                </div>
-                <div className="mt-1 text-sm text-[#3f3a33]">
-                  {editor.institutionGroupId ? (
-                    <span style={{ color: instColor(editor.institutionGroupId, cohort) }}>
-                      {labels[editor.institutionGroupId]}
-                    </span>
-                  ) : (
-                    <span>No university home used for the share series</span>
-                  )}
-                </div>
-                {editor.gapReason ? (
-                  <p className="mt-2 rounded-md bg-[#f8f1d8] px-2 py-1.5 text-sm text-[#5c4a12]">
-                    Gap: {editor.gapReason}
-                  </p>
-                ) : null}
-                {editor.sources.length ? (
-                  <ul className="mt-2 flex flex-col gap-1 text-sm">
-                    {editor.sources.map((s) => (
-                      <li key={s.url}>
-                        <a
-                          href={s.url}
-                          className="break-words text-[#1f4e79] underline underline-offset-2 hover:text-[#16385a]"
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                          {s.label}
-                        </a>
-                        {s.quote ? (
-                          <span className="block text-[#6b6458]">“{s.quote}”</span>
-                        ) : null}
-                      </li>
-                    ))}
-                  </ul>
-                ) : (
-                  <p className="mt-2 text-sm text-[#6b6458]">No source on file for this row.</p>
-                )}
-              </li>
-            ))}
-          </ol>
-        </div>
+        <EditorTimeline editors={current.editors} labels={labels} cohort={cohort} />
 
         <div>
           <h3 className="mb-3 text-sm font-semibold uppercase tracking-wide text-[#6b6458]">

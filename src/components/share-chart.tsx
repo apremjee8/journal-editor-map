@@ -1,5 +1,6 @@
 "use client";
 
+import { useLayoutEffect, useRef, useState } from "react";
 import {
   CartesianGrid,
   Line,
@@ -12,7 +13,14 @@ import {
   YAxis,
 } from "recharts";
 
-import { tenureBands } from "@/lib/chart-marks";
+import {
+  SHARE_CHART_LAYOUT,
+  bandLabelStackHeight,
+  placeBandLabels,
+  shareChartPlotLeft,
+  shareChartPlotWidth,
+  tenureBands,
+} from "@/lib/chart-marks";
 import { instColor } from "@/lib/colors";
 import { formatShare } from "@/lib/load-bundle";
 import type { EditorTenure, InstitutionGroup, YearPoint } from "@/lib/types";
@@ -24,6 +32,19 @@ type Props = {
 };
 
 export function ShareChart({ series, institutions, editors }: Props) {
+  const wrapRef = useRef<HTMLDivElement>(null);
+  const [containerWidth, setContainerWidth] = useState(0);
+
+  useLayoutEffect(() => {
+    const el = wrapRef.current;
+    if (!el) return;
+    const sync = () => setContainerWidth(el.clientWidth);
+    sync();
+    const observer = new ResizeObserver(sync);
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   const cohort = institutions.map((inst) => inst.id);
   const rows = series.map((p) => {
     const row: Record<string, number> = { year: p.year, journalArticles: p.journalArticles };
@@ -38,6 +59,15 @@ export function ShareChart({ series, institutions, editors }: Props) {
   const yearStart = series[0]?.year ?? 0;
   const yearEnd = series[series.length - 1]?.year ?? yearStart;
   const bands = tenureBands(editors, yearStart, yearEnd);
+  const fontSize = containerWidth > 0 && containerWidth < 500 ? 10 : 11;
+  const plotWidth = shareChartPlotWidth(containerWidth);
+  const labels =
+    plotWidth > 0
+      ? placeBandLabels(bands, yearStart, yearEnd, { left: 0, width: plotWidth }, fontSize)
+      : [];
+  const labelBand = bandLabelStackHeight(labels, fontSize);
+  const marginTop = 8 + labelBand;
+  const plotLeft = shareChartPlotLeft();
 
   const maxShare = Math.max(
     4,
@@ -58,9 +88,17 @@ export function ShareChart({ series, institutions, editors }: Props) {
           </li>
         ))}
       </ul>
-      <div className="h-[260px] w-full sm:h-[400px]">
+      <div ref={wrapRef} className="relative h-[260px] w-full overflow-hidden sm:h-[400px]">
         <ResponsiveContainer width="100%" height="100%">
-          <LineChart data={rows} margin={{ top: 28, right: 12, left: 8, bottom: 10 }}>
+          <LineChart
+            data={rows}
+            margin={{
+              top: marginTop,
+              right: SHARE_CHART_LAYOUT.marginRight,
+              left: SHARE_CHART_LAYOUT.marginLeft,
+              bottom: SHARE_CHART_LAYOUT.marginBottom,
+            }}
+          >
             <CartesianGrid stroke="#e7e2d8" vertical={false} />
             {bands.map((band) => (
               <ReferenceArea
@@ -79,14 +117,6 @@ export function ShareChart({ series, institutions, editors }: Props) {
                 stroke={instColor(band.institutionId, cohort)}
                 strokeWidth={2.5}
                 ifOverflow="extendDomain"
-                label={{
-                  value: band.shortLabel,
-                  position: "insideTopRight",
-                  dx: 6,
-                  fill: instColor(band.institutionId, cohort),
-                  fontSize: 11,
-                  fontWeight: 600,
-                }}
               />
             ))}
             <XAxis
@@ -97,7 +127,7 @@ export function ShareChart({ series, institutions, editors }: Props) {
               interval="preserveStartEnd"
               minTickGap={28}
               tickMargin={8}
-              padding={{ left: 6, right: 6 }}
+              padding={{ left: SHARE_CHART_LAYOUT.xPad, right: SHARE_CHART_LAYOUT.xPad }}
             />
             <YAxis
               tickFormatter={(v) => `${v}%`}
@@ -105,7 +135,7 @@ export function ShareChart({ series, institutions, editors }: Props) {
               tick={{ fill: "#4b453c", fontSize: 10 }}
               tickLine={false}
               axisLine={false}
-              width={48}
+              width={SHARE_CHART_LAYOUT.yAxisWidth}
               tickMargin={6}
             />
             <Tooltip
@@ -149,6 +179,20 @@ export function ShareChart({ series, institutions, editors }: Props) {
             ))}
           </LineChart>
         </ResponsiveContainer>
+        {labels.map((label) => (
+          <span
+            key={`${label.text}-${label.row}`}
+            className="pointer-events-none absolute whitespace-nowrap font-semibold"
+            style={{
+              left: plotLeft + label.x,
+              top: 6 + label.y,
+              fontSize,
+              color: instColor(label.institutionId, cohort),
+            }}
+          >
+            {label.text}
+          </span>
+        ))}
       </div>
     </div>
   );

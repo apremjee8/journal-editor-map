@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-import { shareToY, tenureBands, yearToX } from "@/lib/chart-marks";
+import { placeBandLabels, shareToY, tenureBands, yearToX } from "@/lib/chart-marks";
 import { instColor } from "@/lib/colors";
 import { formatShare, getJournal, isJournalId } from "@/lib/load-bundle";
 import { handoverClaim, handoverFallback, latestScoredHandover, takeoverRows } from "@/lib/takeover";
@@ -157,25 +157,28 @@ export default async function Image({ params }: { params: Promise<{ id: string }
           >
             {yearEnd}
           </div>
-          {bands.map((band) => {
-            const x = yearToX(band.visibleStart, yearStart, yearEnd, PLOT.left, PLOT.width);
-            return (
-              <div
-                key={`${band.name}-label`}
-                style={{
-                  position: "absolute",
-                  left: Math.min(x + 10, FRAME.width - 150),
-                  top: PLOT.top + 4,
-                  display: "flex",
-                  fontSize: 16,
-                  fontWeight: 700,
-                  color: instColor(band.institutionId, cohort),
-                }}
-              >
-                {band.shortLabel}
-              </div>
-            );
-          })}
+          {placeBandLabels(
+            bands,
+            yearStart,
+            yearEnd,
+            { left: PLOT.left, width: PLOT.width, top: PLOT.top + 4 },
+            16
+          ).map((label) => (
+            <div
+              key={`${label.text}-${label.row}`}
+              style={{
+                position: "absolute",
+                left: label.x,
+                top: label.y,
+                display: "flex",
+                fontSize: 16,
+                fontWeight: 700,
+                color: instColor(label.institutionId, cohort),
+              }}
+            >
+              {label.text}
+            </div>
+          ))}
         </div>
 
         <div
