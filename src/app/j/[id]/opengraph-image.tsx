@@ -9,7 +9,7 @@ export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 const FRAME = { width: 1104, height: 292 };
-const PLOT = { left: 80, top: 10, width: 996, height: 246 };
+const PLOT = { left: 16, top: 10, width: 1060, height: 246 };
 
 export default async function Image({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
@@ -134,37 +134,7 @@ export default async function Image({ params }: { params: Promise<{ id: string }
           <div
             style={{
               position: "absolute",
-              left: 8,
-              top: PLOT.top,
-              width: PLOT.left - 16,
-              display: "flex",
-              justifyContent: "flex-end",
-              fontSize: 16,
-              lineHeight: 1,
-              color: "#6b6458",
-            }}
-          >
-            {yMax}%
-          </div>
-          <div
-            style={{
-              position: "absolute",
-              left: 8,
-              top: PLOT.top + PLOT.height - 16,
-              width: PLOT.left - 16,
-              display: "flex",
-              justifyContent: "flex-end",
-              fontSize: 16,
-              lineHeight: 1,
-              color: "#6b6458",
-            }}
-          >
-            0%
-          </div>
-          <div
-            style={{
-              position: "absolute",
-              left: PLOT.left,
+              left: PLOT.left + 8,
               top: PLOT.top + PLOT.height + 8,
               display: "flex",
               fontSize: 16,
