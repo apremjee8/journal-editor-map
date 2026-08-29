@@ -16,9 +16,8 @@ import {
 import {
   SHARE_CHART_LAYOUT,
   bandLabelStackHeight,
-  placeBandLabels,
+  fitShareChartBandLabels,
   shareChartPlotLeft,
-  shareChartPlotWidth,
   tenureBands,
 } from "@/lib/chart-marks";
 import { instColor } from "@/lib/colors";
@@ -60,11 +59,11 @@ export function ShareChart({ series, institutions, editors }: Props) {
   const yearEnd = series[series.length - 1]?.year ?? yearStart;
   const bands = tenureBands(editors, yearStart, yearEnd);
   const fontSize = containerWidth > 0 && containerWidth < 500 ? 10 : 11;
-  const plotWidth = shareChartPlotWidth(containerWidth);
-  const labels =
-    plotWidth > 0
-      ? placeBandLabels(bands, yearStart, yearEnd, { left: 0, width: plotWidth }, fontSize)
-      : [];
+  const fitted =
+    containerWidth > 0
+      ? fitShareChartBandLabels(bands, yearStart, yearEnd, containerWidth, fontSize)
+      : { labels: [], plotWidth: 0, marginRight: SHARE_CHART_LAYOUT.marginRight };
+  const labels = fitted.labels;
   const labelBand = bandLabelStackHeight(labels, fontSize);
   const marginTop = 8 + labelBand;
   const plotLeft = shareChartPlotLeft();
@@ -88,13 +87,13 @@ export function ShareChart({ series, institutions, editors }: Props) {
           </li>
         ))}
       </ul>
-      <div ref={wrapRef} className="relative h-[260px] w-full sm:h-[400px]">
+      <div ref={wrapRef} className="relative h-[260px] min-w-0 w-full sm:h-[400px]">
         <ResponsiveContainer width="100%" height="100%">
           <LineChart
             data={rows}
             margin={{
               top: marginTop,
-              right: SHARE_CHART_LAYOUT.marginRight,
+              right: fitted.marginRight,
               left: SHARE_CHART_LAYOUT.marginLeft,
               bottom: SHARE_CHART_LAYOUT.marginBottom,
             }}

@@ -71,19 +71,6 @@
       ]
     },
     {
-      "id": "jama-cardio",
-      "name": "JAMA Cardiology",
-      "shortName": "JAMA Cardiol",
-      "openAlexId": "S2765015654",
-      "issnL": "2380-6583",
-      "issns": ["2380-6583", "2380-6591"],
-      "predecessorOpenAlexIds": [],
-      "firstYear": 2016,
-      "notes": [
-        "Launched in 2016. Years before 2016 have no articles."
-      ]
-    },
-    {
       "id": "ehj",
       "name": "European Heart Journal",
       "shortName": "Eur Heart J",
@@ -137,29 +124,30 @@
       ]
     },
     {
-      "id": "lancet-onc",
-      "name": "The Lancet Oncology",
-      "shortName": "Lancet Oncol",
-      "openAlexId": "S116900674",
-      "issnL": "1470-2045",
-      "issns": ["1470-2045", "1474-5488"],
+      "id": "cid",
+      "name": "Clinical Infectious Diseases",
+      "shortName": "CID",
+      "openAlexId": "S72350973",
+      "issnL": "1058-4838",
+      "issns": ["1058-4838", "1537-6591"],
       "predecessorOpenAlexIds": [],
       "firstYear": 2000,
       "notes": [
-        "Launched in 2000. In-house Lancet Group editors, not a rotating academic EIC."
+        "IDSA flagship. OpenAlex GET /sources?filter=issn:1058-4838 on 2026-08-29 returned this single source. Not The Journal of Infectious Diseases or Open Forum Infectious Diseases."
       ]
     },
     {
-      "id": "jama-onc",
-      "name": "JAMA Oncology",
-      "shortName": "JAMA Oncol",
-      "openAlexId": "S2756165422",
-      "issnL": "2374-2437",
-      "issns": ["2374-2437", "2374-2445"],
+      "id": "jasn",
+      "name": "Journal of the American Society of Nephrology",
+      "shortName": "JASN",
+      "openAlexId": "S115693375",
+      "issnL": "1046-6673",
+      "issns": ["1046-6673", "1533-3450"],
       "predecessorOpenAlexIds": [],
-      "firstYear": 2015,
+      "firstYear": 2000,
       "notes": [
-        "Launched in 2015. OpenAlex first_publication_year of 1902 is noise and is ignored. Years before 2015 have no articles."
+        "ASN flagship. OpenAlex GET /sources?filter=issn:1046-6673 on 2026-08-29 returned this single source. Not CJASN or Kidney360.",
+        "OpenAlex article counts jump in 2024. That year likely includes more supplement or meeting items classified as articles. Share is still a ratio inside that year."
       ]
     }
   ]

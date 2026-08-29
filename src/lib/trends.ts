@@ -1,5 +1,5 @@
 import { takeoverRows, type TakeoverRow } from "./takeover";
-import type { DataBundle, JournalId } from "./types";
+import { CATALOG_JOURNAL_ID_SET, type DataBundle, type JournalId } from "./types";
 
 export type HandoverDirection = "rose" | "fell" | "flat";
 
@@ -71,12 +71,14 @@ export function poolHandovers(
   rows: JournalHandover[],
   journals: { id: JournalId; shortName: string }[] = []
 ): PooledScore {
-  const classified = rows.map(classifyHandover);
+  const catalogRows = rows.filter((row) => CATALOG_JOURNAL_ID_SET.has(row.journalId));
+  const catalogJournals = journals.filter((j) => CATALOG_JOURNAL_ID_SET.has(j.id));
+  const classified = catalogRows.map(classifyHandover);
   const scored = classified.filter((r): r is ScoredHandover => r.direction !== "unscored");
   const unclassified = classified.filter((r): r is UnscoredHandover => r.direction === "unscored");
 
   const byId = new Map<JournalId, JournalTally>();
-  for (const j of journals) {
+  for (const j of catalogJournals) {
     byId.set(j.id, {
       journalId: j.id,
       journalShortName: j.shortName,
@@ -115,11 +117,13 @@ export function poolHandovers(
 
 export function handoversFromBundle(bundle: DataBundle): JournalHandover[] {
   const labels = Object.fromEntries(bundle.institutions.map((i) => [i.id, i.label]));
-  return bundle.journals.flatMap((j) =>
-    takeoverRows(j.editors, j.series, labels).map((row) => ({
-      ...row,
-      journalId: j.journal.id,
-      journalShortName: j.journal.shortName,
-    }))
-  );
+  return bundle.journals
+    .filter((j) => CATALOG_JOURNAL_ID_SET.has(j.journal.id))
+    .flatMap((j) =>
+      takeoverRows(j.editors, j.series, labels).map((row) => ({
+        ...row,
+        journalId: j.journal.id,
+        journalShortName: j.journal.shortName,
+      }))
+    );
 }

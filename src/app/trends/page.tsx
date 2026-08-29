@@ -4,7 +4,7 @@ import { TrendsPage } from "@/components/trends-page";
 import { bundle } from "@/lib/load-bundle";
 import { siteUrl } from "@/lib/site";
 
-const title = "Editor-change trends across twelve journals";
+const title = "Editor-change trends across eleven journals";
 const description =
   "How often a sourced editor-in-chief start is followed by a rise or fall in that editor’s home-institution share of OpenAlex articles. Not a causal estimate.";
 const url = `${siteUrl()}/trends`;

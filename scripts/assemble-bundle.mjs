@@ -19,13 +19,12 @@ const order = [
   "nejm",
   "jacc",
   "circulation",
-  "jama-cardio",
   "ehj",
   "ajrccm",
   "chest",
   "jco",
-  "lancet-onc",
-  "jama-onc",
+  "cid",
+  "jasn",
 ];
 const journals = order.map((id) => {
   if (!byId[id]) throw new Error(`missing bundle part ${id}`);

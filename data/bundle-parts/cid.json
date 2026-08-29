@@ -1,0 +1,789 @@
+{
+  "journal": {
+    "id": "cid",
+    "name": "Clinical Infectious Diseases",
+    "shortName": "CID",
+    "openAlexId": "S72350973",
+    "issnL": "1058-4838",
+    "issns": [
+      "1058-4838",
+      "1537-6591"
+    ],
+    "predecessorOpenAlexIds": [],
+    "firstYear": 2000,
+    "notes": [
+      "IDSA flagship. OpenAlex GET /sources?filter=issn:1058-4838 on 2026-08-29 returned this single source. Not The Journal of Infectious Diseases or Open Forum Infectious Diseases."
+    ]
+  },
+  "editors": [
+    {
+      "role": "eic",
+      "name": "Sherwood L. Gorbach",
+      "institutionGroupId": "tufts",
+      "startYear": 2000,
+      "endYear": 2016,
+      "sources": [
+        {
+          "label": "CID announcement, December 1999",
+          "url": "https://doi.org/10.1086/524971",
+          "quote": "Dr. Sherwood L. Gorbach has been appointed the new editor of Clinical Infectious Diseases. He will assume responsibility beginning with the January 2000 issue… Tufts University School of Medicine, Arnold 205, 136 Harrison Avenue, Boston, Massachusetts 02111."
+        },
+        {
+          "label": "OUP blog, Schooley start, 17 Feb 2017",
+          "url": "https://blog.oup.com/2017/02/chip-schooley-infectious-diseases-journal-publishing/",
+          "quote": "Robert T. “Chip” Schooley, editor-in-chief of the journal Clinical Infectious Diseases (CID), who began his term in January"
+        }
+      ]
+    },
+    {
+      "role": "eic",
+      "name": "Robert T. Schooley",
+      "institutionGroupId": "ucsd",
+      "startYear": 2017,
+      "endYear": 2022,
+      "sources": [
+        {
+          "label": "IDSA, retiring CID editors, 2022",
+          "url": "https://www.idsociety.org/news--publications-new/articles/2022/idsa-thanks-retiring-clinical-infectious-diseases-editors/",
+          "quote": "Dr. Schooley officially took office as editor-in-chief of CID in 2017"
+        },
+        {
+          "label": "OUP blog, 17 Feb 2017",
+          "url": "https://blog.oup.com/2017/02/chip-schooley-infectious-diseases-journal-publishing/",
+          "quote": "He is the Division Head and Professor of Medicine in the Department of Medicine, Division of Infectious Diseases, at the University of California, San Diego."
+        }
+      ]
+    },
+    {
+      "role": "eic",
+      "name": "Paul E. Sax",
+      "institutionGroupId": "harvard-brigham",
+      "startYear": 2022,
+      "endYear": null,
+      "sources": [
+        {
+          "label": "IDSA, next CID editor-in-chief, 2022",
+          "url": "https://www.idsociety.org/news--publications-new/articles/2022/infectious-diseases-society-of-america-announces-next-editor-in-chief-of-clinical-infectious-diseases/",
+          "quote": "will succeed Robert T. Schooley, MD, FIDSA, on July 1, 2022… clinical director of the Division of Infectious Diseases at Brigham and Women's Hospital and professor of medicine at Harvard Medical School."
+        }
+      ]
+    }
+  ],
+  "series": [
+    {
+      "year": 2000,
+      "journalArticles": 637,
+      "byInstitution": {
+        "tufts": {
+          "articles": 9,
+          "share": 0.0141287284144427,
+          "controlArticles": 4,
+          "controlTotal": 288,
+          "controlShare": 0.013888888888888888
+        },
+        "ucsd": {
+          "articles": 4,
+          "share": 0.006279434850863423,
+          "controlArticles": 1,
+          "controlTotal": 288,
+          "controlShare": 0.003472222222222222
+        },
+        "harvard-brigham": {
+          "articles": 18,
+          "share": 0.0282574568288854,
+          "controlArticles": 8,
+          "controlTotal": 288,
+          "controlShare": 0.027777777777777776
+        }
+      }
+    },
+    {
+      "year": 2001,
+      "journalArticles": 867,
+      "byInstitution": {
+        "tufts": {
+          "articles": 26,
+          "share": 0.029988465974625143,
+          "controlArticles": 4,
+          "controlTotal": 348,
+          "controlShare": 0.011494252873563218
+        },
+        "ucsd": {
+          "articles": 2,
+          "share": 0.002306805074971165,
+          "controlArticles": 1,
+          "controlTotal": 348,
+          "controlShare": 0.0028735632183908046
+        },
+        "harvard-brigham": {
+          "articles": 29,
+          "share": 0.03344867358708189,
+          "controlArticles": 12,
+          "controlTotal": 348,
+          "controlShare": 0.034482758620689655
+        }
+      }
+    },
+    {
+      "year": 2002,
+      "journalArticles": 741,
+      "byInstitution": {
+        "tufts": {
+          "articles": 18,
+          "share": 0.024291497975708502,
+          "controlArticles": 7,
+          "controlTotal": 459,
+          "controlShare": 0.015250544662309368
+        },
+        "ucsd": {
+          "articles": 2,
+          "share": 0.002699055330634278,
+          "controlArticles": 4,
+          "controlTotal": 459,
+          "controlShare": 0.008714596949891068
+        },
+        "harvard-brigham": {
+          "articles": 17,
+          "share": 0.022941970310391364,
+          "controlArticles": 18,
+          "controlTotal": 459,
+          "controlShare": 0.0392156862745098
+        }
+      }
+    },
+    {
+      "year": 2003,
+      "journalArticles": 849,
+      "byInstitution": {
+        "tufts": {
+          "articles": 27,
+          "share": 0.03180212014134275,
+          "controlArticles": 2,
+          "controlTotal": 479,
+          "controlShare": 0.0041753653444676405
+        },
+        "ucsd": {
+          "articles": 6,
+          "share": 0.007067137809187279,
+          "controlArticles": 4,
+          "controlTotal": 479,
+          "controlShare": 0.008350730688935281
+        },
+        "harvard-brigham": {
+          "articles": 37,
+          "share": 0.043580683156654886,
+          "controlArticles": 19,
+          "controlTotal": 479,
+          "controlShare": 0.03966597077244259
+        }
+      }
+    },
+    {
+      "year": 2004,
+      "journalArticles": 954,
+      "byInstitution": {
+        "tufts": {
+          "articles": 18,
+          "share": 0.018867924528301886,
+          "controlArticles": 8,
+          "controlTotal": 453,
+          "controlShare": 0.017660044150110375
+        },
+        "ucsd": {
+          "articles": 4,
+          "share": 0.0041928721174004195,
+          "controlArticles": 1,
+          "controlTotal": 453,
+          "controlShare": 0.002207505518763797
+        },
+        "harvard-brigham": {
+          "articles": 43,
+          "share": 0.04507337526205451,
+          "controlArticles": 27,
+          "controlTotal": 453,
+          "controlShare": 0.059602649006622516
+        }
+      }
+    },
+    {
+      "year": 2005,
+      "journalArticles": 1021,
+      "byInstitution": {
+        "tufts": {
+          "articles": 26,
+          "share": 0.025465230166503428,
+          "controlArticles": 16,
+          "controlTotal": 507,
+          "controlShare": 0.03155818540433925
+        },
+        "ucsd": {
+          "articles": 8,
+          "share": 0.007835455435847209,
+          "controlArticles": 1,
+          "controlTotal": 507,
+          "controlShare": 0.0019723865877712033
+        },
+        "harvard-brigham": {
+          "articles": 47,
+          "share": 0.04603330068560235,
+          "controlArticles": 26,
+          "controlTotal": 507,
+          "controlShare": 0.05128205128205128
+        }
+      }
+    },
+    {
+      "year": 2006,
+      "journalArticles": 861,
+      "byInstitution": {
+        "tufts": {
+          "articles": 24,
+          "share": 0.027874564459930314,
+          "controlArticles": 7,
+          "controlTotal": 506,
+          "controlShare": 0.01383399209486166
+        },
+        "ucsd": {
+          "articles": 8,
+          "share": 0.009291521486643438,
+          "controlArticles": 1,
+          "controlTotal": 506,
+          "controlShare": 0.001976284584980237
+        },
+        "harvard-brigham": {
+          "articles": 32,
+          "share": 0.03716608594657375,
+          "controlArticles": 26,
+          "controlTotal": 506,
+          "controlShare": 0.05138339920948617
+        }
+      }
+    },
+    {
+      "year": 2007,
+      "journalArticles": 884,
+      "byInstitution": {
+        "tufts": {
+          "articles": 17,
+          "share": 0.019230769230769232,
+          "controlArticles": 8,
+          "controlTotal": 402,
+          "controlShare": 0.01990049751243781
+        },
+        "ucsd": {
+          "articles": 7,
+          "share": 0.007918552036199095,
+          "controlArticles": 3,
+          "controlTotal": 402,
+          "controlShare": 0.007462686567164179
+        },
+        "harvard-brigham": {
+          "articles": 31,
+          "share": 0.03506787330316742,
+          "controlArticles": 27,
+          "controlTotal": 402,
+          "controlShare": 0.06716417910447761
+        }
+      }
+    },
+    {
+      "year": 2008,
+      "journalArticles": 865,
+      "byInstitution": {
+        "tufts": {
+          "articles": 34,
+          "share": 0.03930635838150289,
+          "controlArticles": 3,
+          "controlTotal": 381,
+          "controlShare": 0.007874015748031496
+        },
+        "ucsd": {
+          "articles": 7,
+          "share": 0.008092485549132947,
+          "controlArticles": 7,
+          "controlTotal": 381,
+          "controlShare": 0.01837270341207349
+        },
+        "harvard-brigham": {
+          "articles": 37,
+          "share": 0.04277456647398844,
+          "controlArticles": 32,
+          "controlTotal": 381,
+          "controlShare": 0.08398950131233596
+        }
+      }
+    },
+    {
+      "year": 2009,
+      "journalArticles": 848,
+      "byInstitution": {
+        "tufts": {
+          "articles": 17,
+          "share": 0.020047169811320754,
+          "controlArticles": 4,
+          "controlTotal": 328,
+          "controlShare": 0.012195121951219513
+        },
+        "ucsd": {
+          "articles": 13,
+          "share": 0.015330188679245283,
+          "controlArticles": 6,
+          "controlTotal": 328,
+          "controlShare": 0.018292682926829267
+        },
+        "harvard-brigham": {
+          "articles": 59,
+          "share": 0.0695754716981132,
+          "controlArticles": 38,
+          "controlTotal": 328,
+          "controlShare": 0.11585365853658537
+        }
+      }
+    },
+    {
+      "year": 2010,
+      "journalArticles": 771,
+      "byInstitution": {
+        "tufts": {
+          "articles": 18,
+          "share": 0.023346303501945526,
+          "controlArticles": 3,
+          "controlTotal": 299,
+          "controlShare": 0.010033444816053512
+        },
+        "ucsd": {
+          "articles": 10,
+          "share": 0.01297016861219196,
+          "controlArticles": 5,
+          "controlTotal": 299,
+          "controlShare": 0.016722408026755852
+        },
+        "harvard-brigham": {
+          "articles": 52,
+          "share": 0.06744487678339818,
+          "controlArticles": 22,
+          "controlTotal": 299,
+          "controlShare": 0.07357859531772576
+        }
+      }
+    },
+    {
+      "year": 2011,
+      "journalArticles": 774,
+      "byInstitution": {
+        "tufts": {
+          "articles": 14,
+          "share": 0.01808785529715762,
+          "controlArticles": 7,
+          "controlTotal": 310,
+          "controlShare": 0.02258064516129032
+        },
+        "ucsd": {
+          "articles": 9,
+          "share": 0.011627906976744186,
+          "controlArticles": 3,
+          "controlTotal": 310,
+          "controlShare": 0.00967741935483871
+        },
+        "harvard-brigham": {
+          "articles": 31,
+          "share": 0.040051679586563305,
+          "controlArticles": 32,
+          "controlTotal": 310,
+          "controlShare": 0.1032258064516129
+        }
+      }
+    },
+    {
+      "year": 2012,
+      "journalArticles": 898,
+      "byInstitution": {
+        "tufts": {
+          "articles": 27,
+          "share": 0.030066815144766147,
+          "controlArticles": 2,
+          "controlTotal": 244,
+          "controlShare": 0.00819672131147541
+        },
+        "ucsd": {
+          "articles": 10,
+          "share": 0.011135857461024499,
+          "controlArticles": 3,
+          "controlTotal": 244,
+          "controlShare": 0.012295081967213115
+        },
+        "harvard-brigham": {
+          "articles": 51,
+          "share": 0.05679287305122494,
+          "controlArticles": 30,
+          "controlTotal": 244,
+          "controlShare": 0.12295081967213115
+        }
+      }
+    },
+    {
+      "year": 2013,
+      "journalArticles": 754,
+      "byInstitution": {
+        "tufts": {
+          "articles": 14,
+          "share": 0.01856763925729443,
+          "controlArticles": 4,
+          "controlTotal": 304,
+          "controlShare": 0.013157894736842105
+        },
+        "ucsd": {
+          "articles": 13,
+          "share": 0.017241379310344827,
+          "controlArticles": 6,
+          "controlTotal": 304,
+          "controlShare": 0.019736842105263157
+        },
+        "harvard-brigham": {
+          "articles": 45,
+          "share": 0.05968169761273209,
+          "controlArticles": 28,
+          "controlTotal": 304,
+          "controlShare": 0.09210526315789473
+        }
+      }
+    },
+    {
+      "year": 2014,
+      "journalArticles": 833,
+      "byInstitution": {
+        "tufts": {
+          "articles": 10,
+          "share": 0.012004801920768308,
+          "controlArticles": 11,
+          "controlTotal": 424,
+          "controlShare": 0.025943396226415096
+        },
+        "ucsd": {
+          "articles": 14,
+          "share": 0.01680672268907563,
+          "controlArticles": 10,
+          "controlTotal": 424,
+          "controlShare": 0.02358490566037736
+        },
+        "harvard-brigham": {
+          "articles": 42,
+          "share": 0.05042016806722689,
+          "controlArticles": 53,
+          "controlTotal": 424,
+          "controlShare": 0.125
+        }
+      }
+    },
+    {
+      "year": 2015,
+      "journalArticles": 874,
+      "byInstitution": {
+        "tufts": {
+          "articles": 7,
+          "share": 0.008009153318077803,
+          "controlArticles": 13,
+          "controlTotal": 394,
+          "controlShare": 0.03299492385786802
+        },
+        "ucsd": {
+          "articles": 11,
+          "share": 0.012585812356979404,
+          "controlArticles": 9,
+          "controlTotal": 394,
+          "controlShare": 0.02284263959390863
+        },
+        "harvard-brigham": {
+          "articles": 40,
+          "share": 0.04576659038901602,
+          "controlArticles": 32,
+          "controlTotal": 394,
+          "controlShare": 0.08121827411167512
+        }
+      }
+    },
+    {
+      "year": 2016,
+      "journalArticles": 798,
+      "byInstitution": {
+        "tufts": {
+          "articles": 11,
+          "share": 0.013784461152882205,
+          "controlArticles": 9,
+          "controlTotal": 310,
+          "controlShare": 0.02903225806451613
+        },
+        "ucsd": {
+          "articles": 20,
+          "share": 0.02506265664160401,
+          "controlArticles": 3,
+          "controlTotal": 310,
+          "controlShare": 0.00967741935483871
+        },
+        "harvard-brigham": {
+          "articles": 45,
+          "share": 0.05639097744360902,
+          "controlArticles": 27,
+          "controlTotal": 310,
+          "controlShare": 0.08709677419354839
+        }
+      }
+    },
+    {
+      "year": 2017,
+      "journalArticles": 1013,
+      "byInstitution": {
+        "tufts": {
+          "articles": 12,
+          "share": 0.011846001974333662,
+          "controlArticles": 10,
+          "controlTotal": 323,
+          "controlShare": 0.030959752321981424
+        },
+        "ucsd": {
+          "articles": 20,
+          "share": 0.019743336623889437,
+          "controlArticles": 7,
+          "controlTotal": 323,
+          "controlShare": 0.021671826625386997
+        },
+        "harvard-brigham": {
+          "articles": 76,
+          "share": 0.07502467917077986,
+          "controlArticles": 23,
+          "controlTotal": 323,
+          "controlShare": 0.07120743034055728
+        }
+      }
+    },
+    {
+      "year": 2018,
+      "journalArticles": 1028,
+      "byInstitution": {
+        "tufts": {
+          "articles": 15,
+          "share": 0.014591439688715954,
+          "controlArticles": 7,
+          "controlTotal": 254,
+          "controlShare": 0.027559055118110236
+        },
+        "ucsd": {
+          "articles": 19,
+          "share": 0.01848249027237354,
+          "controlArticles": 4,
+          "controlTotal": 254,
+          "controlShare": 0.015748031496062992
+        },
+        "harvard-brigham": {
+          "articles": 57,
+          "share": 0.05544747081712062,
+          "controlArticles": 15,
+          "controlTotal": 254,
+          "controlShare": 0.05905511811023622
+        }
+      }
+    },
+    {
+      "year": 2019,
+      "journalArticles": 1128,
+      "byInstitution": {
+        "tufts": {
+          "articles": 8,
+          "share": 0.0070921985815602835,
+          "controlArticles": 5,
+          "controlTotal": 275,
+          "controlShare": 0.01818181818181818
+        },
+        "ucsd": {
+          "articles": 26,
+          "share": 0.02304964539007092,
+          "controlArticles": 5,
+          "controlTotal": 275,
+          "controlShare": 0.01818181818181818
+        },
+        "harvard-brigham": {
+          "articles": 74,
+          "share": 0.06560283687943262,
+          "controlArticles": 24,
+          "controlTotal": 275,
+          "controlShare": 0.08727272727272728
+        }
+      }
+    },
+    {
+      "year": 2020,
+      "journalArticles": 1797,
+      "byInstitution": {
+        "tufts": {
+          "articles": 19,
+          "share": 0.010573177518085699,
+          "controlArticles": 14,
+          "controlTotal": 896,
+          "controlShare": 0.015625
+        },
+        "ucsd": {
+          "articles": 37,
+          "share": 0.020589872008903727,
+          "controlArticles": 7,
+          "controlTotal": 896,
+          "controlShare": 0.0078125
+        },
+        "harvard-brigham": {
+          "articles": 127,
+          "share": 0.07067334446299388,
+          "controlArticles": 49,
+          "controlTotal": 896,
+          "controlShare": 0.0546875
+        }
+      }
+    },
+    {
+      "year": 2021,
+      "journalArticles": 1004,
+      "byInstitution": {
+        "tufts": {
+          "articles": 0,
+          "share": 0,
+          "controlArticles": 26,
+          "controlTotal": 902,
+          "controlShare": 0.028824833702882482
+        },
+        "ucsd": {
+          "articles": 30,
+          "share": 0.029880478087649404,
+          "controlArticles": 7,
+          "controlTotal": 902,
+          "controlShare": 0.007760532150776054
+        },
+        "harvard-brigham": {
+          "articles": 98,
+          "share": 0.09760956175298804,
+          "controlArticles": 59,
+          "controlTotal": 902,
+          "controlShare": 0.06541019955654102
+        }
+      }
+    },
+    {
+      "year": 2022,
+      "journalArticles": 865,
+      "byInstitution": {
+        "tufts": {
+          "articles": 0,
+          "share": 0,
+          "controlArticles": 12,
+          "controlTotal": 920,
+          "controlShare": 0.013043478260869565
+        },
+        "ucsd": {
+          "articles": 24,
+          "share": 0.027745664739884393,
+          "controlArticles": 11,
+          "controlTotal": 920,
+          "controlShare": 0.011956521739130435
+        },
+        "harvard-brigham": {
+          "articles": 93,
+          "share": 0.10751445086705202,
+          "controlArticles": 53,
+          "controlTotal": 920,
+          "controlShare": 0.057608695652173914
+        }
+      }
+    },
+    {
+      "year": 2023,
+      "journalArticles": 703,
+      "byInstitution": {
+        "tufts": {
+          "articles": 14,
+          "share": 0.01991465149359886,
+          "controlArticles": 21,
+          "controlTotal": 1017,
+          "controlShare": 0.02064896755162242
+        },
+        "ucsd": {
+          "articles": 18,
+          "share": 0.025604551920341393,
+          "controlArticles": 9,
+          "controlTotal": 1017,
+          "controlShare": 0.008849557522123894
+        },
+        "harvard-brigham": {
+          "articles": 99,
+          "share": 0.14082503556187767,
+          "controlArticles": 41,
+          "controlTotal": 1017,
+          "controlShare": 0.04031465093411996
+        }
+      }
+    },
+    {
+      "year": 2024,
+      "journalArticles": 611,
+      "byInstitution": {
+        "tufts": {
+          "articles": 20,
+          "share": 0.03273322422258593,
+          "controlArticles": 52,
+          "controlTotal": 4776,
+          "controlShare": 0.010887772194304857
+        },
+        "ucsd": {
+          "articles": 21,
+          "share": 0.03436988543371522,
+          "controlArticles": 53,
+          "controlTotal": 4776,
+          "controlShare": 0.01109715242881072
+        },
+        "harvard-brigham": {
+          "articles": 84,
+          "share": 0.13747954173486088,
+          "controlArticles": 129,
+          "controlTotal": 4776,
+          "controlShare": 0.02701005025125628
+        }
+      }
+    }
+  ],
+  "trackedInstitutions": [
+    {
+      "id": "tufts",
+      "label": "Tufts",
+      "members": [
+        {
+          "openAlexId": "I121934306",
+          "displayName": "Tufts University"
+        },
+        {
+          "openAlexId": "I1290900354",
+          "displayName": "Tufts Medical Center"
+        }
+      ]
+    },
+    {
+      "id": "ucsd",
+      "label": "UC San Diego",
+      "members": [
+        {
+          "openAlexId": "I36258959",
+          "displayName": "University of California San Diego"
+        }
+      ]
+    },
+    {
+      "id": "harvard-brigham",
+      "label": "Harvard / Brigham",
+      "members": [
+        {
+          "openAlexId": "I136199984",
+          "displayName": "Harvard University"
+        },
+        {
+          "openAlexId": "I1283280774",
+          "displayName": "Brigham and Women's Hospital"
+        }
+      ]
+    }
+  ]
+}
