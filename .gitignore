@@ -44,6 +44,5 @@ next-env.d.ts
 .audit/
 agent-tools/
 
-# fetch working files
 /data/openalex-cache.json
 /data/bundle.json
