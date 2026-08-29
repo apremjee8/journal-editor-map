@@ -71,8 +71,10 @@ export type PlacedBandLabel = {
   row: number;
 };
 
-const LABEL_PAD = 8;
-const LABEL_HANG = 10;
+export const BAND_LABEL_PAD = 8;
+export const BAND_LABEL_HANG = 10;
+const LABEL_PAD = BAND_LABEL_PAD;
+const LABEL_HANG = BAND_LABEL_HANG;
 const LABEL_GUTTER = 10;
 const WIDTH_PER_EM = 0.68;
 

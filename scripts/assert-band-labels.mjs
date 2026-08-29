@@ -4,9 +4,15 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
-const { placeBandLabels, tenureBands, shareChartPlotWidth } = await import(
-  "../src/lib/chart-marks.ts"
-);
+const {
+  BAND_LABEL_HANG,
+  BAND_LABEL_PAD,
+  placeBandLabels,
+  shareChartPlotLeft,
+  shareChartPlotWidth,
+  tenureBands,
+  yearToX,
+} = await import("../src/lib/chart-marks.ts");
 
 const WIDTHS = [
   { name: "desktop-1280", container: 928, fontSize: 11 },
@@ -15,26 +21,34 @@ const WIDTHS = [
 ];
 
 const SPOT = {
-  jacc: ["Parmley 1992", "Krumholz 2024"],
-  "jama-im": ["Dalen 1988"],
-  nejm: ["Drazen 2000"],
+  jacc: ["Parmley 1992", "DeMaria 2002", "Fuster 2014", "Krumholz 2024"],
+  "jama-im": ["Dalen 1988", "Greenland 2004", "Redberg 2009", "Inouye 2023"],
+  nejm: ["Drazen 2000", "Rubin 2019"],
 };
 
 const errors = [];
+const HANG_TOL = 0.6;
 
-function checkPlacement(journalId, widthName, plotWidth, fontSize, placed) {
-  const right = plotWidth;
+function checkPlacement(journalId, widthName, containerWidth, plotWidth, fontSize, bands, yearStart, yearEnd, placed) {
+  const plotLeft = shareChartPlotLeft();
+  const frameRight = containerWidth - plotLeft;
   for (const label of placed) {
-    if (label.x < 8) {
-      errors.push(`${journalId} ${widthName}: "${label.text}" left ${label.x} is flush with the clip`);
-    }
-    if (label.x + label.width > right - 8) {
+    const band = bands.find((item) => item.shortLabel === label.text);
+    const ruleX = band
+      ? yearToX(band.visibleStart, yearStart, yearEnd, 0, plotWidth)
+      : Number.NaN;
+    if (!Number.isFinite(ruleX) || Math.abs(label.x - (ruleX + BAND_LABEL_HANG)) > HANG_TOL) {
       errors.push(
-        `${journalId} ${widthName}: "${label.text}" right ${label.x + label.width} exceeds plot ${right}`
+        `${journalId} ${widthName}: "${label.text}" x ${label.x} is not hang-right of rule ${ruleX}`
       );
     }
-    if (label.x < 0 || label.x + label.width > right) {
-      errors.push(`${journalId} ${widthName}: "${label.text}" is outside the plot`);
+    if (label.x < BAND_LABEL_PAD) {
+      errors.push(`${journalId} ${widthName}: "${label.text}" left ${label.x} clips the first letter`);
+    }
+    if (label.x + label.width > frameRight - BAND_LABEL_PAD) {
+      errors.push(
+        `${journalId} ${widthName}: "${label.text}" right ${label.x + label.width} clips past frame ${frameRight}`
+      );
     }
   }
   for (let i = 0; i < placed.length; i += 1) {
@@ -79,14 +93,14 @@ for (const id of ids) {
   for (const width of WIDTHS) {
     const plotWidth = shareChartPlotWidth(width.container);
     const placed = placeBandLabels(bands, yearStart, yearEnd, { left: 0, width: plotWidth }, width.fontSize);
-    checkPlacement(id, width.name, plotWidth, width.fontSize, placed);
+    checkPlacement(id, width.name, width.container, plotWidth, width.fontSize, bands, yearStart, yearEnd, placed);
   }
 }
 
 if (errors.length) {
-  console.error("band labels fail the clip and overlap checks:");
+  console.error("band labels fail the hang, clip, and overlap checks:");
   for (const line of errors) console.error(`  ${line}`);
   process.exit(1);
 }
 
-console.log("band labels stay inside the plot at 1280/1440/390 for all twelve journals");
+console.log("band labels hang right of each rule and stay inside the frame at 1280/1440/390 for all twelve journals");
