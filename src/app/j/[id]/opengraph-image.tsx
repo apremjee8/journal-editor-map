@@ -9,7 +9,7 @@ export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 const FRAME = { width: 1104, height: 292 };
-const PLOT = { left: 16, top: 10, width: 1060, height: 246 };
+const PLOT = { left: 28, top: 10, width: 1040, height: 246 };
 
 export default async function Image({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;

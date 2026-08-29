@@ -58,7 +58,7 @@ export const SHARE_CHART_LAYOUT = {
   marginBottom: 28,
   marginLeft: 8,
   yAxisWidth: 48,
-  xPad: 8,
+  xPad: 14,
 } as const;
 
 export type PlacedBandLabel = {
@@ -71,8 +71,8 @@ export type PlacedBandLabel = {
   row: number;
 };
 
-const LABEL_PAD = 4;
-const LABEL_HANG = 8;
+const LABEL_PAD = 8;
+const LABEL_HANG = 10;
 const LABEL_GUTTER = 10;
 const WIDTH_PER_EM = 0.68;
 

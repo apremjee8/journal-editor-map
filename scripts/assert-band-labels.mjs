@@ -25,10 +25,10 @@ const errors = [];
 function checkPlacement(journalId, widthName, plotWidth, fontSize, placed) {
   const right = plotWidth;
   for (const label of placed) {
-    if (label.x < 4) {
+    if (label.x < 8) {
       errors.push(`${journalId} ${widthName}: "${label.text}" left ${label.x} is flush with the clip`);
     }
-    if (label.x + label.width > right - 4) {
+    if (label.x + label.width > right - 8) {
       errors.push(
         `${journalId} ${widthName}: "${label.text}" right ${label.x + label.width} exceeds plot ${right}`
       );

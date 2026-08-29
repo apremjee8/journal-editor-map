@@ -88,7 +88,7 @@ export function ShareChart({ series, institutions, editors }: Props) {
           </li>
         ))}
       </ul>
-      <div ref={wrapRef} className="relative h-[260px] w-full overflow-hidden sm:h-[400px]">
+      <div ref={wrapRef} className="relative h-[260px] w-full sm:h-[400px]">
         <ResponsiveContainer width="100%" height="100%">
           <LineChart
             data={rows}
