@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-29T19:39:29.308Z",
+  "fetchedAt": "2026-08-29T19:50:09.326Z",
   "yearStart": 2000,
   "yearEnd": 2024,
   "workType": "article",
@@ -357,6 +357,20 @@
         {
           "openAlexId": "I1330342723",
           "displayName": "Mayo Clinic"
+        }
+      ]
+    },
+    {
+      "id": "vanderbilt",
+      "label": "Vanderbilt",
+      "members": [
+        {
+          "openAlexId": "I200719446",
+          "displayName": "Vanderbilt University"
+        },
+        {
+          "openAlexId": "I901861585",
+          "displayName": "Vanderbilt University Medical Center"
         }
       ]
     }
