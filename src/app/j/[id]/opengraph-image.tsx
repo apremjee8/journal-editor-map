@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-import { placeBandLabels, shareToY, tenureBands, yearToX } from "@/lib/chart-marks";
+import { SHARE_OG_LAYOUT, fitOgBandLabels, shareToY, tenureBands, yearToX } from "@/lib/chart-marks";
 import { instColor } from "@/lib/colors";
 import { formatShare, getJournal, isJournalId } from "@/lib/load-bundle";
 import { handoverClaim, handoverFallback, latestScoredHandover, takeoverRows } from "@/lib/takeover";
@@ -8,8 +8,12 @@ import { handoverClaim, handoverFallback, latestScoredHandover, takeoverRows } f
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
-const FRAME = { width: 1104, height: 292 };
-const PLOT = { left: 28, top: 10, width: 1040, height: 246 };
+const FRAME = { width: SHARE_OG_LAYOUT.frameWidth, height: SHARE_OG_LAYOUT.frameHeight };
+const PLOT = {
+  left: SHARE_OG_LAYOUT.plotLeft,
+  top: SHARE_OG_LAYOUT.plotTop,
+  height: SHARE_OG_LAYOUT.plotHeight,
+};
 
 export default async function Image({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
@@ -22,6 +26,8 @@ export default async function Image({ params }: { params: Promise<{ id: string }
   const yearStart = series[0]?.year ?? 2000;
   const yearEnd = series.at(-1)?.year ?? yearStart;
   const bands = tenureBands(editors, yearStart, yearEnd);
+  const ogMarks = fitOgBandLabels(bands, yearStart, yearEnd);
+  const plotWidth = ogMarks.plotWidth;
   const labels = Object.fromEntries(institutions.map((inst) => [inst.id, inst.label]));
   const claimRow = row ? latestScoredHandover(takeoverRows(editors, series, labels)) : null;
   const claim = claimRow ? handoverClaim(claimRow, formatShare) : handoverFallback();
@@ -35,7 +41,7 @@ export default async function Image({ params }: { params: Promise<{ id: string }
   const polylines = institutions.map((inst) => {
     const points = series
       .map((pt) => {
-        const x = yearToX(pt.year, yearStart, yearEnd, PLOT.left, PLOT.width);
+        const x = yearToX(pt.year, yearStart, yearEnd, PLOT.left, plotWidth);
         const y = shareToY((pt.byInstitution[inst.id]?.share ?? 0) * 100, yMax, PLOT.top, PLOT.height);
         return `${x.toFixed(1)},${y.toFixed(1)}`;
       })
@@ -85,8 +91,8 @@ export default async function Image({ params }: { params: Promise<{ id: string }
         >
           <svg width={FRAME.width} height={FRAME.height} viewBox={`0 0 ${FRAME.width} ${FRAME.height}`}>
             {bands.map((band) => {
-              const x1 = yearToX(band.visibleStart, yearStart, yearEnd, PLOT.left, PLOT.width);
-              const x2 = yearToX(band.endYear, yearStart, yearEnd, PLOT.left, PLOT.width);
+              const x1 = yearToX(band.visibleStart, yearStart, yearEnd, PLOT.left, plotWidth);
+              const x2 = yearToX(band.endYear, yearStart, yearEnd, PLOT.left, plotWidth);
               const color = instColor(band.institutionId, cohort);
               return (
                 <g key={`${band.name}-band`}>
@@ -112,7 +118,7 @@ export default async function Image({ params }: { params: Promise<{ id: string }
             <line
               x1={PLOT.left}
               y1={PLOT.top + PLOT.height}
-              x2={PLOT.left + PLOT.width}
+              x2={PLOT.left + plotWidth}
               y2={PLOT.top + PLOT.height}
               stroke="#d6cfc2"
               strokeWidth="2"
@@ -147,7 +153,7 @@ export default async function Image({ params }: { params: Promise<{ id: string }
           <div
             style={{
               position: "absolute",
-              left: PLOT.left + PLOT.width - 40,
+              left: PLOT.left + plotWidth - 40,
               top: PLOT.top + PLOT.height + 8,
               display: "flex",
               fontSize: 16,
@@ -157,13 +163,7 @@ export default async function Image({ params }: { params: Promise<{ id: string }
           >
             {yearEnd}
           </div>
-          {placeBandLabels(
-            bands,
-            yearStart,
-            yearEnd,
-            { left: PLOT.left, width: PLOT.width, top: PLOT.top + 4 },
-            16
-          ).map((label) => (
+          {ogMarks.labels.map((label) => (
             <div
               key={`${label.text}-${label.row}`}
               style={{

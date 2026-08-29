@@ -43,3 +43,7 @@ next-env.d.ts
 # local audit trail
 .audit/
 agent-tools/
+
+# fetch working files
+/data/openalex-cache.json
+/data/bundle.json

@@ -73,22 +73,33 @@ export type PlacedBandLabel = {
 
 export const BAND_LABEL_PAD = 8;
 export const BAND_LABEL_HANG = 10;
-const LABEL_PAD = BAND_LABEL_PAD;
-const LABEL_HANG = BAND_LABEL_HANG;
 const LABEL_GUTTER = 10;
 const WIDTH_PER_EM = 0.68;
+
+export const SHARE_OG_LAYOUT = {
+  frameWidth: 1104,
+  frameHeight: 292,
+  plotLeft: 28,
+  plotTop: 10,
+  plotWidth: 1040,
+  plotHeight: 246,
+  fontSize: 16,
+} as const;
 
 export function shareChartPlotLeft(): number {
   return SHARE_CHART_LAYOUT.marginLeft + SHARE_CHART_LAYOUT.yAxisWidth + SHARE_CHART_LAYOUT.xPad;
 }
 
-export function shareChartPlotWidth(containerWidth: number): number {
+export function shareChartPlotWidth(
+  containerWidth: number,
+  marginRight: number = SHARE_CHART_LAYOUT.marginRight
+): number {
   return Math.max(
     0,
     containerWidth -
       SHARE_CHART_LAYOUT.marginLeft -
       SHARE_CHART_LAYOUT.yAxisWidth -
-      SHARE_CHART_LAYOUT.marginRight -
+      marginRight -
       SHARE_CHART_LAYOUT.xPad * 2
   );
 }
@@ -111,22 +122,13 @@ export function placeBandLabels(
 ): PlacedBandLabel[] {
   const top = plot.top ?? 0;
   const line = fontSize + 5;
-  const plotRight = plot.left + plot.width;
   const drafts = bands.map((band) => {
     const ruleX = yearToX(band.visibleStart, yearStart, yearEnd, plot.left, plot.width);
     const width = estimateLabelWidth(band.shortLabel, fontSize);
-    let x = ruleX + LABEL_HANG;
-    if (x + width > plotRight - LABEL_PAD) {
-      x = ruleX - LABEL_HANG - width;
-    }
-    if (x < plot.left + LABEL_PAD) x = plot.left + LABEL_PAD;
-    if (x + width > plotRight - LABEL_PAD) {
-      x = Math.max(plot.left + LABEL_PAD, plotRight - LABEL_PAD - width);
-    }
     return {
       text: band.shortLabel,
       institutionId: band.institutionId,
-      x,
+      x: ruleX + BAND_LABEL_HANG,
       width,
       height: fontSize,
       ruleX,
@@ -150,6 +152,63 @@ export function placeBandLabels(
     placed.push({ ...item, y: top + row * line, row });
   }
   return placed;
+}
+
+export function fitShareChartBandLabels(
+  bands: TenureBand[],
+  yearStart: number,
+  yearEnd: number,
+  containerWidth: number,
+  fontSize: number
+): { labels: PlacedBandLabel[]; plotWidth: number; marginRight: number } {
+  let marginRight = SHARE_CHART_LAYOUT.marginRight;
+  let plotWidth = shareChartPlotWidth(containerWidth, marginRight);
+  let labels = placeBandLabels(bands, yearStart, yearEnd, { left: 0, width: plotWidth }, fontSize);
+  const rightLimit = containerWidth - shareChartPlotLeft();
+  for (let i = 0; i < 8; i += 1) {
+    const overflow = Math.max(
+      0,
+      ...labels.map((label) => label.x + label.width + BAND_LABEL_PAD - rightLimit)
+    );
+    if (overflow <= 1e-6) break;
+    marginRight += Math.ceil(overflow);
+    plotWidth = shareChartPlotWidth(containerWidth, marginRight);
+    labels = placeBandLabels(bands, yearStart, yearEnd, { left: 0, width: plotWidth }, fontSize);
+  }
+  return { labels, plotWidth, marginRight };
+}
+
+export function fitOgBandLabels(
+  bands: TenureBand[],
+  yearStart: number,
+  yearEnd: number
+): { labels: PlacedBandLabel[]; plotWidth: number } {
+  const { plotLeft, plotTop, plotWidth: initialWidth, fontSize, frameWidth } = SHARE_OG_LAYOUT;
+  let plotWidth: number = initialWidth;
+  let labels = placeBandLabels(
+    bands,
+    yearStart,
+    yearEnd,
+    { left: plotLeft, width: plotWidth, top: plotTop + 4 },
+    fontSize
+  );
+  const rightLimit = frameWidth - BAND_LABEL_PAD;
+  for (let i = 0; i < 8; i += 1) {
+    const overflow = Math.max(
+      0,
+      ...labels.map((label) => label.x + label.width + BAND_LABEL_PAD - rightLimit)
+    );
+    if (overflow <= 1e-6) break;
+    plotWidth = Math.max(0, plotWidth - Math.ceil(overflow));
+    labels = placeBandLabels(
+      bands,
+      yearStart,
+      yearEnd,
+      { left: plotLeft, width: plotWidth, top: plotTop + 4 },
+      fontSize
+    );
+  }
+  return { labels, plotWidth };
 }
 
 export function shareToY(sharePct: number, yMax: number, top: number, height: number): number {

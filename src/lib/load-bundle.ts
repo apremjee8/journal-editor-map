@@ -1,34 +1,20 @@
 import ajrccm from "../../data/bundle-parts/ajrccm.json";
 import chest from "../../data/bundle-parts/chest.json";
+import cid from "../../data/bundle-parts/cid.json";
 import circulation from "../../data/bundle-parts/circulation.json";
 import ehj from "../../data/bundle-parts/ehj.json";
 import jacc from "../../data/bundle-parts/jacc.json";
 import jama from "../../data/bundle-parts/jama.json";
-import jamaCardio from "../../data/bundle-parts/jama-cardio.json";
 import jamaIm from "../../data/bundle-parts/jama-im.json";
-import jamaOnc from "../../data/bundle-parts/jama-onc.json";
+import jasn from "../../data/bundle-parts/jasn.json";
 import jco from "../../data/bundle-parts/jco.json";
-import lancetOnc from "../../data/bundle-parts/lancet-onc.json";
 import meta from "../../data/bundle-parts/meta.json";
 import nejm from "../../data/bundle-parts/nejm.json";
 import type { DataBundle, JournalBundle, JournalId } from "./types";
 
 export const bundle = {
   ...meta,
-  journals: [
-    jama,
-    jamaIm,
-    nejm,
-    jacc,
-    circulation,
-    jamaCardio,
-    ehj,
-    ajrccm,
-    chest,
-    jco,
-    lancetOnc,
-    jamaOnc,
-  ],
+  journals: [jama, jamaIm, nejm, jacc, circulation, ehj, ajrccm, chest, jco, cid, jasn],
 } as DataBundle;
 
 export function isJournalId(id: string): id is JournalId {

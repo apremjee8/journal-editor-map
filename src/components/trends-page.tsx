@@ -41,7 +41,7 @@ export function TrendsPage({ bundle }: { bundle: DataBundle }) {
 
       <section className="rounded-xl border border-[#d6cfc2] bg-[#fffdf8] p-3 sm:p-6">
         <p className="text-xs uppercase tracking-wide text-[#6b6458]">
-          Sourced handovers across twelve journals
+          Sourced handovers across eleven journals
         </p>
         <p className="mt-2 text-3xl font-semibold tabular-nums tracking-tight text-[#1c1915] sm:text-4xl">
           {score.rose} rose

@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     template: "%s",
   },
   description:
-    "Editor-in-chief timelines for twelve journals, plotted against each editor’s home institution share of OpenAlex articles.",
+    "Editor-in-chief timelines for eleven journals, plotted against each editor’s home institution share of OpenAlex articles.",
   openGraph: {
     type: "website",
     siteName: "Editor home and journal share",

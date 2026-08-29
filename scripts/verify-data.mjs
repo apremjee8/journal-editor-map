@@ -10,13 +10,12 @@ const REQUIRED = [
   "nejm",
   "jacc",
   "circulation",
-  "jama-cardio",
   "ehj",
   "ajrccm",
   "chest",
   "jco",
-  "lancet-onc",
-  "jama-onc",
+  "cid",
+  "jasn",
 ];
 
 const PARTS = join(ROOT, "data/bundle-parts");

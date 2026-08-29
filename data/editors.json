@@ -328,48 +328,6 @@
         ]
       }
     ],
-    "jama-cardio": [
-      {
-        "role": "eic",
-        "name": "Robert O. Bonow",
-        "institutionGroupId": "northwestern",
-        "startYear": 2016,
-        "endYear": 2026,
-        "gapReason": "Casadei’s opening editorial is 2 February 2026. No JAMA notice names Bonow’s last day, so the end year is inferred from that start.",
-        "sources": [
-          {
-            "label": "Northwestern Feinberg News Center, 12 Oct 2015",
-            "url": "https://news.feinberg.northwestern.edu/2015/10/12/bonow-named-founding-editor-of-jama-cardiology/",
-            "quote": "Robert Bonow… named editor-in-chief of JAMA Cardiology, a new journal in the JAMA Network that will debut in 2016."
-          },
-          {
-            "label": "JAMA Cardiology, The First Decade, 30 Jan 2026",
-            "url": "https://jamanetwork.com/journals/jamacardiology/fullarticle/2844652",
-            "quote": "inaugural Editor-in-Chief of a brand-new major medical journal."
-          }
-        ]
-      },
-      {
-        "role": "eic",
-        "name": "Barbara Casadei",
-        "institutionGroupId": "imperial",
-        "startYear": 2026,
-        "endYear": null,
-        "gapReason": "Tenure starts in early 2026. The OpenAlex series in this build ends in 2024, so Imperial has no plotted share points yet.",
-        "sources": [
-          {
-            "label": "JAMA Network appointment",
-            "url": "https://media.jamanetwork.com/post/jama-network-names-new-editor-in-chief-of-jama-cardiology",
-            "quote": "Head of the National Heart and Lung Institute (NHLI) and British Heart Foundation Professor of Cardiovascular Medicine at Imperial College London."
-          },
-          {
-            "label": "JAMA Cardiology opening editorial, 2 Feb 2026",
-            "url": "https://doi.org/10.1001/jamacardio.2026.0161",
-            "quote": "I am grateful to the JAMA Network for appointing me as the next Editor in Chief."
-          }
-        ]
-      }
-    ],
     "ehj": [
       {
         "role": "eic",
@@ -679,60 +637,176 @@
         ]
       }
     ],
-    "lancet-onc": [
+    "cid": [
       {
         "role": "eic",
-        "name": "Unknown (launch to Feb 2002)",
-        "institutionGroupId": null,
-        "startYear": null,
-        "endYear": 2002,
-        "gapReason": "The journal launched in 2000. Collingridge’s own About page says he became EIC in March 2002. No sourced EIC is on file for the first 18 months. Wikipedia and Grokipedia names for that window were not used.",
+        "name": "Sherwood L. Gorbach",
+        "institutionGroupId": "tufts",
+        "startYear": 2000,
+        "endYear": 2016,
         "sources": [
           {
-            "label": "The Lancet Oncology About page",
-            "url": "https://www.thelancet.com/lanonc/about",
-            "quote": "I have been Editor-in-Chief of The Lancet Oncology since March 2002."
+            "label": "CID announcement, December 1999",
+            "url": "https://doi.org/10.1086/524971",
+            "quote": "Dr. Sherwood L. Gorbach has been appointed the new editor of Clinical Infectious Diseases. He will assume responsibility beginning with the January 2000 issue… Tufts University School of Medicine, Arnold 205, 136 Harrison Avenue, Boston, Massachusetts 02111."
+          },
+          {
+            "label": "OUP blog, Schooley start, 17 Feb 2017",
+            "url": "https://blog.oup.com/2017/02/chip-schooley-infectious-diseases-journal-publishing/",
+            "quote": "Robert T. “Chip” Schooley, editor-in-chief of the journal Clinical Infectious Diseases (CID), who began his term in January"
           }
         ]
       },
       {
         "role": "eic",
-        "name": "David Collingridge",
-        "institutionGroupId": null,
-        "startYear": 2002,
-        "endYear": null,
-        "gapReason": "In-house Lancet Group editor in London. Prior Yale and Imperial research posts are pre-Lancet and are not used for the share series.",
+        "name": "Robert T. Schooley",
+        "institutionGroupId": "ucsd",
+        "startYear": 2017,
+        "endYear": 2022,
         "sources": [
           {
-            "label": "The Lancet Oncology About page",
-            "url": "https://www.thelancet.com/lanonc/about",
-            "quote": "I have been Editor-in-Chief of The Lancet Oncology since March 2002… Affiliation: The Lancet Group, London, UK."
+            "label": "IDSA, retiring CID editors, 2022",
+            "url": "https://www.idsociety.org/news--publications-new/articles/2022/idsa-thanks-retiring-clinical-infectious-diseases-editors/",
+            "quote": "Dr. Schooley officially took office as editor-in-chief of CID in 2017"
           },
           {
-            "label": "Elsevier Researcher Academy editor bio",
-            "url": "https://researcheracademy.elsevier.com/node/5149",
-            "quote": "Dr David Collingridge has been Editor-in-Chief of The Lancet Oncology since March 2002."
+            "label": "OUP blog, 17 Feb 2017",
+            "url": "https://blog.oup.com/2017/02/chip-schooley-infectious-diseases-journal-publishing/",
+            "quote": "He is the Division Head and Professor of Medicine in the Department of Medicine, Division of Infectious Diseases, at the University of California, San Diego."
+          }
+        ]
+      },
+      {
+        "role": "eic",
+        "name": "Paul E. Sax",
+        "institutionGroupId": "harvard-brigham",
+        "startYear": 2022,
+        "endYear": null,
+        "sources": [
+          {
+            "label": "IDSA, next CID editor-in-chief, 2022",
+            "url": "https://www.idsociety.org/news--publications-new/articles/2022/infectious-diseases-society-of-america-announces-next-editor-in-chief-of-clinical-infectious-diseases/",
+            "quote": "will succeed Robert T. Schooley, MD, FIDSA, on July 1, 2022… clinical director of the Division of Infectious Diseases at Brigham and Women's Hospital and professor of medicine at Harvard Medical School."
           }
         ]
       }
     ],
-    "jama-onc": [
+    "jasn": [
       {
         "role": "eic",
-        "name": "Mary L. (Nora) Disis",
+        "name": "C. Craig Tisher",
+        "institutionGroupId": "florida",
+        "startYear": 1996,
+        "endYear": 2001,
+        "gapReason": "Couser’s 2001 handover essay places Tisher’s office in Gainesville after Grantham’s 1996 term. The chart window starts in 2000.",
+        "sources": [
+          {
+            "label": "Couser, JASN: The next era, 2001",
+            "url": "https://doi.org/10.1681/asn.v1271547",
+            "quote": "When Dr. Grantham's term expired in 1996, the editorial office… relocated from Kansas City to Gainesville, Florida, under the direction of the second JASN editor-in-chief, Dr. C. Craig Tisher."
+          },
+          {
+            "label": "Couser, Round 3 at JASN (2001 to 2007), 2010",
+            "url": "https://journals.lww.com/jasn/fulltext/2010/09000/round_3_at_jasn__2001_to_2007___recollections_of.1.aspx",
+            "quote": "When we began our tenure in July 2001"
+          }
+        ]
+      },
+      {
+        "role": "eic",
+        "name": "William G. Couser",
         "institutionGroupId": "washington",
-        "startYear": 2015,
+        "startYear": 2001,
+        "endYear": 2007,
+        "sources": [
+          {
+            "label": "Couser, Round 3 at JASN (2001 to 2007), 2010",
+            "url": "https://journals.lww.com/jasn/fulltext/2010/09000/round_3_at_jasn__2001_to_2007___recollections_of.1.aspx",
+            "quote": "our term as the third editor-in-chief, deputy editor, and editorial assistant of JASN from 2001 to 2007… When we began our tenure in July 2001"
+          },
+          {
+            "label": "ASN Presidential Address 2006",
+            "url": "https://journals.lww.com/jasn/fulltext/2007/04000/american_society_of_nephrology_presidential.6.aspx",
+            "quote": "Eric Nielsen and his deputy and associate editors will take over the reins at JASN beginning July 2007… We thank Bill Couser"
+          }
+        ]
+      },
+      {
+        "role": "eic",
+        "name": "Eric G. Neilson",
+        "institutionGroupId": "vanderbilt",
+        "startYear": 2007,
+        "endYear": 2013,
+        "gapReason": "Became EIC while chair of medicine at Vanderbilt. Vanderbilt news says he continued as JASN editor when he left for Northwestern on 1 September 2011. The plotted home is Vanderbilt, where the term began.",
+        "sources": [
+          {
+            "label": "Northwestern Feinberg dean biography",
+            "url": "https://www.feinberg.northwestern.edu/about/dean/biography.html",
+            "quote": "From 2007-2013 he served as Editor-in-Chief of the Journal of the American Society of Nephrology (JASN)"
+          },
+          {
+            "label": "Vanderbilt Health News, Neilson takes post at Northwestern",
+            "url": "https://news.vumc.org/reporter-archive/neilson-takes-post-at-northwestern/",
+            "quote": "former chair of the Vanderbilt University Department of Medicine, is leaving after 13 years… He will begin his work there on Sept. 1… He also continued his role as editor of the Journal of the American Society of Nephrology."
+          },
+          {
+            "label": "ASN, Nath appointment",
+            "url": "https://www.asn-online.org/g/blast/files/jasn_eic.html",
+            "quote": "In July of 2013, Dr. Nath will succeed Editor-in-Chief Eric G. Neilson, MD, FASN who has led JASN’s tremendous success since 2007."
+          }
+        ]
+      },
+      {
+        "role": "eic",
+        "name": "Karl A. Nath",
+        "institutionGroupId": "mayo",
+        "startYear": 2013,
+        "endYear": 2017,
+        "gapReason": "ASN said a six-year term from 1 July 2013. Briggs’s first issue is January 2018 volume 29, so the outgoing year is 2017. The later years of the announced six-year window were not used.",
+        "sources": [
+          {
+            "label": "ASN, Nath appointment",
+            "url": "https://www.asn-online.org/g/blast/files/jasn_eic.html",
+            "quote": "Dr. Nath is a nephrologist at the Mayo Clinic in Rochester, MN… Dr. Nath will assume the post July 1, 2013"
+          },
+          {
+            "label": "Briggs, Thoughts on Turning 29, January 2018",
+            "url": "https://journals.lww.com/jasn/fulltext/2018/01000/thoughts_on_turning_29.2.aspx",
+            "quote": "This issue, the first in volume 29, introduces the next team. I am delighted to have been selected to be the next Editor in Chief of the journal… so ably led by the previous Editor in Chief Karl Nath"
+          }
+        ]
+      },
+      {
+        "role": "eic",
+        "name": "Josephine P. Briggs",
+        "institutionGroupId": null,
+        "startYear": 2018,
+        "endYear": 2023,
+        "gapReason": "EIC from the January 2018 issue through the December 2023 handover. The 2018 editorial and ASN bio place her in Washington, DC after NIH leadership. No university home is used for the share series.",
+        "sources": [
+          {
+            "label": "Briggs, Thoughts on Turning 29, January 2018",
+            "url": "https://journals.lww.com/jasn/fulltext/2018/01000/thoughts_on_turning_29.2.aspx",
+            "quote": "This issue, the first in volume 29, introduces the next team. I am delighted to have been selected to be the next Editor in Chief of the journal."
+          },
+          {
+            "label": "ASN JASN podcast, 12 Jan 2024",
+            "url": "https://www.asn-online.org/media/podcast.aspx?p=JASN",
+            "quote": "outgoing Editor-in-Chief Josie Briggs talks with incoming Editor-in-Chief Raj Mehrotra"
+          }
+        ]
+      },
+      {
+        "role": "eic",
+        "name": "Rajnish Mehrotra",
+        "institutionGroupId": "washington",
+        "startYear": 2024,
         "endYear": null,
         "sources": [
           {
-            "label": "AMA, JAMA Oncology to debut in 2015",
-            "url": "https://www.ama-assn.org/about/publications-newsletters/new-journal-jama-oncology-debut-2015",
-            "quote": "Nora Disis, MD, as our inaugural editor-in-chief… director of the Center for Translational Medicine in Women’s Health and director of the Institute of Translational Health Sciences at the University of Washington."
-          },
-          {
-            "label": "Disis, Announcing JAMA Oncology, 2015",
-            "url": "https://jamanetwork.com/journals/jamaoncology/fullarticle/2108846",
-            "quote": "Tumor Vaccine Group, Center for Translational Medicine in Women’s Health, University of Washington."
+            "label": "ASN / Newswise, 25 May 2023",
+            "url": "https://www.newswise.com/articles/american-society-of-nephrology-names-rajnish-mehrotra-editor-in-chief-of-jasn-and-senior-editor-in-chief-for-the-asn-journal-portfolio",
+            "quote": "Mehrotra’s term will begin January 1, 2024… Professor of Medicine and the Head of the Division of Nephrology in the Department of Medicine at the University of Washington School of Medicine in Seattle, Washington."
           }
         ]
       }

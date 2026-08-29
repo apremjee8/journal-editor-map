@@ -1,0 +1,1026 @@
+{
+  "journal": {
+    "id": "jasn",
+    "name": "Journal of the American Society of Nephrology",
+    "shortName": "JASN",
+    "openAlexId": "S115693375",
+    "issnL": "1046-6673",
+    "issns": [
+      "1046-6673",
+      "1533-3450"
+    ],
+    "predecessorOpenAlexIds": [],
+    "firstYear": 2000,
+    "notes": [
+      "ASN flagship. OpenAlex GET /sources?filter=issn:1046-6673 on 2026-08-29 returned this single source. Not CJASN, Kidney360, or Kidney International."
+    ]
+  },
+  "editors": [
+    {
+      "role": "eic",
+      "name": "C. Craig Tisher",
+      "institutionGroupId": "florida",
+      "startYear": 1996,
+      "endYear": 2001,
+      "gapReason": "Couser’s 2001 handover essay places Tisher’s office in Gainesville after Grantham’s 1996 term. The chart window starts in 2000.",
+      "sources": [
+        {
+          "label": "Couser, JASN: The next era, 2001",
+          "url": "https://doi.org/10.1681/asn.v1271547",
+          "quote": "When Dr. Grantham's term expired in 1996, the editorial office… relocated from Kansas City to Gainesville, Florida, under the direction of the second JASN editor-in-chief, Dr. C. Craig Tisher."
+        },
+        {
+          "label": "Couser, Round 3 at JASN (2001 to 2007), 2010",
+          "url": "https://journals.lww.com/jasn/fulltext/2010/09000/round_3_at_jasn__2001_to_2007___recollections_of.1.aspx",
+          "quote": "When we began our tenure in July 2001"
+        }
+      ]
+    },
+    {
+      "role": "eic",
+      "name": "William G. Couser",
+      "institutionGroupId": "washington",
+      "startYear": 2001,
+      "endYear": 2007,
+      "sources": [
+        {
+          "label": "Couser, Round 3 at JASN (2001 to 2007), 2010",
+          "url": "https://journals.lww.com/jasn/fulltext/2010/09000/round_3_at_jasn__2001_to_2007___recollections_of.1.aspx",
+          "quote": "our term as the third editor-in-chief, deputy editor, and editorial assistant of JASN from 2001 to 2007… When we began our tenure in July 2001"
+        },
+        {
+          "label": "ASN Presidential Address 2006",
+          "url": "https://journals.lww.com/jasn/fulltext/2007/04000/american_society_of_nephrology_presidential.6.aspx",
+          "quote": "Eric Nielsen and his deputy and associate editors will take over the reins at JASN beginning July 2007… We thank Bill Couser"
+        }
+      ]
+    },
+    {
+      "role": "eic",
+      "name": "Eric G. Neilson",
+      "institutionGroupId": "northwestern",
+      "startYear": 2007,
+      "endYear": 2013,
+      "sources": [
+        {
+          "label": "Northwestern Feinberg dean biography",
+          "url": "https://www.feinberg.northwestern.edu/about/dean/biography.html",
+          "quote": "From 2007-2013 he served as Editor-in-Chief of the Journal of the American Society of Nephrology (JASN)"
+        },
+        {
+          "label": "ASN, Nath appointment",
+          "url": "https://www.asn-online.org/g/blast/files/jasn_eic.html",
+          "quote": "In July of 2013, Dr. Nath will succeed Editor-in-Chief Eric G. Neilson, MD, FASN who has led JASN’s tremendous success since 2007."
+        }
+      ]
+    },
+    {
+      "role": "eic",
+      "name": "Karl A. Nath",
+      "institutionGroupId": "mayo",
+      "startYear": 2013,
+      "endYear": 2017,
+      "gapReason": "ASN said a six-year term from 1 July 2013. Briggs’s first issue is January 2018 volume 29, so the outgoing year is 2017. The later years of the announced six-year window were not used.",
+      "sources": [
+        {
+          "label": "ASN, Nath appointment",
+          "url": "https://www.asn-online.org/g/blast/files/jasn_eic.html",
+          "quote": "Dr. Nath is a nephrologist at the Mayo Clinic in Rochester, MN… Dr. Nath will assume the post July 1, 2013"
+        },
+        {
+          "label": "Briggs, Thoughts on Turning 29, January 2018",
+          "url": "https://journals.lww.com/jasn/fulltext/2018/01000/thoughts_on_turning_29.2.aspx",
+          "quote": "This issue, the first in volume 29, introduces the next team. I am delighted to have been selected to be the next Editor in Chief of the journal… so ably led by the previous Editor in Chief Karl Nath"
+        }
+      ]
+    },
+    {
+      "role": "eic",
+      "name": "Josephine P. Briggs",
+      "institutionGroupId": null,
+      "startYear": 2018,
+      "endYear": 2023,
+      "gapReason": "EIC from the January 2018 issue through the December 2023 handover. The 2018 editorial and ASN bio place her in Washington, DC after NIH leadership. No university home is used for the share series.",
+      "sources": [
+        {
+          "label": "Briggs, Thoughts on Turning 29, January 2018",
+          "url": "https://journals.lww.com/jasn/fulltext/2018/01000/thoughts_on_turning_29.2.aspx",
+          "quote": "This issue, the first in volume 29, introduces the next team. I am delighted to have been selected to be the next Editor in Chief of the journal."
+        },
+        {
+          "label": "ASN JASN podcast, 12 Jan 2024",
+          "url": "https://www.asn-online.org/media/podcast.aspx?p=JASN",
+          "quote": "outgoing Editor-in-Chief Josie Briggs talks with incoming Editor-in-Chief Raj Mehrotra"
+        }
+      ]
+    },
+    {
+      "role": "eic",
+      "name": "Rajnish Mehrotra",
+      "institutionGroupId": "washington",
+      "startYear": 2024,
+      "endYear": null,
+      "sources": [
+        {
+          "label": "ASN / Newswise, 25 May 2023",
+          "url": "https://www.newswise.com/articles/american-society-of-nephrology-names-rajnish-mehrotra-editor-in-chief-of-jasn-and-senior-editor-in-chief-for-the-asn-journal-portfolio",
+          "quote": "Mehrotra’s term will begin January 1, 2024… Professor of Medicine and the Head of the Division of Nephrology in the Department of Medicine at the University of Washington School of Medicine in Seattle, Washington."
+        }
+      ]
+    }
+  ],
+  "series": [
+    {
+      "year": 2000,
+      "journalArticles": 288,
+      "byInstitution": {
+        "florida": {
+          "articles": 5,
+          "share": 0.017361111111111112,
+          "controlArticles": 2,
+          "controlTotal": 637,
+          "controlShare": 0.0031397174254317113
+        },
+        "washington": {
+          "articles": 2,
+          "share": 0.006944444444444444,
+          "controlArticles": 15,
+          "controlTotal": 637,
+          "controlShare": 0.023547880690737835
+        },
+        "northwestern": {
+          "articles": 1,
+          "share": 0.003472222222222222,
+          "controlArticles": 2,
+          "controlTotal": 637,
+          "controlShare": 0.0031397174254317113
+        },
+        "mayo": {
+          "articles": 2,
+          "share": 0.006944444444444444,
+          "controlArticles": 3,
+          "controlTotal": 637,
+          "controlShare": 0.004709576138147566
+        }
+      }
+    },
+    {
+      "year": 2001,
+      "journalArticles": 348,
+      "byInstitution": {
+        "florida": {
+          "articles": 6,
+          "share": 0.017241379310344827,
+          "controlArticles": 2,
+          "controlTotal": 867,
+          "controlShare": 0.002306805074971165
+        },
+        "washington": {
+          "articles": 3,
+          "share": 0.008620689655172414,
+          "controlArticles": 15,
+          "controlTotal": 867,
+          "controlShare": 0.01730103806228374
+        },
+        "northwestern": {
+          "articles": 2,
+          "share": 0.005747126436781609,
+          "controlArticles": 4,
+          "controlTotal": 867,
+          "controlShare": 0.00461361014994233
+        },
+        "mayo": {
+          "articles": 5,
+          "share": 0.014367816091954023,
+          "controlArticles": 4,
+          "controlTotal": 867,
+          "controlShare": 0.00461361014994233
+        }
+      }
+    },
+    {
+      "year": 2002,
+      "journalArticles": 459,
+      "byInstitution": {
+        "florida": {
+          "articles": 1,
+          "share": 0.002178649237472767,
+          "controlArticles": 4,
+          "controlTotal": 741,
+          "controlShare": 0.005398110661268556
+        },
+        "washington": {
+          "articles": 5,
+          "share": 0.010893246187363835,
+          "controlArticles": 14,
+          "controlTotal": 741,
+          "controlShare": 0.018893387314439947
+        },
+        "northwestern": {
+          "articles": 0,
+          "share": 0,
+          "controlArticles": 3,
+          "controlTotal": 741,
+          "controlShare": 0.004048582995951417
+        },
+        "mayo": {
+          "articles": 4,
+          "share": 0.008714596949891068,
+          "controlArticles": 11,
+          "controlTotal": 741,
+          "controlShare": 0.014844804318488529
+        }
+      }
+    },
+    {
+      "year": 2003,
+      "journalArticles": 479,
+      "byInstitution": {
+        "florida": {
+          "articles": 2,
+          "share": 0.0041753653444676405,
+          "controlArticles": 1,
+          "controlTotal": 849,
+          "controlShare": 0.001177856301531213
+        },
+        "washington": {
+          "articles": 11,
+          "share": 0.022964509394572025,
+          "controlArticles": 15,
+          "controlTotal": 849,
+          "controlShare": 0.0176678445229682
+        },
+        "northwestern": {
+          "articles": 4,
+          "share": 0.008350730688935281,
+          "controlArticles": 3,
+          "controlTotal": 849,
+          "controlShare": 0.0035335689045936395
+        },
+        "mayo": {
+          "articles": 5,
+          "share": 0.010438413361169102,
+          "controlArticles": 5,
+          "controlTotal": 849,
+          "controlShare": 0.005889281507656066
+        }
+      }
+    },
+    {
+      "year": 2004,
+      "journalArticles": 453,
+      "byInstitution": {
+        "florida": {
+          "articles": 2,
+          "share": 0.004415011037527594,
+          "controlArticles": 1,
+          "controlTotal": 954,
+          "controlShare": 0.0010482180293501049
+        },
+        "washington": {
+          "articles": 17,
+          "share": 0.037527593818984545,
+          "controlArticles": 25,
+          "controlTotal": 954,
+          "controlShare": 0.02620545073375262
+        },
+        "northwestern": {
+          "articles": 3,
+          "share": 0.006622516556291391,
+          "controlArticles": 9,
+          "controlTotal": 954,
+          "controlShare": 0.009433962264150943
+        },
+        "mayo": {
+          "articles": 6,
+          "share": 0.013245033112582781,
+          "controlArticles": 5,
+          "controlTotal": 954,
+          "controlShare": 0.005241090146750524
+        }
+      }
+    },
+    {
+      "year": 2005,
+      "journalArticles": 507,
+      "byInstitution": {
+        "florida": {
+          "articles": 5,
+          "share": 0.009861932938856016,
+          "controlArticles": 4,
+          "controlTotal": 1021,
+          "controlShare": 0.0039177277179236044
+        },
+        "washington": {
+          "articles": 14,
+          "share": 0.027613412228796843,
+          "controlArticles": 21,
+          "controlTotal": 1021,
+          "controlShare": 0.02056807051909892
+        },
+        "northwestern": {
+          "articles": 2,
+          "share": 0.0039447731755424065,
+          "controlArticles": 9,
+          "controlTotal": 1021,
+          "controlShare": 0.00881488736532811
+        },
+        "mayo": {
+          "articles": 3,
+          "share": 0.005917159763313609,
+          "controlArticles": 6,
+          "controlTotal": 1021,
+          "controlShare": 0.005876591576885406
+        }
+      }
+    },
+    {
+      "year": 2006,
+      "journalArticles": 506,
+      "byInstitution": {
+        "florida": {
+          "articles": 6,
+          "share": 0.011857707509881422,
+          "controlArticles": 2,
+          "controlTotal": 861,
+          "controlShare": 0.0023228803716608595
+        },
+        "washington": {
+          "articles": 9,
+          "share": 0.017786561264822136,
+          "controlArticles": 16,
+          "controlTotal": 861,
+          "controlShare": 0.018583042973286876
+        },
+        "northwestern": {
+          "articles": 4,
+          "share": 0.007905138339920948,
+          "controlArticles": 6,
+          "controlTotal": 861,
+          "controlShare": 0.006968641114982578
+        },
+        "mayo": {
+          "articles": 5,
+          "share": 0.009881422924901186,
+          "controlArticles": 12,
+          "controlTotal": 861,
+          "controlShare": 0.013937282229965157
+        }
+      }
+    },
+    {
+      "year": 2007,
+      "journalArticles": 402,
+      "byInstitution": {
+        "florida": {
+          "articles": 3,
+          "share": 0.007462686567164179,
+          "controlArticles": 2,
+          "controlTotal": 884,
+          "controlShare": 0.0022624434389140274
+        },
+        "washington": {
+          "articles": 9,
+          "share": 0.022388059701492536,
+          "controlArticles": 21,
+          "controlTotal": 884,
+          "controlShare": 0.023755656108597284
+        },
+        "northwestern": {
+          "articles": 2,
+          "share": 0.004975124378109453,
+          "controlArticles": 8,
+          "controlTotal": 884,
+          "controlShare": 0.00904977375565611
+        },
+        "mayo": {
+          "articles": 10,
+          "share": 0.024875621890547265,
+          "controlArticles": 14,
+          "controlTotal": 884,
+          "controlShare": 0.01583710407239819
+        }
+      }
+    },
+    {
+      "year": 2008,
+      "journalArticles": 381,
+      "byInstitution": {
+        "florida": {
+          "articles": 7,
+          "share": 0.01837270341207349,
+          "controlArticles": 3,
+          "controlTotal": 865,
+          "controlShare": 0.003468208092485549
+        },
+        "washington": {
+          "articles": 11,
+          "share": 0.028871391076115485,
+          "controlArticles": 14,
+          "controlTotal": 865,
+          "controlShare": 0.016184971098265895
+        },
+        "northwestern": {
+          "articles": 2,
+          "share": 0.005249343832020997,
+          "controlArticles": 4,
+          "controlTotal": 865,
+          "controlShare": 0.004624277456647399
+        },
+        "mayo": {
+          "articles": 4,
+          "share": 0.010498687664041995,
+          "controlArticles": 6,
+          "controlTotal": 865,
+          "controlShare": 0.006936416184971098
+        }
+      }
+    },
+    {
+      "year": 2009,
+      "journalArticles": 328,
+      "byInstitution": {
+        "florida": {
+          "articles": 3,
+          "share": 0.009146341463414634,
+          "controlArticles": 1,
+          "controlTotal": 848,
+          "controlShare": 0.0011792452830188679
+        },
+        "washington": {
+          "articles": 9,
+          "share": 0.027439024390243903,
+          "controlArticles": 16,
+          "controlTotal": 848,
+          "controlShare": 0.018867924528301886
+        },
+        "northwestern": {
+          "articles": 1,
+          "share": 0.003048780487804878,
+          "controlArticles": 10,
+          "controlTotal": 848,
+          "controlShare": 0.01179245283018868
+        },
+        "mayo": {
+          "articles": 4,
+          "share": 0.012195121951219513,
+          "controlArticles": 11,
+          "controlTotal": 848,
+          "controlShare": 0.012971698113207548
+        }
+      }
+    },
+    {
+      "year": 2010,
+      "journalArticles": 299,
+      "byInstitution": {
+        "florida": {
+          "articles": 2,
+          "share": 0.006688963210702341,
+          "controlArticles": 4,
+          "controlTotal": 771,
+          "controlShare": 0.005188067444876783
+        },
+        "washington": {
+          "articles": 11,
+          "share": 0.03678929765886288,
+          "controlArticles": 13,
+          "controlTotal": 771,
+          "controlShare": 0.016861219195849545
+        },
+        "northwestern": {
+          "articles": 1,
+          "share": 0.0033444816053511705,
+          "controlArticles": 6,
+          "controlTotal": 771,
+          "controlShare": 0.007782101167315175
+        },
+        "mayo": {
+          "articles": 10,
+          "share": 0.033444816053511704,
+          "controlArticles": 7,
+          "controlTotal": 771,
+          "controlShare": 0.009079118028534372
+        }
+      }
+    },
+    {
+      "year": 2011,
+      "journalArticles": 310,
+      "byInstitution": {
+        "florida": {
+          "articles": 2,
+          "share": 0.0064516129032258064,
+          "controlArticles": 5,
+          "controlTotal": 774,
+          "controlShare": 0.006459948320413436
+        },
+        "washington": {
+          "articles": 11,
+          "share": 0.035483870967741936,
+          "controlArticles": 20,
+          "controlTotal": 774,
+          "controlShare": 0.025839793281653745
+        },
+        "northwestern": {
+          "articles": 3,
+          "share": 0.00967741935483871,
+          "controlArticles": 8,
+          "controlTotal": 774,
+          "controlShare": 0.0103359173126615
+        },
+        "mayo": {
+          "articles": 9,
+          "share": 0.02903225806451613,
+          "controlArticles": 3,
+          "controlTotal": 774,
+          "controlShare": 0.003875968992248062
+        }
+      }
+    },
+    {
+      "year": 2012,
+      "journalArticles": 244,
+      "byInstitution": {
+        "florida": {
+          "articles": 0,
+          "share": 0,
+          "controlArticles": 3,
+          "controlTotal": 898,
+          "controlShare": 0.0033407572383073497
+        },
+        "washington": {
+          "articles": 5,
+          "share": 0.020491803278688523,
+          "controlArticles": 19,
+          "controlTotal": 898,
+          "controlShare": 0.021158129175946547
+        },
+        "northwestern": {
+          "articles": 1,
+          "share": 0.004098360655737705,
+          "controlArticles": 10,
+          "controlTotal": 898,
+          "controlShare": 0.011135857461024499
+        },
+        "mayo": {
+          "articles": 3,
+          "share": 0.012295081967213115,
+          "controlArticles": 7,
+          "controlTotal": 898,
+          "controlShare": 0.0077951002227171495
+        }
+      }
+    },
+    {
+      "year": 2013,
+      "journalArticles": 304,
+      "byInstitution": {
+        "florida": {
+          "articles": 1,
+          "share": 0.003289473684210526,
+          "controlArticles": 2,
+          "controlTotal": 754,
+          "controlShare": 0.002652519893899204
+        },
+        "washington": {
+          "articles": 16,
+          "share": 0.05263157894736842,
+          "controlArticles": 22,
+          "controlTotal": 754,
+          "controlShare": 0.029177718832891247
+        },
+        "northwestern": {
+          "articles": 4,
+          "share": 0.013157894736842105,
+          "controlArticles": 5,
+          "controlTotal": 754,
+          "controlShare": 0.006631299734748011
+        },
+        "mayo": {
+          "articles": 9,
+          "share": 0.029605263157894735,
+          "controlArticles": 10,
+          "controlTotal": 754,
+          "controlShare": 0.013262599469496022
+        }
+      }
+    },
+    {
+      "year": 2014,
+      "journalArticles": 424,
+      "byInstitution": {
+        "florida": {
+          "articles": 4,
+          "share": 0.009433962264150943,
+          "controlArticles": 9,
+          "controlTotal": 833,
+          "controlShare": 0.010804321728691477
+        },
+        "washington": {
+          "articles": 17,
+          "share": 0.04009433962264151,
+          "controlArticles": 29,
+          "controlTotal": 833,
+          "controlShare": 0.03481392557022809
+        },
+        "northwestern": {
+          "articles": 10,
+          "share": 0.02358490566037736,
+          "controlArticles": 10,
+          "controlTotal": 833,
+          "controlShare": 0.012004801920768308
+        },
+        "mayo": {
+          "articles": 16,
+          "share": 0.03773584905660377,
+          "controlArticles": 3,
+          "controlTotal": 833,
+          "controlShare": 0.003601440576230492
+        }
+      }
+    },
+    {
+      "year": 2015,
+      "journalArticles": 394,
+      "byInstitution": {
+        "florida": {
+          "articles": 2,
+          "share": 0.005076142131979695,
+          "controlArticles": 3,
+          "controlTotal": 874,
+          "controlShare": 0.003432494279176201
+        },
+        "washington": {
+          "articles": 17,
+          "share": 0.04314720812182741,
+          "controlArticles": 17,
+          "controlTotal": 874,
+          "controlShare": 0.019450800915331808
+        },
+        "northwestern": {
+          "articles": 9,
+          "share": 0.02284263959390863,
+          "controlArticles": 16,
+          "controlTotal": 874,
+          "controlShare": 0.018306636155606407
+        },
+        "mayo": {
+          "articles": 15,
+          "share": 0.03807106598984772,
+          "controlArticles": 11,
+          "controlTotal": 874,
+          "controlShare": 0.012585812356979404
+        }
+      }
+    },
+    {
+      "year": 2016,
+      "journalArticles": 310,
+      "byInstitution": {
+        "florida": {
+          "articles": 1,
+          "share": 0.0032258064516129032,
+          "controlArticles": 6,
+          "controlTotal": 798,
+          "controlShare": 0.007518796992481203
+        },
+        "washington": {
+          "articles": 14,
+          "share": 0.04516129032258064,
+          "controlArticles": 18,
+          "controlTotal": 798,
+          "controlShare": 0.022556390977443608
+        },
+        "northwestern": {
+          "articles": 6,
+          "share": 0.01935483870967742,
+          "controlArticles": 13,
+          "controlTotal": 798,
+          "controlShare": 0.016290726817042606
+        },
+        "mayo": {
+          "articles": 13,
+          "share": 0.041935483870967745,
+          "controlArticles": 7,
+          "controlTotal": 798,
+          "controlShare": 0.008771929824561403
+        }
+      }
+    },
+    {
+      "year": 2017,
+      "journalArticles": 323,
+      "byInstitution": {
+        "florida": {
+          "articles": 1,
+          "share": 0.0030959752321981426,
+          "controlArticles": 8,
+          "controlTotal": 1013,
+          "controlShare": 0.007897334649555774
+        },
+        "washington": {
+          "articles": 17,
+          "share": 0.05263157894736842,
+          "controlArticles": 34,
+          "controlTotal": 1013,
+          "controlShare": 0.03356367226061204
+        },
+        "northwestern": {
+          "articles": 6,
+          "share": 0.018575851393188854,
+          "controlArticles": 11,
+          "controlTotal": 1013,
+          "controlShare": 0.01085883514313919
+        },
+        "mayo": {
+          "articles": 14,
+          "share": 0.043343653250773995,
+          "controlArticles": 13,
+          "controlTotal": 1013,
+          "controlShare": 0.012833168805528134
+        }
+      }
+    },
+    {
+      "year": 2018,
+      "journalArticles": 254,
+      "byInstitution": {
+        "florida": {
+          "articles": 4,
+          "share": 0.015748031496062992,
+          "controlArticles": 10,
+          "controlTotal": 1028,
+          "controlShare": 0.009727626459143969
+        },
+        "washington": {
+          "articles": 10,
+          "share": 0.03937007874015748,
+          "controlArticles": 47,
+          "controlTotal": 1028,
+          "controlShare": 0.04571984435797665
+        },
+        "northwestern": {
+          "articles": 2,
+          "share": 0.007874015748031496,
+          "controlArticles": 18,
+          "controlTotal": 1028,
+          "controlShare": 0.017509727626459144
+        },
+        "mayo": {
+          "articles": 11,
+          "share": 0.04330708661417323,
+          "controlArticles": 14,
+          "controlTotal": 1028,
+          "controlShare": 0.013618677042801557
+        }
+      }
+    },
+    {
+      "year": 2019,
+      "journalArticles": 275,
+      "byInstitution": {
+        "florida": {
+          "articles": 1,
+          "share": 0.0036363636363636364,
+          "controlArticles": 8,
+          "controlTotal": 1128,
+          "controlShare": 0.0070921985815602835
+        },
+        "washington": {
+          "articles": 10,
+          "share": 0.03636363636363636,
+          "controlArticles": 40,
+          "controlTotal": 1128,
+          "controlShare": 0.03546099290780142
+        },
+        "northwestern": {
+          "articles": 8,
+          "share": 0.02909090909090909,
+          "controlArticles": 16,
+          "controlTotal": 1128,
+          "controlShare": 0.014184397163120567
+        },
+        "mayo": {
+          "articles": 11,
+          "share": 0.04,
+          "controlArticles": 10,
+          "controlTotal": 1128,
+          "controlShare": 0.008865248226950355
+        }
+      }
+    },
+    {
+      "year": 2020,
+      "journalArticles": 896,
+      "byInstitution": {
+        "florida": {
+          "articles": 3,
+          "share": 0.0033482142857142855,
+          "controlArticles": 8,
+          "controlTotal": 1797,
+          "controlShare": 0.004451864218141347
+        },
+        "washington": {
+          "articles": 21,
+          "share": 0.0234375,
+          "controlArticles": 76,
+          "controlTotal": 1797,
+          "controlShare": 0.042292710072342796
+        },
+        "northwestern": {
+          "articles": 18,
+          "share": 0.020089285714285716,
+          "controlArticles": 26,
+          "controlTotal": 1797,
+          "controlShare": 0.014468558708959377
+        },
+        "mayo": {
+          "articles": 20,
+          "share": 0.022321428571428572,
+          "controlArticles": 30,
+          "controlTotal": 1797,
+          "controlShare": 0.01669449081803005
+        }
+      }
+    },
+    {
+      "year": 2021,
+      "journalArticles": 902,
+      "byInstitution": {
+        "florida": {
+          "articles": 1,
+          "share": 0.0011086474501108647,
+          "controlArticles": 11,
+          "controlTotal": 1004,
+          "controlShare": 0.010956175298804782
+        },
+        "washington": {
+          "articles": 28,
+          "share": 0.031042128603104215,
+          "controlArticles": 45,
+          "controlTotal": 1004,
+          "controlShare": 0.044820717131474105
+        },
+        "northwestern": {
+          "articles": 18,
+          "share": 0.019955654101995565,
+          "controlArticles": 15,
+          "controlTotal": 1004,
+          "controlShare": 0.014940239043824702
+        },
+        "mayo": {
+          "articles": 30,
+          "share": 0.03325942350332594,
+          "controlArticles": 19,
+          "controlTotal": 1004,
+          "controlShare": 0.018924302788844622
+        }
+      }
+    },
+    {
+      "year": 2022,
+      "journalArticles": 920,
+      "byInstitution": {
+        "florida": {
+          "articles": 5,
+          "share": 0.005434782608695652,
+          "controlArticles": 8,
+          "controlTotal": 865,
+          "controlShare": 0.009248554913294798
+        },
+        "washington": {
+          "articles": 26,
+          "share": 0.02826086956521739,
+          "controlArticles": 39,
+          "controlTotal": 865,
+          "controlShare": 0.04508670520231214
+        },
+        "northwestern": {
+          "articles": 18,
+          "share": 0.01956521739130435,
+          "controlArticles": 19,
+          "controlTotal": 865,
+          "controlShare": 0.021965317919075144
+        },
+        "mayo": {
+          "articles": 22,
+          "share": 0.02391304347826087,
+          "controlArticles": 15,
+          "controlTotal": 865,
+          "controlShare": 0.017341040462427744
+        }
+      }
+    },
+    {
+      "year": 2023,
+      "journalArticles": 1017,
+      "byInstitution": {
+        "florida": {
+          "articles": 6,
+          "share": 0.0058997050147492625,
+          "controlArticles": 0,
+          "controlTotal": 703,
+          "controlShare": 0
+        },
+        "washington": {
+          "articles": 24,
+          "share": 0.02359882005899705,
+          "controlArticles": 30,
+          "controlTotal": 703,
+          "controlShare": 0.04267425320056899
+        },
+        "northwestern": {
+          "articles": 15,
+          "share": 0.014749262536873156,
+          "controlArticles": 6,
+          "controlTotal": 703,
+          "controlShare": 0.008534850640113799
+        },
+        "mayo": {
+          "articles": 32,
+          "share": 0.03146509341199607,
+          "controlArticles": 14,
+          "controlTotal": 703,
+          "controlShare": 0.01991465149359886
+        }
+      }
+    },
+    {
+      "year": 2024,
+      "journalArticles": 4776,
+      "byInstitution": {
+        "florida": {
+          "articles": 32,
+          "share": 0.006700167504187605,
+          "controlArticles": 8,
+          "controlTotal": 611,
+          "controlShare": 0.01309328968903437
+        },
+        "washington": {
+          "articles": 72,
+          "share": 0.01507537688442211,
+          "controlArticles": 38,
+          "controlTotal": 611,
+          "controlShare": 0.062193126022913256
+        },
+        "northwestern": {
+          "articles": 63,
+          "share": 0.013190954773869347,
+          "controlArticles": 11,
+          "controlTotal": 611,
+          "controlShare": 0.01800327332242226
+        },
+        "mayo": {
+          "articles": 123,
+          "share": 0.025753768844221106,
+          "controlArticles": 18,
+          "controlTotal": 611,
+          "controlShare": 0.029459901800327332
+        }
+      }
+    }
+  ],
+  "trackedInstitutions": [
+    {
+      "id": "florida",
+      "label": "University of Florida",
+      "members": [
+        {
+          "openAlexId": "I33213144",
+          "displayName": "University of Florida"
+        }
+      ]
+    },
+    {
+      "id": "washington",
+      "label": "University of Washington",
+      "members": [
+        {
+          "openAlexId": "I201448701",
+          "displayName": "University of Washington"
+        }
+      ]
+    },
+    {
+      "id": "northwestern",
+      "label": "Northwestern",
+      "members": [
+        {
+          "openAlexId": "I111979921",
+          "displayName": "Northwestern University"
+        }
+      ]
+    },
+    {
+      "id": "mayo",
+      "label": "Mayo Clinic",
+      "members": [
+        {
+          "openAlexId": "I1330342723",
+          "displayName": "Mayo Clinic"
+        }
+      ]
+    }
+  ]
+}

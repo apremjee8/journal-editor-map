@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-28T22:42:46.679Z",
+  "fetchedAt": "2026-08-29T19:39:29.308Z",
   "yearStart": 2000,
   "yearEnd": 2024,
   "workType": "article",
@@ -323,6 +323,40 @@
         {
           "openAlexId": "I201448701",
           "displayName": "University of Washington"
+        }
+      ]
+    },
+    {
+      "id": "tufts",
+      "label": "Tufts",
+      "members": [
+        {
+          "openAlexId": "I121934306",
+          "displayName": "Tufts University"
+        },
+        {
+          "openAlexId": "I1290900354",
+          "displayName": "Tufts Medical Center"
+        }
+      ]
+    },
+    {
+      "id": "florida",
+      "label": "University of Florida",
+      "members": [
+        {
+          "openAlexId": "I33213144",
+          "displayName": "University of Florida"
+        }
+      ]
+    },
+    {
+      "id": "mayo",
+      "label": "Mayo Clinic",
+      "members": [
+        {
+          "openAlexId": "I1330342723",
+          "displayName": "Mayo Clinic"
         }
       ]
     }

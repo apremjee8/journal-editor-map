@@ -322,6 +322,54 @@
           "displayName": "University of Washington"
         }
       ]
+    },
+    {
+      "id": "tufts",
+      "label": "Tufts",
+      "members": [
+        {
+          "openAlexId": "I121934306",
+          "displayName": "Tufts University"
+        },
+        {
+          "openAlexId": "I1290900354",
+          "displayName": "Tufts Medical Center"
+        }
+      ]
+    },
+    {
+      "id": "florida",
+      "label": "University of Florida",
+      "members": [
+        {
+          "openAlexId": "I33213144",
+          "displayName": "University of Florida"
+        }
+      ]
+    },
+    {
+      "id": "mayo",
+      "label": "Mayo Clinic",
+      "members": [
+        {
+          "openAlexId": "I1330342723",
+          "displayName": "Mayo Clinic"
+        }
+      ]
+    },
+    {
+      "id": "vanderbilt",
+      "label": "Vanderbilt",
+      "members": [
+        {
+          "openAlexId": "I200719446",
+          "displayName": "Vanderbilt University"
+        },
+        {
+          "openAlexId": "I901861585",
+          "displayName": "Vanderbilt University Medical Center"
+        }
+      ]
     }
   ]
 }
