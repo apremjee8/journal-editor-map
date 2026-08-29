@@ -1,15 +1,20 @@
-export type JournalId =
-  | "jama"
-  | "jama-im"
-  | "nejm"
-  | "jacc"
-  | "circulation"
-  | "ehj"
-  | "ajrccm"
-  | "chest"
-  | "jco"
-  | "lancet-id"
-  | "kidney-int";
+export const CATALOG_JOURNAL_IDS = [
+  "jama",
+  "jama-im",
+  "nejm",
+  "jacc",
+  "circulation",
+  "ehj",
+  "ajrccm",
+  "chest",
+  "jco",
+  "cid",
+  "jasn",
+] as const;
+
+export type JournalId = (typeof CATALOG_JOURNAL_IDS)[number];
+
+export const CATALOG_JOURNAL_ID_SET = new Set<string>(CATALOG_JOURNAL_IDS);
 
 export type EditorRole = "eic" | "deputy" | "interim-eic";
 

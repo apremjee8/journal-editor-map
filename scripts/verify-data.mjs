@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { readFile } from "node:fs/promises";
+import { readdir, readFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -14,8 +14,8 @@ const REQUIRED = [
   "ajrccm",
   "chest",
   "jco",
-  "lancet-id",
-  "kidney-int",
+  "cid",
+  "jasn",
 ];
 
 const PARTS = join(ROOT, "data/bundle-parts");
@@ -40,6 +40,21 @@ if (!bundle.fetchedAt) errors.push("missing fetchedAt");
 const ids = bundle.journals.map((j) => j.journal.id);
 for (const id of REQUIRED) {
   if (!ids.includes(id)) errors.push(`missing journal ${id}`);
+}
+for (const id of ids) {
+  if (!REQUIRED.includes(id)) errors.push(`unexpected journal ${id}`);
+}
+if (ids.length !== REQUIRED.length) {
+  errors.push(`catalog size ${ids.length} != ${REQUIRED.length}`);
+}
+
+const partFiles = (await readdir(PARTS)).filter((f) => f.endsWith(".json") && f !== "meta.json");
+for (const file of partFiles) {
+  const id = file.replace(/\.json$/, "");
+  if (!REQUIRED.includes(id)) errors.push(`leftover bundle-part ${file}`);
+}
+for (const id of REQUIRED) {
+  if (!partFiles.includes(`${id}.json`)) errors.push(`missing bundle-part ${id}.json`);
 }
 
 for (const j of bundle.journals) {

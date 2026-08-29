@@ -16,9 +16,9 @@ Pulmonary: AJRCCM, CHEST.
 
 Oncology: Journal of Clinical Oncology.
 
-Infectious disease: The Lancet Infectious Diseases.
+Infectious disease: Clinical Infectious Diseases.
 
-Nephrology: Kidney International.
+Nephrology: Journal of the American Society of Nephrology.
 
 Each journal was resolved through the OpenAlex `/sources` search. ISSNs in `data/journals.json` are the ones OpenAlex returned.
 

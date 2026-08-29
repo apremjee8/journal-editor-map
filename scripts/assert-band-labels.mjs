@@ -25,8 +25,8 @@ const SPOT = {
   jacc: ["Parmley 1992", "DeMaria 2002", "Fuster 2014", "Krumholz 2024"],
   "jama-im": ["Dalen 1988", "Greenland 2004", "Redberg 2009", "Inouye 2023"],
   nejm: ["Drazen 2000", "Rubin 2019"],
-  "lancet-id": ["Hofer 2022"],
-  "kidney-int": ["Klahr 1996", "Al-Awqati 2006", "Schlöndorff 2012", "Ronco 2018"],
+  cid: ["Gorbach 2000", "Schooley 2017", "Sax 2022"],
+  jasn: ["Tisher 1996", "Couser 2001", "Neilson 2007", "Nath 2013", "Mehrotra 2024"],
 };
 
 const errors = [];
@@ -91,8 +91,8 @@ const ids = [
   "ajrccm",
   "chest",
   "jco",
-  "lancet-id",
-  "kidney-int",
+  "cid",
+  "jasn",
 ];
 
 for (const id of ids) {

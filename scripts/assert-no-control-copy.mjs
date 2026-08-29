@@ -31,6 +31,18 @@ const FORBIDDEN = [
   /other journals/i,
   /\bdashed\b/i,
   /CONTROL_LABEL/,
+  /JAMA Oncology/,
+  /Lancet Oncology/,
+  /JAMA Cardiology/,
+  /Lancet Infectious Diseases/,
+  /Kidney International/,
+  /Lancet Infect Dis/,
+  /Kidney Int/,
+  /\bjama-onc\b/,
+  /\blancet-onc\b/,
+  /\bjama-cardio\b/,
+  /\blancet-id\b/,
+  /\bkidney-int\b/,
 ];
 
 const ALLOWED = [

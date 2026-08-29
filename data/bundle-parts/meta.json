@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-29T20:16:13.700Z",
+  "fetchedAt": "2026-08-29T19:50:09.326Z",
   "yearStart": 2000,
   "yearEnd": 2024,
   "workType": "article",
@@ -371,54 +371,6 @@
         {
           "openAlexId": "I901861585",
           "displayName": "Vanderbilt University Medical Center"
-        }
-      ]
-    },
-    {
-      "id": "columbia",
-      "label": "Columbia",
-      "members": [
-        {
-          "openAlexId": "I78577930",
-          "displayName": "Columbia University"
-        },
-        {
-          "openAlexId": "I2799503643",
-          "displayName": "Columbia University Irving Medical Center"
-        }
-      ]
-    },
-    {
-      "id": "wustl",
-      "label": "Washington University",
-      "members": [
-        {
-          "openAlexId": "I204465549",
-          "displayName": "Washington University in St. Louis"
-        }
-      ]
-    },
-    {
-      "id": "sorbonne",
-      "label": "Sorbonne / Tenon",
-      "members": [
-        {
-          "openAlexId": "I39804081",
-          "displayName": "Sorbonne Université"
-        },
-        {
-          "openAlexId": "I4210166768",
-          "displayName": "Hôpital Tenon"
-        }
-      ]
-    },
-    {
-      "id": "toronto",
-      "label": "University of Toronto",
-      "members": [
-        {
-          "openAlexId": "I185261750",
-          "displayName": "University of Toronto"
         }
       ]
     }
