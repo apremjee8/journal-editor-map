@@ -50,6 +50,16 @@
       ]
     },
     {
+      "id": "harvard-hms",
+      "label": "HMS / Harvard",
+      "members": [
+        {
+          "openAlexId": "I136199984",
+          "displayName": "Harvard University"
+        }
+      ]
+    },
+    {
       "id": "hebrew-seniorlife",
       "label": "Hebrew SeniorLife",
       "members": [

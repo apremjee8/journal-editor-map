@@ -1,11 +1,10 @@
 "use client";
 
-import Link from "next/link";
 import { useMemo } from "react";
 
 import { ShareChart } from "@/components/share-chart";
+import { SiteNav } from "@/components/site-nav";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { instColor } from "@/lib/colors";
 import { formatShare, yearLabel } from "@/lib/load-bundle";
 import { takeoverRows } from "@/lib/takeover";
@@ -28,6 +27,7 @@ export function JournalApp({
   const labels = Object.fromEntries(
     current.trackedInstitutions.map((i) => [i.id, i.label])
   );
+  const cohort = current.trackedInstitutions.map((i) => i.id);
   const takeovers = useMemo(
     () => takeoverRows(current.editors, current.series, labels),
     [current, labels]
@@ -49,31 +49,7 @@ export function JournalApp({
         </p>
       </header>
 
-      <nav
-        className="-mx-3 flex gap-2 overflow-x-auto px-3 pb-1 sm:mx-0 sm:flex-wrap sm:overflow-visible sm:px-0"
-        aria-label="Journals"
-      >
-        {bundle.journals.map((j) => {
-          const selected = j.journal.id === current.journal.id;
-          return (
-            <Button
-              key={j.journal.id}
-              asChild
-              variant={selected ? "default" : "outline"}
-              size="sm"
-              className={
-                selected
-                  ? "shrink-0 bg-[#1c1915] text-[#fffdf8] hover:bg-[#1c1915]/90"
-                  : "shrink-0 border-[#d6cfc2] bg-[#fffdf8] text-[#1c1915] hover:bg-[#f3eee4]"
-              }
-            >
-              <Link href={`/j/${j.journal.id}`} aria-current={selected ? "page" : undefined}>
-                {j.journal.shortName}
-              </Link>
-            </Button>
-          );
-        })}
-      </nav>
+      <SiteNav bundle={bundle} current={current.journal.id} />
 
       <section className="rounded-xl border border-[#d6cfc2] bg-[#fffdf8] p-3 sm:p-6">
         <div className="mb-4 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
@@ -111,6 +87,7 @@ export function JournalApp({
         <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-xs text-[#6b6458]">
           <span>Solid: share in this journal</span>
           <span>Band: sourced EIC window</span>
+          <span>Rule: sourced start year</span>
         </div>
       </section>
 
@@ -136,7 +113,7 @@ export function JournalApp({
                 </div>
                 <div className="mt-1 text-sm text-[#3f3a33]">
                   {editor.institutionGroupId ? (
-                    <span style={{ color: instColor(editor.institutionGroupId) }}>
+                    <span style={{ color: instColor(editor.institutionGroupId, cohort) }}>
                       {labels[editor.institutionGroupId]}
                     </span>
                   ) : (
@@ -187,7 +164,7 @@ export function JournalApp({
                     className="rounded-lg border border-[#d6cfc2] bg-[#fffdf8] p-3 text-sm"
                   >
                     <div className="font-medium text-[#1c1915]">{row.name}</div>
-                    <div className="text-xs" style={{ color: instColor(row.institutionId) }}>
+                    <div className="text-xs" style={{ color: instColor(row.institutionId, cohort) }}>
                       {row.institutionLabel} · {row.startYear}
                     </div>
                     <div className="text-xs text-[#6b6458]">{row.window}</div>
@@ -217,7 +194,7 @@ export function JournalApp({
                       <tr key={`${row.name}-${row.startYear}`} className="border-t border-[#ece6da]">
                         <td className="px-3 py-2 align-top">
                           <div className="font-medium text-[#1c1915]">{row.name}</div>
-                          <div className="text-xs" style={{ color: instColor(row.institutionId) }}>
+                          <div className="text-xs" style={{ color: instColor(row.institutionId, cohort) }}>
                             {row.institutionLabel} · {row.startYear}
                           </div>
                           <div className="text-xs text-[#6b6458]">{row.window}</div>

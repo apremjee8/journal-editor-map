@@ -50,3 +50,19 @@ export function takeoverRows(
   }
   return rows;
 }
+
+export function latestScoredHandover(rows: TakeoverRow[]): TakeoverRow | null {
+  const scored = rows.filter(
+    (row) => row.beforeShare != null && row.afterShare != null
+  );
+  if (!scored.length) return null;
+  return scored.reduce((best, row) => (row.startYear >= best.startYear ? row : best));
+}
+
+export function handoverClaim(row: TakeoverRow, formatShare: (n: number) => string): string {
+  return `When ${row.name} became EIC, ${row.institutionLabel} share went from ${formatShare(row.beforeShare!)} to ${formatShare(row.afterShare!)}.`;
+}
+
+export function handoverFallback(): string {
+  return "Sourced EIC windows are shaded. This title has no before-and-after share in the series.";
+}

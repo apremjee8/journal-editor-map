@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-28T18:04:36.704Z",
+  "fetchedAt": "2026-08-28T22:42:46.679Z",
   "yearStart": 2000,
   "yearEnd": 2024,
   "workType": "article",
@@ -49,6 +49,16 @@
         {
           "openAlexId": "I1283280774",
           "displayName": "Brigham and Women's Hospital"
+        }
+      ]
+    },
+    {
+      "id": "harvard-hms",
+      "label": "HMS / Harvard",
+      "members": [
+        {
+          "openAlexId": "I136199984",
+          "displayName": "Harvard University"
         }
       ]
     },
@@ -132,7 +142,7 @@
       "members": [
         {
           "openAlexId": "I103320735",
-          "displayName": "Universit\u00e0 Cattolica del Sacro Cuore"
+          "displayName": "Università Cattolica del Sacro Cuore"
         },
         {
           "openAlexId": "I2802557943",
@@ -230,7 +240,7 @@
         },
         {
           "openAlexId": "I1340179700",
-          "displayName": "NewYork\u2013Presbyterian Hospital"
+          "displayName": "NewYork–Presbyterian Hospital"
         }
       ]
     },
