@@ -23,10 +23,12 @@ export default async function Image({ params }: { params: Promise<{ id: string }
   const institutions = row?.trackedInstitutions ?? [];
   const editors = row?.editors ?? [];
   const cohort = institutions.map((inst) => inst.id);
-  const yearStart = series[0]?.year ?? 2000;
-  const yearEnd = series.at(-1)?.year ?? yearStart;
-  const bands = tenureBands(editors, yearStart, yearEnd);
-  const ogMarks = fitOgBandLabels(bands, yearStart, yearEnd);
+  const dataStart = series[0]?.year ?? 2000;
+  const yearEnd = series.at(-1)?.year ?? dataStart;
+  const draftBands = tenureBands(editors, dataStart, yearEnd);
+  const ogMarks = fitOgBandLabels(draftBands, dataStart, yearEnd);
+  const domainStart = ogMarks.domainStart;
+  const bands = tenureBands(editors, domainStart, yearEnd);
   const plotWidth = ogMarks.plotWidth;
   const labels = Object.fromEntries(institutions.map((inst) => [inst.id, inst.label]));
   const claimRow = row ? latestScoredHandover(takeoverRows(editors, series, labels)) : null;
@@ -41,7 +43,7 @@ export default async function Image({ params }: { params: Promise<{ id: string }
   const polylines = institutions.map((inst) => {
     const points = series
       .map((pt) => {
-        const x = yearToX(pt.year, yearStart, yearEnd, PLOT.left, plotWidth);
+        const x = yearToX(pt.year, domainStart, yearEnd, PLOT.left, plotWidth);
         const y = shareToY((pt.byInstitution[inst.id]?.share ?? 0) * 100, yMax, PLOT.top, PLOT.height);
         return `${x.toFixed(1)},${y.toFixed(1)}`;
       })
@@ -91,8 +93,8 @@ export default async function Image({ params }: { params: Promise<{ id: string }
         >
           <svg width={FRAME.width} height={FRAME.height} viewBox={`0 0 ${FRAME.width} ${FRAME.height}`}>
             {bands.map((band) => {
-              const x1 = yearToX(band.visibleStart, yearStart, yearEnd, PLOT.left, plotWidth);
-              const x2 = yearToX(band.endYear, yearStart, yearEnd, PLOT.left, plotWidth);
+              const x1 = yearToX(band.visibleStart, domainStart, yearEnd, PLOT.left, plotWidth);
+              const x2 = yearToX(band.endYear, domainStart, yearEnd, PLOT.left, plotWidth);
               const color = instColor(band.institutionId, cohort);
               return (
                 <g key={`${band.name}-band`}>
@@ -148,7 +150,7 @@ export default async function Image({ params }: { params: Promise<{ id: string }
               color: "#6b6458",
             }}
           >
-            {yearStart}
+            {domainStart}
           </div>
           <div
             style={{

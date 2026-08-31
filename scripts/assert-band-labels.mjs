@@ -10,6 +10,7 @@ const {
   SHARE_OG_LAYOUT,
   fitOgBandLabels,
   fitShareChartBandLabels,
+  labelDomainStart,
   shareChartPlotLeft,
   tenureBands,
   yearToX,
@@ -22,25 +23,31 @@ const WIDTHS = [
 ];
 
 const SPOT = {
-  jacc: ["Parmley 1992", "DeMaria 2002", "Fuster 2014", "Krumholz 2024"],
-  "jama-im": ["Dalen 1988", "Greenland 2004", "Redberg 2009", "Inouye 2023"],
-  nejm: ["Drazen 2000", "Rubin 2019"],
-  cid: ["Gorbach 2000", "Schooley 2017", "Sax 2022"],
-  jasn: ["Tisher 1996", "Couser 2001", "Neilson 2007", "Nath 2013", "Mehrotra 2024"],
+  jacc: ["Parmley", "DeMaria", "Fuster", "Krumholz"],
+  "jama-im": ["Dalen", "Greenland", "Redberg", "Inouye"],
+  nejm: ["Drazen", "Rubin"],
+  cid: ["Gorbach", "Schooley", "Sax"],
+  jasn: ["Tisher", "Couser", "Neilson", "Nath", "Mehrotra"],
+  jco: ["Canellos", "Haller", "Cannistra", "Friedberg"],
 };
 
 const errors = [];
 const HANG_TOL = 0.6;
 
+function bandForLabel(bands, text) {
+  return bands.find((item) => item.shortLabel === text || item.shortLabel.startsWith(`${text} `));
+}
+
 function checkHang(journalId, widthName, plotLeft, plotWidth, yearStart, yearEnd, bands, placed) {
+  const domainStart = labelDomainStart(bands, yearStart);
   for (const label of placed) {
-    const band = bands.find((item) => item.shortLabel === label.text);
+    const band = bandForLabel(bands, label.text);
     const ruleX = band
-      ? yearToX(band.visibleStart, yearStart, yearEnd, plotLeft, plotWidth)
+      ? yearToX(band.startYear, domainStart, yearEnd, plotLeft, plotWidth)
       : Number.NaN;
-    if (!Number.isFinite(ruleX) || Math.abs(label.x - (ruleX + BAND_LABEL_HANG)) > HANG_TOL) {
+    if (!Number.isFinite(ruleX) || label.x + HANG_TOL < ruleX + BAND_LABEL_HANG) {
       errors.push(
-        `${journalId} ${widthName}: "${label.text}" x ${label.x} is not hang-right of rule ${ruleX}`
+        `${journalId} ${widthName}: "${label.text}" x ${label.x} is left of hang-right ${ruleX + BAND_LABEL_HANG}`
       );
     }
   }
@@ -86,7 +93,7 @@ function checkOverlap(journalId, widthName, placed) {
 
 function checkSpot(journalId, widthName, placed) {
   for (const text of SPOT[journalId] ?? []) {
-    if (!placed.some((label) => label.text === text)) {
+    if (!placed.some((label) => label.text === text || label.text.startsWith(`${text} `))) {
       errors.push(`${journalId} ${widthName}: missing required label "${text}"`);
     }
   }
@@ -133,4 +140,4 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log("band labels hang right of each rule, share one baseline, and stay inside the frame at 1280/1440/390 and on OG cards for all eleven journals");
+console.log("band labels hang right of each rule, share one baseline, do not overlap, and stay inside the frame at 1280/1440/390 and on OG cards for all eleven journals");

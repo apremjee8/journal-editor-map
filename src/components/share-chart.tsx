@@ -55,14 +55,21 @@ export function ShareChart({ series, institutions, editors }: Props) {
     return row;
   });
 
-  const yearStart = series[0]?.year ?? 0;
-  const yearEnd = series[series.length - 1]?.year ?? yearStart;
-  const bands = tenureBands(editors, yearStart, yearEnd);
+  const dataStart = series[0]?.year ?? 0;
+  const yearEnd = series[series.length - 1]?.year ?? dataStart;
+  const draftBands = tenureBands(editors, dataStart, yearEnd);
   const fontSize = containerWidth > 0 && containerWidth < 500 ? 10 : 11;
   const fitted =
     containerWidth > 0
-      ? fitShareChartBandLabels(bands, yearStart, yearEnd, containerWidth, fontSize)
-      : { labels: [], plotWidth: 0, marginRight: SHARE_CHART_LAYOUT.marginRight };
+      ? fitShareChartBandLabels(draftBands, dataStart, yearEnd, containerWidth, fontSize)
+      : {
+          labels: [],
+          plotWidth: 0,
+          marginRight: SHARE_CHART_LAYOUT.marginRight,
+          domainStart: dataStart,
+        };
+  const domainStart = fitted.domainStart;
+  const bands = tenureBands(editors, domainStart, yearEnd);
   const labels = fitted.labels;
   const labelBand = bandLabelStackHeight(labels, fontSize);
   const marginTop = 8 + labelBand;
@@ -119,7 +126,10 @@ export function ShareChart({ series, institutions, editors }: Props) {
               />
             ))}
             <XAxis
+              type="number"
               dataKey="year"
+              domain={[domainStart, yearEnd]}
+              allowDecimals={false}
               tick={{ fill: "#4b453c", fontSize: 10 }}
               tickLine={false}
               axisLine={{ stroke: "#d6cfc2" }}
