@@ -116,7 +116,7 @@ export default async function Image({ params }: { params: Promise<{ id: string }
                     width={Math.max(2, x2 - x1)}
                     height={PLOT.height}
                     fill={color}
-                    fillOpacity="0.16"
+                    fillOpacity="0.22"
                   />
                   <line
                     x1={x1}

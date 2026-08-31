@@ -114,7 +114,7 @@ export function ShareChart({ series, institutions, editors }: Props) {
                 x1={band.visibleStart}
                 x2={bandDrawEnd(band, yearEnd, bands[i + 1])}
                 fill={instColor(band.institutionId, cohort)}
-                fillOpacity={0.14}
+                fillOpacity={0.22}
                 ifOverflow="hidden"
               />
             ))}
