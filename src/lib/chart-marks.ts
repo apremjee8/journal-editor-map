@@ -230,7 +230,7 @@ function fitShareChartBandLabelsAtFont(
 ): { labels: PlacedBandLabel[]; plotWidth: number; marginRight: number; ok: boolean } {
   const texts = bands.map((band) => band.shortLabel);
   const rightLimit = containerWidth - shareChartPlotLeft();
-  let marginRight = SHARE_CHART_LAYOUT.marginRight;
+  let marginRight: number = SHARE_CHART_LAYOUT.marginRight;
   let fitted = growSharePlot(
     bands,
     yearStart,
