@@ -73,7 +73,6 @@ export type PlacedBandLabel = {
 
 export const BAND_LABEL_PAD = 8;
 export const BAND_LABEL_HANG = 10;
-const LABEL_GUTTER = 10;
 const WIDTH_PER_EM = 0.68;
 
 export const SHARE_OG_LAYOUT = {
@@ -121,37 +120,18 @@ export function placeBandLabels(
   fontSize: number
 ): PlacedBandLabel[] {
   const top = plot.top ?? 0;
-  const line = fontSize + 5;
-  const drafts = bands.map((band) => {
+  return bands.map((band) => {
     const ruleX = yearToX(band.visibleStart, yearStart, yearEnd, plot.left, plot.width);
-    const width = estimateLabelWidth(band.shortLabel, fontSize);
     return {
       text: band.shortLabel,
       institutionId: band.institutionId,
       x: ruleX + BAND_LABEL_HANG,
-      width,
+      y: top,
+      width: estimateLabelWidth(band.shortLabel, fontSize),
       height: fontSize,
-      ruleX,
+      row: 0,
     };
   });
-
-  const placed: PlacedBandLabel[] = [];
-  const ordered = [...drafts].sort((a, b) => a.ruleX - b.ruleX || a.x - b.x);
-  for (const item of ordered) {
-    let row = 0;
-    while (row < 8) {
-      const overlaps = placed.some(
-        (other) =>
-          other.row === row &&
-          item.x < other.x + other.width + LABEL_GUTTER &&
-          item.x + item.width + LABEL_GUTTER > other.x
-      );
-      if (!overlaps) break;
-      row += 1;
-    }
-    placed.push({ ...item, y: top + row * line, row });
-  }
-  return placed;
 }
 
 export function fitShareChartBandLabels(
