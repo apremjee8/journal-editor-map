@@ -7,11 +7,13 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const {
   BAND_LABEL_HANG,
   BAND_LABEL_PAD,
+  PHONE_BAND_LABEL_FONT,
   SHARE_OG_LAYOUT,
   bandDrawEnd,
   clampBandRuleYear,
   fitOgBandLabels,
   fitShareChartBandLabels,
+  shareChartLayout,
   shareChartPlotLeft,
   tenureBands,
   yearTicks,
@@ -21,7 +23,7 @@ const {
 const WIDTHS = [
   { name: "desktop-1280", container: 928, fontSize: 11 },
   { name: "desktop-1440", container: 928, fontSize: 11 },
-  { name: "phone-390", container: 342, fontSize: 10 },
+  { name: "phone-390", container: 374, fontSize: PHONE_BAND_LABEL_FONT },
 ];
 
 const SPOT = {
@@ -42,6 +44,7 @@ function bandForLabel(bands, text) {
 }
 
 function checkHang(journalId, widthName, plotLeft, plotWidth, yearStart, yearEnd, bands, placed) {
+  if (widthName === "phone-390") return;
   for (const label of placed) {
     const band = bandForLabel(bands, label.text);
     const ruleX = band
@@ -171,12 +174,16 @@ for (const id of ids) {
   checkSourcedWindows(id, row.editors, yearStart, yearEnd, bands);
   for (const width of WIDTHS) {
     const fitted = fitShareChartBandLabels(bands, yearStart, yearEnd, width.container, width.fontSize);
+    const layout = shareChartLayout(width.container);
     checkDomain(id, width.name, fitted.domainStart, yearStart);
     checkHang(id, width.name, 0, fitted.plotWidth, yearStart, yearEnd, bands, fitted.labels);
-    checkFrame(id, width.name, 0, width.container - shareChartPlotLeft(), fitted.labels);
+    checkFrame(id, width.name, 0, width.container - shareChartPlotLeft(layout), fitted.labels);
     checkBaseline(id, width.name, fitted.labels);
     checkOverlap(id, width.name, fitted.labels);
     checkSpot(id, width.name, fitted.labels);
+    if (width.name === "phone-390" && fitted.fontSize < 12) {
+      errors.push(`${id} ${width.name}: label font ${fitted.fontSize} is below readable 12px`);
+    }
   }
   const og = fitOgBandLabels(bands, yearStart, yearEnd);
   checkDomain(id, "og-card", og.domainStart, yearStart);

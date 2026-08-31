@@ -21,7 +21,7 @@ export function TrendsPage({ bundle }: { bundle: DataBundle }) {
   const scoredN = score.rose + score.fell + score.flat;
 
   return (
-    <div className="mx-auto flex w-full max-w-5xl flex-col gap-6 overflow-x-clip px-3 py-6 sm:gap-8 sm:px-6 sm:py-10">
+    <div className="mx-auto flex w-full max-w-5xl flex-col gap-6 overflow-x-clip px-2 py-6 sm:gap-8 sm:px-6 sm:py-10">
       <header className="flex flex-col gap-3">
         <p className="text-xs uppercase tracking-[0.14em] text-[#6b6458]">
           Editor home × journal share

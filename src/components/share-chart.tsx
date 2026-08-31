@@ -12,10 +12,13 @@ import {
 } from "recharts";
 
 import {
-  SHARE_CHART_LAYOUT,
+  PHONE_AXIS_TICK_FONT,
+  PHONE_BAND_LABEL_FONT,
+  PHONE_CHART_MAX_WIDTH,
   bandDrawEnd,
   bandLabelStackHeight,
   fitShareChartBandLabels,
+  shareChartLayout,
   shareChartPlotLeft,
   tenureBands,
   yearTicks,
@@ -59,14 +62,17 @@ export function ShareChart({ series, institutions, editors }: Props) {
   const dataStart = series[0]?.year ?? 0;
   const yearEnd = series[series.length - 1]?.year ?? dataStart;
   const bands = tenureBands(editors, dataStart, yearEnd);
-  const fontSize = containerWidth > 0 && containerWidth < 500 ? 10 : 11;
+  const layout = shareChartLayout(containerWidth);
+  const phone = containerWidth > 0 && containerWidth < PHONE_CHART_MAX_WIDTH;
+  const fontSize = phone ? PHONE_BAND_LABEL_FONT : 11;
+  const tickFont = phone ? PHONE_AXIS_TICK_FONT : 10;
   const fitted =
     containerWidth > 0
       ? fitShareChartBandLabels(bands, dataStart, yearEnd, containerWidth, fontSize)
       : {
           labels: [],
           plotWidth: 0,
-          marginRight: SHARE_CHART_LAYOUT.marginRight,
+          marginRight: layout.marginRight,
           domainStart: dataStart,
           fontSize,
         };
@@ -74,7 +80,7 @@ export function ShareChart({ series, institutions, editors }: Props) {
   const labelFont = fitted.fontSize;
   const labelBand = bandLabelStackHeight(labels, labelFont);
   const marginTop = 8 + labelBand;
-  const plotLeft = shareChartPlotLeft();
+  const plotLeft = shareChartPlotLeft(layout);
   const plotWidth = fitted.plotWidth;
   const xTickValues = yearTicks(dataStart, yearEnd);
 
@@ -86,7 +92,7 @@ export function ShareChart({ series, institutions, editors }: Props) {
 
   return (
     <div className="flex flex-col gap-2">
-      <ul className="flex flex-wrap gap-x-3 gap-y-1 text-xs text-[#3f3a33]" aria-label="Institutions">
+      <ul className="flex flex-wrap gap-x-3 gap-y-1 px-2 text-xs text-[#3f3a33] sm:px-0" aria-label="Institutions">
         {institutions.map((inst) => (
           <li key={inst.id} className="flex items-center gap-1.5">
             <span
@@ -109,7 +115,7 @@ export function ShareChart({ series, institutions, editors }: Props) {
                   style={{
                     left: plotLeft + x1,
                     top: marginTop,
-                    bottom: SHARE_CHART_LAYOUT.marginBottom,
+                    bottom: layout.marginBottom,
                     width: Math.max(2, x2 - x1),
                     background: instColor(band.institutionId, cohort),
                     opacity: 0.22,
@@ -128,7 +134,7 @@ export function ShareChart({ series, institutions, editors }: Props) {
                   style={{
                     left: plotLeft + x,
                     top: marginTop,
-                    bottom: SHARE_CHART_LAYOUT.marginBottom,
+                    bottom: layout.marginBottom,
                     width: 2.5,
                     background: instColor(band.institutionId, cohort),
                   }}
@@ -142,8 +148,8 @@ export function ShareChart({ series, institutions, editors }: Props) {
             margin={{
               top: marginTop,
               right: fitted.marginRight,
-              left: SHARE_CHART_LAYOUT.marginLeft,
-              bottom: SHARE_CHART_LAYOUT.marginBottom,
+              left: layout.marginLeft,
+              bottom: layout.marginBottom,
             }}
           >
             <CartesianGrid stroke="#e7e2d8" vertical={false} />
@@ -154,7 +160,7 @@ export function ShareChart({ series, institutions, editors }: Props) {
               ticks={xTickValues}
               allowDataOverflow
               allowDecimals={false}
-              tick={{ fill: "#4b453c", fontSize: 10 }}
+              tick={{ fill: "#4b453c", fontSize: tickFont }}
               tickLine={false}
               axisLine={{ stroke: "#d6cfc2" }}
               interval={0}
@@ -164,11 +170,11 @@ export function ShareChart({ series, institutions, editors }: Props) {
             <YAxis
               tickFormatter={(v) => `${v}%`}
               domain={[0, yMax]}
-              tick={{ fill: "#4b453c", fontSize: 10 }}
+              tick={{ fill: "#4b453c", fontSize: tickFont }}
               tickLine={false}
               axisLine={false}
-              width={SHARE_CHART_LAYOUT.yAxisWidth}
-              tickMargin={6}
+              width={layout.yAxisWidth}
+              tickMargin={phone ? 4 : 6}
             />
             <Tooltip
               content={({ active, payload, label }) => {

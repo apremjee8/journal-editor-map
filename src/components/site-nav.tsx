@@ -14,7 +14,7 @@ export function SiteNav({
 }) {
   return (
     <nav
-      className="-mx-3 flex gap-2 overflow-x-auto px-3 pb-1 sm:mx-0 sm:flex-wrap sm:overflow-visible sm:px-0"
+      className="-mx-2 flex gap-2 overflow-x-auto px-2 pb-1 sm:mx-0 sm:flex-wrap sm:overflow-visible sm:px-0"
       aria-label="Journals and trends"
     >
       <Button

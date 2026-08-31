@@ -58,13 +58,40 @@ export function yearToX(
   return left + ((year - yearStart) / (yearEnd - yearStart)) * width;
 }
 
-export const SHARE_CHART_LAYOUT = {
+export type ShareChartLayout = {
+  marginRight: number;
+  marginBottom: number;
+  marginLeft: number;
+  yAxisWidth: number;
+  xPad: number;
+};
+
+export const SHARE_CHART_LAYOUT: ShareChartLayout = {
   marginRight: 12,
   marginBottom: 28,
   marginLeft: 8,
   yAxisWidth: 48,
   xPad: 0,
-} as const;
+};
+
+export const SHARE_CHART_LAYOUT_PHONE: ShareChartLayout = {
+  marginRight: 8,
+  marginBottom: 28,
+  marginLeft: 4,
+  yAxisWidth: 36,
+  xPad: 0,
+};
+
+export const PHONE_CHART_MAX_WIDTH = 500;
+export const PHONE_BAND_LABEL_FONT = 12;
+export const PHONE_AXIS_TICK_FONT = 12;
+const PHONE_WIDTH_PER_EM = 0.6;
+
+export function shareChartLayout(containerWidth: number): ShareChartLayout {
+  return containerWidth > 0 && containerWidth < PHONE_CHART_MAX_WIDTH
+    ? SHARE_CHART_LAYOUT_PHONE
+    : SHARE_CHART_LAYOUT;
+}
 
 export function yearTicks(yearStart: number, yearEnd: number, gap = 6): number[] {
   const ticks = [yearStart];
@@ -98,26 +125,28 @@ export const SHARE_OG_LAYOUT = {
   fontSize: 16,
 } as const;
 
-export function shareChartPlotLeft(): number {
-  return SHARE_CHART_LAYOUT.marginLeft + SHARE_CHART_LAYOUT.yAxisWidth + SHARE_CHART_LAYOUT.xPad;
+export function shareChartPlotLeft(layout: ShareChartLayout = SHARE_CHART_LAYOUT): number {
+  return layout.marginLeft + layout.yAxisWidth + layout.xPad;
 }
 
 export function shareChartPlotWidth(
   containerWidth: number,
-  marginRight: number = SHARE_CHART_LAYOUT.marginRight
+  marginRight?: number,
+  layout: ShareChartLayout = shareChartLayout(containerWidth)
 ): number {
+  const right = marginRight ?? layout.marginRight;
   return Math.max(
     0,
-    containerWidth -
-      SHARE_CHART_LAYOUT.marginLeft -
-      SHARE_CHART_LAYOUT.yAxisWidth -
-      marginRight -
-      SHARE_CHART_LAYOUT.xPad * 2
+    containerWidth - layout.marginLeft - layout.yAxisWidth - right - layout.xPad * 2
   );
 }
 
-export function estimateLabelWidth(text: string, fontSize: number): number {
-  return Math.max(1, Math.round(Math.max(text.length, 1) * fontSize * WIDTH_PER_EM));
+export function estimateLabelWidth(
+  text: string,
+  fontSize: number,
+  widthPerEm: number = WIDTH_PER_EM
+): number {
+  return Math.max(1, Math.round(Math.max(text.length, 1) * fontSize * widthPerEm));
 }
 
 export function bandLabelStackHeight(placed: PlacedBandLabel[], fontSize: number): number {
@@ -182,13 +211,101 @@ function nudgeLabelsRight(labels: PlacedBandLabel[]): PlacedBandLabel[] {
   return placed;
 }
 
+function packLabelsToFit(
+  labels: PlacedBandLabel[],
+  leftLimit: number,
+  rightLimit: number
+): PlacedBandLabel[] {
+  const byHang = [...labels].sort((a, b) => a.x - b.x || a.width - b.width);
+  const nudged = nudgeLabelsRight(byHang);
+  const first = nudged[0];
+  const last = nudged.at(-1);
+  if (
+    first &&
+    last &&
+    first.x + 1e-6 >= leftLimit &&
+    last.x + last.width <= rightLimit + 1e-6
+  ) {
+    return nudged;
+  }
+  const packed: PlacedBandLabel[] = [];
+  for (const label of byHang) {
+    const minX = packed.length
+      ? packed[packed.length - 1].x + packed[packed.length - 1].width + LABEL_GUTTER
+      : leftLimit;
+    packed.push({ ...label, x: minX });
+  }
+  return packed;
+}
+
+function fitPhoneShareChartBandLabels(
+  bands: TenureBand[],
+  yearStart: number,
+  yearEnd: number,
+  containerWidth: number,
+  fontSize: number
+): { labels: PlacedBandLabel[]; plotWidth: number; marginRight: number; ok: boolean } {
+  const layout = shareChartLayout(containerWidth);
+  const marginRight = layout.marginRight;
+  const plotWidth = shareChartPlotWidth(containerWidth, marginRight, layout);
+  const rightLimit = containerWidth - shareChartPlotLeft(layout);
+  const texts = bands.map((band) => band.shortLabel);
+  const overflowOf = (next: PlacedBandLabel[]) =>
+    Math.max(0, ...next.map((label) => label.x + label.width + BAND_LABEL_PAD - rightLimit));
+
+  const place = (nextTexts: string[]) =>
+    placeBandLabels(
+      bands,
+      yearStart,
+      yearEnd,
+      { left: 0, width: plotWidth },
+      fontSize,
+      nextTexts,
+      PHONE_WIDTH_PER_EM
+    );
+
+  let labels = place(texts);
+  for (let attempt = 0; attempt < 24; attempt += 1) {
+    if (labelsOverlap(labels) && dropRightmostYear(texts, labels)) {
+      labels = place(texts);
+      continue;
+    }
+    labels = packLabelsToFit(labels, BAND_LABEL_PAD, rightLimit - BAND_LABEL_PAD);
+    if (!labelsOverlap(labels) && overflowOf(labels) <= 1e-6) {
+      return { labels, plotWidth, marginRight, ok: true };
+    }
+    let dropped = false;
+    for (let i = texts.length - 1; i >= 0; i -= 1) {
+      if (labelStem(texts[i]) !== texts[i]) {
+        texts[i] = labelStem(texts[i]);
+        dropped = true;
+        break;
+      }
+    }
+    if (dropped) {
+      labels = place(texts);
+      continue;
+    }
+    break;
+  }
+
+  labels = packLabelsToFit(labels, BAND_LABEL_PAD, rightLimit - BAND_LABEL_PAD);
+  return {
+    labels,
+    plotWidth,
+    marginRight,
+    ok: !labelsOverlap(labels) && overflowOf(labels) <= 1e-6,
+  };
+}
+
 export function placeBandLabels(
   bands: TenureBand[],
   yearStart: number,
   yearEnd: number,
   plot: { left: number; width: number; top?: number },
   fontSize: number,
-  texts: string[] = bands.map((band) => band.shortLabel)
+  texts: string[] = bands.map((band) => band.shortLabel),
+  widthPerEm: number = WIDTH_PER_EM
 ): PlacedBandLabel[] {
   const top = plot.top ?? 0;
   return bands.map((band, i) => {
@@ -205,7 +322,7 @@ export function placeBandLabels(
       institutionId: band.institutionId,
       x: ruleX + BAND_LABEL_HANG,
       y: top,
-      width: estimateLabelWidth(text, fontSize),
+      width: estimateLabelWidth(text, fontSize, widthPerEm),
       height: fontSize,
       row: 0,
     };
@@ -220,11 +337,20 @@ function growSharePlot(
   fontSize: number,
   texts: string[],
   marginRight: number,
-  rightLimit: number
+  rightLimit: number,
+  widthPerEm: number
 ): { labels: PlacedBandLabel[]; plotWidth: number; marginRight: number } {
   let nextMargin = marginRight;
   let plotWidth = shareChartPlotWidth(containerWidth, nextMargin);
-  let labels = placeBandLabels(bands, domainStart, yearEnd, { left: 0, width: plotWidth }, fontSize, texts);
+  let labels = placeBandLabels(
+    bands,
+    domainStart,
+    yearEnd,
+    { left: 0, width: plotWidth },
+    fontSize,
+    texts,
+    widthPerEm
+  );
   for (let i = 0; i < 8; i += 1) {
     const overflow = Math.max(
       0,
@@ -233,7 +359,15 @@ function growSharePlot(
     if (overflow <= 1e-6) break;
     nextMargin += Math.ceil(overflow);
     plotWidth = shareChartPlotWidth(containerWidth, nextMargin);
-    labels = placeBandLabels(bands, domainStart, yearEnd, { left: 0, width: plotWidth }, fontSize, texts);
+    labels = placeBandLabels(
+      bands,
+      domainStart,
+      yearEnd,
+      { left: 0, width: plotWidth },
+      fontSize,
+      texts,
+      widthPerEm
+    );
   }
   return { labels, plotWidth, marginRight: nextMargin };
 }
@@ -246,8 +380,10 @@ function fitShareChartBandLabelsAtFont(
   fontSize: number
 ): { labels: PlacedBandLabel[]; plotWidth: number; marginRight: number; ok: boolean } {
   const texts = bands.map((band) => band.shortLabel);
-  const rightLimit = containerWidth - shareChartPlotLeft();
-  let marginRight: number = SHARE_CHART_LAYOUT.marginRight;
+  const layout = shareChartLayout(containerWidth);
+  const rightLimit = containerWidth - shareChartPlotLeft(layout);
+  const widthPerEm = WIDTH_PER_EM;
+  let marginRight: number = layout.marginRight;
   let fitted = growSharePlot(
     bands,
     yearStart,
@@ -256,7 +392,8 @@ function fitShareChartBandLabelsAtFont(
     fontSize,
     texts,
     marginRight,
-    rightLimit
+    rightLimit,
+    widthPerEm
   );
 
   const overflowOf = (labels: PlacedBandLabel[]) =>
@@ -272,7 +409,8 @@ function fitShareChartBandLabelsAtFont(
         fontSize,
         texts,
         fitted.marginRight,
-        rightLimit
+        rightLimit,
+        widthPerEm
       );
       continue;
     }
@@ -291,7 +429,8 @@ function fitShareChartBandLabelsAtFont(
           fontSize,
           texts,
           fitted.marginRight,
-          rightLimit
+          rightLimit,
+          widthPerEm
         );
         continue;
       }
@@ -308,7 +447,8 @@ function fitShareChartBandLabelsAtFont(
         fontSize,
         texts,
         marginRight,
-        rightLimit
+        rightLimit,
+        widthPerEm
       );
       continue;
     }
@@ -344,11 +484,16 @@ export function fitShareChartBandLabels(
   fontSize: number;
 } {
   const domainStart = yearStart;
-  let last = fitShareChartBandLabelsAtFont(bands, yearStart, yearEnd, containerWidth, fontSize);
+  const phone = containerWidth > 0 && containerWidth < PHONE_CHART_MAX_WIDTH;
+  let last = phone
+    ? fitPhoneShareChartBandLabels(bands, yearStart, yearEnd, containerWidth, fontSize)
+    : fitShareChartBandLabelsAtFont(bands, yearStart, yearEnd, containerWidth, fontSize);
   let usedFont = fontSize;
   while (!last.ok && usedFont > 8) {
     usedFont -= 1;
-    last = fitShareChartBandLabelsAtFont(bands, yearStart, yearEnd, containerWidth, usedFont);
+    last = phone
+      ? fitPhoneShareChartBandLabels(bands, yearStart, yearEnd, containerWidth, usedFont)
+      : fitShareChartBandLabelsAtFont(bands, yearStart, yearEnd, containerWidth, usedFont);
   }
   return {
     labels: last.labels,

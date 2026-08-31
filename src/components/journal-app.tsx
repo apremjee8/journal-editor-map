@@ -28,7 +28,7 @@ export function JournalApp({
   );
 
   return (
-    <div className="mx-auto flex min-w-0 w-full max-w-5xl flex-col gap-6 overflow-x-clip px-3 py-6 sm:gap-8 sm:px-6 sm:py-10">
+    <div className="mx-auto flex min-w-0 w-full max-w-5xl flex-col gap-6 overflow-x-clip px-2 py-6 sm:gap-8 sm:px-6 sm:py-10">
       <header className="flex flex-col gap-3">
         <p className="text-xs uppercase tracking-[0.14em] text-[#6b6458]">
           Editor home × journal share
@@ -45,7 +45,7 @@ export function JournalApp({
 
       <SiteNav bundle={bundle} current={current.journal.id} />
 
-      <section className="min-w-0 rounded-xl border border-[#d6cfc2] bg-[#fffdf8] p-3 sm:p-6">
+      <section className="min-w-0 rounded-xl border border-[#d6cfc2] bg-[#fffdf8] px-2 py-3 sm:p-6">
         <div className="mb-4 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <h2 className="text-xl font-semibold text-[#1c1915]">{current.journal.name}</h2>
@@ -72,16 +72,12 @@ export function JournalApp({
           </p>
         ) : null}
 
-        <ShareChart
-          series={current.series}
-          institutions={current.trackedInstitutions}
-          editors={current.editors}
-        />
-
-        <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-xs text-[#6b6458]">
-          <span>Solid: share in this journal</span>
-          <span>Band: sourced EIC window</span>
-          <span>Rule: sourced start year</span>
+        <div className="-mx-2 sm:mx-0">
+          <ShareChart
+            series={current.series}
+            institutions={current.trackedInstitutions}
+            editors={current.editors}
+          />
         </div>
       </section>
 
