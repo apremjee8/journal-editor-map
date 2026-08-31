@@ -14,6 +14,7 @@ const {
   fitShareChartBandLabels,
   shareChartPlotLeft,
   tenureBands,
+  yearTicks,
   yearToX,
 } = await import("../src/lib/chart-marks.ts");
 
@@ -163,6 +164,10 @@ for (const id of ids) {
   const yearStart = row.series[0]?.year ?? 0;
   const yearEnd = row.series.at(-1)?.year ?? yearStart;
   const bands = tenureBands(row.editors, yearStart, yearEnd);
+  const ticks = yearTicks(yearStart, yearEnd);
+  if (ticks[0] !== yearStart) {
+    errors.push(`${id}: first axis tick ${ticks[0]} must equal series yearStart ${yearStart}`);
+  }
   checkSourcedWindows(id, row.editors, yearStart, yearEnd, bands);
   for (const width of WIDTHS) {
     const fitted = fitShareChartBandLabels(bands, yearStart, yearEnd, width.container, width.fontSize);

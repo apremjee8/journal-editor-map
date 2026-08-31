@@ -63,8 +63,15 @@ export const SHARE_CHART_LAYOUT = {
   marginBottom: 28,
   marginLeft: 8,
   yAxisWidth: 48,
-  xPad: 14,
+  xPad: 0,
 } as const;
+
+export function yearTicks(yearStart: number, yearEnd: number, gap = 6): number[] {
+  const ticks = [yearStart];
+  for (let year = yearStart + gap; year < yearEnd; year += gap) ticks.push(year);
+  if (ticks.at(-1) !== yearEnd) ticks.push(yearEnd);
+  return ticks;
+}
 
 export type PlacedBandLabel = {
   text: string;
