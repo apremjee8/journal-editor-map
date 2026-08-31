@@ -71,6 +71,19 @@ function checkBaseline(journalId, widthName, placed) {
   }
 }
 
+function checkOverlap(journalId, widthName, placed) {
+  for (let i = 0; i < placed.length; i += 1) {
+    for (let j = i + 1; j < placed.length; j += 1) {
+      const a = placed[i];
+      const b = placed[j];
+      const overlap = a.x < b.x + b.width && a.x + a.width > b.x;
+      if (overlap) {
+        errors.push(`${journalId} ${widthName}: "${a.text}" overlaps "${b.text}"`);
+      }
+    }
+  }
+}
+
 function checkSpot(journalId, widthName, placed) {
   for (const text of SPOT[journalId] ?? []) {
     if (!placed.some((label) => label.text === text)) {
@@ -103,17 +116,19 @@ for (const id of ids) {
     checkHang(id, width.name, 0, fitted.plotWidth, yearStart, yearEnd, bands, fitted.labels);
     checkFrame(id, width.name, 0, width.container - shareChartPlotLeft(), fitted.labels);
     checkBaseline(id, width.name, fitted.labels);
+    checkOverlap(id, width.name, fitted.labels);
     checkSpot(id, width.name, fitted.labels);
   }
   const og = fitOgBandLabels(bands, yearStart, yearEnd);
   checkHang(id, "og-card", SHARE_OG_LAYOUT.plotLeft, og.plotWidth, yearStart, yearEnd, bands, og.labels);
   checkFrame(id, "og-card", 0, SHARE_OG_LAYOUT.frameWidth, og.labels);
   checkBaseline(id, "og-card", og.labels);
+  checkOverlap(id, "og-card", og.labels);
   checkSpot(id, "og-card", og.labels);
 }
 
 if (errors.length) {
-  console.error("band labels fail the hang, clip, and baseline checks:");
+  console.error("band labels fail the hang, clip, baseline, and overlap checks:");
   for (const line of errors) console.error(`  ${line}`);
   process.exit(1);
 }
