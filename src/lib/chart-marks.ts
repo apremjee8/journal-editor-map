@@ -20,12 +20,7 @@ export function tenureBands(
   yearEnd: number
 ): TenureBand[] {
   return editors
-    .filter(
-      (editor) =>
-        editor.role !== "deputy" &&
-        editor.institutionGroupId &&
-        editor.startYear != null
-    )
+    .filter((editor) => editor.role !== "deputy" && editor.startYear != null)
     .map((editor) => {
       const startYear = editor.startYear!;
       const endYear = Math.min(editor.endYear ?? yearEnd, yearEnd);
@@ -36,7 +31,7 @@ export function tenureBands(
         startYear,
         visibleStart,
         endYear,
-        institutionId: editor.institutionGroupId!,
+        institutionId: editor.institutionGroupId ?? "",
       };
     })
     .filter((band) => band.visibleStart <= band.endYear);
@@ -113,9 +108,12 @@ export function bandLabelStackHeight(placed: PlacedBandLabel[], fontSize: number
   return rows * (fontSize + 5);
 }
 
-export function labelDomainStart(bands: TenureBand[], seriesStart: number): number {
-  if (!bands.length) return seriesStart;
-  return Math.min(seriesStart, ...bands.map((band) => band.startYear));
+export function labelDomainStart(_bands: TenureBand[], seriesStart: number): number {
+  return seriesStart;
+}
+
+export function clampBandRuleYear(startYear: number, seriesStart: number): number {
+  return Math.max(startYear, seriesStart);
 }
 
 function labelStem(text: string): string {
@@ -176,9 +174,14 @@ export function placeBandLabels(
   texts: string[] = bands.map((band) => band.shortLabel)
 ): PlacedBandLabel[] {
   const top = plot.top ?? 0;
-  const domainStart = labelDomainStart(bands, yearStart);
   return bands.map((band, i) => {
-    const ruleX = yearToX(band.startYear, domainStart, yearEnd, plot.left, plot.width);
+    const ruleX = yearToX(
+      clampBandRuleYear(band.startYear, yearStart),
+      yearStart,
+      yearEnd,
+      plot.left,
+      plot.width
+    );
     const text = texts[i] ?? band.shortLabel;
     return {
       text,
@@ -218,20 +221,19 @@ function growSharePlot(
   return { labels, plotWidth, marginRight: nextMargin };
 }
 
-export function fitShareChartBandLabels(
+function fitShareChartBandLabelsAtFont(
   bands: TenureBand[],
   yearStart: number,
   yearEnd: number,
   containerWidth: number,
   fontSize: number
-): { labels: PlacedBandLabel[]; plotWidth: number; marginRight: number; domainStart: number } {
-  const domainStart = labelDomainStart(bands, yearStart);
+): { labels: PlacedBandLabel[]; plotWidth: number; marginRight: number; ok: boolean } {
   const texts = bands.map((band) => band.shortLabel);
   const rightLimit = containerWidth - shareChartPlotLeft();
   let marginRight = SHARE_CHART_LAYOUT.marginRight;
   let fitted = growSharePlot(
     bands,
-    domainStart,
+    yearStart,
     yearEnd,
     containerWidth,
     fontSize,
@@ -240,11 +242,14 @@ export function fitShareChartBandLabels(
     rightLimit
   );
 
+  const overflowOf = (labels: PlacedBandLabel[]) =>
+    Math.max(0, ...labels.map((label) => label.x + label.width + BAND_LABEL_PAD - rightLimit));
+
   for (let attempt = 0; attempt < 24; attempt += 1) {
     if (labelsOverlap(fitted.labels) && dropRightmostYear(texts, fitted.labels)) {
       fitted = growSharePlot(
         bands,
-        domainStart,
+        yearStart,
         yearEnd,
         containerWidth,
         fontSize,
@@ -255,10 +260,7 @@ export function fitShareChartBandLabels(
       continue;
     }
     let labels = labelsOverlap(fitted.labels) ? nudgeLabelsRight(fitted.labels) : fitted.labels;
-    const overflow = Math.max(
-      0,
-      ...labels.map((label) => label.x + label.width + BAND_LABEL_PAD - rightLimit)
-    );
+    const overflow = overflowOf(labels);
     if (overflow > 1e-6) {
       const rightmost = [...labels].sort((a, b) => a.x + a.width - (b.x + b.width)).at(-1);
       const idx = rightmost ? texts.findIndex((text) => text === rightmost.text) : -1;
@@ -266,7 +268,7 @@ export function fitShareChartBandLabels(
         texts[idx] = labelStem(texts[idx]);
         fitted = growSharePlot(
           bands,
-          domainStart,
+          yearStart,
           yearEnd,
           containerWidth,
           fontSize,
@@ -276,10 +278,14 @@ export function fitShareChartBandLabels(
         );
         continue;
       }
-      marginRight = fitted.marginRight + Math.ceil(overflow);
+      const nextMargin = fitted.marginRight + Math.ceil(overflow);
+      if (nextMargin === fitted.marginRight || shareChartPlotWidth(containerWidth, nextMargin) <= 0) {
+        return { labels, plotWidth: fitted.plotWidth, marginRight: fitted.marginRight, ok: false };
+      }
+      marginRight = nextMargin;
       fitted = growSharePlot(
         bands,
-        domainStart,
+        yearStart,
         yearEnd,
         containerWidth,
         fontSize,
@@ -290,22 +296,50 @@ export function fitShareChartBandLabels(
       continue;
     }
     if (!labelsOverlap(labels)) {
-      return { labels, plotWidth: fitted.plotWidth, marginRight: fitted.marginRight, domainStart };
+      return { labels, plotWidth: fitted.plotWidth, marginRight: fitted.marginRight, ok: true };
     }
     labels = nudgeLabelsRight(labels);
-    if (!labelsOverlap(labels)) {
-      const still = Math.max(
-        0,
-        ...labels.map((label) => label.x + label.width + BAND_LABEL_PAD - rightLimit)
-      );
-      if (still <= 1e-6) {
-        return { labels, plotWidth: fitted.plotWidth, marginRight: fitted.marginRight, domainStart };
-      }
+    if (!labelsOverlap(labels) && overflowOf(labels) <= 1e-6) {
+      return { labels, plotWidth: fitted.plotWidth, marginRight: fitted.marginRight, ok: true };
     }
   }
 
   const labels = nudgeLabelsRight(fitted.labels);
-  return { labels, plotWidth: fitted.plotWidth, marginRight: fitted.marginRight, domainStart };
+  return {
+    labels,
+    plotWidth: fitted.plotWidth,
+    marginRight: fitted.marginRight,
+    ok: !labelsOverlap(labels) && overflowOf(labels) <= 1e-6,
+  };
+}
+
+export function fitShareChartBandLabels(
+  bands: TenureBand[],
+  yearStart: number,
+  yearEnd: number,
+  containerWidth: number,
+  fontSize: number
+): {
+  labels: PlacedBandLabel[];
+  plotWidth: number;
+  marginRight: number;
+  domainStart: number;
+  fontSize: number;
+} {
+  const domainStart = yearStart;
+  let last = fitShareChartBandLabelsAtFont(bands, yearStart, yearEnd, containerWidth, fontSize);
+  let usedFont = fontSize;
+  while (!last.ok && usedFont > 8) {
+    usedFont -= 1;
+    last = fitShareChartBandLabelsAtFont(bands, yearStart, yearEnd, containerWidth, usedFont);
+  }
+  return {
+    labels: last.labels,
+    plotWidth: last.plotWidth,
+    marginRight: last.marginRight,
+    domainStart,
+    fontSize: usedFont,
+  };
 }
 
 export function fitOgBandLabels(
@@ -314,7 +348,7 @@ export function fitOgBandLabels(
   yearEnd: number
 ): { labels: PlacedBandLabel[]; plotWidth: number; domainStart: number } {
   const { plotLeft, plotTop, plotWidth: initialWidth, fontSize, frameWidth } = SHARE_OG_LAYOUT;
-  const domainStart = labelDomainStart(bands, yearStart);
+  const domainStart = yearStart;
   const texts = bands.map((band) => band.shortLabel);
   const rightLimit = frameWidth - BAND_LABEL_PAD;
   const plot = (width: number, nextTexts: string[]) =>

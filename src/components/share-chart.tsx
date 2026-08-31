@@ -57,21 +57,22 @@ export function ShareChart({ series, institutions, editors }: Props) {
 
   const dataStart = series[0]?.year ?? 0;
   const yearEnd = series[series.length - 1]?.year ?? dataStart;
-  const draftBands = tenureBands(editors, dataStart, yearEnd);
+  const bands = tenureBands(editors, dataStart, yearEnd);
   const fontSize = containerWidth > 0 && containerWidth < 500 ? 10 : 11;
   const fitted =
     containerWidth > 0
-      ? fitShareChartBandLabels(draftBands, dataStart, yearEnd, containerWidth, fontSize)
+      ? fitShareChartBandLabels(bands, dataStart, yearEnd, containerWidth, fontSize)
       : {
           labels: [],
           plotWidth: 0,
           marginRight: SHARE_CHART_LAYOUT.marginRight,
           domainStart: dataStart,
+          fontSize,
         };
-  const domainStart = fitted.domainStart;
-  const bands = tenureBands(editors, domainStart, yearEnd);
+  const domainStart = dataStart;
   const labels = fitted.labels;
-  const labelBand = bandLabelStackHeight(labels, fontSize);
+  const labelFont = fitted.fontSize;
+  const labelBand = bandLabelStackHeight(labels, labelFont);
   const marginTop = 8 + labelBand;
   const plotLeft = shareChartPlotLeft();
 
@@ -113,7 +114,7 @@ export function ShareChart({ series, institutions, editors }: Props) {
                 x2={band.endYear}
                 fill={instColor(band.institutionId, cohort)}
                 fillOpacity={0.14}
-                ifOverflow="extendDomain"
+                ifOverflow="hidden"
               />
             ))}
             {bands.map((band) => (
@@ -122,7 +123,7 @@ export function ShareChart({ series, institutions, editors }: Props) {
                 x={band.visibleStart}
                 stroke={instColor(band.institutionId, cohort)}
                 strokeWidth={2.5}
-                ifOverflow="extendDomain"
+                ifOverflow="hidden"
               />
             ))}
             <XAxis
@@ -195,7 +196,7 @@ export function ShareChart({ series, institutions, editors }: Props) {
             style={{
               left: plotLeft + label.x,
               top: 6 + label.y,
-              fontSize,
+              fontSize: labelFont,
               color: instColor(label.institutionId, cohort),
             }}
           >

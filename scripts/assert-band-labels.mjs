@@ -8,9 +8,9 @@ const {
   BAND_LABEL_HANG,
   BAND_LABEL_PAD,
   SHARE_OG_LAYOUT,
+  clampBandRuleYear,
   fitOgBandLabels,
   fitShareChartBandLabels,
-  labelDomainStart,
   shareChartPlotLeft,
   tenureBands,
   yearToX,
@@ -27,8 +27,9 @@ const SPOT = {
   "jama-im": ["Dalen", "Greenland", "Redberg", "Inouye"],
   nejm: ["Drazen", "Rubin"],
   cid: ["Gorbach", "Schooley", "Sax"],
-  jasn: ["Tisher", "Couser", "Neilson", "Nath", "Mehrotra"],
+  jasn: ["Tisher", "Couser", "Neilson", "Nath", "Briggs", "Mehrotra"],
   jco: ["Canellos", "Haller", "Cannistra", "Friedberg"],
+  jama: ["DeAngelis", "Bauchner", "Fontanarosa", "Bibbins-Domingo"],
 };
 
 const errors = [];
@@ -39,11 +40,10 @@ function bandForLabel(bands, text) {
 }
 
 function checkHang(journalId, widthName, plotLeft, plotWidth, yearStart, yearEnd, bands, placed) {
-  const domainStart = labelDomainStart(bands, yearStart);
   for (const label of placed) {
     const band = bandForLabel(bands, label.text);
     const ruleX = band
-      ? yearToX(band.startYear, domainStart, yearEnd, plotLeft, plotWidth)
+      ? yearToX(clampBandRuleYear(band.startYear, yearStart), yearStart, yearEnd, plotLeft, plotWidth)
       : Number.NaN;
     if (!Number.isFinite(ruleX) || label.x + HANG_TOL < ruleX + BAND_LABEL_HANG) {
       errors.push(
@@ -99,6 +99,35 @@ function checkSpot(journalId, widthName, placed) {
   }
 }
 
+function checkDomain(journalId, widthName, domainStart, yearStart) {
+  if (domainStart !== yearStart) {
+    errors.push(
+      `${journalId} ${widthName}: domainStart ${domainStart} must equal series yearStart ${yearStart}`
+    );
+  }
+}
+
+function checkSourcedWindows(journalId, editors, yearStart, yearEnd, bands) {
+  for (const editor of editors) {
+    if (editor.role === "deputy" || editor.startYear == null || !editor.sources?.length) continue;
+    const coverStart = Math.max(editor.startYear, yearStart);
+    const coverEnd = Math.min(editor.endYear ?? yearEnd, yearEnd);
+    if (coverStart > coverEnd) continue;
+    const band = bands.find((item) => item.name === editor.name);
+    if (!band) {
+      errors.push(
+        `${journalId}: sourced window "${editor.name}" ${coverStart}–${coverEnd} has no band`
+      );
+      continue;
+    }
+    if (band.visibleStart > coverStart || band.endYear < coverEnd) {
+      errors.push(
+        `${journalId}: band for "${editor.name}" is ${band.visibleStart}–${band.endYear}, expected to cover ${coverStart}–${coverEnd}`
+      );
+    }
+  }
+}
+
 const ids = [
   "jama",
   "jama-im",
@@ -118,8 +147,10 @@ for (const id of ids) {
   const yearStart = row.series[0]?.year ?? 0;
   const yearEnd = row.series.at(-1)?.year ?? yearStart;
   const bands = tenureBands(row.editors, yearStart, yearEnd);
+  checkSourcedWindows(id, row.editors, yearStart, yearEnd, bands);
   for (const width of WIDTHS) {
     const fitted = fitShareChartBandLabels(bands, yearStart, yearEnd, width.container, width.fontSize);
+    checkDomain(id, width.name, fitted.domainStart, yearStart);
     checkHang(id, width.name, 0, fitted.plotWidth, yearStart, yearEnd, bands, fitted.labels);
     checkFrame(id, width.name, 0, width.container - shareChartPlotLeft(), fitted.labels);
     checkBaseline(id, width.name, fitted.labels);
@@ -127,6 +158,7 @@ for (const id of ids) {
     checkSpot(id, width.name, fitted.labels);
   }
   const og = fitOgBandLabels(bands, yearStart, yearEnd);
+  checkDomain(id, "og-card", og.domainStart, yearStart);
   checkHang(id, "og-card", SHARE_OG_LAYOUT.plotLeft, og.plotWidth, yearStart, yearEnd, bands, og.labels);
   checkFrame(id, "og-card", 0, SHARE_OG_LAYOUT.frameWidth, og.labels);
   checkBaseline(id, "og-card", og.labels);
@@ -140,4 +172,6 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log("band labels hang right of each rule, share one baseline, do not overlap, and stay inside the frame at 1280/1440/390 and on OG cards for all eleven journals");
+console.log(
+  "band labels hang right of each clamped rule, share one baseline, do not overlap, keep the series domain, cover sourced windows including null-home, and stay inside the frame at 1280/1440/390 and on OG cards for all eleven journals"
+);

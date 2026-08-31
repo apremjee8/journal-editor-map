@@ -25,10 +25,9 @@ export default async function Image({ params }: { params: Promise<{ id: string }
   const cohort = institutions.map((inst) => inst.id);
   const dataStart = series[0]?.year ?? 2000;
   const yearEnd = series.at(-1)?.year ?? dataStart;
-  const draftBands = tenureBands(editors, dataStart, yearEnd);
-  const ogMarks = fitOgBandLabels(draftBands, dataStart, yearEnd);
-  const domainStart = ogMarks.domainStart;
-  const bands = tenureBands(editors, domainStart, yearEnd);
+  const bands = tenureBands(editors, dataStart, yearEnd);
+  const ogMarks = fitOgBandLabels(bands, dataStart, yearEnd);
+  const domainStart = dataStart;
   const plotWidth = ogMarks.plotWidth;
   const labels = Object.fromEntries(institutions.map((inst) => [inst.id, inst.label]));
   const claimRow = row ? latestScoredHandover(takeoverRows(editors, series, labels)) : null;
