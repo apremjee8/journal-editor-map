@@ -1,6 +1,13 @@
 import { ImageResponse } from "next/og";
 
-import { SHARE_OG_LAYOUT, fitOgBandLabels, shareToY, tenureBands, yearToX } from "@/lib/chart-marks";
+import {
+  SHARE_OG_LAYOUT,
+  bandDrawEnd,
+  fitOgBandLabels,
+  shareToY,
+  tenureBands,
+  yearToX,
+} from "@/lib/chart-marks";
 import { instColor } from "@/lib/colors";
 import { formatShare, getJournal, isJournalId } from "@/lib/load-bundle";
 import { handoverClaim, handoverFallback, latestScoredHandover, takeoverRows } from "@/lib/takeover";
@@ -91,9 +98,15 @@ export default async function Image({ params }: { params: Promise<{ id: string }
           }}
         >
           <svg width={FRAME.width} height={FRAME.height} viewBox={`0 0 ${FRAME.width} ${FRAME.height}`}>
-            {bands.map((band) => {
+            {bands.map((band, i) => {
               const x1 = yearToX(band.visibleStart, domainStart, yearEnd, PLOT.left, plotWidth);
-              const x2 = yearToX(band.endYear, domainStart, yearEnd, PLOT.left, plotWidth);
+              const x2 = yearToX(
+                bandDrawEnd(band, yearEnd, bands[i + 1]),
+                domainStart,
+                yearEnd,
+                PLOT.left,
+                plotWidth
+              );
               const color = instColor(band.institutionId, cohort);
               return (
                 <g key={`${band.name}-band`}>

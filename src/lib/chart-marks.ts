@@ -37,6 +37,16 @@ export function tenureBands(
     .filter((band) => band.visibleStart <= band.endYear);
 }
 
+export function bandDrawEnd(
+  band: TenureBand,
+  yearEnd: number,
+  next?: TenureBand
+): number {
+  if (band.endYear >= yearEnd) return yearEnd;
+  if (next && next.visibleStart <= band.endYear) return band.endYear;
+  return Math.min(yearEnd, band.endYear + 1);
+}
+
 export function yearToX(
   year: number,
   yearStart: number,

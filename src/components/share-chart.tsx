@@ -15,6 +15,7 @@ import {
 
 import {
   SHARE_CHART_LAYOUT,
+  bandDrawEnd,
   bandLabelStackHeight,
   fitShareChartBandLabels,
   shareChartPlotLeft,
@@ -107,11 +108,11 @@ export function ShareChart({ series, institutions, editors }: Props) {
             }}
           >
             <CartesianGrid stroke="#e7e2d8" vertical={false} />
-            {bands.map((band) => (
+            {bands.map((band, i) => (
               <ReferenceArea
                 key={`${band.name}-band`}
                 x1={band.visibleStart}
-                x2={band.endYear}
+                x2={bandDrawEnd(band, yearEnd, bands[i + 1])}
                 fill={instColor(band.institutionId, cohort)}
                 fillOpacity={0.14}
                 ifOverflow="hidden"

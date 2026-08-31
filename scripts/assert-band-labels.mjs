@@ -8,6 +8,7 @@ const {
   BAND_LABEL_HANG,
   BAND_LABEL_PAD,
   SHARE_OG_LAYOUT,
+  bandDrawEnd,
   clampBandRuleYear,
   fitOgBandLabels,
   fitShareChartBandLabels,
@@ -123,6 +124,21 @@ function checkSourcedWindows(journalId, editors, yearStart, yearEnd, bands) {
     if (band.visibleStart > coverStart || band.endYear < coverEnd) {
       errors.push(
         `${journalId}: band for "${editor.name}" is ${band.visibleStart}–${band.endYear}, expected to cover ${coverStart}–${coverEnd}`
+      );
+    }
+  }
+  for (let i = 0; i < bands.length; i += 1) {
+    const band = bands[i];
+    const next = bands[i + 1];
+    const drawEnd = bandDrawEnd(band, yearEnd, next);
+    if (drawEnd < band.endYear) {
+      errors.push(
+        `${journalId}: draw end ${drawEnd} is left of sourced end ${band.endYear} for "${band.name}"`
+      );
+    }
+    if (next && next.visibleStart === band.endYear + 1 && drawEnd < next.visibleStart) {
+      errors.push(
+        `${journalId}: "${band.name}" leaves a hole before "${next.name}" (${drawEnd} < ${next.visibleStart})`
       );
     }
   }
