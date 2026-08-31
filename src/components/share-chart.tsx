@@ -5,8 +5,6 @@ import {
   CartesianGrid,
   Line,
   LineChart,
-  ReferenceArea,
-  ReferenceLine,
   ResponsiveContainer,
   Tooltip,
   XAxis,
@@ -15,10 +13,13 @@ import {
 
 import {
   SHARE_CHART_LAYOUT,
+  bandDrawEnd,
   bandLabelStackHeight,
   fitShareChartBandLabels,
   shareChartPlotLeft,
   tenureBands,
+  yearTicks,
+  yearToX,
 } from "@/lib/chart-marks";
 import { instColor } from "@/lib/colors";
 import { formatShare } from "@/lib/load-bundle";
@@ -55,18 +56,27 @@ export function ShareChart({ series, institutions, editors }: Props) {
     return row;
   });
 
-  const yearStart = series[0]?.year ?? 0;
-  const yearEnd = series[series.length - 1]?.year ?? yearStart;
-  const bands = tenureBands(editors, yearStart, yearEnd);
+  const dataStart = series[0]?.year ?? 0;
+  const yearEnd = series[series.length - 1]?.year ?? dataStart;
+  const bands = tenureBands(editors, dataStart, yearEnd);
   const fontSize = containerWidth > 0 && containerWidth < 500 ? 10 : 11;
   const fitted =
     containerWidth > 0
-      ? fitShareChartBandLabels(bands, yearStart, yearEnd, containerWidth, fontSize)
-      : { labels: [], plotWidth: 0, marginRight: SHARE_CHART_LAYOUT.marginRight };
+      ? fitShareChartBandLabels(bands, dataStart, yearEnd, containerWidth, fontSize)
+      : {
+          labels: [],
+          plotWidth: 0,
+          marginRight: SHARE_CHART_LAYOUT.marginRight,
+          domainStart: dataStart,
+          fontSize,
+        };
   const labels = fitted.labels;
-  const labelBand = bandLabelStackHeight(labels, fontSize);
+  const labelFont = fitted.fontSize;
+  const labelBand = bandLabelStackHeight(labels, labelFont);
   const marginTop = 8 + labelBand;
   const plotLeft = shareChartPlotLeft();
+  const plotWidth = fitted.plotWidth;
+  const xTickValues = yearTicks(dataStart, yearEnd);
 
   const maxShare = Math.max(
     4,
@@ -88,6 +98,44 @@ export function ShareChart({ series, institutions, editors }: Props) {
         ))}
       </ul>
       <div ref={wrapRef} className="relative h-[260px] min-w-0 w-full sm:h-[400px]">
+        {containerWidth > 0
+          ? bands.map((band, i) => {
+              const x1 = yearToX(band.visibleStart, dataStart, yearEnd, 0, plotWidth);
+              const x2 = yearToX(bandDrawEnd(band, yearEnd, bands[i + 1]), dataStart, yearEnd, 0, plotWidth);
+              return (
+                <div
+                  key={`${band.name}-band`}
+                  className="pointer-events-none absolute"
+                  style={{
+                    left: plotLeft + x1,
+                    top: marginTop,
+                    bottom: SHARE_CHART_LAYOUT.marginBottom,
+                    width: Math.max(2, x2 - x1),
+                    background: instColor(band.institutionId, cohort),
+                    opacity: 0.22,
+                  }}
+                />
+              );
+            })
+          : null}
+        {containerWidth > 0
+          ? bands.map((band) => {
+              const x = yearToX(band.visibleStart, dataStart, yearEnd, 0, plotWidth);
+              return (
+                <div
+                  key={`${band.name}-start`}
+                  className="pointer-events-none absolute"
+                  style={{
+                    left: plotLeft + x,
+                    top: marginTop,
+                    bottom: SHARE_CHART_LAYOUT.marginBottom,
+                    width: 2.5,
+                    background: instColor(band.institutionId, cohort),
+                  }}
+                />
+              );
+            })
+          : null}
         <ResponsiveContainer width="100%" height="100%">
           <LineChart
             data={rows}
@@ -99,34 +147,19 @@ export function ShareChart({ series, institutions, editors }: Props) {
             }}
           >
             <CartesianGrid stroke="#e7e2d8" vertical={false} />
-            {bands.map((band) => (
-              <ReferenceArea
-                key={`${band.name}-band`}
-                x1={band.visibleStart}
-                x2={band.endYear}
-                fill={instColor(band.institutionId, cohort)}
-                fillOpacity={0.14}
-                ifOverflow="extendDomain"
-              />
-            ))}
-            {bands.map((band) => (
-              <ReferenceLine
-                key={`${band.name}-start`}
-                x={band.visibleStart}
-                stroke={instColor(band.institutionId, cohort)}
-                strokeWidth={2.5}
-                ifOverflow="extendDomain"
-              />
-            ))}
             <XAxis
+              type="number"
               dataKey="year"
+              domain={[dataStart, yearEnd]}
+              ticks={xTickValues}
+              allowDataOverflow
+              allowDecimals={false}
               tick={{ fill: "#4b453c", fontSize: 10 }}
               tickLine={false}
               axisLine={{ stroke: "#d6cfc2" }}
-              interval="preserveStartEnd"
-              minTickGap={28}
+              interval={0}
               tickMargin={8}
-              padding={{ left: SHARE_CHART_LAYOUT.xPad, right: SHARE_CHART_LAYOUT.xPad }}
+              padding={{ left: 0, right: 0 }}
             />
             <YAxis
               tickFormatter={(v) => `${v}%`}
@@ -185,7 +218,7 @@ export function ShareChart({ series, institutions, editors }: Props) {
             style={{
               left: plotLeft + label.x,
               top: 6 + label.y,
-              fontSize,
+              fontSize: labelFont,
               color: instColor(label.institutionId, cohort),
             }}
           >

@@ -41,7 +41,10 @@ export const INSTITUTION_COLORS: Record<string, string> = {
   washington: "#4c1d95",
 };
 
+export const NO_HOME_COLOR = "#a39b8e";
+
 export function instColor(id: string, cohort: string[] = []): string {
+  if (!id) return NO_HOME_COLOR;
   if (cohort.length > 1) {
     const i = cohort.indexOf(id);
     if (i >= 0) return PALETTE[i % PALETTE.length];

@@ -1,6 +1,13 @@
 import { ImageResponse } from "next/og";
 
-import { SHARE_OG_LAYOUT, fitOgBandLabels, shareToY, tenureBands, yearToX } from "@/lib/chart-marks";
+import {
+  SHARE_OG_LAYOUT,
+  bandDrawEnd,
+  fitOgBandLabels,
+  shareToY,
+  tenureBands,
+  yearToX,
+} from "@/lib/chart-marks";
 import { instColor } from "@/lib/colors";
 import { formatShare, getJournal, isJournalId } from "@/lib/load-bundle";
 import { handoverClaim, handoverFallback, latestScoredHandover, takeoverRows } from "@/lib/takeover";
@@ -23,10 +30,11 @@ export default async function Image({ params }: { params: Promise<{ id: string }
   const institutions = row?.trackedInstitutions ?? [];
   const editors = row?.editors ?? [];
   const cohort = institutions.map((inst) => inst.id);
-  const yearStart = series[0]?.year ?? 2000;
-  const yearEnd = series.at(-1)?.year ?? yearStart;
-  const bands = tenureBands(editors, yearStart, yearEnd);
-  const ogMarks = fitOgBandLabels(bands, yearStart, yearEnd);
+  const dataStart = series[0]?.year ?? 2000;
+  const yearEnd = series.at(-1)?.year ?? dataStart;
+  const bands = tenureBands(editors, dataStart, yearEnd);
+  const ogMarks = fitOgBandLabels(bands, dataStart, yearEnd);
+  const domainStart = dataStart;
   const plotWidth = ogMarks.plotWidth;
   const labels = Object.fromEntries(institutions.map((inst) => [inst.id, inst.label]));
   const claimRow = row ? latestScoredHandover(takeoverRows(editors, series, labels)) : null;
@@ -41,7 +49,7 @@ export default async function Image({ params }: { params: Promise<{ id: string }
   const polylines = institutions.map((inst) => {
     const points = series
       .map((pt) => {
-        const x = yearToX(pt.year, yearStart, yearEnd, PLOT.left, plotWidth);
+        const x = yearToX(pt.year, domainStart, yearEnd, PLOT.left, plotWidth);
         const y = shareToY((pt.byInstitution[inst.id]?.share ?? 0) * 100, yMax, PLOT.top, PLOT.height);
         return `${x.toFixed(1)},${y.toFixed(1)}`;
       })
@@ -90,9 +98,15 @@ export default async function Image({ params }: { params: Promise<{ id: string }
           }}
         >
           <svg width={FRAME.width} height={FRAME.height} viewBox={`0 0 ${FRAME.width} ${FRAME.height}`}>
-            {bands.map((band) => {
-              const x1 = yearToX(band.visibleStart, yearStart, yearEnd, PLOT.left, plotWidth);
-              const x2 = yearToX(band.endYear, yearStart, yearEnd, PLOT.left, plotWidth);
+            {bands.map((band, i) => {
+              const x1 = yearToX(band.visibleStart, domainStart, yearEnd, PLOT.left, plotWidth);
+              const x2 = yearToX(
+                bandDrawEnd(band, yearEnd, bands[i + 1]),
+                domainStart,
+                yearEnd,
+                PLOT.left,
+                plotWidth
+              );
               const color = instColor(band.institutionId, cohort);
               return (
                 <g key={`${band.name}-band`}>
@@ -102,7 +116,7 @@ export default async function Image({ params }: { params: Promise<{ id: string }
                     width={Math.max(2, x2 - x1)}
                     height={PLOT.height}
                     fill={color}
-                    fillOpacity="0.16"
+                    fillOpacity="0.22"
                   />
                   <line
                     x1={x1}
@@ -148,7 +162,7 @@ export default async function Image({ params }: { params: Promise<{ id: string }
               color: "#6b6458",
             }}
           >
-            {yearStart}
+            {domainStart}
           </div>
           <div
             style={{

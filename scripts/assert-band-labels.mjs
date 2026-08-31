@@ -8,10 +8,13 @@ const {
   BAND_LABEL_HANG,
   BAND_LABEL_PAD,
   SHARE_OG_LAYOUT,
+  bandDrawEnd,
+  clampBandRuleYear,
   fitOgBandLabels,
   fitShareChartBandLabels,
   shareChartPlotLeft,
   tenureBands,
+  yearTicks,
   yearToX,
 } = await import("../src/lib/chart-marks.ts");
 
@@ -22,25 +25,31 @@ const WIDTHS = [
 ];
 
 const SPOT = {
-  jacc: ["Parmley 1992", "DeMaria 2002", "Fuster 2014", "Krumholz 2024"],
-  "jama-im": ["Dalen 1988", "Greenland 2004", "Redberg 2009", "Inouye 2023"],
-  nejm: ["Drazen 2000", "Rubin 2019"],
-  cid: ["Gorbach 2000", "Schooley 2017", "Sax 2022"],
-  jasn: ["Tisher 1996", "Couser 2001", "Neilson 2007", "Nath 2013", "Mehrotra 2024"],
+  jacc: ["Parmley", "DeMaria", "Fuster", "Krumholz"],
+  "jama-im": ["Dalen", "Greenland", "Redberg", "Inouye"],
+  nejm: ["Drazen", "Rubin"],
+  cid: ["Gorbach", "Schooley", "Sax"],
+  jasn: ["Tisher", "Couser", "Neilson", "Nath", "Briggs", "Mehrotra"],
+  jco: ["Canellos", "Haller", "Cannistra", "Friedberg"],
+  jama: ["DeAngelis", "Bauchner", "Fontanarosa", "Bibbins-Domingo"],
 };
 
 const errors = [];
 const HANG_TOL = 0.6;
 
+function bandForLabel(bands, text) {
+  return bands.find((item) => item.shortLabel === text || item.shortLabel.startsWith(`${text} `));
+}
+
 function checkHang(journalId, widthName, plotLeft, plotWidth, yearStart, yearEnd, bands, placed) {
   for (const label of placed) {
-    const band = bands.find((item) => item.shortLabel === label.text);
+    const band = bandForLabel(bands, label.text);
     const ruleX = band
-      ? yearToX(band.visibleStart, yearStart, yearEnd, plotLeft, plotWidth)
+      ? yearToX(clampBandRuleYear(band.startYear, yearStart), yearStart, yearEnd, plotLeft, plotWidth)
       : Number.NaN;
-    if (!Number.isFinite(ruleX) || Math.abs(label.x - (ruleX + BAND_LABEL_HANG)) > HANG_TOL) {
+    if (!Number.isFinite(ruleX) || label.x + HANG_TOL < ruleX + BAND_LABEL_HANG) {
       errors.push(
-        `${journalId} ${widthName}: "${label.text}" x ${label.x} is not hang-right of rule ${ruleX}`
+        `${journalId} ${widthName}: "${label.text}" x ${label.x} is left of hang-right ${ruleX + BAND_LABEL_HANG}`
       );
     }
   }
@@ -71,10 +80,67 @@ function checkBaseline(journalId, widthName, placed) {
   }
 }
 
+function checkOverlap(journalId, widthName, placed) {
+  for (let i = 0; i < placed.length; i += 1) {
+    for (let j = i + 1; j < placed.length; j += 1) {
+      const a = placed[i];
+      const b = placed[j];
+      const overlap = a.x < b.x + b.width && a.x + a.width > b.x;
+      if (overlap) {
+        errors.push(`${journalId} ${widthName}: "${a.text}" overlaps "${b.text}"`);
+      }
+    }
+  }
+}
+
 function checkSpot(journalId, widthName, placed) {
   for (const text of SPOT[journalId] ?? []) {
-    if (!placed.some((label) => label.text === text)) {
+    if (!placed.some((label) => label.text === text || label.text.startsWith(`${text} `))) {
       errors.push(`${journalId} ${widthName}: missing required label "${text}"`);
+    }
+  }
+}
+
+function checkDomain(journalId, widthName, domainStart, yearStart) {
+  if (domainStart !== yearStart) {
+    errors.push(
+      `${journalId} ${widthName}: domainStart ${domainStart} must equal series yearStart ${yearStart}`
+    );
+  }
+}
+
+function checkSourcedWindows(journalId, editors, yearStart, yearEnd, bands) {
+  for (const editor of editors) {
+    if (editor.role === "deputy" || editor.startYear == null || !editor.sources?.length) continue;
+    const coverStart = Math.max(editor.startYear, yearStart);
+    const coverEnd = Math.min(editor.endYear ?? yearEnd, yearEnd);
+    if (coverStart > coverEnd) continue;
+    const band = bands.find((item) => item.name === editor.name);
+    if (!band) {
+      errors.push(
+        `${journalId}: sourced window "${editor.name}" ${coverStart}–${coverEnd} has no band`
+      );
+      continue;
+    }
+    if (band.visibleStart > coverStart || band.endYear < coverEnd) {
+      errors.push(
+        `${journalId}: band for "${editor.name}" is ${band.visibleStart}–${band.endYear}, expected to cover ${coverStart}–${coverEnd}`
+      );
+    }
+  }
+  for (let i = 0; i < bands.length; i += 1) {
+    const band = bands[i];
+    const next = bands[i + 1];
+    const drawEnd = bandDrawEnd(band, yearEnd, next);
+    if (drawEnd < band.endYear) {
+      errors.push(
+        `${journalId}: draw end ${drawEnd} is left of sourced end ${band.endYear} for "${band.name}"`
+      );
+    }
+    if (next && next.visibleStart === band.endYear + 1 && drawEnd < next.visibleStart) {
+      errors.push(
+        `${journalId}: "${band.name}" leaves a hole before "${next.name}" (${drawEnd} < ${next.visibleStart})`
+      );
     }
   }
 }
@@ -98,24 +164,35 @@ for (const id of ids) {
   const yearStart = row.series[0]?.year ?? 0;
   const yearEnd = row.series.at(-1)?.year ?? yearStart;
   const bands = tenureBands(row.editors, yearStart, yearEnd);
+  const ticks = yearTicks(yearStart, yearEnd);
+  if (ticks[0] !== yearStart) {
+    errors.push(`${id}: first axis tick ${ticks[0]} must equal series yearStart ${yearStart}`);
+  }
+  checkSourcedWindows(id, row.editors, yearStart, yearEnd, bands);
   for (const width of WIDTHS) {
     const fitted = fitShareChartBandLabels(bands, yearStart, yearEnd, width.container, width.fontSize);
+    checkDomain(id, width.name, fitted.domainStart, yearStart);
     checkHang(id, width.name, 0, fitted.plotWidth, yearStart, yearEnd, bands, fitted.labels);
     checkFrame(id, width.name, 0, width.container - shareChartPlotLeft(), fitted.labels);
     checkBaseline(id, width.name, fitted.labels);
+    checkOverlap(id, width.name, fitted.labels);
     checkSpot(id, width.name, fitted.labels);
   }
   const og = fitOgBandLabels(bands, yearStart, yearEnd);
+  checkDomain(id, "og-card", og.domainStart, yearStart);
   checkHang(id, "og-card", SHARE_OG_LAYOUT.plotLeft, og.plotWidth, yearStart, yearEnd, bands, og.labels);
   checkFrame(id, "og-card", 0, SHARE_OG_LAYOUT.frameWidth, og.labels);
   checkBaseline(id, "og-card", og.labels);
+  checkOverlap(id, "og-card", og.labels);
   checkSpot(id, "og-card", og.labels);
 }
 
 if (errors.length) {
-  console.error("band labels fail the hang, clip, and baseline checks:");
+  console.error("band labels fail the hang, clip, baseline, and overlap checks:");
   for (const line of errors) console.error(`  ${line}`);
   process.exit(1);
 }
 
-console.log("band labels hang right of each rule, share one baseline, and stay inside the frame at 1280/1440/390 and on OG cards for all eleven journals");
+console.log(
+  "band labels hang right of each clamped rule, share one baseline, do not overlap, keep the series domain, cover sourced windows including null-home, and stay inside the frame at 1280/1440/390 and on OG cards for all eleven journals"
+);
